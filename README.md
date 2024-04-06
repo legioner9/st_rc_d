@@ -4,6 +4,9 @@
 - <name_repo> = st_rc_d
 - <NAME_REPO> = ST_RC_D
 
+- mast be stored ${HOME}/.<name_repo>.rc
+- just be touched ${HOME}/.<name_repo>.path
+
 ```bash
     cat ${HOME}/.<name_repo>.rc
 
