@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo -e "${RED}--- start  ${REPO_PATH}/st_rc_d/.d/.ham/ham/before_push_.ham ---${NORMAL}" #exit 1
+
+return 0
