@@ -41,3 +41,13 @@
         fi
 
 ```
+
+## bcp-dpl
+### from strclib:
+    _bcp_strc
+    _dpl_strc
+### from pltlib:
+    bcp_strs_ -_bcp
+    bcp_strs_ -_dpl
+
+    
