@@ -2,6 +2,8 @@
 
 [up to parent doc](../../../README.md)
 
+# standart SHAREBASHLIB
+
 ## example for repo st_rc_d
 - <name_repo> = st_rc_d
 - <NAME_REPO> = ST_RC_D
