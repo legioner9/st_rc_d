@@ -1,4 +1,4 @@
-# strclib
+# $STRCLIB$
 
 ## [<manifesto> Цель создания](.d/.md.ax/README.md/manifesto.md)
 ## [<whatthat> Что такое strclib](.d/.md.ax/README.md/whatthat.md)
