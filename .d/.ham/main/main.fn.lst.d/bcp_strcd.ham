@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo -e "${BLUE}--- start ${REPO_PATH}/st_rc_d/.d/.ham/main/main.fn.lst.d/bcp_strcd.ham ---${NORMAL}" #exit 1
+
+echo -e "${HLIGHT}--- exec: _bcp_strc ---${NORMAL}" #start files
+
+if command -v _bcp_strc; then
+    if ! _bcp_strc; then
+        echo "in fs= file://${REPO_PATH}/st_rc_d/.d/.ham/main/main.fn.lst.d/bcp_strcd.ham , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_bcp_strc' : ${hint} : return 1"
+        return 1
+    fi
+fi
+
+if command -v bcp_before_push__; then
+    if is_yes__ "DO?: bcp_before_push__"; then
+        if ! bcp_before_push__; then
+            echo "in fs= file://${REPO_PATH}/st_rc_d/.d/.ham/main/main.fn.lst.d/bcp_strcd.ham , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'bcp_before_push__' : ${hint} : return 1"
+            return 1
+        fi
+    fi
+fi
+
+return 0
