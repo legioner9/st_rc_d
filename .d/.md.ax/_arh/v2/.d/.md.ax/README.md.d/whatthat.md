@@ -19,10 +19,10 @@
     - использование названия функций strclib запрещается
         - только переменных из файла ${HOME}/.st.rc.d/.st.config.d/fn_name.sh (подстановка имен для удобного использования версионирования)
 - Название функции ^[_a-z][a-zA-Z1-9]*$
-- $1 специальные значения первого аргумента
-    _e : _edit body      : _edit ${HOME}/.st.rc.d/.st.sh.d/\<name_fn>.sh
-    _t : _edit tst_dir   : _edit ${HOME}/.st.rc.d/.st.tst.d/\<name_fn>.tst.d
-    _d : exec tst_dir_fn : . ${HOME}/.st.rc.d/.st.tst.d/\<name_fn>.tst.d/\<name_fn>.tst.sh
+- \$1 специальные значения первого аргумента
+   - _e : _edit body      : _edit \${HOME}/.st.rc.d/.st.sh.d/\<name_fn>.sh
+   - _t : _edit tst_dir   : _edit \${HOME}/.st.rc.d/.st.tst.d/\<name_fn>.tst.d
+   - _d : exec tst_dir_fn : . \${HOME}/.st.rc.d/.st.tst.d/\<name_fn>.tst.d/\<name_fn>.tst.sh
 
 ## Требования которые необходимо соблюдать при эскалировании ошибок:
     - на каждом этапе фиксируется 
