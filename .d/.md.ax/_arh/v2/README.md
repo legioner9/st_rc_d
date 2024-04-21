@@ -17,7 +17,21 @@
 ## [<note> Заметки](.d/.md.ax/README.md.d/note.md)
 
 
-# Справочное руководство
+# Справочное руководство STRC
+## Введение [Introduction]
+- ### 
+    - ####
+## Определения [Definitions]
+- ###
+    - ####
+## Структура [Structure]
+- ### файловая структура
+    - #### [standart repo](.d/.md.ax/README.md.d/STRC/standart_repo.md)
+- ### 
+    - #### 
+
+# Справочное руководство STRCLIB
+
 ## Введение [Introduction]
 - ### 
     - ####
