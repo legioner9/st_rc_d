@@ -21,3 +21,4 @@ if command -v bcp_strc_; then
 fi
 
 return 0
+ 

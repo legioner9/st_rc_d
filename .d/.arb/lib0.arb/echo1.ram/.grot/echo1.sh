@@ -2,14 +2,14 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${REPO_PATH}/mane/.d/.arb/lib0.arb/echo0.ram/.grot/echo0.sh"
+filename="${REPO_PATH}/st_rc_d/.d/.arb/lib0.arb/echo0.ram/.grot/echo0.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-echo0() {
+echo1() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -17,7 +17,7 @@ echo0() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/echo0.ram/.grot/echo0.sh)
+    local d_name=$(dirname ${REPO_PATH}/st_rc_d/.d/.arb/lib0.arb/echo1.ram/.grot/echo0.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then

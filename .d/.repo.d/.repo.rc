@@ -11,3 +11,19 @@ else
     echo "in fs=file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO}: : NOT_FILE : 'file://${file}' : ${hint} : return 1" >&2
     return 1
 fi
+
+echo -e "${HLIGHT}--- _arb_up ${ST_RC_D_PATH}/.d/.arb/lib0.arb ---${NORMAL}" #start files
+if ! _arb_up ${ST_RC_D_PATH}/.d/.arb/lib0.arb "in fs=file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO}, pwd=${PWD}"; then
+    echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO}: : EXEC_FAIL : '_arb_up ${MANE_PATH}/.d/.arb/lib0.arb' : ${hint} : return 1" >&2
+    return 1
+fi
+
+file_sh=${ST_RC_D_PATH}/.d/.ham/main/main.fn.lst.d/exec_tst_arb_.sh
+file_lst=${ST_RC_D_PATH}/.d/.ham/main/main.fn.lst.d/_exec_tst_arb_.lst
+
+if ! _tst_arb ${file_lst}; then
+    echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : EXEC_FAIL : '_tst_arb file://${file_lst}' : ${hint} : return 1" >&2
+    return 1
+fi
+
+return 0
