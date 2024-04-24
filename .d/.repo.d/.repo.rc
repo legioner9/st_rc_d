@@ -12,8 +12,8 @@ else
     return 1
 fi
 
-echo -e "${HLIGHT}--- _arb_up ${ST_RC_D_PATH}/.d/.arb/lib0.arb ---${NORMAL}" #start files
-if ! _arb_up ${ST_RC_D_PATH}/.d/.arb/lib0.arb "in fs=file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO}, pwd=${PWD}"; then
+echo -e "${HLIGHT}--- _arb_up ${ST_RC_D_PATH}/.d/.arb/stl0.arb ---${NORMAL}" #start files
+if ! _arb_up ${ST_RC_D_PATH}/.d/.arb/stl0.arb "in fs=file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO}, pwd=${PWD}"; then
     echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO}: : EXEC_FAIL : '_arb_up ${MANE_PATH}/.d/.arb/lib0.arb' : ${hint} : return 1" >&2
     return 1
 fi

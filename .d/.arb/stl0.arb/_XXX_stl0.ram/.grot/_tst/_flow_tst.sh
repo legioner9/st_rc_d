@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-filename=${MANE_PATH}/.d/.arb/lib0.arb/_XXX.ram/.grot/_tst/_flow_tst.sh
+filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_tst/_flow_tst.sh
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 PW=$(pwd)
 idir="$(dirname ${filename})"

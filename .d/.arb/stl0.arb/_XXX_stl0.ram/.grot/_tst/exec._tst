@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename=${MANE_PATH}/.d/.arb/lib0.arb/_XXX.ram/.grot/_tst/exec._tst
+filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_tst/exec._tst
 
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
