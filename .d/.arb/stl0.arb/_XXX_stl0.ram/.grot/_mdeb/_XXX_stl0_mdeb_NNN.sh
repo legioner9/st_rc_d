@@ -1,9 +1,18 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-___XXX_stl0_FLOW() {
+#. "${HOME}/.bashrc"
 
-    if ! command -v _XXX_stl0 >/dev/null; then
-        echo "TYPE_ERROR : _XXX_stl0" >&2
+filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_mdeb/_XXX_stl0_mdeb_NNN.sh"
+
+echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
+idir=$(pwd)
+# cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
+# garg_ $(prs_f -n $filename) $@ 1>/dev/null
+#{pre_fn}
+
+_XXX_stl0_mdeb_NNN() {
+     if ! command -v _XXX; then
+        echo "TYPE_ERROR : _XXX" >&2
         return 1
     fi
 
@@ -36,7 +45,10 @@ ___XXX_stl0_FLOW() {
         echo "${PW} not dir" >&2
         return 1
     }
-
 }
 
-___XXX_stl0_FLOW "$@"
+_XXX_stl0_mdeb_NNN "$@"
+
+cd "${idir}"
+unset filename
+#{post_fn}
