@@ -16,6 +16,8 @@ _XXX_stl0() {
     local NARGS=$#
     local verbose=0
 
+    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX
+
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX.sh
     local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX.sh)
 
