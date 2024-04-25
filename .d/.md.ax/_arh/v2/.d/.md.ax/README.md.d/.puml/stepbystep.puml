@@ -1,0 +1,45 @@
+@startuml
+
+participant sys
+participant ".bashrc" as brc
+participant ".st.rc" as st_rc
+participant ".enterrc" as erc
+participant ".fonshrc" as frc
+
+
+
+' sys -> brc : . .bashrc
+sys -> brc 
+
+
+note right
+<code>
+. .bashrc
+</code>
+end note
+brc -> st_rc
+note right
+<code>
+. ~/.d/.rc.d/.st.rc.d/.st.rc
+</code>
+end note
+
+ref over st_rc
+def [STRCD]=${HOME}/.d/.rc.d/.st.rc.d
+
+eval STRC_DATA_PATH=$(cat [STRCD]/.repo.data)
+def _up_d(){} - exec all file in dir
+def _up_st_os_d(){} - _up_d [STRCD]/.st.os.d
+_up_st_os_d - Up2Mem :
+    git-completion
+    git-prompt
+    git-alias
+    app-aliases - (user alias)
+    os_aliases - (util alias)
+def _up_st_config_d(){} - _up_d [STRCD]/.st.os.d
+def _up_st_sh_d(){}
+end ref
+
+
+
+@enduml

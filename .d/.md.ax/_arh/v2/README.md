@@ -15,6 +15,7 @@
 ## [<whatthat> Что такое strclib](.d/.md.ax/README.md.d/whatthat.md)
 ## [<embed> Развертывание](.d/.md.ax/README.md.d/embed.md)
 ## [<note> Заметки](.d/.md.ax/README.md.d/note.md)
+## [<stepbystep> Step by Step from .bashrc](.d/.md.ax/README.md.d/stepbystep.md)
 
 
 # Справочное руководство STRC
