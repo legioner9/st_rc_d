@@ -2,24 +2,26 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX.sh"
+filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/doxy_stl0.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-_XXX_stl0() {
+doxy_stl0() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
     local NARGS=$#
     local verbose=0
 
-    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX
+    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/doxy_stl0
 
-    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX.sh
-    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX.sh)
+    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/doxy_stl0.sh
+    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/doxy_stl0.sh)
+
+    echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file} ---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 

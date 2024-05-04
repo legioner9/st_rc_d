@@ -53,7 +53,10 @@ ${NORMAL}"
         fi
     fi
 
-    _sd2d _XXX $1 ${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram
+    local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/gig_fn_stl_stl0
+
+    # _sd2d _XXX $1 ${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram
+    _sdd2d _XXX $1 ${fn_data_dir}/_XXX_stl0.ram ${ST_RC_D_PATH}/.d/.arb/stl0.arb
 
 }
 

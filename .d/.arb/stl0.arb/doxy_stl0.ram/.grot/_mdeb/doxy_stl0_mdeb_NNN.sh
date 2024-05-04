@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_mdeb/_XXX_stl0_mdeb_NNN.sh"
+filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_mdeb/doxy_stl0_mdeb_NNN.sh"
 
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
@@ -10,13 +10,13 @@ idir=$(pwd)
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-_XXX_stl0_mdeb_NNN() {
-     if ! command -v _XXX; then
-        echo "TYPE_ERROR : _XXX" >&2
+doxy_stl0_mdeb_NNN() {
+     if ! command -v doxy; then
+        echo "TYPE_ERROR : doxy" >&2
         return 1
     fi
 
-    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_tst/_flow_tst.sh
+    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_flow_tst.sh
 
     local PW=$(pwd)
     local idir="$(dirname ${filename})"
@@ -47,7 +47,7 @@ _XXX_stl0_mdeb_NNN() {
     }
 }
 
-_XXX_stl0_mdeb_NNN "$@"
+doxy_stl0_mdeb_NNN "$@"
 
 cd "${idir}"
 unset filename
