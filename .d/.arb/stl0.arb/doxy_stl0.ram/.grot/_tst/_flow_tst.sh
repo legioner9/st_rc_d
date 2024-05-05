@@ -29,6 +29,11 @@ __doxy_stl0_FLOW() {
 
     # : >res
 
+    rm -r _dir_tst/1.doxy
+    mkdir _dir_tst/1.doxy
+
+    doxy_stl0 _dir_tst/1.ossa _dir_tst/1.doxy 0
+
     #?-------------------------------------
     #?----------------------------------------------------
 

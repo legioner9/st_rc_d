@@ -16,7 +16,7 @@ doxy_stl0() {
     local NARGS=$#
     local verbose=0
 
-    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/doxy_stl0
+    local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/doxy_stl0
 
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/doxy_stl0.sh
     local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/doxy_stl0.sh)
@@ -28,7 +28,9 @@ doxy_stl0() {
 MAIN: ${FNN} :: 
 TAGS:
 ARGS: 
-\$1
+\$1 dir_with_ossa 
+\$2 dir_with_doxy
+\$3 num menu or 0
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
@@ -56,10 +58,78 @@ ${NORMAL}"
         fi
     fi
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    # fi
+    hint="\$1 dir_with_ossa, \$2 dir_with_doxy, \$3 num menu or 0"
+    if _isn_from ${NARGS} 3 3 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '3' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
+
+    dir_doxy_file_sh=${fn_data_dir}/doxy.file.sh.d
+
+    if ! [[ -d ${dir_doxy_file_sh} ]]; then
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_doxy_file_sh}' : hint : dir with data for ${FNN}() : return 1"
+        return 1
+    fi
+
+    #! ptr_path
+    local dir_with_ossa="${ARGS[0]}"
+    echo -e "${GREEN}\$dir_with_ossa = $dir_with_ossa${NORMAL}" #print variable
+
+    if ! _abs_path "${PPWD}" dir_with_ossa; then
+        echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_abs_path ${PPWD} dir_with_ossa' : ${hint} : return 1" >&2
+        return 1
+    fi
+
+    dir_with_ossa="$(_abs_path "${PPWD}" "dir_with_ossa")"
+    #[[ptr_path_s]]
+
+    #! ptr_path
+    local dir_with_doxy="${ARGS[1]}"
+    echo -e "${GREEN}\$dir_with_doxy = $dir_with_doxy${NORMAL}" #print variable
+
+    if ! _abs_path "${PPWD}" dir_with_doxy; then
+        echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_abs_path ${PPWD} dir_with_doxy' : ${hint} : return 1" >&2
+        return 1
+    fi
+
+    dir_with_ossa="$(_abs_path "${PPWD}" "dir_with_doxy")"
+    #[[ptr_path_s]]
+
+    if _isn_od ${ARGS[2]}; then
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : NOT_NUMBER : \${ARGS[2]} = '${ARGS[2]}' : ${hint} : return 1"
+        return 1
+    fi
+
+    #* --- START _nr2mm_min ---
+    local _arr_name=()
+    local _arr_result=()
+    local _result=
+    local item=
+
+    _arr_name=($(_dd2e ${dir_doxy_file_sh}))
+
+    _parr3e _arr_name
+
+    for item in $(_dd2e ${dir_doxy_file_sh}); do
+        _arr_result+=("${dir_doxy_file_sh}/${item}")
+    done
+
+    _parr3e _arr_result
+
+    # arr_result=($(GEN_RESULT))
+
+    echo -e "
+${RED}--- parr2mm_ message :${BLUE}
+GENERATOR_INFO :
+name   from :: \$(_dd2e file://${dir_doxy_file_sh})
+result from :: name -> full path
+${RED}---${NORMAL}"
+
+    _nr2mm _arr_name _arr_result _result ${ARGS[2]}
+
+    echo -e "${GREEN}\$_result = $_result${NORMAL}" #print variable
+
+    #* --- END _nr2mm_min ---
+    #[[nr2mm_min]]
 
 }
 
