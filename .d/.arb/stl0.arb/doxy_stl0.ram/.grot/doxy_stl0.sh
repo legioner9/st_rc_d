@@ -101,8 +101,8 @@ ${NORMAL}"
 
     #* --- START _nr2mm_min ---
     local _arr_name=()
-    local _arr_result=()
-    local _result=
+    local arr_result=()
+    local result=
     local item=
 
     _arr_name=($(_dd2e ${dir_doxy_file_sh}))
@@ -110,10 +110,10 @@ ${NORMAL}"
     _parr3e _arr_name
 
     for item in $(_dd2e ${dir_doxy_file_sh}); do
-        _arr_result+=("${dir_doxy_file_sh}/${item}")
+        arr_result+=("${dir_doxy_file_sh}/${item}")
     done
 
-    _parr3e _arr_result
+    _parr3e arr_result
 
     # arr_result=($(GEN_RESULT))
 
@@ -124,9 +124,12 @@ name   from :: \$(_dd2e file://${dir_doxy_file_sh})
 result from :: name -> full path
 ${RED}---${NORMAL}"
 
-    _nr2mm _arr_name _arr_result _result ${ARGS[2]}
+    if ! _nr2mm _arr_name arr_result result ${ARGS[2]}; then
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_arr_name arr_result result ${ARGS[2]}' : ${hint} : return 1"
+        return 1
+    fi
 
-    echo -e "${GREEN}\$_result = $_result${NORMAL}" #print variable
+    echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
 
     #* --- END _nr2mm_min ---
     #[[nr2mm_min]]
