@@ -25,12 +25,13 @@ doxy_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: doxygen \$1 dir_with_ossa \$2 dir_with_doxy \$3 num menu or 0 dir with stand_conf \$4 file_stdin_extend_conf
 TAGS:
 ARGS: 
 \$1 dir_with_ossa 
 \$2 dir_with_doxy
 \$3 num menu or 0
+\$4 file_stdin_extend_conf
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
@@ -102,7 +103,7 @@ ${NORMAL}"
     #* --- START _nr2mm_min ---
     local _arr_name=()
     local arr_result=()
-    local result=
+    local _result=
     local item=
 
     _arr_name=($(_dd2e ${dir_doxy_file_sh}))
@@ -124,12 +125,14 @@ name   from :: \$(_dd2e file://${dir_doxy_file_sh})
 result from :: name -> full path
 ${RED}---${NORMAL}"
 
-    if ! _nr2mm _arr_name arr_result result ${ARGS[2]}; then
-        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_arr_name arr_result result ${ARGS[2]}' : ${hint} : return 1"
+    if ! _nr2mm _arr_name arr_result _result ${ARGS[2]}; then
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_arr_name arr_result _result ${ARGS[2]}' : ${hint} : return 1"
         return 1
     fi
 
-    echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
+    echo -e "${GREEN}\$_result = $_result${NORMAL}" #print variable
+
+    . $_result/doxy.sh
 
     #* --- END _nr2mm_min ---
     #[[nr2mm_min]]
