@@ -25,13 +25,10 @@ doxy_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: doxygen \$1 ( file_list_with_dir_ossa | 0 ) \$2 dir_with_doxy \$3 num menu or 0 dir with stand_conf
+MAIN: ${FNN} :: doxygen \$1 dir_with_ossa \$2 dir_with_doxy \$3 num menu or 0 dir with stand_conf
 TAGS:
 ARGS: 
-\$1 
-    - [file.lst] : with dir_with_ossa
-    - [0]        : if not exist file.lst : create empty file.lst
-                   if exist file.lst : _edit file.lst
+\$1 dir_with_ossa 
 \$2 dir_with_doxy
 \$3 num menu or 0
 \$4 file_stdin_extend_conf
