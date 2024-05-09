@@ -105,21 +105,21 @@ ${NORMAL}"
 
     #* --- START _nr2mm_min ---
     local _arr_name=()
-    local arr_result=()
+    local _arr_result=()
     local _result=
     local item=
-
+    echo -e "${HLIGHT}--- exec: _dd2e ${dir_doxy_file_sh} ---${NORMAL}" #start files
     _arr_name=($(_dd2e ${dir_doxy_file_sh}))
 
     _parr3e _arr_name
 
     for item in $(_dd2e ${dir_doxy_file_sh}); do
-        arr_result+=("${dir_doxy_file_sh}/${item}")
+        _arr_result+=("${dir_doxy_file_sh}/${item}")
     done
 
-    _parr3e arr_result
+    _parr3e _arr_result
 
-    # arr_result=($(GEN_RESULT))
+    # _arr_result=($(GEN_RESULT))
 
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE}
@@ -128,7 +128,7 @@ name   from :: \$(_dd2e file://${dir_doxy_file_sh})
 result from :: name -> full path
 ${RED}---${NORMAL}"
 
-    if ! _nr2mm _arr_name arr_result _result ${ARGS[2]}; then
+    if ! _nr2mm _arr_name _arr_result _result ${ARGS[2]}; then
         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_arr_name arr_result _result ${ARGS[2]}' : ${hint} : return 1"
         return 1
     fi
@@ -141,14 +141,16 @@ ${RED}---${NORMAL}"
     # ${dir_with_doxy}
     # ${dir_with_data}
 
-    if ! [[ -f ${dir_with_doxy}/conf/doxy.diss ]]; then
+    if ! [[ -f ${dir_with_doxy}/.conf/doxy.diss ]]; then
 
         [[ -d ${dir_with_doxy} ]] || mkdir ${dir_with_doxy}
-        [[ -d ${dir_with_doxy}/conf ]] || mkdir ${dir_with_doxy}/conf
+        [[ -d ${dir_with_doxy}/.conf ]] || mkdir ${dir_with_doxy}/conf
 
-        cp ${dir_with_data}/doxy.diss ${dir_with_doxy}/conf/doxy.diss
+        cp ${dir_with_data}/doxy.diss ${dir_with_doxy}/.conf/doxy.diss
 
     fi
+
+    [[ -f ${dir_with_doxy}/.conf/doxy.ossa.lst ]] || touch ${dir_with_doxy}/.conf/doxy.ossa.lst
 
     echo -e "${HLIGHT}--- exec: . ${dir_with_data}/doxy.sh ---${NORMAL}" #start files
 
@@ -159,17 +161,25 @@ ${RED}---${NORMAL}"
 
     echo -e "${HLIGHT}--- exec: . ${dir_with_doxy}/conf/doxy.diss ---${NORMAL}" #start files
 
-    . ${dir_with_doxy}/conf/doxy.diss || {
+    . ${dir_with_doxy}/.conf/doxy.diss || {
         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_with_doxy}/conf/doxy.diss' : return 1"
         return 1
     }
 
-    cd ${dir_with_doxy} || {
+    [[ -d ${dir_with_doxy}/.doxy ]] || rm -r ${dir_with_doxy}/.doxy
+
+    mkdir ${dir_with_doxy}/.doxy
+
+    cd ${dir_with_doxy}/.doxy || {
         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_with_doxy}' : return 1"
         return 1
     }
 
-    export INPUT="${dir_with_ossa}"
+    [[ -f ${dir_with_doxy}/.conf/doxy.ossa.lst ]] || ${dir_with_doxy}/.conf/doxy.ossa.lst
+
+    local input_arr=($(_f2e ${dir_with_doxy}/.conf/doxy.ossa.lst))
+
+    export INPUT="${input_arr[*]}" 
 
     echo -e "${HLIGHT}--- exec: doxygen ${dir_with_data}/doxy.file ---${NORMAL}" #start files
 

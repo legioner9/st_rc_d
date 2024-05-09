@@ -33,7 +33,7 @@ __doxy_stl0_FLOW() {
     # mkdir _dir_tst/1.doxy
 
     doxy_stl0 _dir_tst/1.ossa _dir_tst/1.doxy 2
-    yandex-browser ${idir}/_dir_tst/1.doxy/html/index.html
+    yandex-browser ${idir}/_dir_tst/1.doxy/.doxy/html/index.html
 
     #?-------------------------------------
     #?----------------------------------------------------
