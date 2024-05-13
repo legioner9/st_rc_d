@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-__pr1c_tr_stl0_FLOW() {
+__d1c8vt_stl0_FLOW() {
 
-    if ! command -v pr1c_tr_stl0 >/dev/null; then
-        echo "TYPE_ERROR : pr1c_tr_stl0" >&2
+    if ! command -v d1c8vt_stl0 >/dev/null; then
+        echo "TYPE_ERROR : d1c8vt_stl0" >&2
         return 1
     fi
 
-    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/pr1c_tr_stl0.ram/.grot/_tst/_flow_tst.sh
+    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/d1c8vt_stl0.ram/.grot/_tst/_flow_tst.sh
 
     local PW=$(pwd)
     local idir="$(dirname ${filename})"
@@ -39,4 +39,4 @@ __pr1c_tr_stl0_FLOW() {
 
 }
 
-__pr1c_tr_stl0_FLOW "$@"
+__d1c8vt_stl0_FLOW "$@"

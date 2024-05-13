@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/pr1c_tr_stl0.ram/.grot/_mdeb/pr1c_tr_stl0_mdeb_NNN.sh"
+filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/site2d_stl0.ram/.grot/_mdeb/site2d_stl0_mdeb_NNN.sh"
 
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
@@ -10,13 +10,13 @@ idir=$(pwd)
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-pr1c_tr_stl0_mdeb_NNN() {
-     if ! command -v pr1c_tr; then
-        echo "TYPE_ERROR : pr1c_tr" >&2
+site2d_stl0_mdeb_NNN() {
+     if ! command -v site2d; then
+        echo "TYPE_ERROR : site2d" >&2
         return 1
     fi
 
-    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/pr1c_tr_stl0.ram/.grot/_tst/_flow_tst.sh
+    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/site2d_stl0.ram/.grot/_tst/_flow_tst.sh
 
     local PW=$(pwd)
     local idir="$(dirname ${filename})"
@@ -47,7 +47,7 @@ pr1c_tr_stl0_mdeb_NNN() {
     }
 }
 
-pr1c_tr_stl0_mdeb_NNN "$@"
+site2d_stl0_mdeb_NNN "$@"
 
 cd "${idir}"
 unset filename

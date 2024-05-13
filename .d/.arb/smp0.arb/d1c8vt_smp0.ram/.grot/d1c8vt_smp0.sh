@@ -2,33 +2,33 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/pr1c_tr_stl0.ram/.grot/pr1c_tr_stl0.sh"
+filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/d1c8vt_stl0.ram/.grot/d1c8vt_stl0.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-pr1c_tr_stl0() {
+d1c8vt_stl0() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
     local NARGS=$#
     local verbose=0
 
-    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/pr1c_tr_stl0
+    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/d1c8vt_stl0
 
-    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/pr1c_tr_stl0.ram/.grot/pr1c_tr_stl0.sh
-    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/pr1c_tr_stl0.ram/.grot/pr1c_tr_stl0.sh)
+    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/d1c8vt_stl0.ram/.grot/d1c8vt_stl0.sh
+    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/d1c8vt_stl0.ram/.grot/d1c8vt_stl0.sh)
 
     #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: \$1 (-inst|-del) 1c trane predpriyatie [, \$2 = num v (default 8.3.25.1257)]
-TAGS:
+MAIN: ${FNN} :: 1cv8t (-inst|-del|-exec)
+TAGS: @1c
 ARGS: 
-\$1 (-inst|-del)
+\$1
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
@@ -56,7 +56,12 @@ ${NORMAL}"
         fi
     fi
 
-    hint="\$1: (-inst|-del)"
+    # hint="\$1: \$2: "
+    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+    #     return 1
+    # fi
+
+    hint="\$1: (-inst|-del|-exec)"
     if _isn_from ${NARGS} 1 2 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1,2' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
         return 1
     fi
@@ -70,7 +75,7 @@ ${NORMAL}"
     fi
 
     local dot_v=$arg2
-    local d_shift_v=${arg2/\./_}
+    local d_shift_v=${arg2//\./_}
     echo -e "${GREEN}\$d_shift_v = $d_shift_v${NORMAL}" #print variable
 
     local dir_src="/run/media/st/TOSHIBA_EXT/1c_distr/predpr_demo/training_${d_shift_v}_LinuxRun"
@@ -90,12 +95,24 @@ ${NORMAL}"
 
     # /opt/1cv8/x86_64
 
+    local dir_bin="/opt/1cv8t/x86_64/${dot_v}"
+    local file_bin_uninst="uninstaller-training"
+
     [[ "$1" == "-del" ]] && _is_yes "DO?: REMOVE 1c predpr tr" && {
-        cd ${dir_src}
-        sudo ./${file_src}
+        cd ${dir_bin}
+        sudo ./${file_bin_uninst}
         return 0
     }
-    _st_err "\$1 not (-inst|-del)"
+
+    local file_bin_exec="1cv8t"
+
+    [[ "$1" == "-exec" ]] && {
+        cd ${dir_bin}
+        ./${file_bin_exec} &
+        return 0
+    }
+
+    _st_err "\$1 not (-inst|-del|-exec)"
     return 1
     #RRR
 
