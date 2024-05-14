@@ -64,12 +64,12 @@ ${NORMAL}"
 
     #RRR
 
-    local arr1=$1
+    local arg1=$1
 
-    _st_pause "download? : ${ar1} to dir ${PPWD}"
-    _st_pause "do? : wget -r -l3 -k -p -E -np --remote-encoding=UTF-8 --user-agent=Mozilla/5.0 ${ar1} ${ar2}"
+    _st_pause "download? : ${arg1} to dir ${PPWD}"
+    _st_pause "do? : wget -r -l3 -k -p -E -np --remote-encoding=UTF-8 --user-agent=Mozilla/5.0 ${arg1}"
     # amount_arg $# min_args max_args
-    wget -r -l3 -k -p -E -np --remote-encoding=UTF-8 --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" "${ar1}"
+    wget -r -l3 -k -p -E -np --remote-encoding=UTF-8 --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" "${arg1}"
 
 }
 
