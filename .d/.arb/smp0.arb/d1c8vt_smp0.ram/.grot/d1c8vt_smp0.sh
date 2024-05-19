@@ -61,6 +61,8 @@ ${NORMAL}"
     #     return 1
     # fi
 
+    #! legioner9999 124578a124578a
+
     hint="\$1: (-inst|-del|-exec)"
     if _isn_from ${NARGS} 1 2 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1,2' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
         return 1
@@ -78,8 +80,8 @@ ${NORMAL}"
     local d_shift_v=${arg2//\./_}
     echo -e "${GREEN}\$d_shift_v = $d_shift_v${NORMAL}" #print variable
 
-    local dir_src="/run/media/st/TOSHIBA_EXT/1c_distr/predpr_demo/training_${d_shift_v}_LinuxRun"
-    local file_src="setup-training-${dot_v}-x86_64.run"
+    local dir_src="${HOME}/1c_com_lic/server64_${d_shift_v}"
+    local file_src="setup-full-${dot_v}-x86_64.run"
 
     if ! [[ -f ${dir_src}/${file_src} ]]; then
         hint=".run installer"
@@ -95,8 +97,8 @@ ${NORMAL}"
 
     # /opt/1cv8/x86_64
 
-    local dir_bin="/opt/1cv8t/x86_64/${dot_v}"
-    local file_bin_uninst="uninstaller-training"
+    local dir_bin="/opt/1cv8/x86_64/${dot_v}"
+    local file_bin_uninst="uninstaller-full"
 
     [[ "$1" == "-del" ]] && _is_yes "DO?: REMOVE 1c predpr tr" && {
         cd ${dir_bin}
@@ -104,7 +106,7 @@ ${NORMAL}"
         return 0
     }
 
-    local file_bin_exec="1cv8t"
+    local file_bin_exec="1cv8"
 
     [[ "$1" == "-exec" ]] && {
         cd ${dir_bin}

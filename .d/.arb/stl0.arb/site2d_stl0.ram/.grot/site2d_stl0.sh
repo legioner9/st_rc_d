@@ -69,7 +69,10 @@ ${NORMAL}"
     else
         if _is_yes "wget -r -k -p -E -np --user-agent=\"Mozilla/5.0 \(X11; Linux x86_64\) AppleWebKit/537.36 \(KHTML, like Gecko\) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36 $1"; then
 
-            wget -r -k -p -E -np --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" "$1"
+            # wget -r -k -p -E -np --user-agent="Mozilla/5.0 (Linux; arm_64; Android 14; SM-G965F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.119 YaBrowser/21.3.4.59 Mobile Safari/537.36" "$1"
+            #wget -rk -np -nc -U "Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20110328 Firefox/24.0" --wait=5 --random-wait  адрес_сайта
+            # wget -r -k -p -E -np --user-agent="Mozilla/5.0 (X11; Linux x86_64; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"  --wait=5 --random-wait "$1"
+            wget -rk -np -nc -U "Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20110328 Firefox/24.0" --wait=5 --random-wait  "$1"
 
         fi
     fi
