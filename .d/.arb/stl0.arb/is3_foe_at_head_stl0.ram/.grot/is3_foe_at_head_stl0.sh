@@ -77,10 +77,10 @@ ${NORMAL}"
 
     ! git rev-parse --show-toplevel && {
         hint="'file://$(pwd)' ?is git dir"
-        _st_info "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'git rev-parse --show-toplevel' : ${hint} : return 1"
+        _st_info "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'git rev-parse --show-toplevel' : ${hint} : return 3"
 
         cd ${PPWD}
-        return 1
+        return 3
     }
     #{{estat}}
 

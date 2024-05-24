@@ -27,6 +27,45 @@ __foe2head_stl0_FLOW() {
     #?----------------------------------------------------
     #?-------------------------------------
 
+    rm -rf ${HOME}/.foe.bac
+    cp -r ${HOME}/.foe/init/. ${HOME}/.foe.bac
+    : >${HOME}/.foe.bac/1.file
+    echo "rbdbgf" >${HOME}/.foe.bac/init
+    mkdir ${HOME}/.foe.bac/dir
+    echo "yuoy" >${HOME}/.foe.bac/dir/2.file
+
+    echo -e "${HLIGHT}--- foe2head_stl0 ${HOME}/.foe.bac ---${NORMAL}" #start files
+    foe2head_stl0 ${HOME}/.foe.bac
+    # _ret2e foe2head_stl0 ${HOME}/.foe.bac
+
+    echo -e "${HLIGHT}--- foe2head_stl0 ${HOME}/x/.foe.bac ---${NORMAL}" #start files
+    foe2head_stl0 ${HOME}/x/.foe.bac
+    # _ret2e foe2head_stl0 ${HOME}/x/.foe.bac
+
+    echo -e "${HLIGHT}--- cd ${HOME}/.foe.bac ---${NORMAL}" #start files
+    cd ${HOME}/.foe.bac || {
+        _st_exit "FAIL: cd ${HOME}/.foe.bac"
+        return 1
+    }
+
+    echo -e "${HLIGHT}--- foe2head_stl0 ---${NORMAL}" #start files
+    foe2head_stl0
+    # _ret2e foe2head_stl0
+
+    echo -e "${HLIGHT}--- foe2head_stl0 dfv ---${NORMAL}" #start files
+    foe2head_stl0 dfv
+    # _ret2e foe2head_stl0 dfv
+
+    echo -e "${HLIGHT}--- foe2head_stl0 ${HOME}/.foe ---${NORMAL}" #start files
+    foe2head_stl0 ${HOME}/.foe
+    # _ret2e foe2head_stl0 ${HOME}/.foe
+
+    echo -e "${HLIGHT}--- cat ${HOME}/.foe.bac/init ---${NORMAL}" #start files
+    cat ${HOME}/.foe.bac/init
+    file ${HOME}/.foe.bac/1.file
+    file ${HOME}/.foe.bac/dir
+    file ${HOME}/.foe.bac/dir/2.file
+
     # : >res
 
     #?-------------------------------------

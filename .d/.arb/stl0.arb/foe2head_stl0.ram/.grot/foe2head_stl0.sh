@@ -26,7 +26,7 @@ foe2head_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: git reset work dir [if \$1 -> abs_path] to HEAD and deete untrack files
+MAIN: ${FNN} :: git reset work dir [if \$1 -> abs_path] to HEAD and delte untrack files
 TAGS:
 ARGS: 
 \$1
@@ -91,9 +91,12 @@ ${NORMAL}"
         return 1
     fi
 
+    # echo -e "${BLUE}--- exec: git status -s in file://$(pwd) ---${NORMAL}" #start files
+    # git status -s
+
     if [[ -z "$(git status -s)" ]]; then
         echo -e "${RED}--- work dir file://$(pwd) is clear ---${NORMAL}" #sistem info mesage
-        echo -e "${RED}--- return 0 ---${NORMAL}"          #start files
+        echo -e "${RED}--- return 0 ---${NORMAL}"                        #start files
 
         cd ${PPWD}
         return 0

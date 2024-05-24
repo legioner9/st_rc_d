@@ -29,6 +29,35 @@ __is3_foe_at_head_stl0_FLOW() {
 
     # : >res
 
+    rm -rf ${HOME}/.foe.bac
+    cp -r ${HOME}/.foe/init/. ${HOME}/.foe.bac
+
+    echo -e "${HLIGHT}--- is3_foe_at_head_stl0 ${HOME}/.foe.bac ---${NORMAL}" #start files
+    is3_foe_at_head_stl0 ${HOME}/.foe.bac
+    _ret2e is3_foe_at_head_stl0 ${HOME}/.foe.bac
+
+    echo -e "${HLIGHT}--- is3_foe_at_head_stl0 ${HOME}/x/.foe.bac ---${NORMAL}" #start files
+    is3_foe_at_head_stl0 ${HOME}/x/.foe.bac
+    _ret2e is3_foe_at_head_stl0 ${HOME}/x/.foe.bac
+
+    echo -e "${HLIGHT}--- cd ${HOME}/.foe.bac ---${NORMAL}" #start files
+    cd ${HOME}/.foe.bac || {
+        _st_exit "FAIL: cd ${HOME}/.foe.bac"
+        return 1
+    }
+
+    echo -e "${HLIGHT}--- is3_foe_at_head_stl0 ---${NORMAL}" #start files
+    is3_foe_dir_stl0
+    _ret2e is3_foe_dir_stl0
+
+    echo -e "${HLIGHT}--- is3_foe_at_head_stl0 dfv ---${NORMAL}" #start files
+    is3_foe_at_head_stl0 dfv
+    _ret2e is3_foe_at_head_stl0 dfv
+
+    echo -e "${HLIGHT}--- is3_foe_at_head_stl0 ${HOME}/.foe ---${NORMAL}" #start files
+    is3_foe_at_head_stl0 ${HOME}/.foe
+    _ret2e is3_foe_at_head_stl0 ${HOME}/.foe
+
     #?-------------------------------------
     #?----------------------------------------------------
 
