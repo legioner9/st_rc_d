@@ -2,24 +2,24 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/d1c8vt_stl0.ram/.grot/d1c8vt_stl0.sh"
+filename="${ST_RC_D_PATH}/.d/.arb/smp0.arb/d1c8vt_smp0.ram/.grot/d1c8vt_smp0.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-d1c8vt_stl0() {
+d1c8vt_smp0() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
     local NARGS=$#
     local verbose=0
 
-    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/d1c8vt_stl0
+    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/d1c8vt_smp0
 
-    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/d1c8vt_stl0.ram/.grot/d1c8vt_stl0.sh
-    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/d1c8vt_stl0.ram/.grot/d1c8vt_stl0.sh)
+    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/smp0.arb/d1c8vt_smp0.ram/.grot/d1c8vt_smp0.sh
+    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/smp0.arb/d1c8vt_smp0.ram/.grot/d1c8vt_smp0.sh)
 
     #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
@@ -52,6 +52,7 @@ ${NORMAL}"
             . ${d_name}/_tst/exec.tst
         else
             echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/exec.tst' : ${hint} : return 1" >&2
+            cd ${PPWD}
             return 1
         fi
     fi
@@ -65,6 +66,7 @@ ${NORMAL}"
 
     hint="\$1: (-inst|-del|-exec)"
     if _isn_from ${NARGS} 1 2 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1,2' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        cd ${PPWD}
         return 1
     fi
 
@@ -86,12 +88,14 @@ ${NORMAL}"
     if ! [[ -f ${dir_src}/${file_src} ]]; then
         hint=".run installer"
         _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_src}/${file_src}' : ${hint} : return 1"
+        cd ${PPWD}
         return 1
     fi
 
     [[ "$1" == "-inst" ]] && _is_yes "DO?: INSTALL 1c predpr tr" && {
         cd ${dir_src}
         sudo ./${file_src}
+        cd ${PPWD}
         return 0
     }
 
@@ -103,6 +107,7 @@ ${NORMAL}"
     [[ "$1" == "-del" ]] && _is_yes "DO?: REMOVE 1c predpr tr" && {
         cd ${dir_bin}
         sudo ./${file_bin_uninst}
+        cd ${PPWD}
         return 0
     }
 
@@ -111,10 +116,12 @@ ${NORMAL}"
     [[ "$1" == "-exec" ]] && {
         cd ${dir_bin}
         ./${file_bin_exec} &
+        cd ${PPWD}
         return 0
     }
 
     _st_err "\$1 not (-inst|-del|-exec)"
+    cd ${PPWD}
     return 1
     #RRR
 
