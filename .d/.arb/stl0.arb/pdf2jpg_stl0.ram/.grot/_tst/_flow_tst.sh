@@ -29,6 +29,20 @@ __pdf2jpg_stl0_FLOW() {
 
     # : >res
 
+    cd _dir_tst || {
+        echo "_dir_tst not dir" >&2
+        return 1
+    }
+
+    rm tst.pdf
+    rm tst.jpg
+    cp _tst.pdf tst.pdf
+    pdf2jpg_stl0 tst.pdf
+    # pdftocairo -jpeg tst.pdf
+
+    # mv tst-1.jpg tst.jpg
+    # rm tst.pdf
+
     #?-------------------------------------
     #?----------------------------------------------------
 

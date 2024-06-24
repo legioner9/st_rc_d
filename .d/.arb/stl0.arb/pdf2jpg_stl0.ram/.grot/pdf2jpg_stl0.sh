@@ -27,7 +27,7 @@ pdf2jpg_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: \$1 file_name.pdf (single page) to file_name.jpg 
 TAGS:
 ARGS: 
 \$1
@@ -58,10 +58,40 @@ ${NORMAL}"
         fi
     fi
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    # fi
+    hint="\$1 file_name.pdf (single page) to file_name.jpg"
+    if _isn_from ${NARGS} 1 1 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
+
+    #! ptr_path
+    local ptr_path="$1"
+    ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
+    #[[ptr_path]]
+
+    [ -f ${ptr_path} ] || {
+
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${ptr_path}' : ${hint} : return 1"
+        return 1
+
+    }
+
+    file_name=$(_prs_f -n ${ptr_path})
+    file_ext=$(_prs_f -e ${ptr_path})
+    dir_path=$(_prs_f -d ${ptr_path})
+
+    [ ${file_ext} == "pdf" ] || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '${file_ext} == pdf ' : ${hint} : return 1"
+        return 1
+    }
+
+    pdftocairo -jpeg ${ptr_path} || {
+        # hint="\$1: \$2: "
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'pdftocairo -jpeg ${ptr_path}' : ${hint} : return 1"
+        return 1
+    }
+
+    mv ${dir_path}/${file_name}-1.jpg ${dir_path}/${file_name}.jpg
+    rm ${ptr_path}
 
     cd ${PPWD}
     return 0
