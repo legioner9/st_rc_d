@@ -84,14 +84,22 @@ ${NORMAL}"
         return 1
     }
 
-    pdftocairo -jpeg ${ptr_path} || {
+    cd ${dir_path} || {
+        # hint="\$1: \$2: "
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'cd ${dir_path}' : ${hint} : return 1"
+        return 1
+    }
+
+    echo -e "${HLIGHT}--- pdftocairo -jpeg ${ptr_path} ---${NORMAL}" #start files
+    pdftocairo -jpeg ${file_name}.pdf || {
         # hint="\$1: \$2: "
         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'pdftocairo -jpeg ${ptr_path}' : ${hint} : return 1"
         return 1
     }
 
-    mv ${dir_path}/${file_name}-1.jpg ${dir_path}/${file_name}.jpg
-    rm ${ptr_path}
+    echo -e "${HLIGHT}--- mv ${file_name}-1.jpg ${file_name}.jpg ---${NORMAL}" #start files
+    mv ${file_name}-1.jpg ${file_name}.jpg
+    rm ${file_name}.pdf
 
     cd ${PPWD}
     return 0
