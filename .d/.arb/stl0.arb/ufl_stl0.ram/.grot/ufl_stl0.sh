@@ -30,7 +30,7 @@ ufl_stl0() {
 MAIN: ${FNN} :: unite file from tml, value, proc
 TAGS:
 ARGS: 
-\$1
+\$1 0 or num_menu dir_ptv from ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
@@ -58,16 +58,33 @@ ${NORMAL}"
         fi
     fi
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    # fi
+    hint="\$1: 0 or num menu"
+    if _isn_from ${NARGS} 1 10 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
 
     #* ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 
-     
+    local dir_ptv=${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 
+    local arr_ptv=($(_dd2e ${dir_ptv}))
 
+    local res_ptv=
+
+    _nr2mm arr_ptv arr_ptv res_ptv ${ARGS[0]}
+
+    echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}" #print variable
+
+    dir_set=${dir_ptv}/${res_ptv}
+
+    local dir_ins=${dir_set}/.ins    
+    local dir_prc=${dir_set}/.prc
+    local dir_tml=${dir_set}/.tml
+    local dir_vlu=${dir_set}/.vlu
+
+    local file_mane=${dir_set}/main.sh
+
+    . ${file_mane}
 
     cd ${PPWD}
     return 0
