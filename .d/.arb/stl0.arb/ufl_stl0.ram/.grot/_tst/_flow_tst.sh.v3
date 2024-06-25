@@ -29,17 +29,15 @@ __ufl_stl0_FLOW() {
 
     # : >res
 
-     _st_info "tst 'ufl_stl0 1'"
+     _st_info "tst 'ufl_stl0' catalogs"
 
     cd _dir_tst || {
         _st_info "${idir}/_dir_tst NOT_DIR return 1"
         return 1
     }
 
-    ufl_stl0 1 any.sh
+    ufl_stl0
 
-    _edit any.sh
- 
     #?-------------------------------------
     #?----------------------------------------------------
 

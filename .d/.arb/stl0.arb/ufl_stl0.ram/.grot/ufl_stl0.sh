@@ -44,6 +44,41 @@ ${NORMAL}"
     fi
     #{help_cntl_fn}
 
+    local dir_ptv=${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+
+    # local arr_ptv=($(_dd2e ${dir_ptv}))
+
+    _E_ufl_stl0() {
+
+        echo -e "${HLIGHT}--- START CATALOG ufl_stl0 ---${NORMAL}" #start files
+        local item=
+        for item in $(_dd2e ${dir_ptv}); do
+            # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+            local e_dir=${dir_ptv}/${item}
+            local name_str="${item}"
+            local main_str=$(cat ${e_dir}/main.sh | grep MAIN)
+            local tags_str=$(cat ${e_dir}/main.sh | grep TAGS)
+            local exam_str=$(cat ${e_dir}/main.sh | grep EXAM)
+
+            echo -e "
+${BLUE}FILE: file://${e_dir}${NORMAL}
+${GREEN}NAME: ${name_str}${NORMAL}
+${RED}${main_str}${NORMAL}
+${CYAN}${tags_str}${NORMAL}
+${CYAN}${exam_str}${NORMAL}
+"
+
+        done
+
+        echo -e "${HLIGHT}--- END CATALOG ufl_stl0 ---${NORMAL}" #start files
+
+    }
+
+    [ -z "$1" ] && {
+        _E_ufl_stl0
+        return 0
+    }
+
     if [[ "_go" == "$1" ]]; then
         _edit "${d_name}/${FNN}".sh
         return 0
@@ -65,19 +100,28 @@ ${NORMAL}"
 
     #* ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 
-    local dir_ptv=${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+    # local dir_ptv=${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 
-    local arr_ptv=($(_dd2e ${dir_ptv}))
+    local arr1_ptv=($(_dd2e ${dir_ptv}))
+    local arr2_ptv=($(_dd2e ${dir_ptv}))
+
+    arr1_ptv+=("_edit file://${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0")
+    arr2_ptv+=("_edit ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0")
 
     local res_ptv=
 
-    _nr2mm arr_ptv arr_ptv res_ptv ${ARGS[0]}
+    _nr2mm arr1_ptv arr2_ptv res_ptv ${ARGS[0]}
+
+    [ "_edit ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0" == "${res_ptv}" ] && {
+        _edit ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+        return 0
+    }
 
     echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}" #print variable
 
     dir_set=${dir_ptv}/${res_ptv}
 
-    local dir_ins=${dir_set}/.ins    
+    local dir_ins=${dir_set}/.ins
     local dir_prc=${dir_set}/.prc
     local dir_tml=${dir_set}/.tml
     local dir_vlu=${dir_set}/.vlu
