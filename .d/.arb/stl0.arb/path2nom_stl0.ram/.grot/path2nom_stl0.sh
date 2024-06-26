@@ -68,6 +68,8 @@ ${NORMAL}"
     ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
+    eval "_s2f ${REPO_PATH} '\${REPO_PATH}' ${ptr_path}"
+
     cd ${PPWD}
     return 0
 

@@ -28,6 +28,13 @@ __path2nom_stl0_FLOW() {
     #?-------------------------------------
 
     # : >res
+    cd _dir_tst || _st_exit "NOT_DIR _dir_tst"
+    rm res_with_path.lst
+    cp init_with_path.lst res_with_path.lst
+
+    path2nom_stl0 res_with_path.lst
+
+    cat res_with_path.lst
 
     #?-------------------------------------
     #?----------------------------------------------------
