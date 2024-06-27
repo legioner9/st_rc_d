@@ -68,6 +68,19 @@ ${NORMAL}"
     ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
+    # $ST_RC_D_DATA_PATH
+    # $STRC_DATA_PATH
+    # $STA_PATH
+    # $ST_RC_D_PATH
+
+    eval "_s2f ${ST_RC_D_PATH} '\${ST_RC_D_PATH}' ${ptr_path}" # /home/st/REPOBARE/_repo/st_rc_d
+
+    eval "_s2f ${ST_RC_D_DATA_PATH} '\${ST_RC_D_DATA_PATH}' ${ptr_path}" # data_repo for st_rc_d repo
+    eval "_s2f ${STRC_DATA_PATH} '\${STRC_DATA_PATH}' ${ptr_path}" # data_repo for ~/.d
+
+    
+    #! eval "_s2f ${STA_PATH} '\${STA_PATH}' ${ptr_path}"
+
     eval "_s2f ${REPO_PATH} '\${REPO_PATH}' ${ptr_path}"
 
     cd ${PPWD}

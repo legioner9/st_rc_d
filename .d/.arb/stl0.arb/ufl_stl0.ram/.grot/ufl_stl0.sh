@@ -126,9 +126,11 @@ ${CYAN}${exam_str}${NORMAL}
     local dir_tml=${dir_set}/.tml
     local dir_vlu=${dir_set}/.vlu
 
-    local file_mane=${dir_set}/main.sh
+    local file_main=${dir_set}/main.sh
 
-    . ${file_mane}
+    . ${file_main}
+
+
 
     cd ${PPWD}
     return 0
