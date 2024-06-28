@@ -27,9 +27,9 @@ arb2f_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: \$1: recive file
+MAIN: ${FNN} :: \$1: recive file [, \$2 lst_arb (if \$2='' dflt lst_arb=\${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f_stl0/mitt_arb.lst )]
 TAGS:
-ARGS: 
+ARGS: \$1: recive file [, \$2 lst_arb (if \$2='' dflt lst_arb=\${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f_stl0/mitt_arb.lst )]
 \$1: recive file
 [ ,\$2 num_menu ]
 CNTL: 
@@ -58,13 +58,21 @@ ${NORMAL}"
         fi
     fi
 
-    local lst_mitt=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f_stl0/mitt_arb.lst
+    local lst_mitt
+
+    if [ -z "$2" ]; then
+        lst_mitt=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f_stl0/mitt_arb.lst
+    else
+        lst_mitt=$2
+    fi
+
     if [ -z "$1" ]; then
         larb2e_stl0_ ${lst_mitt}
+        return 0
     fi
 
     hint="\$1: recive file"
-    if _isn_from ${NARGS} 1 1 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+    if _isn_from ${NARGS} 1 2 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1..2' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
         return 1
     fi
 
@@ -77,6 +85,10 @@ ${NORMAL}"
         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${ptr_path}' : ${hint} : return 1"
         return 1
     }
+
+    local arr_arb=($(_f2e $lst_mitt))
+
+    parr3e_ arr_arb
 
     cd ${PPWD}
     return 0
