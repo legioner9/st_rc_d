@@ -130,8 +130,6 @@ ${CYAN}${exam_str}${NORMAL}
 
     . ${file_main}
 
-
-
     cd ${PPWD}
     return 0
 
