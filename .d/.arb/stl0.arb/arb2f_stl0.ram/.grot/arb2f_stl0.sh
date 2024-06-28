@@ -27,10 +27,10 @@ arb2f_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: \$1: recive file
 TAGS:
 ARGS: 
-\$1
+\$1: recive file
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
@@ -63,17 +63,15 @@ ${NORMAL}"
         larb2e_stl0_ ${lst_mitt}
     fi
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    # fi
+    hint="\$1: recive file"
+    if _isn_from ${NARGS} 1 1 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
 
     #! ptr_path
     local ptr_path="$1"
     ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
-
-    hint="\$1: recive file"
 
     [ -f ${ptr_path} ] || {
         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${ptr_path}' : ${hint} : return 1"
@@ -81,7 +79,7 @@ ${NORMAL}"
     }
 
     cd ${PPWD}
-    return 0 
+    return 0
 
 }
 

@@ -72,7 +72,7 @@ ${NORMAL}"
 
     #! ptr_path
     local ptr_path="$1"
-    ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
+    ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
     cd ${ptr_path} || {

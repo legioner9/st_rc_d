@@ -65,7 +65,7 @@ ${NORMAL}"
 
     #! ptr_path
     local ptr_path="$1"
-    ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
+    ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
     # $ST_RC_D_DATA_PATH

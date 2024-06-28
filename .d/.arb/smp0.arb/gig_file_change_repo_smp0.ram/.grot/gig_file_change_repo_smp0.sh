@@ -65,12 +65,12 @@ ${NORMAL}"
 
     #! ptr_path
     local ptr_path_1="$1"
-    ptr_path_1="$("${_abs_path}" "${PPWD}" "ptr_path_1")"
+    ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
     # [[ptr_path]]
 
     #! ptr_path
     local ptr_path_2="$2"
-    ptr_path_2="$("${_abs_path}" "${PPWD}" "ptr_path_2")"
+    ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
     # [[ptr_path]]
 
     hint="'git status -s' at any dir from dir \$1 , \$2 file with changed repo"
