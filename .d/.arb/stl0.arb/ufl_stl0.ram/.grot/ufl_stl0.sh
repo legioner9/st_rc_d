@@ -23,7 +23,7 @@ ufl_stl0() {
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
     local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh)
 
-    #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
+    echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
@@ -125,10 +125,16 @@ ${CYAN}${exam_str}${NORMAL}
     local dir_prc=${dir_set}/.prc
     local dir_tml=${dir_set}/.tml
     local dir_vlu=${dir_set}/.vlu
+    local dir_lst=${dir_set}/.lst
+    local dir_lst2=${dir_set}/.lst2
+    local dir_rpn=${dir_set}/.rpn
 
     local file_main=${dir_set}/main.sh
 
-    . ${file_main}
+    . ${file_main} || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. file://${file_main}' : return 1"
+        return 1
+    }
 
     cd ${PPWD}
     return 0
