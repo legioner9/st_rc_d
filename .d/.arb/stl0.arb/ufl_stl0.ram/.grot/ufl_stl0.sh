@@ -18,7 +18,7 @@ ufl_stl0() {
     local hint=
     local estat=
 
-    local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+    local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d
 
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
     local d_name=$(dirname ${fn_sh_file})
@@ -98,22 +98,22 @@ ${CYAN}${exam_str}${NORMAL}
         return 1
     fi
 
-    #* ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+    #* ${fn_data_dir}
 
-    # local dir_ptv=${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+    # local dir_ptv=${fn_data_dir}
 
     local arr1_ptv=($(_dd2e ${dir_ptv}))
     local arr2_ptv=($(_dd2e ${dir_ptv}))
 
-    arr1_ptv+=("_edit file://${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0")
-    arr2_ptv+=("_edit ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0")
+    arr1_ptv+=("_edit file://${fn_data_dir}")
+    arr2_ptv+=("_edit ${fn_data_dir}")
 
     local res_ptv=
 
     _nr2mm arr1_ptv arr2_ptv res_ptv ${ARGS[0]}
 
-    [ "_edit ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0" == "${res_ptv}" ] && {
-        _edit ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+    [ "_edit ${fn_data_dir}" == "${res_ptv}" ] && {
+        _edit ${fn_data_dir}
         return 0
     }
 
