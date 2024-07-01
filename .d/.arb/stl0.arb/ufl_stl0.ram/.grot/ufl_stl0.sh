@@ -18,10 +18,10 @@ ufl_stl0() {
     local hint=
     local estat=
 
-    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+    local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
-    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh)
+    local d_name=$(dirname ${fn_sh_file})
 
     echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
@@ -30,7 +30,7 @@ ufl_stl0() {
 MAIN: ${FNN} :: unite file from tml, value, proc
 TAGS:
 ARGS: 
-\$1 0 or num_menu dir_ptv from ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+\$1 0 or num_menu dir_ptv from ${d_name}
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
@@ -44,7 +44,7 @@ ${NORMAL}"
     fi
     #{help_cntl_fn}
 
-    local dir_ptv=${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+    local dir_ptv=${fn_data_dir}
 
     # local arr_ptv=($(_dd2e ${dir_ptv}))
 
