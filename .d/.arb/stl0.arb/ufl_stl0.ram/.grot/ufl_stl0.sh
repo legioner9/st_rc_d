@@ -19,6 +19,8 @@ ufl_stl0() {
     local estat=
 
     local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d
+    # ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.lst/cntx_name_value.lst
+    local fn_lst_cntx_file=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.lst/cntx_name_value.lst
 
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
     local d_name=$(dirname ${fn_sh_file})
@@ -105,15 +107,15 @@ ${CYAN}${exam_str}${NORMAL}
     local arr1_ptv=($(_dd2e ${dir_ptv}))
     local arr2_ptv=($(_dd2e ${dir_ptv}))
 
-    arr1_ptv+=("_edit file://${fn_data_dir}")
-    arr2_ptv+=("_edit ${fn_data_dir}")
+    arr1_ptv+=("_edit file://${dir_ptv}")
+    arr2_ptv+=("_edit ${dir_ptv}")
 
     local res_ptv=
 
     _nr2mm arr1_ptv arr2_ptv res_ptv ${ARGS[0]}
 
-    [ "_edit ${fn_data_dir}" == "${res_ptv}" ] && {
-        _edit ${fn_data_dir}
+    [ "_edit ${dir_ptv}" == "${res_ptv}" ] && {
+        _edit ${dir_ptv}
         return 0
     }
 
