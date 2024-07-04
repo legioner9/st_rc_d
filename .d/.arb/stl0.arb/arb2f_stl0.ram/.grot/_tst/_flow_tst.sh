@@ -27,8 +27,16 @@ __arb2f_stl0_FLOW() {
     #?----------------------------------------------------
     #?-------------------------------------
 
-    # : >res
+    : >"${idir}"/res
+    cd _dir_tst || _st_exit "NOT_DIR _dir_tst"
 
+    rm ptr_path.file
+    cp ptr_path_init.file ptr_path.file
+
+    arb2f_stl0 ptr_path.file
+
+    cat ptr_path.file >"${idir}"/res
+    echo >>"${idir}"/res
     #?-------------------------------------
     #?----------------------------------------------------
 

@@ -31,7 +31,12 @@ __arb2f_stl0_FLOW() {
 
     cd _dir_tst || _st_exit "NOT_DIR _dir_tst"
 
-    arb2f_stl0 
+    rm ptr_path.file
+    cp ptr_path_init.file ptr_path.file
+
+    arb2f_stl0 ptr_path.file
+
+    cat ptr_path.file
 
     #?-------------------------------------
     #?----------------------------------------------------

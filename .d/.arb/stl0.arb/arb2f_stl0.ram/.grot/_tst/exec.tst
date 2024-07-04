@@ -2,8 +2,8 @@
 
 __arb2f_stl0_TST() {
 
-    if ! command -v arb2f >/dev/null; then
-        echo "TYPE_ERROR : arb2f" >&2
+    if ! command -v arb2f_stl0 >/dev/null; then
+        echo "TYPE_ERROR : arb2f_stl0" >&2
         return 1
     fi
 

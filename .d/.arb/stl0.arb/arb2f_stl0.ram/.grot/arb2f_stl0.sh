@@ -86,9 +86,28 @@ ${NORMAL}"
         return 1
     }
 
-    local arr_arb=($(_f2e $lst_mitt))
+    local item=
+    local item2=
+    local file_cont=
+    local recive_name=
 
-    parr3e_ arr_arb
+    for item in $(_f2e $lst_mitt); do
+
+        # echo -e "${GREEN}\$item = file://$item${NORMAL}" #print variable
+        for item2 in $(_dd2e $item ram); do
+            # echo -e "${BLUE}file://$item/$item2${NORMAL}" #print variable
+            recive_name=$(_prs_f -n "$item2")
+            # echo -e "${BLUE}\$recive_name = $recive_name${NORMAL}" #print variable
+            file_cont=$item/$item2/cont.fol
+            (cat ${ptr_path} | grep "{{${recive_name}}" >/dev/null) && {
+                echo "${recive_name}"
+                # echo -e "${BLUE}\$file_cont = file://$file_cont${NORMAL}" #print variable
+                _f2f ${file_cont} "{{${recive_name}}" ${ptr_path}
+                _s2f "{{${recive_name}}}" "[[${recive_name}]]" ${ptr_path}
+            }
+
+        done
+    done
 
     cd ${PPWD}
     return 0
