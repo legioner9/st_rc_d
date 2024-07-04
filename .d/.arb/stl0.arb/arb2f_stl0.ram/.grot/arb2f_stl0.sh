@@ -29,8 +29,8 @@ arb2f_stl0() {
         echo -e "${CYAN} ${FNN}() help: 
 MAIN: ${FNN} :: \$1: recive file [, \$2 lst_arb (if \$2='' dflt lst_arb=\${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f_stl0/mitt_arb.lst )]
 TAGS:
-ARGS: \$1: recive file [, \$2 lst_arb (if \$2='' dflt lst_arb=\${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f_stl0/mitt_arb.lst )]
-\$1: recive file
+ARGS: \$1: recive file (if \$1=@ _edit dflt lst_arb) [, \$2 lst_arb (\$2='' dflt lst_arb=\${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f_stl0/mitt_arb.lst )])
+\$1: recive file (if \$1=@ _edit dflt lst_arb)
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
@@ -66,8 +66,13 @@ ${NORMAL}"
         lst_mitt=$2
     fi
 
+    if [ "@" == "$1" ];then
+        _edit "${lst_mitt}"
+        return 0
+    fi
+
     if [ -z "$1" ]; then
-        larb2e_stl0_ ${lst_mitt}
+        larb2e_stl0 ${lst_mitt}
         return 0
     fi
 
@@ -92,23 +97,21 @@ ${NORMAL}"
     local recive_name=
 
     for item in $(_f2e $lst_mitt); do
-
-        # echo -e "${GREEN}\$item = file://$item${NORMAL}" #print variable
-        for item2 in $(_dd2e $item ram); do
-            # echo -e "${BLUE}file://$item/$item2${NORMAL}" #print variable
-            recive_name=$(_prs_f -n "$item2")
-            # echo -e "${BLUE}\$recive_name = $recive_name${NORMAL}" #print variable
-            file_cont=$item/$item2/cont.fol
-            (cat ${ptr_path} | grep "{{${recive_name}}" >/dev/null) && {
-                echo "${recive_name}"
-                # echo -e "${BLUE}\$file_cont = file://$file_cont${NORMAL}" #print variable
-                _f2f ${file_cont} "{{${recive_name}}" ${ptr_path}
-                _s2f "{{${recive_name}}}" "[[${recive_name}]]" ${ptr_path}
-            }
-
-        done
+        if [ -d $item ]; then
+            for item2 in $(_dd2e $item ram); do
+                recive_name=$(_prs_f -n "$item2")
+                file_cont=$item/$item2/cont.fol
+                (cat ${ptr_path} | grep "{{${recive_name}}" >/dev/null) && {
+                    echo "${recive_name} insert to ${ptr_path}"
+                    _f2f ${file_cont} "{{${recive_name}}" ${ptr_path}
+                    _s2f "{{${recive_name}}}" "[[${recive_name}]]" ${ptr_path}
+                }
+            done
+        else
+            hint="dir from $lst_mitt"
+            _st_info "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://$item' : ${hint}"
+        fi
     done
-
     cd ${PPWD}
     return 0
 
