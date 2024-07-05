@@ -23,7 +23,7 @@ arb2f_stl0() {
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/arb2f_stl0.ram/.grot/arb2f_stl0.sh
     local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/arb2f_stl0.ram/.grot/arb2f_stl0.sh)
 
-    #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
+    echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
