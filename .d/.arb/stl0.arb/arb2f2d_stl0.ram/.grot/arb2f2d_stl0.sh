@@ -2,14 +2,14 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/path2nom2d_stl0.ram/.grot/path2nom2d_stl0.sh"
+filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/arb2f2d_stl0.ram/.grot/arb2f2d_stl0.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-path2nom2d_stl0() {
+arb2f2d_stl0() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
@@ -18,19 +18,19 @@ path2nom2d_stl0() {
     local hint=
     local estat=
 
-    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/path2nom2d_stl0
+    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f2d_stl0
 
-    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/path2nom2d_stl0.ram/.grot/path2nom2d_stl0.sh
-    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/path2nom2d_stl0.ram/.grot/path2nom2d_stl0.sh)
+    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/arb2f2d_stl0.ram/.grot/arb2f2d_stl0.sh
+    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/arb2f2d_stl0.ram/.grot/arb2f2d_stl0.sh)
 
     #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: path2nom_stl0 for all files in dir \$1
+MAIN: ${FNN} :: arb2f_stl0 for any in dir \$1
 TAGS:
 ARGS: 
-\$1: dir for treat
+\$1
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
@@ -77,7 +77,7 @@ ${NORMAL}"
     echo -e "${HLIGHT}--- _dfr2Ae ${ptr_path} ---${NORMAL}" #start files
     for item in $(_dfr2Ae ${ptr_path}); do
         echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
-        path2nom_stl0 $item
+        arb2f_stl0 $item
     done
 
     cd ${PPWD}
