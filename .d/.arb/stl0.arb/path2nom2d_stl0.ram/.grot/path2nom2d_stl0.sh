@@ -27,10 +27,10 @@ path2nom2d_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: path2nom_stl0 for all files in dir
+MAIN: ${FNN} :: path2nom_stl0 for all files in dir \$1
 TAGS:
 ARGS: 
-\$1
+\$1: dir for treat
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
@@ -58,10 +58,24 @@ ${NORMAL}"
         fi
     fi
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    # fi
+    hint="\$1: dir for treat"
+    if _isn_from ${NARGS} 1 1 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
+
+    #[[ptr_path]]
+    #! ptr_path
+    local ptr_path="$1"
+    ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+
+    [ -d ${ptr_path} ] || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${ptr_path}' : ${hint} : return 1"
+        return 1
+    }
+
+    local item=
+
+    # for item in $(_d2)
 
     cd ${PPWD}
     return 0
