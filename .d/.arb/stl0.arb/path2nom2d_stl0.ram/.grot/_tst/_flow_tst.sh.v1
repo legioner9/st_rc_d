@@ -27,6 +27,17 @@ __path2nom2d_stl0_FLOW() {
     #?----------------------------------------------------
     #?-------------------------------------
 
+    local init_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/path2nom2d_stl0.ram/.grot/_tst/_tst_dir/.dir.a/tst_dir/_dir.a/ptr_path.init.file
+    local tst_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/path2nom2d_stl0.ram/.grot/_tst/_tst_dir/.dir.a/tst_dir/_dir.a/ptr_path.tst.file
+    local tst_dir=${ST_RC_D_PATH}/.d/.arb/stl0.arb/path2nom2d_stl0.ram/.grot/_tst/_tst_dir
+
+    rm ${tst_file}
+    cp ${init_file} ${tst_file}
+
+    path2nom2d_stl0 ${tst_dir}
+
+    cat ${tst_file}
+
     # : >res
 
     #?-------------------------------------

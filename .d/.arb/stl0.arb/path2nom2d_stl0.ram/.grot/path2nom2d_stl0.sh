@@ -74,8 +74,10 @@ ${NORMAL}"
     }
 
     local item=
-
-    # for item in $(_d2)
+    echo -e "${HLIGHT}--- _dfr2Ae ${ptr_path} ---${NORMAL}" #start files
+    for item in $(_dfr2Ae ${ptr_path}); do
+        echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    done
 
     cd ${PPWD}
     return 0
