@@ -132,6 +132,7 @@ ${CYAN}${exam_str}${NORMAL}
     local dir_lst=${dir_set}/.lst
     local dir_lst2=${dir_set}/.lst2
     local dir_rpn=${dir_set}/.rpn
+    local dir_cntx=${dir_set}/.cntx
 
     local file_main=${dir_set}/main.sh
 
