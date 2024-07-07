@@ -13,7 +13,9 @@ ufl_stl0() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
+    local _ARGS_=("$@") # copy ARGS for passing for reference
     local NARGS=$#
+    # local _NARGS_=$# # copy NARGS for passing to main.sh
     local verbose=0
     local hint=
     local estat=
