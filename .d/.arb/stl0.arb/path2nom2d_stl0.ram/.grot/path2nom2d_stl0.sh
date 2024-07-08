@@ -27,7 +27,7 @@ path2nom2d_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: path2nom_stl0 for all files in dir \$1
+MAIN: ${FNN} :: path2nom_stl0 for all files (with prev) in dir \$1
 TAGS:
 ARGS: 
 \$1: dir for treat
