@@ -82,6 +82,7 @@ ${NORMAL}"
     #! eval "_s2f ${STA_PATH} '\${STA_PATH}' ${ptr_path}"
 
     eval "_s2f ${REPO_PATH} '\${REPO_PATH}' ${ptr_path}"
+    eval "_s2f ${HOME} '\${HOME}' ${ptr_path}"
 
     cd ${PPWD}
     return 0
