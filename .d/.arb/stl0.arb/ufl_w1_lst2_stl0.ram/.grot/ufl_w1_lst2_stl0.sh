@@ -94,9 +94,32 @@ ${NORMAL}"
 
     local item=
 
+    echo -e "
+{{recive_ufl_4}}
+" >${ptr_path_2}
+
     for item in $(_f2e ${ptr_path_1}); do
-        echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+        # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+        ufl_stl0 4 ${item} ${ptr_path_2}.curr
+        _f2f ${ptr_path_2}.curr "{{recive_ufl_4}}" ${ptr_path_2}
     done
+
+    rm ${ptr_path_2}.curr
+    rm ${ptr_path_2}.curr_ufl4
+
+    ufl_stl0 1 ${ptr_path_2}_ufl4w1lst2
+
+    echo -e "
+    ufl_w1_lst2_stl0 ${ptr_path_1} ${ptr_path_2}
+    " >${ptr_path_2}_ufl4w1lst2.tmp
+
+    _f2f ${ptr_path_2}_ufl4w1lst2.tmp {{body_fn}} ${ptr_path_2}_ufl4w1lst2
+
+    path2nom_stl0 ${ptr_path_2}_ufl4w1lst2
+
+    rm ${ptr_path_2}_ufl4w1lst2.tmp
+
+    _edit ${ptr_path_2}
 
     cd ${PPWD}
     return 0
