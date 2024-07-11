@@ -27,7 +27,7 @@ ufl_w1_lst2_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: wrap ufl as \$1 file.lst dir to \$2 file.md 
+MAIN: ${FNN} :: wrap [ufl_stl0 4]  as \$1 file.lst dir to \$2 file.md 
 TAGS:
 ARGS: 
 \$1
@@ -52,16 +52,51 @@ ${NORMAL}"
     if [[ "_tst" == "$1" ]]; then
         if [[ -f ${d_name}/_tst/exec.tst ]]; then
             . ${d_name}/_tst/exec.tst
+            return 0
         else
             echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/exec.tst' : ${hint} : return 1" >&2
             return 1
         fi
     fi
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    # fi
+    if [[ "_flow_1" == "$1" ]]; then
+        if [[ -f ${d_name}/_tst/_flow_tst.sh.v1 ]]; then
+            . ${d_name}/_tst/_flow_tst.sh.v1
+            return 0
+        else
+            echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1" >&2
+            return 1
+        fi
+    fi
+
+    hint="wrap [ufl_stl0 4]  as \$1 file.lst dir to \$2 file.md "
+    if _isn_from ${NARGS} 2 2 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '2' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
+
+    #[[ptr_path]]
+    #! ptr_path
+    local ptr_path_1="$1"
+    ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+
+    local ptr_path_2="$2"
+    ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
+
+    [ -f ${ptr_path_1} ] || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${ptr_path_1}' : ${hint} : return 1"
+        return 1
+    }
+
+    [ -f ${ptr_path_2} ] || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${ptr_path_2}' : ${hint} : return 1"
+        return 1
+    }
+
+    local item=
+
+    for item in $(_f2e ${ptr_path_1}); do
+        echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    done
 
     cd ${PPWD}
     return 0

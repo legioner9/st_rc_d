@@ -7,7 +7,7 @@ __ufl_w1_lst2_stl0_FLOW() {
         return 1
     fi
 
-    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_w1_lst2_stl0.ram/.grot/_tst/_flow_tst.sh
+    local filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_w1_lst2_stl0.ram/.grot/_tst/_flow_tst.sh
 
     local PW=$(pwd)
     local idir="$(dirname ${filename})"
@@ -26,8 +26,15 @@ __ufl_w1_lst2_stl0_FLOW() {
 
     #?----------------------------------------------------
     #?-------------------------------------
+    # echo "start file://$filename"
 
     # : >res
+
+    # cd _dir_tst || {
+    #     hint="\$1: \$2: "
+    #     _st_exit "in fs= file://${filename} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${idir}/_dir_tst' : ${hint} : return 1"
+    #     return 1
+    # }
 
     #?-------------------------------------
     #?----------------------------------------------------

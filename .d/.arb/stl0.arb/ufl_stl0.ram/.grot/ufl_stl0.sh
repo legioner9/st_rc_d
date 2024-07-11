@@ -97,6 +97,16 @@ ${CYAN}${exam_str}${NORMAL}
         fi
     fi
 
+    if [[ "_flow_1" == "$1" ]]; then
+        if [[ -f ${d_name}/_tst/_flow_tst.sh.v1 ]]; then
+            . ${d_name}/_tst/_flow_tst.sh.v1
+            return 0
+        else
+            echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1" >&2
+            return 1
+        fi
+    fi
+
     hint="\$1: 0 or num menu"
     if _isn_from ${NARGS} 1 10 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
         return 1
