@@ -34,7 +34,8 @@ ufl_stl0() {
 MAIN: ${FNN} :: unite file from tml, value, proc
 TAGS:
 ARGS: 
-\$1 0 or num_menu dir_ptv from ${d_name}
+\$1 0 or num_menu dir_ptv from ${d_name} 
+    if \$1 NOT_DEFINE be CATALOG
 [ ,\$2 num_menu ]
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
