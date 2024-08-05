@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-__yt_dlp_stl0_FLOW() {
+__mm_start_tit_stl0_FLOW() {
 
-    if ! command -v yt_dlp_stl0 >/dev/null; then
-        echo "TYPE_ERROR : yt_dlp_stl0" >&2
+    if ! command -v mm_start_stl0 >/dev/null; then
+        echo "TYPE_ERROR : mm_start_stl0" >&2
         return 1
     fi
 
-    local filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/yt_dlp_stl0.ram/.grot/_tst/_flow_tst.sh.v1
+    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/mm_start_stl0.ram/.grot/_tit/_flow_tit.sh.v1
 
     local PW=$(pwd)
     local idir="$(dirname ${filename})"
@@ -26,18 +26,8 @@ __yt_dlp_stl0_FLOW() {
 
     #?----------------------------------------------------
     #?-------------------------------------
-    # echo "start file://$filename"
+
     # : >res
-
-    # cd _dir_tst || {
-    #     hint="\$1: \$2: "
-    #     _st_exit "in fs= file://${filename} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${idir}/_dir_tst' : ${hint} : return 1"
-    #     return 1
-    # }
-
-    yt_dlp_stl0 0
-    yt_dlp_stl0 1
-
 
     #?-------------------------------------
     #?----------------------------------------------------
@@ -49,4 +39,4 @@ __yt_dlp_stl0_FLOW() {
 
 }
 
-__yt_dlp_stl0_FLOW "$@"
+__mm_start_tit_stl0_FLOW "$@"

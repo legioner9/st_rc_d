@@ -23,14 +23,14 @@ yt_dlp_stl0() {
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/yt_dlp_stl0.ram/.grot/yt_dlp_stl0.sh
     local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/yt_dlp_stl0.ram/.grot/yt_dlp_stl0.sh)
 
-    #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
+    echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: \$1 0 or num_lst_in_dir for down yt_dlp to \$PPWD
 TAGS:
 ARGS: 
-\$1
+\$1 0 or num_lst_in_dir for down yt_dlp to \$PPWD
 [ ,\$2 num_menu ]
 CNTL: 
     _go     : _edit ${d_name}/${FNN}.sh
@@ -69,17 +69,54 @@ ${NORMAL}"
         fi
     fi
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    # fi
+    hint="\$1: 0 or num_lst_in_dir"
+    if _isn_from ${NARGS} 1 1 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
 
     #[[ptr_path]]
     #! ptr_path
     # local ptr_path="$1"
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
-    # ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/yt_dlp_stl0/.lst
+    local dir_list=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/yt_dlp_stl0/.lst
+
+    _arr_name=($(_df2e ${dir_list}))
+    _result=
+
+    _nr2mm _arr_name _arr_name _result "$1" >/dev/null
+    echo -e "${GREEN}\$_result = $_result${NORMAL}" #print variable
+
+    local file_list=${dir_list}/${_result}
+
+    _f2e ${file_list}
+    echo
+
+    _is_yes "DownLoad that list to file://$PPWD ?" || {
+        _st_info "NOT 'y' - return 0"
+        return 0
+    }
+
+    local item=
+
+    for item in $(_f2e ${file_list}); do
+
+        echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+        # yt-dlp -c "https://www.youtube.com/watch?v=tJwDiAPqSw0&list=PL6TsfzLhXW-EZH0qfKIhbr6rsMkXTt5co&index=$num&pp=iAQB"
+
+        # echo -e "${HLIGHT}--- yt-dlp -c https://www.youtube.com/watch?v=AQTHyG-KM7U&list=PL6TsfzLhXW-EZH0qfKIhbr6rsMkXTt5co&index=19 ---${NORMAL}" #start files
+        # "wv*+wa/w"
+        # '(bv*[ext=mp4][height<=720]+ba*[ext=m4a])[protocol^=http]'
+        # 'worstvideo[vcodec^=avc1]+worstaudio[acodec^=mp4a]'
+
+        # until yt-dlp -c -f worstvideo+worstaudio ${str_0}/${item}; do
+        echo -e "${GREEN}\$PPWD = $PPWD${NORMAL}" #print variable
+        echo -e "${HLIGHT}--- until yt-dlp -c -f '(bv*[ext=mp4][height<=320]+ba*[ext=m4a])[protocol^=http]' ${item} ---${NORMAL}" #start files
+        until yt-dlp -c -f '(bv*[ext=mp4][height<=320]+ba*[ext=m4a])[protocol^=http]' "${item}"; do
+            :
+        done
+
+    done
 
     cd ${PPWD}
     return 0
