@@ -79,30 +79,42 @@ ${NORMAL}"
     # local ptr_path="$1"
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
+    local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0
+
+    echo -e "${GREEN}\$dir_fn_data = file://$dir_fn_data${NORMAL}" #print variable
+
     local _arr_name=()
     local _arr_res=()
     local _result=
 
-    _arr_name+=("echo XXX")
-    _arr_res+=("echo XXX")
-    # _arr_name+=("cd /home/st/tp_1; ")
-    # _arr_res+=("cd ${HOME}/tp_1";)
-    # _arr_name+=("nnnnnn")
-    # _arr_res+=("rrrrr")
-    # _arr_name+=("nnnnnn")
-    # _arr_res+=("rrrrr")
-    # _arr_name+=("nnnnnn")
-    # _arr_res+=("rrrrr")
-    # _arr_name+=("nnnnnn")
-    # _arr_res+=("rrrrr")
-    # _arr_name+=("nnnnnn")
-    # _arr_res+=("rrrrr")
+    . ${dir_fn_data}/.prc/arrays.prc || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. file://${dir_fn_data}/.proc/arrays.proc' : ${hint} : return 1"
+        return 1
+    }
 
-    _nr2mm _arr_name _arr_name _result "$1" >/dev/null
+    # _arr_name+=("echo XXX")
+    # _arr_res+=("echo XXX")
+    # _arr_name+=("cd ${HOME}/tp_1; yt_dlp_stl0 2 &")
+    # _arr_res+=("cd ${HOME}/tp_1; yt_dlp_stl0 2 &")
+    # # _arr_name+=("nnnnnn")
+    # # _arr_res+=("rrrrr")
+    # # _arr_name+=("nnnnnn")
+    # # _arr_res+=("rrrrr")
+    # # _arr_name+=("nnnnnn")
+    # # _arr_res+=("rrrrr")
+    # # _arr_name+=("nnnnnn")
+    # # _arr_res+=("rrrrr")
+    # # _arr_name+=("nnnnnn")
+    # # _arr_res+=("rrrrr")
+
+    _nr2mm _arr_name _arr_res _result "$1" 
 
     echo -e "${GREEN}\$_result = $_result${NORMAL}" #print variable
 
-    eval "${_result}"
+    "${_result}" || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '${_result} : ${hint} : return 1"
+        return 1
+    }
 
     cd ${PPWD}
     return 0
