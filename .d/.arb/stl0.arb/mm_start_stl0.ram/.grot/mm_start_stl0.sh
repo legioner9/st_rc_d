@@ -111,7 +111,7 @@ ${NORMAL}"
 
     echo -e "${GREEN}\$_result = $_result${NORMAL}" #print variable
 
-    local path_rnd_="${HOME}/tmpx/mm_start_stl0_$(_rnd2e).f"
+    local path_rnd_="${TMP_DIR}/mm_start_stl0_$(_rnd2e).f"
 
     echo "${_result}" >${path_rnd_}
 
