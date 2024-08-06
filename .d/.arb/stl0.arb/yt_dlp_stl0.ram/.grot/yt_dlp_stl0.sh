@@ -15,7 +15,7 @@ yt_dlp_stl0() {
     local ARGS=("$@")
     local NARGS=$#
     local verbose=0
-    local hint=
+    local hint="\$1 0 or num_lst_in_dir for down yt_dlp to \$2 u@dir \$3 (1->144|2->240|3->360|4->480|5->720|6->1080) \$4 (|-y)"
     local estat=
 
     #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/yt_dlp_stl0
@@ -27,11 +27,10 @@ yt_dlp_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: \$1 0 or num_lst_in_dir for down yt_dlp to \$PPWD
+MAIN: ${FNN} :: ${hint}
 TAGS:
 ARGS: 
-\$1 0 or num_lst_in_dir for down yt_dlp to \$PPWD
-[ ,\$2 num_menu ]
+${hint}
 CNTL: 
     _go     : _edit ${d_name}/${FNN}.sh
     _tst    : . ${d_name}/_tst/exec.tst
@@ -69,15 +68,19 @@ ${NORMAL}"
         fi
     fi
 
-    hint="\$1: 0 or num_lst_in_dir"
-    if _isn_from ${NARGS} 1 1 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+    if _isn_from ${NARGS} 2 4 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '2 - 4' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
         return 1
     fi
 
     #[[ptr_path]]
     #! ptr_path
-    # local ptr_path="$1"
-    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+    local ptr_path="$2"
+    ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+
+    [ -d ${ptr_path} ] || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${ptr_path}' : ${hint} : return 1"
+        return 1
+    }
 
     local dir_list=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/yt_dlp_stl0/.lst
 
@@ -92,9 +95,28 @@ ${NORMAL}"
     _f2e ${file_list}
     echo
 
-    _is_yes "DownLoad that list to file://$PPWD ?" || {
-        _st_info "NOT 'y' - return 0"
-        return 0
+    cd ${ptr_path} || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'cd file://${ptr_path}' : ${hint} : return 1"
+        return 1
+    }
+
+    [ "-y" = "$4" ] || {
+        _is_yes "DownLoad that list to file://$(pwd) ?" || {
+            _st_info "NOT 'y' - return 0"
+            return 0
+        }
+    }
+# 144 240 360 480 720 1080
+    local resolution=
+    [[ 1 -eq $3 ]] && resolution=144 
+    [[ 2 -eq $3 ]] && resolution=240 
+    [[ 3 -eq $3 ]] && resolution=360 
+    [[ 4 -eq $3 ]] && resolution=480 
+    [[ 5 -eq $3 ]] && resolution=720 
+    [[ 6 -eq $3 ]] && resolution=1080 
+    [[ -n "${resolution}" ]] || {
+        _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : NOT_IN_CONDITION : '\$3 not (1|2|3|4|5|6)' : ${hint} : return 1"
+        return 1
     }
 
     local item=
@@ -110,9 +132,9 @@ ${NORMAL}"
         # 'worstvideo[vcodec^=avc1]+worstaudio[acodec^=mp4a]'
 
         # until yt-dlp -c -f worstvideo+worstaudio ${str_0}/${item}; do
-        echo -e "${GREEN}\$PPWD = $PPWD${NORMAL}" #print variable
-        echo -e "${HLIGHT}--- until yt-dlp -c -f '(bv*[ext=mp4][height<=320]+ba*[ext=m4a])[protocol^=http]' ${item} ---${NORMAL}" #start files
-        until yt-dlp -c -f '(bv*[ext=mp4][height<=320]+ba*[ext=m4a])[protocol^=http]' "${item}"; do
+        echo -e "${GREEN}\$PPWD = $PPWD${NORMAL}"                                                                                 #print variable
+        echo -e "${HLIGHT}--- until yt-dlp -c -f '(bv*[ext=mp4][height<=${resolution}]+ba*[ext=m4a])[protocol^=http]' ${item} ---${NORMAL}" #start files
+        until eval "yt-dlp -c -f '(bv*[ext=mp4][height<=${resolution}]+ba*[ext=m4a])[protocol^=http]' ${item}"; do
             :
         done
 

@@ -29,15 +29,19 @@ __yt_dlp_stl0_FLOW() {
     # echo "start file://$filename"
     # : >res
 
-    # cd _dir_tst || {
-    #     hint="\$1: \$2: "
-    #     _st_exit "in fs= file://${filename} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${idir}/_dir_tst' : ${hint} : return 1"
-    #     return 1
-    # }
+    yt_dlp_stl0 0 _dir_tst
 
-    yt_dlp_stl0 0
-    yt_dlp_stl0 1
+    cd "${idir}" || {
+        echo "${idir} not dir" >&2
+        return 1
+    }
 
+    cd _dir_tst || {
+        _st_exit "in fs= file://${filename} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${idir}/_dir_tst' : ${hint} : return 1"
+        return 1
+    }
+
+    yt_dlp_stl0 1 @
 
     #?-------------------------------------
     #?----------------------------------------------------

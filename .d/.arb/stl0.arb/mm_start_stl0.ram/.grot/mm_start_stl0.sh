@@ -107,12 +107,16 @@ ${NORMAL}"
     # # _arr_name+=("nnnnnn")
     # # _arr_res+=("rrrrr")
 
-    _nr2mm _arr_name _arr_res _result "$1" 
+    _nr2mm _arr_name _arr_res _result "$1"
 
     echo -e "${GREEN}\$_result = $_result${NORMAL}" #print variable
 
-    "${_result}" || {
-        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '${_result} : ${hint} : return 1"
+    local path_rnd_="${HOME}/tmpx/mm_start_stl0_$(_rnd2e).f"
+
+    echo "${_result}" >${path_rnd_}
+
+    . ${path_rnd_} || {
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${path_rnd_}' : ${hint} : return 1"
         return 1
     }
 
