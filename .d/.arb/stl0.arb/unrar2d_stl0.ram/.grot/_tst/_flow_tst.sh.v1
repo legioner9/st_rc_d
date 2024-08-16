@@ -37,6 +37,8 @@ __unrar2d_stl0_FLOW() {
 
     rm -r ${ST_RC_D_PATH}/.d/.arb/stl0.arb/unrar2d_stl0.ram/.grot/_tst/_dir_tst/file.rar.unrar2d_stl0.d
 
+    unrar2d_stl0 file.rarX
+
     echo -e "${HLIGHT}--- unrar2d_stl0 file.rar ---${NORMAL}" #start files
     unrar2d_stl0 file.rar
     read -p "PAUSE: Enter"

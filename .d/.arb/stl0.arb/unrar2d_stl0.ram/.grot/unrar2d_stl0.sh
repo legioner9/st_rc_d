@@ -85,7 +85,6 @@ ${NORMAL}"
     hint="unrar \$1 <file> to dir <file>.unrar2d_stl0.d"
 
     [ -f "${ptr_path}" ] || {
-
         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${ptr_path}' : ${hint} : return 1"
         return 1
     }
@@ -99,7 +98,13 @@ ${NORMAL}"
 
     mkdir "${rar_dir}"
 
-    unrar x ${ptr_path} ${rar_dir}
+    echo -e "${HLIGHT}--- unrar x file://${ptr_path} file://${rar_dir} ---${NORMAL}" #start files
+    unrar x ${ptr_path} ${rar_dir} || {
+        _st_info "rm -r ${rar_dir}"
+        rm -r ${rar_dir}
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'unrar x file://${ptr_path} file://${rar_dir}' : ${hint} : return 1"
+        return 1
+    }
 
     cd ${PPWD}
     return 0
