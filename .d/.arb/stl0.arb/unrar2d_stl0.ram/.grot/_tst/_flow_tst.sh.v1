@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+
+__unrar2d_stl0_FLOW() {
+
+    if ! command -v unrar2d_stl0 >/dev/null; then
+        echo "TYPE_ERROR : unrar2d_stl0" >&2
+        return 1
+    fi
+
+    local filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/unrar2d_stl0.ram/.grot/_tst/_flow_tst.sh.v1
+
+    local PW=$(pwd)
+    local idir="$(dirname ${filename})"
+
+    local ARGS0="$1"
+    local ARGS1="$2"
+    local ARGS2="$3"
+    local ARGS3="$4"
+
+    local NARGS=$#
+
+    cd "${idir}" || {
+        echo "${idir} not dir" >&2
+        return 1
+    }
+
+    #?----------------------------------------------------
+    #?-------------------------------------
+    # echo "start file://$filename"
+    # : >res
+
+    cd _dir_tst || {
+        # hint="\$1: \$2: "
+        _st_exit "in fs= file://${filename} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${idir}/_dir_tst' : ${hint} : return 1"
+        return 1
+    }
+
+    rm -r ${ST_RC_D_PATH}/.d/.arb/stl0.arb/unrar2d_stl0.ram/.grot/_tst/_dir_tst/file.rar.unrar2d_stl0.d
+
+    echo -e "${HLIGHT}--- unrar2d_stl0 file.rar ---${NORMAL}" #start files
+    unrar2d_stl0 file.rar
+    read -p "PAUSE: Enter"
+    ls file.rar.unrar2d_stl0.d
+    rm -r file.rar.unrar2d_stl0.d
+
+    echo -e "${HLIGHT}--- unrar2d_stl0 file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/unrar2d_stl0.ram/.grot/_tst/_dir_tst/file.rar ---${NORMAL}" #start files
+    unrar2d_stl0 ${ST_RC_D_PATH}/.d/.arb/stl0.arb/unrar2d_stl0.ram/.grot/_tst/_dir_tst/file.rar
+    read -p "PAUSE: Enter"
+    ls ${ST_RC_D_PATH}/.d/.arb/stl0.arb/unrar2d_stl0.ram/.grot/_tst/_dir_tst/file.rar.unrar2d_stl0.d
+
+    unrar2d_stl0 ${ST_RC_D_PATH}/.d/.arb/stl0.arb/unrar2d_stl0.ram/.grot/_tst/_dir_tst/file.rar
+
+    # rm -r ${ST_RC_D_PATH}/.d/.arb/stl0.arb/unrar2d_stl0.ram/.grot/_tst/_dir_tst/file.rar.unrar2d_stl0.d
+
+    #?-------------------------------------
+    #?----------------------------------------------------
+
+    cd "${PW}" || {
+        echo "${PW} not dir" >&2
+        return 1
+    }
+
+}
+
+__unrar2d_stl0_FLOW "$@"
