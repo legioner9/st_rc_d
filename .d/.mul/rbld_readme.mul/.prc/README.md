@@ -6,8 +6,6 @@
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
-- [Manifesto](#manifesto)
-
 <!-- /TOC -->
 
 End Contents Menu
