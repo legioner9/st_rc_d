@@ -33,6 +33,7 @@ ARGS:
 \$1
 [ ,\$2 num_menu ]
 CNTL: 
+    _lst    : _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0
     _go     : _edit ${d_name}/${FNN}.sh
     _tst    : . ${d_name}/_tst/exec.tst
     _flow_1 : . ${d_name}/_tst/_flow_tst.sh.v1
@@ -47,6 +48,11 @@ ${NORMAL}"
 
     if [[ "_go" == "$1" ]]; then
         _edit "${d_name}/${FNN}".sh
+        return 0
+    fi
+
+    if [[ "_lst" == "$1" ]]; then
+        _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0
         return 0
     fi
 

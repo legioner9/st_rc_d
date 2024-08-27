@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- README_rnd7_19e29ad() $* in file://${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md_ufl4---${NORMAL}" #started functions
+echo -e "${CYAN}--- README_rnd7_a53911e() $* in file://${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md_ufl4---${NORMAL}" #started functions
 
-README_rnd7_19e29ad() {
+README_rnd7_a53911e() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -57,7 +57,8 @@ ${NORMAL}"
 
     #{{body_fn}}
 
-    ufl_stl0 4 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md
+ufl_stl0 4 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md
+
 
     #! END BODY FN ---------------------------------------
 
@@ -65,4 +66,4 @@ ${NORMAL}"
 
 }
 
-README_rnd7_19e29ad "$@"
+README_rnd7_a53911e "$@"
