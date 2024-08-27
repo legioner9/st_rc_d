@@ -57,8 +57,7 @@ ${NORMAL}"
 
     #{{body_fn}}
 
-ufl_stl0 4 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md
-
+    ufl_stl0 4 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md
 
     #! END BODY FN ---------------------------------------
 
