@@ -19,9 +19,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 29082024004602
+DATE: 29082024025023
 
-DATX: 1724867162
+DATX: 1724874623
 -->
 
 
@@ -88,6 +88,151 @@ DATX: 1724867162
 - сделать унифицированые по поведнию и удобные в испльзовании юзером обертки над стандартными утилитами os \{user wrapper}
 - обеспечить бэкап с последующим восстановлением файлов и настроек программ \{bcp dpl}
     
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/001.pref.txt.man)
+
+
+
+# Install stl
+    
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/002.inst_stl.code.sh -->
+
+[002.inst_stl.code.sh](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/002.inst_stl.code.sh)
+
+
+```sh
+
+#!/bin/bash
+
+# THIS file (beta version) install stl for user
+
+read -p "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
+
+cd "${PATH_TO_CLONE}" || {
+    echo "in file: inst_st_rc_d.sh : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
+    return 1
+}
+
+git clone git@gitflic.ru:legioner9/st_rc_d.git
+
+cp "${PATH_TO_CLONE}"/st_rc_d/.d/.zip/.d.zip "${HOME}"
+
+unzip .d.zip
+
+if ! grep -F 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then' <~/.bashrc; then
+    echo 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then if ! . ~/.d/.rc.d/.st.rc.d/.st.rc ; then echo "in ~/.bashrc : FAIL . ~/.d/.rc.d/.st.rc.d/.st.rc : return 1" >&2;return 1;fi fi' >>~/.bashrc
+fi
+
+bash
+
+```
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/003.rm_stl.code.sh -->
+
+[003.rm_stl.code.sh](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/003.rm_stl.code.sh)
+
+
+```sh
+
+#!/bin/bash
+
+# THIS file (beta version) delele stl for user
+
+read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
+
+cd "${PATH_TO_CLONE}" || {
+    echo "in file: rm_st_rc_d.sh , line=${LINENO} : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
+    return 1
+}
+
+rm -rf st_rc_d || {
+    echo "in file: rm_st_rc_d.sh , line=${LINENO} : FAILEXEC : 'rm -rf st_rc_d' : be continue"
+    read -rp "Delete ${PATH_TO_CLONE}/st_rc_d : Enter to continue"
+}
+
+read -rp "Delete from ~/.bashrc code \
+starting with 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then' \
+and restart you shell : \
+Enter to continue"
+
+
+
+```
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/004.inst_stl_and_data.code.sh -->
+
+[004.inst_stl_and_data.code.sh](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/004.inst_stl_and_data.code.sh)
+
+
+```sh
+
+#!/bin/bash
+
+# THIS file (beta version) install stl and data for user
+
+read -p "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
+
+cd "${PATH_TO_CLONE}" || {
+    echo "in file: inst_st_rc_d_and_data_repo.sh : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
+    return 1
+}
+
+git clone git@gitflic.ru:legioner9/st_rc_d.git
+# empty DATA to st_rc_d
+git clone git@gitflic.ru:legioner9/st_rc_d_data.git
+
+cp "${PATH_TO_CLONE}"/st_rc_d/.d/.zip/.d.zip "${HOME}"
+
+unzip .d.zip
+
+if ! grep -F 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then' <~/.bashrc; then
+    echo 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then if ! . ~/.d/.rc.d/.st.rc.d/.st.rc ; then echo "in ~/.bashrc : FAIL . ~/.d/.rc.d/.st.rc.d/.st.rc : return 1" >&2;return 1;fi fi' >>~/.bashrc
+fi
+
+bash
+
+
+```
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/005.rm_stl_and_data.code.sh -->
+
+[005.rm_stl_and_data.code.sh](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/005.rm_stl_and_data.code.sh)
+
+
+```sh
+
+#!/bin/bash
+
+# THIS file (beta version) delele stl and data for user
+
+read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
+
+cd "${PATH_TO_CLONE}" || {
+    echo "in file: dpl_st_rc_d.sh , line=${LINENO} : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
+    return 1
+}
+
+rm -rf st_rc_d || {
+    echo "in file: dpl_st_rc_d.sh , line=${LINENO} : FAILEXEC : 'rm -rf st_rc_d' : be continue"
+    read -rp "Delete ${PATH_TO_CLONE}/st_rc_d : Enter to continue"
+}
+
+rm -rf st_rc_d_data || {
+    echo "in file: dpl_st_rc_d.sh , line=${LINENO} : FAILEXEC : 'rm -rf st_rc_d_data' : be continue"
+    read -rp "Delete ${PATH_TO_CLONE}/st_rc_d_data : Enter to continue"
+}
+
+read -rp "Delete from ~/.bashrc code \
+starting with 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then' \
+and restart you shell : \
+Enter to continue"
+
+
+
+```
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.man -->
 
