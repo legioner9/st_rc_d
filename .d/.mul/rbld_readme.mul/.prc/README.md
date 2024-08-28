@@ -19,11 +19,20 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 29082024025023
+DATE: 29082024033901
 
-DATX: 1724874623
+DATX: 1724877541
 -->
 
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.ave_marcus.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.ave_marcus.d/001.pref.txt.man)
+
+
+
+# Ave Marcus tshemsedinov
+    
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.contextus_culturalis.d/001.pref.txt.man -->
 
