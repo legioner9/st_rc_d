@@ -59,7 +59,8 @@ ${NORMAL}"
 
     rm ${ST_RC_D_PATH}/README.md
     cp README.md ${ST_RC_D_PATH}/README.md
-    _edit ${ST_RC_D_PATH}/README.md
+    _s2f '(/REPOBARE/_repo/st_rc_d' '(' ${ST_RC_D_PATH}/README.md
+    _edit ${ST_RC_D_PATH}/README.md 
 
     #{{body_fn}}
 

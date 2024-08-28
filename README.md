@@ -40,7 +40,7 @@ DATX: 1724785704
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.contextus_culturalis.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.contextus_culturalis.d/001.pref.txt.man)
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/001.contextus_culturalis.d/001.pref.txt.man)
 
 
 
@@ -53,7 +53,7 @@ DATX: 1724785704
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/001.pef.txt.man -->
 
-[001.pef.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/001.pef.txt.man)
+[001.pef.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/001.pef.txt.man)
 
 
 
@@ -62,7 +62,7 @@ DATX: 1724785704
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/001.pef.txt.man -->
 
-[001.pef.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/001.pef.txt.man)
+[001.pef.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/001.pef.txt.man)
 
 
 
@@ -71,7 +71,7 @@ DATX: 1724785704
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/002.d/001.txt.man -->
 
-[001.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/002.d/001.txt.man)
+[001.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/002.d/001.txt.man)
 
 
 
@@ -81,7 +81,7 @@ DATX: 1724785704
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/003.user_task.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/003.user_task.d/001.pref.txt.man)
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/003.user_task.d/001.pref.txt.man)
 
 
 
@@ -90,7 +90,7 @@ DATX: 1724785704
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/003.user_task.d/002.d/001.txt.man -->
 
-[001.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/003.user_task.d/002.d/001.txt.man)
+[001.txt.man](/.d/.mul/rbld_readme.mul/.cnt/003.user_task.d/002.d/001.txt.man)
 
 
 
@@ -104,7 +104,7 @@ DATX: 1724785704
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.man)
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.man)
 
 
 
@@ -113,7 +113,7 @@ DATX: 1724785704
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/002.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/002.d/001.pref.txt.man)
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/002.d/001.pref.txt.man)
 
 
 
