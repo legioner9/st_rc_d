@@ -8,24 +8,6 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
-- [Ave Marcus tshemsedinov](#ave-marcus-tshemsedinov)
-- [Contextus culturalis](#contextus-culturalis)
-- [Manifesto](#manifesto)
-  - [Gradus in saxa](#gradus-in-saxa)
-- [Quid possum facere](#quid-possum-facere)
-- [Bibliotheca Lapidum (stl)](#bibliotheca-lapidum-stl)
-  - [Lexicon](#lexicon)
-  - [Quid est](#quid-est)
-  - [Limitations](#limitations)
-    - [Ограничение сложности stl](#ограничение-сложности-stl)
-    - [Требования к fn\_elem](#требования-к-fn_elem)
-    - [Требования к os\_sl](#требования-к-os_sl)
-    - [Тестируемость](#тестируемость)
-    - [Расширяемость](#расширяемость)
-    - [Производительность](#производительность)
-- [Install stl](#install-stl)
-- [Libero capitulum](#libero-capitulum)
-
 <!-- /TOC -->
 
 End Contents Menu
@@ -37,9 +19,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 29082024114625
+DATE: 29082024115921
 
-DATX: 1724906785
+DATX: 1724907561
 -->
 
 
@@ -81,25 +63,26 @@ DATX: 1724906785
 
 Библиотеки stlu это инструмент создаваемый пользователем для создания автоматизации пользовательских задач.
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/001.pef.txt.man -->
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.man -->
 
-[001.pef.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/001.pef.txt.man)
+[001.pef.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.man)
 
 
 
 ## Gradus in saxa 
-    
-
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/002.d/001.txt.man -->
-
-[001.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.walk_to_stone.d/002.d/001.txt.man)
-
-
 
 Шаги по камням (лат.)
+    
 
-    - Следует использовать только доверенный код, который понятен и тестировал сам, а так же операционной системе
-    - Следует знать как используется недоверенный код    
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.man -->
+
+[001.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.man)
+
+
+
+
+- Следует использовать только доверенный код, который понятен и тестировал сам, а так же операционной системе
+- Следует знать как используется недоверенный код    
     
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/001.pref.txt.man -->
@@ -136,9 +119,9 @@ DATX: 1724906785
 
 
 
-# Bibliotheca Lapidum (stl)
+# Bibliotheca Lapidum - Theoria
     
-Библиотека камней (лат.)
+Библиотека камней - Теория (лат.)
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum.d/002.lexicon.d/001.pref.txt.man -->
 
