@@ -19,9 +19,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 29082024033901
+DATE: 29082024093612
 
-DATX: 1724877541
+DATX: 1724898972
 -->
 
 
@@ -71,7 +71,7 @@ DATX: 1724877541
 
 
 
-- Следует доверять только доверенному коду, который тестировал сам, а так же операционной системе
+- Следует использовать только доверенный код, который понятен и тестировал сам, а так же операционной системе
 - Следует знать как используется недоверенный код    
     
 
@@ -96,6 +96,7 @@ DATX: 1724877541
 - сделать локальную базу знаний на файлах с поиском по тегам и каталогом .md файл \{knowledge base}
 - сделать унифицированые по поведнию и удобные в испльзовании юзером обертки над стандартными утилитами os \{user wrapper}
 - обеспечить бэкап с последующим восстановлением файлов и настроек программ \{bcp dpl}
+- данный README.md динамически создается из директории /.d/.mul/rbld_readme.mul/.cnt 
     
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/001.pref.txt.man -->
@@ -116,7 +117,7 @@ DATX: 1724877541
 
 #!/bin/bash
 
-# THIS file (beta version) install stl for user
+# THIS file (demo version) install stl for user
 
 read -p "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
 
@@ -148,7 +149,7 @@ bash
 
 #!/bin/bash
 
-# THIS file (beta version) delele stl for user
+# THIS file (demo version) delele stl for user
 
 read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
 
@@ -180,7 +181,7 @@ Enter to continue"
 
 #!/bin/bash
 
-# THIS file (beta version) install stl and data for user
+# THIS file (demo version) install stl and data for user
 
 read -p "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
 
@@ -215,7 +216,7 @@ bash
 
 #!/bin/bash
 
-# THIS file (beta version) delele stl and data for user
+# THIS file (demo version) delele stl and data for user
 
 read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
 

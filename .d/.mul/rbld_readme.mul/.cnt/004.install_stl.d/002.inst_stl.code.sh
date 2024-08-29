@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# THIS file (beta version) install stl for user
+# THIS file (demo version) install stl for user
 
 read -p "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
 

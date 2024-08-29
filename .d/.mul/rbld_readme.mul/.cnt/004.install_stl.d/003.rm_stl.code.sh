@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# THIS file (beta version) delele stl for user
+# THIS file (demo version) delele stl for user
 
 read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
 
