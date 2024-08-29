@@ -23,6 +23,10 @@ Start Contents Menu
     - [Тестируемость](#тестируемость)
     - [Расширяемость](#расширяемость)
     - [Производительность](#производительность)
+- [Bibliotheca Lapidum - Usu](#bibliotheca-lapidum---usu)
+  - [Deminutio abstractionis](#deminutio-abstractionis)
+    - [Basic principiis](#basic-principiis)
+    - [Basic technologiae](#basic-technologiae)
 - [Install stl](#install-stl)
 - [Libero capitulum](#libero-capitulum)
 
@@ -37,9 +41,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 29082024124748
+DATE: 29082024205813
 
-DATX: 1724910468
+DATX: 1724939893
 -->
 
 
@@ -64,7 +68,7 @@ DATX: 1724910468
 
 Культурологический контекст (лат.)
 
-Эпоха Виндовс характеризуемая тонким юзером, довольствующимся графическим интерфейсом с кнопками, созданным глобальными корпорациями, подходит к концу. Графически итерфейсы истощили под собой все имеющиеся в распоряжнении человечества вычислительные мощности в погоне за призрачным удовлетворения пользователя, при этом нарастающая сложность информационных систем усугабляется падающей квалификацией программистов пытающихся их (системы) поддерживать. Если умножить это пониманием того что корпорации строились на диктате гегемона над всеми остальными - и диктату этому пришел конец - то вопрос таков - что будем выращивать на руинах?
+Эпоха Виндовс характеризуемая тонким юзером, довольствующимся графическим интерфейсом с кнопками, созданным глобальными корпорациями, подходит к концу. Графические итерфейсы истощили под собой все имеющиеся в распоряжнении человечества вычислительные мощности в погоне за призрачным удовлетворения пользователя, при этом нарастающая сложность информационных систем усугабляется падающей квалификацией программистов пытающихся их (системы) поддерживать (спасать). Если умножить это пониманием того, что корпорации строились на диктате гегемона над всеми остальными - и диктату этому пришел конец - то вопрос таков - что будем выращивать на руинах?
 
 Остается Линукс, характеризуемый толстым юзером, знающим что делает, и тонкими программистами, представляющимися служителями операционной системы (области высоких абстракций пока еще катастрофически сложных программ (броузеры, и т.п.) мы пока не рассмариваем). Все дальнейшее будет посвящено помощи юзерам, желающим стать все толще и толще.
 
@@ -123,6 +127,7 @@ DATX: 1724910468
 
 - Демонстрация возможностей stlu
     - данный README.md динамически создается из директории /.d/.mul/rbld_readme.mul/.cnt
+      - локальная версия README.md /.d/.mul/rbld_readme.mul/.prc/README.md
     - много локальных репозиториев push в много удаленных репозиториев ( как локальных так и в сети ) \{push many to many}
     - перед git add проверить что нет больших файлов (>50Mb) \{flow hook}
     - сделать .md файл используя файлы из директории - вставить картинки и т.п. \{file gennerate}
@@ -132,9 +137,9 @@ DATX: 1724910468
  
     
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum.d/001.pref.txt.man -->
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum.d/001.pref.txt.man)
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/001.pref.txt.man)
 
 
 
@@ -142,9 +147,9 @@ DATX: 1724910468
     
 Библиотека камней - Теория (лат.)
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum.d/002.lexicon.d/001.pref.txt.man -->
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum.d/002.lexicon.d/001.pref.txt.man)
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/001.pref.txt.man)
 
 
 
@@ -162,9 +167,9 @@ DATX: 1724910468
     fn_elem             - элементарная функция 
     
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum.d/003.quid_est.d/001.pref.txt.man -->
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum.d/003.quid_est.d/001.pref.txt.man)
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.man)
 
 
 
@@ -179,9 +184,9 @@ DATX: 1724910468
   - Последующее за stl древо библиотек - stlu
     
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum.d/004.limitations.d/001.pref.txt.man -->
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/004.limitations.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum.d/004.limitations.d/001.pref.txt.man)
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/004.limitations.d/001.pref.txt.man)
 
 
 
@@ -221,6 +226,58 @@ DATX: 1724910468
 - Управляемость автоматизации рутинных действий для юзера ценнее производительности
     
 
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/001.pref.txt.man)
+
+
+
+# Bibliotheca Lapidum - Usu
+
+Библиотека камней - Практика (лат.)  
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.man)
+
+
+
+## Deminutio abstractionis 
+
+Понижение абстракций (лат.)
+    
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.man)
+
+
+
+### Basic principiis
+
+Базовые принципы (лат.)
+
+- fn_stl - пожелания:
+  - содержит только логику состоящую в использовании fn_elem и запуска процедур хрнящихся в файлах
+    - если логика состоит в обработке вариантов использования однотипных процедур или наборов данных - все процедуры или наборы данных для выбора следует хранить в отдельных директориях    
+  -  
+    
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_technologiae.txt.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_technologiae.txt.d/001.pref.txt.man)
+
+
+
+### Basic technologiae
+
+Базовые технологии (лат.)
+
+- os    - altlinux  (ALT operating systems Russian software company)
+- os_cl - gcc       (the GNU Compiler)
+- os_sl - bash      (the GNU Project's shell—the Bourne Again SHell)
+    
+
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/104.install_stl.d/001.pref.txt.man -->
 
 [001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/104.install_stl.d/001.pref.txt.man)
@@ -241,7 +298,7 @@ DATX: 1724910468
 
 # THIS file (demo version) install stl for user
 
-read -p "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
+read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
 
 cd "${PATH_TO_CLONE}" || {
     echo "in file: inst_st_rc_d.sh : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
@@ -305,7 +362,7 @@ Enter to continue"
 
 # THIS file (demo version) install stl and data for user
 
-read -p "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
+read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
 
 cd "${PATH_TO_CLONE}" || {
     echo "in file: inst_st_rc_d_and_data_repo.sh : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2

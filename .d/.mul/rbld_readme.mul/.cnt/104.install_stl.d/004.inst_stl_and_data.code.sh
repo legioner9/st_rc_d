@@ -2,7 +2,7 @@
 
 # THIS file (demo version) install stl and data for user
 
-read -p "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
+read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
 
 cd "${PATH_TO_CLONE}" || {
     echo "in file: inst_st_rc_d_and_data_repo.sh : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
