@@ -8,24 +8,6 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
-- [Ave Marcus tshemsedinov](#ave-marcus-tshemsedinov)
-- [Contextus culturalis](#contextus-culturalis)
-- [Manifesto](#manifesto)
-  - [Gradus in saxa](#gradus-in-saxa)
-- [Задачи юзера](#задачи-юзера)
-- [Install stl](#install-stl)
-- [Libero capitulum](#libero-capitulum)
-  - [Bibliotheca Lapidum (stl)](#bibliotheca-lapidum-stl)
-    - [Lexicon](#lexicon)
-    - [Quid est](#quid-est)
-    - [Limitations](#limitations)
-      - [Ограничение сложности](#ограничение-сложности)
-      - [Требования к fn\_elem](#требования-к-fn_elem)
-      - [Требования к os\_sl](#требования-к-os_sl)
-      - [Тестируемость](#тестируемость)
-      - [Расширяемость](#расширяемость)
-      - [Ограничение производительности](#ограничение-производительности)
-
 <!-- /TOC -->
 
 End Contents Menu
@@ -37,9 +19,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 29082024093612
+DATE: 29082024100435
 
-DATX: 1724898972
+DATX: 1724900675
 -->
 
 
@@ -99,7 +81,7 @@ DATX: 1724898972
 
 
 
-# Задачи юзера
+# Examples of solved user problems
     
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/003.user_task.d/002.d/001.txt.man -->
@@ -322,9 +304,9 @@ Enter to continue"
 - по набору функций в библиотеке
 - по написанию библиотеки следующего уровня абстракции
 
-#### Ограничение производительности
+#### Производительность
 
-- Читабельность и простота для юзера будет происходить за счет увеличения времени исплнения stlu функций
+- Читабельность и простота для юзера будет происходить за счет уменьшения производительности
 - Производительность есть следствие толщины юзера (оптимизация как повод к повышению квалификации)
 - Управляемость автоматизации рутинных действий для юзера ценнее скорости выполнения
 
