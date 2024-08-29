@@ -8,6 +8,24 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
+- [Ave Marcus tshemsedinov](#ave-marcus-tshemsedinov)
+- [Contextus culturalis](#contextus-culturalis)
+- [Manifesto](#manifesto)
+  - [Gradus in saxa](#gradus-in-saxa)
+- [Examples of solved user problems](#examples-of-solved-user-problems)
+- [Install stl](#install-stl)
+- [Libero capitulum](#libero-capitulum)
+  - [Bibliotheca Lapidum (stl)](#bibliotheca-lapidum-stl)
+    - [Lexicon](#lexicon)
+    - [Quid est](#quid-est)
+    - [Limitations](#limitations)
+      - [Ограничение сложности](#ограничение-сложности)
+      - [Требования к fn\_elem](#требования-к-fn_elem)
+      - [Требования к os\_sl](#требования-к-os_sl)
+      - [Тестируемость](#тестируемость)
+      - [Расширяемость](#расширяемость)
+      - [Производительность](#производительность)
+
 <!-- /TOC -->
 
 End Contents Menu
@@ -19,9 +37,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 29082024100435
+DATE: 29082024103114
 
-DATX: 1724900675
+DATX: 1724902274
 -->
 
 
@@ -90,13 +108,14 @@ DATX: 1724900675
 
 
 
+- данный README.md динамически создается из директории /.d/.mul/rbld_readme.mul/.cnt
 - много локальных репозиториев push в много удаленных репозиториев ( как локальных так и в сети ) \{push many to many}
 - перед git add проверить что нет больших файлов (>50Mb) \{flow hook}
 - сделать .md файл используя файлы из директории - вставить картинки и т.п. \{file gennerate}
 - сделать локальную базу знаний на файлах с поиском по тегам и каталогом .md файл \{knowledge base}
 - сделать унифицированые по поведнию и удобные в испльзовании юзером обертки над стандартными утилитами os \{user wrapper}
 - обеспечить бэкап с последующим восстановлением файлов и настроек программ \{bcp dpl}
-- данный README.md динамически создается из директории /.d/.mul/rbld_readme.mul/.cnt 
+ 
     
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.install_stl.d/001.pref.txt.man -->
@@ -307,8 +326,8 @@ Enter to continue"
 #### Производительность
 
 - Читабельность и простота для юзера будет происходить за счет уменьшения производительности
-- Производительность есть следствие толщины юзера (оптимизация как повод к повышению квалификации)
-- Управляемость автоматизации рутинных действий для юзера ценнее скорости выполнения
+- Юзер пишет код сам - производительность его ответственность
+- Управляемость автоматизации рутинных действий для юзера ценнее производительности
 
     
 
