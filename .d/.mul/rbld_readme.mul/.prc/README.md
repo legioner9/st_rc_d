@@ -23,11 +23,11 @@ Start Contents Menu
     - [Тестируемость](#тестируемость)
     - [Расширяемость](#расширяемость)
     - [Производительность](#производительность)
+  - [Genera et mores](#genera-et-mores)
 - [Bibliotheca Lapidum - Usu](#bibliotheca-lapidum---usu)
   - [Deminutio abstractionis](#deminutio-abstractionis)
     - [Basic principiis](#basic-principiis)
     - [Basic technologiae](#basic-technologiae)
-    - [Genera et mores](#genera-et-mores)
 - [Install stl](#install-stl)
 - [Libero capitulum](#libero-capitulum)
 
@@ -42,9 +42,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 31082024001440
+DATE: 31082024003253
 
-DATX: 1725038080
+DATX: 1725039173
 -->
 
 
@@ -71,7 +71,12 @@ DATX: 1725038080
 
 Эпоха Виндовс характеризуемая тонким юзером, довольствующимся графическим интерфейсом с кнопками, созданным глобальными корпорациями, подходит к концу. Графические итерфейсы истощили под собой все имеющиеся в распоряжнении человечества вычислительные мощности в погоне за призрачным удовлетворения пользователя, при этом нарастающая сложность информационных систем усугабляется падающей квалификацией программистов пытающихся их (системы) поддерживать (спасать). Если умножить это пониманием того, что корпорации строились на диктате гегемона над всеми остальными - и диктату этому пришел конец - то вопрос таков - что будем выращивать на руинах?
 
-Остается Линукс, характеризуемый толстым юзером, знающим что делает, и тонкими программистами, представляющимися служителями операционной системы (области высоких абстракций пока еще катастрофически сложных программ (броузеры, и т.п.) мы пока не рассмариваем). Все дальнейшее будет посвящено помощи юзерам, желающим стать все толще и толще.
+Остается Линукс, характеризуемый толстым юзером, знающим что делает, и тонкими программистами, представляющимися служителями операционной системы (области высоких абстракций пока еще катастрофически сложных программ (броузеры, и т.п.) мы пока не рассмариваем).
+
+Все дальнейшее будет посвящено помощи юзерам, желающим стать все толще и толще, и будет исходить из того, что 
+большинство пользовательской автоматизации может и должно быть написано самим пользователем и использоваться только в командной строке. 
+
+
 
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/001.pef.txt.man -->
@@ -234,6 +239,24 @@ DATX: 1725038080
 - Управляемость автоматизации рутинных действий для юзера ценнее производительности
     
 
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/005.genera_at_mores.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/005.genera_at_mores.d/001.pref.txt.man)
+
+
+
+## Genera et mores
+
+Типы и поведение (лат.)
+
+- Гитхуки в репозитории
+  - файлы процедур и данных вызываемые функциями обертками над git
+- Арбструктуры
+  - Структуры поддерикторий предназначенные для поиска по тегам и строке основного содержания
+- upath 
+  - строка являющаяся '@', относительным либо абсолютным путем
+    
+
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/001.pref.txt.man -->
 
 [001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/001.pref.txt.man)
@@ -313,24 +336,6 @@ DATX: 1725038080
 - os    - altlinux  (ALT operating systems Russian software company)
 - os_cl - gcc       (the GNU Compiler)
 - os_sl - bash      (the GNU Project's shell—the Bourne Again SHell)
-    
-
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/004.genera_at_mores.d/001.pref.txt.man -->
-
-[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/004.genera_at_mores.d/001.pref.txt.man)
-
-
-
-### Genera et mores
-
-Типы и поведение (лат.)
-
-- Гитхуки в репозитории
-  - файлы процедур и данных вызываемые функциями обертками над git
-- Арбструктуры
-  - Структуры поддерикторий предназначенные для поиска по тегам и строке основного содержания
-- upath 
-  - строка являющаяся '@', относительным либо абсолютным путем
     
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/104.install_stl.d/001.pref.txt.man -->
