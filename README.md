@@ -27,6 +27,7 @@ Start Contents Menu
   - [Deminutio abstractionis](#deminutio-abstractionis)
     - [Basic principiis](#basic-principiis)
     - [Basic technologiae](#basic-technologiae)
+    - [Genera et mores](#genera-et-mores)
 - [Install stl](#install-stl)
 - [Libero capitulum](#libero-capitulum)
 
@@ -41,9 +42,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 30082024012115
+DATE: 31082024001440
 
-DATX: 1724955675
+DATX: 1725038080
 -->
 
 
@@ -170,6 +171,8 @@ DATX: 1724955675
     os_cl               - основной компилируемый язык операционной системы 
     os_sl               - основной скриптовый язык операционной системы 
     fn_elem             - элементарная функция написаная на os_cl вызываемая os_sl с аргументами и по имени 
+
+    upath               - тип указания пути файловой системы
     
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.man -->
@@ -262,7 +265,14 @@ DATX: 1724955675
 
 Базовые принципы (лат.)
 
-- fn_stlu - пожелания:
+- stlu : описание поведения и интерфейсов:
+  - при возникновении ошибки генерируется stack error который должен содержать:
+    - описание восхождения ошибки от системного вызова до пользовательского файла его вызвавшего в виде списка
+    - файл в котором сгенерирована ошибка
+    - номер строки где произошла ошибка
+    - краткое описание  
+
+- fn_stlu : описание поведения и интерфейсов:
   - все файлы с функциями хранятся в однотипных поддиректориях одной директории
   - содержит только одну функцию с названием 
   - содержит только логику состоящую в использовании fn_elem и запуска процедур хрнящихся в файлах
@@ -276,18 +286,23 @@ DATX: 1724955675
     - ARGS: 
       - перечисление всех возможных вариантов наборов аргументов и их значения в функции при стандартном вызове
     - CNTL:
-      - перечисление всех возможных специальных аргументов определяющих специальное поведение
+      - перечисление всех возможных специальных аргументов определяющих специальное поведение:
         - [-h] возвращает текст - описывает общее поведение и внутреннее устройство
-        - [_go or _e] вызывае в редактор кода тело функции
-        - [_tst or _t] вызывает функцию в стандартном тестовом контексте и тестовыми параметрами v_0
-        - [_flow_1] вызывает функцию в произвольном тестовом контексте и тестовыми параметрами v_1
+        - [_go or _e] вызывает в редактор кода тело функции
+        - [_tst or _t] вызывает функцию в стандартном тестовом контексте и тестовыми параметрами, возвращает:
+          - return 1 : if test NOT PASS
+          - return 0 : if test IS PASS
+        - [_flow_1] вызывает функцию в произвольном пользовательском контексте и произвольными параметрами 
     - EXAM:
       - пример вызова функции
+  - аргументы функции
+    - если аргумент обязателен и необходимо передать пустое значение - следует указать '@'
 
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_technologiae.txt.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_technologiae.txt.d/001.pref.txt.man)
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/003.basic_technologiae.txt.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/003.basic_technologiae.txt.d/001.pref.txt.man)
 
 
 
@@ -298,6 +313,24 @@ DATX: 1724955675
 - os    - altlinux  (ALT operating systems Russian software company)
 - os_cl - gcc       (the GNU Compiler)
 - os_sl - bash      (the GNU Project's shell—the Bourne Again SHell)
+    
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/004.genera_at_mores.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/004.genera_at_mores.d/001.pref.txt.man)
+
+
+
+### Genera et mores
+
+Типы и поведение (лат.)
+
+- Гитхуки в репозитории
+  - файлы процедур и данных вызываемые функциями обертками над git
+- Арбструктуры
+  - Структуры поддерикторий предназначенные для поиска по тегам и строке основного содержания
+- upath 
+  - строка являющаяся '@', относительным либо абсолютным путем
     
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/104.install_stl.d/001.pref.txt.man -->
