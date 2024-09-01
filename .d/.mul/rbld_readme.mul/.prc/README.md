@@ -10,9 +10,11 @@ Start Contents Menu
 
 - [Ave Marcus tshemsedinov](#ave-marcus-tshemsedinov)
   - [Gratia](#gratia)
-- [Contextus culturalis](#contextus-culturalis)
 - [Manifesto](#manifesto)
   - [Gradus in saxa](#gradus-in-saxa)
+- [Sfondo](#sfondo)
+  - [Contextus culturalis](#contextus-culturalis)
+  - [Fuoco dentro](#fuoco-dentro)
 - [Quid possum facere](#quid-possum-facere)
 - [Bibliotheca Lapidum - Theoria](#bibliotheca-lapidum---theoria)
   - [Lexicon](#lexicon)
@@ -43,15 +45,15 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 01092024104905
+DATE: 01092024114504
 
-DATX: 1725162545
+DATX: 1725165904
 -->
 
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.ave_marcus.d/001.pref.txt.man -->
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.ave_marcus.d/001.pref.txt.man)
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/001.pref.txt.man)
 
 
 
@@ -60,9 +62,9 @@ DATX: 1725162545
 Да здравствует Марк tshemsedinov (лат.)
     
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.ave_marcus.d/002.gratia.d/001.pref.txt.man -->
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/002.gratia.d/001.pref.txt.man -->
 
-[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.ave_marcus.d/002.gratia.d/001.pref.txt.man)
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/002.gratia.d/001.pref.txt.man)
 
 
 
@@ -73,13 +75,60 @@ DATX: 1725162545
 - vitlav
     
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.contextus_culturalis.d/001.pref.txt.man -->
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/001.pef.txt.man -->
 
-[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.contextus_culturalis.d/001.pref.txt.man)
+[001.pef.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/001.pef.txt.man)
 
 
 
-# Contextus culturalis
+# Manifesto
+    
+Явление миру (лат.)
+
+Библиотеки stlu это инструмент создаваемый пользователем для создания автоматизации пользовательских задач.
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.man -->
+
+[001.pef.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.man)
+
+
+
+## Gradus in saxa 
+
+Шаги по камням (лат.)
+    
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.man -->
+
+[001.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.man)
+
+
+
+
+- Следует использовать только доверенный код, который понятен и тестировал сам, а так же операционную систему
+- Следует знать как используется недоверенный код    
+    
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/001.pref.txt.man)
+
+
+
+# Sfondo
+
+Фон (лат.)
+
+Понимание поступков иногда кроется в том как человек видит реальность и в том что его терзает 
+    
+
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/002.contextus_culturalis.d/001.pref.txt.man -->
+
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/002.contextus_culturalis.d/001.pref.txt.man)
+
+
+
+## Contextus culturalis
 
 Культурологический контекст (лат.)
 
@@ -93,38 +142,18 @@ DATX: 1725162545
 
 
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/001.pef.txt.man -->
+<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/003.fuoco_dentro.d/001.pref.txt.man -->
 
-[001.pef.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/001.pef.txt.man)
-
-
-
-# Manifesto
-    
-Явление миру (лат.)
-
-Библиотеки stlu это инструмент создаваемый пользователем для создания автоматизации пользовательских задач.
-
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.man -->
-
-[001.pef.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.man)
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/003.fuoco_dentro.d/001.pref.txt.man)
 
 
 
-## Gradus in saxa 
+## Fuoco dentro
 
-Шаги по камням (лат.)
-    
+Огонь внутри (лат.)
 
-<!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.man -->
-
-[001.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.man)
-
-
-
-
-- Следует использовать только доверенный код, который понятен и тестировал сам, а так же операционную систему
-- Следует знать как используется недоверенный код    
+- написать код просто - не потерять его вообще возможно?
+- баланса между системным и прикладным кодом не существует? 
     
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/001.pref.txt.man -->
