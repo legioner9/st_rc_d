@@ -45,9 +45,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 01092024121256
+DATE: 01092024144208
 
-DATX: 1725167576
+DATX: 1725176528
 -->
 
 
@@ -59,7 +59,10 @@ DATX: 1725167576
 
 # Ave Marcus tshemsedinov
 
-Да здравствует Марк tshemsedinov (лат.)
+Да здравствует Марк tshemsedinov* (лат.)
+
+*) Cuius fides est lux
+
     
 
 <!-- file:///home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/002.gratia.d/001.pref.txt.man -->
