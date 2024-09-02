@@ -8,6 +8,32 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
+- [Ave Marcus tshemsedinov](#ave-marcus-tshemsedinov)
+  - [Gratia](#gratia)
+- [Manifesto](#manifesto)
+  - [Gradus in saxa](#gradus-in-saxa)
+- [Sfondo](#sfondo)
+  - [Contextus culturalis](#contextus-culturalis)
+  - [Fuoco dentro](#fuoco-dentro)
+- [Quid possum facere](#quid-possum-facere)
+- [Bibliotheca Lapidum - Theoria](#bibliotheca-lapidum---theoria)
+  - [Lexicon](#lexicon)
+  - [Quid est](#quid-est)
+  - [Limitations](#limitations)
+    - [Ограничение сложности stl](#ограничение-сложности-stl)
+    - [Требования к fn\_elem](#требования-к-fn_elem)
+    - [Требования к os\_sl](#требования-к-os_sl)
+    - [Тестируемость](#тестируемость)
+    - [Расширяемость](#расширяемость)
+    - [Производительность](#производительность)
+  - [Genera et mores](#genera-et-mores)
+- [Bibliotheca Lapidum - Usu](#bibliotheca-lapidum---usu)
+  - [Deminutio abstractionis](#deminutio-abstractionis)
+    - [Basic principiis](#basic-principiis)
+    - [Basic technologiae](#basic-technologiae)
+- [Install stl](#install-stl)
+- [Libero capitulum](#libero-capitulum)
+
 <!-- /TOC -->
 
 End Contents Menu
