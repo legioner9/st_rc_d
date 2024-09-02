@@ -8,32 +8,6 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
-- [Ave Marcus tshemsedinov](#ave-marcus-tshemsedinov)
-  - [Gratia](#gratia)
-- [Manifesto](#manifesto)
-  - [Gradus in saxa](#gradus-in-saxa)
-- [Sfondo](#sfondo)
-  - [Contextus culturalis](#contextus-culturalis)
-  - [Fuoco dentro](#fuoco-dentro)
-- [Quid possum facere](#quid-possum-facere)
-- [Bibliotheca Lapidum - Theoria](#bibliotheca-lapidum---theoria)
-  - [Lexicon](#lexicon)
-  - [Quid est](#quid-est)
-  - [Limitations](#limitations)
-    - [Ограничение сложности stl](#ограничение-сложности-stl)
-    - [Требования к fn\_elem](#требования-к-fn_elem)
-    - [Требования к os\_sl](#требования-к-os_sl)
-    - [Тестируемость](#тестируемость)
-    - [Расширяемость](#расширяемость)
-    - [Производительность](#производительность)
-  - [Genera et mores](#genera-et-mores)
-- [Bibliotheca Lapidum - Usu](#bibliotheca-lapidum---usu)
-  - [Deminutio abstractionis](#deminutio-abstractionis)
-    - [Basic principiis](#basic-principiis)
-    - [Basic technologiae](#basic-technologiae)
-- [Install stl](#install-stl)
-- [Libero capitulum](#libero-capitulum)
-
 <!-- /TOC -->
 
 End Contents Menu
@@ -45,9 +19,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 01092024144208
+DATE: 02092024095511
 
-DATX: 1725176528
+DATX: 1725245711
 -->
 
 
