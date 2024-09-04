@@ -1,0 +1,228 @@
+#!/bin/bash
+
+IFS=$' \t\n'
+
+path_to_data=${HOME}/.d/.rc.d/.st.rc.d/.st.path.d/.repo.data
+
+if [[ -f ${path_to_data} ]]; then
+
+    eval STRC_DATA_PATH=$(cat ${path_to_data})
+
+    if [[ -z ${STRC_DATA_PATH} ]]; then
+        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DEFINE : '\${STRC_DATA_PATH} in file://${path_to_data}' : ${hint} : return 1" >&2
+        return 1
+    fi
+
+    if ! [[ -d ${STRC_DATA_PATH} ]]; then
+        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DIR : '\${STRC_DATA_PATH} in file://${path_to_data}' : ${hint} : return 1" >&2
+        return 1
+    fi
+
+else
+    echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_FILE : '. file://${path_to_data}' : ${hint} : return 1" >&2
+    return 1
+fi
+
+_up_d() {
+
+    if ! [[ -d "$1" ]]; then
+        echo "in _up_d() : NOT_DIR : file://$1 return 1" >&2
+        return 1
+    fi
+
+    local item
+
+    for item in $(ls $1); do
+
+        local path_file=${path_dir}/${item}
+
+        if [[ -f ${path_file} ]]; then
+            # echo ". file://${path_file}" >/dev/null
+            echo ". file://${path_file}"
+            if ! . ${path_file}; then
+                echo "in _up_d() : FAIL_EXEC : . file://$path_file return 1" >&2
+                return 1
+            fi
+        fi
+
+    done
+
+}
+
+_up_st_os_d() {
+
+    local path_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.os.d
+
+    if ! [[ -d "$path_dir" ]]; then
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc ${LINENO} _up_st_os_d() : NOT_DIR : file://$path_dir return 1" >&2
+        return 1
+    fi
+    _up_d ${path_dir}
+
+}
+
+if ! _up_st_os_d; then
+    echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}: : EXEC_FAIL : '_up_st_os_d()' : ${hint} : return 1" >&2
+    return 1
+fi
+
+_up_st_config_d() {
+
+    local path_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.config.d
+
+    if ! [[ -d "$path_dir" ]]; then
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc ${LINENO} _up_st_config_d() : NOT_DIR : file://$path_dir return 1" >&2
+        return 1
+    fi
+    _up_d ${path_dir}
+
+}
+
+if ! _up_st_config_d; then
+    echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}: : EXEC_FAIL : '_up_st_config_d()' : ${hint} : return 1" >&2
+    return 1
+fi
+
+_up_st_sh_d() {
+
+    local path_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d
+
+    if ! [[ -d "$path_dir" ]]; then
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc ${LINENO} _up_st_sh_d() : NOT_DIR : file://$path_dir return 1" >&2
+        return 1
+    fi
+    _up_d ${path_dir}
+
+}
+
+if ! _up_st_sh_d; then
+    echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}: : EXEC_FAIL : '_up_st_sh_d()' : ${hint} : return 1" >&2
+    return 1
+fi
+
+# read -p "1"
+
+echo ". ${HOME}/.d/.rc.d/.st.rc.d/.st.tst"
+if ! . ${HOME}/.d/.rc.d/.st.rc.d/.st.tst; then
+    echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO} : EXEC_FAIL : '. ${HOME}/.d/.rc.d/.st.rc.d/.st.tst' : ${hint} : return 1" >&2
+    return 1
+fi
+
+_loop_lib_st_rc() {
+
+    local file_lib_lst=${HOME}/.d/.lst.d/.st.lst
+
+    if ! [[ -f ${file_lib_lst} ]]; then
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc ${LINENO} _loop_lib_st_rc() : NOT_FILE : file://$file_lib_lst return 1" >&2
+        return 1
+    fi
+    local item
+    for item in $(_f2e ${file_lib_lst}); do
+
+        if [[ -f ${item} ]]; then
+
+            IFS=$' \t\n'
+            echo ". ${item} >/dev/null"
+            if ! . ${item} >/dev/null; then
+                echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc ${LINENO} _loop_lib_st_rc() : FAIL_EXEC : . file://$item return 1" >&2
+                return 1
+            fi
+
+        else
+            echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc ${LINENO} _loop_lib_st_rc() : NOT_FILE : file://$item return 1" >&2
+            return 1
+        fi
+
+    done
+}
+
+IFS=$' \t\n'
+
+echo "_loop_lib_st_rc()"
+if ! _loop_lib_st_rc; then
+    echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}: : EXEC_FAIL : '_loop_lib_st_rc()' : ${hint} : return 1" >&2
+    return 1
+fi
+
+W_CONST=
+
+if ! [ -f ~/.w ]; then
+    touch ~/.w
+fi
+
+_w_declare() {
+
+    if [[ -n "${_W_CONST}" ]]; then
+        return 0
+    fi
+
+    local _W_
+
+    if [[ -f ${HOME}/.w ]]; then
+        _W_=$(cat ${HOME}/.w)
+
+        if [[ -z "${_W_}" ]]; then
+            _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${W_CONST} see file://${HOME}/.w' : return 1"
+            return 1
+        fi
+
+        if ! [[ "${_W_}" == "w+" ]] && ! [[ "${_W_}" == "w-" ]]; then
+            _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() : : EXEC_TRUE : '! [[ ${W_CONST} == w+ ]] && ! [[ ${W_CONST} == w- ]]' : see file://${HOME}/.w : return 1"
+            return 1
+        fi
+
+    else
+        _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${HOME}/.w' see file://${HOME}/.w : return 1"
+        return 1
+    fi
+
+    if ! declare -r -g _W_CONST=${_W_}; then
+        _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'declare -r -g _W_CONST=${_W_}' see file://${HOME}/.w : return 1"
+        return 1
+    fi
+
+}
+
+if ! _w_declare; then
+    _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO} : : EXEC_FAIL : '_w_declare' see file://${HOME}/.w : return 1"
+    return 1
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWSTASHSTATE=1
+# GIT_PS1_SHOWUPSTREAM="auto verbose"
+arr_lib=($(_str_lib_lst))
+# export PS1='\033[0;32m${arr_lib[*]} \033[0;35m\u@\H \w$(__git_ps1 " (%s)") \$\033[0m '
+if [[ ${_W_CONST} == "w-" ]]; then
+    export PS1='\033[0;34m${_W_CONST} \033[0;32m${arr_lib[*]} \033[0;35m\u@\H \w$(__git_ps1 " (%s)") \$\033[0m '
+fi
+
+if [[ ${_W_CONST} == "w+" ]]; then
+    export PS1='\033[0;31m${_W_CONST}\033[0;32m${arr_lib[*]} \033[0;35m\u@\H \w$(__git_ps1 " (%s)") \$\033[0m '
+fi
+
+if [[ -f ${HOME}/.tmp_dir_st_rc ]]; then
+    eval "TMP_DIR_ST_RC=$(cat ${HOME}/.tmp_dir_st_rc)"
+    if [[ -z "${TMP_DIR_ST_RC}" ]]; then
+        _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${TMP_DIR} from ${HOME}/.tmp_dir' : ${hint} : return 1"
+        return 1
+    fi
+    if [[ -d ${TMP_DIR_ST_RC} ]]; then
+        export TMP_DIR_ST_RC
+    else
+        _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${TMP_DIR_ST_RC} from ${HOME}/.tmp_dir' : ${hint} : return 1"
+        return 1
+    fi
+
+else
+    _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() : NOT_FILE : 'file://${HOME}/.tmp_dir  from ${HOME}/.tmp_di' : ${hint} : return 1"
+    return 1
+fi
+
+if [[ -d ${TMP_DIR_ST_RC} ]]; then
+    rm -r ${TMP_DIR_ST_RC}
+    mkdir ${TMP_DIR_ST_RC}
+else
+    mkdir ${TMP_DIR_ST_RC}
+fi

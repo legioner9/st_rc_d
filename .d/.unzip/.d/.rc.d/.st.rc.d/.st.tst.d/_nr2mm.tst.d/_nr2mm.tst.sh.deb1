@@ -1,0 +1,50 @@
+#!/bin/bash
+
+cd ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_nr2mm.tst.d || echo "cd ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_nr2mm.tst.d EXEC_FALI" >&2
+
+if true; then
+    echo "_nr2mm"
+fi
+
+# : >${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_nr2mm.tst.d/res
+
+# _nr2mm >/dev/null
+
+a_name=_arr_name
+a_res=_arr_result
+v_res=_result_$(_rnd2e)
+
+# _eval <<EOF
+# # _flur 1 <<EOF
+# ${a_name}=(a b)
+# ${a_res}=(c d)
+# ${v_res}=
+# #echo _nr2mm ${a_name} ${a_res} ${v_res} 2
+# #_nr2mm ${a_name} ${a_res} ${v_res} 2
+# # _nr2mm ${a_name} ${a_res} ${v_res} '&'
+# #echo -e "${GREEN}\\\$${v_res} = \$${v_res}${NORMAL}"
+# EOF
+
+
+_flur 1 <<EOF
+${a_name}=(a b)
+${a_res}=(c d)
+${v_res}=
+_nr2mm ${a_name} ${a_res} ${v_res} 2
+echo -e "${GREEN}\\\$${v_res} = \$${v_res}${NORMAL}"
+EOF
+
+flag=1
+
+if ! diff -q res pre >/dev/null; then
+    flag=0
+fi
+
+if [ 0 -eq "$flag" ]; then
+    echo "in file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_nr2mm.tst.d/_nr2mm.tst.sh fail" >&2
+    diff res pre >&2
+    return 1
+else
+    echo "in file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_nr2mm.tst.d/_nr2mm.tst.sh true"
+    return 0
+fi

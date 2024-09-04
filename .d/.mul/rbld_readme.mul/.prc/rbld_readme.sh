@@ -55,11 +55,20 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
+    ufl_stl0 7 1 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.txt.man
+
     . README.md_ufl4
 
+    _s2f "${HOME}"/ '/' README.md
+
     rm ${ST_RC_D_PATH}/README.md
+
     cp README.md ${ST_RC_D_PATH}/README.md
-    _s2f '(/REPOBARE/_repo/st_rc_d' '(' ${ST_RC_D_PATH}/README.md
+
+    _s2f "${HOME}"/REPOBARE/_repo/st_rc_d/ '/' ${ST_RC_D_PATH}/README.md
+
+    _s2f '/REPOBARE/_repo/st_rc_d/' '/' ${ST_RC_D_PATH}/README.md
+
     _edit ${ST_RC_D_PATH}/README.md 
 
     #{{body_fn}}

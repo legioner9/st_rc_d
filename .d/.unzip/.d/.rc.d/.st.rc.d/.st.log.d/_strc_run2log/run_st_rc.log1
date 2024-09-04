@@ -1,0 +1,472 @@
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.os.d/app-aliases.sh
+[1m---start file: /home/st/.os/.sh/app-aliases.sh---[0m
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.os.d/git-alias.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.os.d/git-completion.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.os.d/git-prompt.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.os.d/os_aliases.sh
+[1m---start file: /home/st/REPOBARE/_repo/plt/.d/.sh/.bashrc/os_aliases.sh---[0m
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.os.d/os_utils.sh
+[1m---start file: /home/st/REPOBARE/_repo/plt/.d/.sh/.bashrc/os_utils.sh---[0m
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.config.d/fn_name.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_abs_path.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_arb_up.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_bcp_strc.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_color_self.sh
+[0;36m--- start : _color_self() @ ---[0m
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_c_up.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_d2e.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_d2f_marg.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_d2f.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_d2mm.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_dd2e.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_df2e.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_dpl_strc.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_dSYd.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_edir.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_edit.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_elib.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_f2ad.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_f2e.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_f2f.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_f2mm.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_fn2var.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_fnCMPenv.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_is_dDIFz.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_is_dNTf.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_isn_from.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_isn_od.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_is_root.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_is_rr.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_is_yes.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_nr2mm.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_parr3e.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_prs_f.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_re.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_ret2e.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_rnd2e.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_rpr_strc.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_rr.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_s2ad.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_s2d.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_s2f.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_s2se.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_sd2d.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_sf2f.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_sRf.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_st_err.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_stE.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_st_exit.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_st_info.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_strc_run2log.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_str_lib_lst.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_ststart.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_tst_arb.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_unzip_to.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_XXX.sh
+. file:///home/st/.d/.rc.d/.st.rc.d/.st.sh.d/_zip_to.sh
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_abs_path.tst
+_abs_path
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_arb_up.tst
+_arb_up
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_bcp_strc.tst
+_bcp_strc
+_bcp_strc
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_bcp_strc.tst.d/_bcp_strc.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_color_self.tst
+_color_self
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_c_up.tst
+_c_up
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2e.tst
+_d2e
+_d2e
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2e.tst.d/_d2e.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f_marg.tst
+_d2f_marg
+_d2f_marg
+[0;36m--- start : _d2f_marg() file.result 2 ---[0m
+[0;36m--- start : _nr2mm() arr_flow res res_nr2mm 2 ---[0m
+${arr_name[0]} = 001_XXX.flow
+${arr_name[1]} = 002_sh_with_rndfn.flow
+${arr_name[2]} = exit menu
+${arr_res[0]} = /home/st/.d/.rc.d/.st.rc.d/.st.d/.mul/_d2f_marg/001_XXX.flow
+${arr_res[1]} = /home/st/.d/.rc.d/.st.rc.d/.st.d/.mul/_d2f_marg/002_sh_with_rndfn.flow
+${arr_res[2]} = return 0
+[0;32m$res_nr2mm = /home/st/.d/.rc.d/.st.rc.d/.st.d/.mul/_d2f_marg/002_sh_with_rndfn.flow[0m
+[1m--- exec: cat tst.d/file.result ---[0m
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f_marg.tst.d/_d2f_marg.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst
+_d2f
+_d2f
+[0;36m--- start : _d2f() tst.insert.d tst.tml file.result ---[0m
+[0;32m$file_insert = /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/tst.insert.d/body.insert[0m
+[0;32m$reciver = {{body}}[0m
+[1m--- exec: _f2f /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/tst.insert.d/body.insert {{body}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/file.result ---[0m
+[0;36m--- start : _f2f() /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/tst.insert.d/body.insert {{body}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/file.result ---[0m
+[1m--- exec: sed -e '/{{body}}/{r /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/tst.insert.d/body.insert' -e ';}' /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/file.result >tmp ---[0m
+[0;32m$file_insert = /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/tst.insert.d/main.insert[0m
+[0;32m$reciver = {{main}}[0m
+[1m--- exec: _f2f /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/tst.insert.d/main.insert {{main}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/file.result ---[0m
+[0;36m--- start : _f2f() /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/tst.insert.d/main.insert {{main}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/file.result ---[0m
+[1m--- exec: sed -e '/{{main}}/{r /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/tst.insert.d/main.insert' -e ';}' /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/tst.d/file.result >tmp ---[0m
+[1m--- exec: cat file.result ---[0m
+{{body}}
+that body.insert
+{{main}}
+that main.insert
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2f.tst.d/_d2f.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2mm.tst
+_d2mm
+_d2mm
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_d2mm.tst.d/_d2mm.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_dd2e.tst
+_dd2e
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_df2e.tst
+_df2e
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_dpl_strc.tst
+_dpl_strc
+_dpl_strc
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_dpl_strc.tst.d/_dpl_strc.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_dSYd.tst
+_dSYd
+_dSYd
+[1m--- exec: ls tst.d/data/dir_b ---[0m
+[1m--- exec: _dSYd tst.d/src/dir_a tst.d/src/dir_b ---[0m
+[0;36m--- start : _dSYd() tst.d/src/dir_a tst.d/data/dir_b ---[0m
+/home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_dSYd.tst.d/tst.d/src/dir_a
+/home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_dSYd.tst.d/tst.d/data/dir_b
+sending incremental file list
+./
+cw.cw
+cwcasdc.cw
+cwcq.cwqac
+
+sent 259 bytes  received 76 bytes  670,00 bytes/sec
+total size is 32  speedup is 0,10
+[1m--- exec: ls tst.d/data/dir_b ---[0m
+cwcasdc.cw
+cwcq.cwqac
+cw.cw
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_dSYd.tst.d/_dSYd.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_edir.tst
+_edir
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_edit.tst
+_edit
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_elib.tst
+_elib
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst
+_f2ad
+_f2ad
+[0;36m--- start : _f2ad() file.insert {{reciver}} res.d ---[0m
+/home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert
+/home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d
+[0;36m--- start : _f2f() /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert {{reciver}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/1.file ---[0m
+[1m--- exec: sed -e '/{{reciver}}/{r /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert' -e ';}' /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/1.file >tmp ---[0m
+[0;36m--- start : _f2f() /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert {{reciver}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/_2.file ---[0m
+[1m--- exec: sed -e '/{{reciver}}/{r /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert' -e ';}' /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/_2.file >tmp ---[0m
+[0;36m--- start : _f2f() /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert {{reciver}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/.3.file ---[0m
+[1m--- exec: sed -e '/{{reciver}}/{r /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert' -e ';}' /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/.3.file >tmp ---[0m
+[0;36m--- start : _f2f() /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert {{reciver}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/.dir/_2.file ---[0m
+[1m--- exec: sed -e '/{{reciver}}/{r /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert' -e ';}' /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/.dir/_2.file >tmp ---[0m
+[0;36m--- start : _f2f() /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert {{reciver}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/_dir/2.file ---[0m
+[1m--- exec: sed -e '/{{reciver}}/{r /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert' -e ';}' /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/_dir/2.file >tmp ---[0m
+[0;36m--- start : _f2f() /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert {{reciver}} /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/dir/2.file ---[0m
+[1m--- exec: sed -e '/{{reciver}}/{r /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/file.insert' -e ';}' /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/tst.d/res.d/dir/2.file >tmp ---[0m
+[1m--- exec: cat res.d/.dir/_2.file ---[0m
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2ad.tst.d/_f2ad.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2e.tst
+_f2e
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2f.tst
+_f2f
+[0;36m--- start : _f2f() insert.file {\[reciver\]} res ---[0m
+[1m--- exec: sed -e '/{\[reciver\]}/{r insert.file' -e ';}' res >tmp ---[0m
+{[reciver]}
+    that insert.file content
+dasf
+{[reciver]}
+    that insert.file content
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2f.tst.d/_f2f.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2mm.tst
+_f2mm
+_f2mm
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_f2mm.tst.d/_f2mm.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_fn2var.tst
+_fn2var
+_fn2var
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_fn2var.tst.d/_fn2var.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_fnCMPenv.tst
+_fnCMPenv
+_fnCMPenv
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_fnCMPenv.tst.d/_fnCMPenv.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.tst
+_gig_st_rc_fn
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.tst.d/_gig_st_rc_fn.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_is_dDIFz.tst
+_is_dDIFz
+_is_dDIFz
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_is_dDIFz.tst.d/_is_dDIFz.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_is_dNTf.tst
+_is_dNTf
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_is_dNTf.tst.d/_is_dNTf.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_isn_from.tst
+_isn_from
+_isn_from
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_isn_from.tst.d/_isn_from.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_isn_od.tst
+_isn_od
+_isn_od
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_isn_od.tst.d/_isn_od.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_is_root.tst
+_is_root
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_is_rr.tst
+_is_rr
+_is_rr
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_is_rr.tst.d/_is_rr.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_is_yes.tst
+_is_yes
+_is_yes
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_is_yes.tst.d/_is_yes.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_nr2mm.tst
+_nr2mm
+_nr2mm
+[0;36m--- start : _nr2mm() a_name a_res result_str 2 ---[0m
+${arr_name[0]} = a
+${arr_name[1]} = b
+${arr_name[2]} = exit menu
+${arr_res[0]} = c
+${arr_res[1]} = d
+${arr_res[2]} = return 0
+[0;32m$result_str = d[0m
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_nr2mm.tst.d/_nr2mm.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_parr3e.tst
+_parr3e
+_parr3e
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_parr3e.tst.d/_parr3e.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_prs_f.tst
+_prs_f
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_prs_f.tst.d/_prs_f.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_re.tst
+_re
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_ret2e.tst
+_ret2e
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_rnd2e.tst
+_rnd2e
+_rnd2e
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_rnd2e.tst.d/_rnd2e.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_rpr_strc.tst
+_rpr_strc
+_rpr_strc
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_rpr_strc.tst.d/_rpr_strc.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_rr.tst
+_rr
+_rr
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_rr.tst.d/_rr.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2ad.tst
+_s2ad
+_s2ad
+[0;36m--- start : _s2ad() XXX t vfds eee3 res.d ---[0m
+/home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2ad.tst.d/tst.d/res.d
+[0;36m--- start : _s2f() XXX t vfds eee3 /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2ad.tst.d/tst.d/res.d/1.file ---[0m
+[0;36m--- start : _s2f() XXX t vfds eee3 /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2ad.tst.d/tst.d/res.d/_2.file ---[0m
+[0;36m--- start : _s2f() XXX t vfds eee3 /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2ad.tst.d/tst.d/res.d/.3.file ---[0m
+[0;36m--- start : _s2f() XXX t vfds eee3 /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2ad.tst.d/tst.d/res.d/.dir/_2.file ---[0m
+[0;36m--- start : _s2f() XXX t vfds eee3 /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2ad.tst.d/tst.d/res.d/_dir/2.file ---[0m
+[0;36m--- start : _s2f() XXX t vfds eee3 /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2ad.tst.d/tst.d/res.d/dir/2.file ---[0m
+[1m--- exec: cat res.d/.dir/2.file ---[0m
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2ad.tst.d/_s2ad.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2d.tst
+_s2d
+_s2d
+[0;36m--- start : _s2d() XXX t vfds eee3 res.d ---[0m
+/home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2d.tst.d/tst.d/res.d
+[0;36m--- start : _s2f() XXX t vfds eee3 /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2d.tst.d/tst.d/res.d/1.file ---[0m
+[0;36m--- start : _s2f() XXX t vfds eee3 /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2d.tst.d/tst.d/res.d/dir/2.file ---[0m
+[1m--- exec: cat tst.d/res.d/dir/2.file >res---[0m
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2d.tst.d/_s2d.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2f.tst
+_s2f
+csdacsd_one x ycweca
+csdacsd_one x ycweca
+csdacsd_one x ycweca[0;36m--- start : _s2f() _one x y _two t tst.file ---[0m
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_st_exit.tst.d/_st_exit.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2se.tst
+_s2se
+_s2se
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2se.tst.d/_s2se.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst
+_sd2d
+[1m--- exec: _sd2d _XXX _RES tst.d/init_XXX.d ---[0m
+[0;32m$init_dir = tst.d/init_XXX.d[0m
+/home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_XXX.d
+[1m--- exec: _s2se _XXX _RES init_XXX.d ---[0m
+[0;32m$result_dir = file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d[0m
+[0;32m$item = 0[0m
+[1m--- exec: _s2f _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/0 ---[0m
+[0;36m--- start : _s2f() _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/0 ---[0m
+[0;32m$item = file.f[0m
+[1m--- exec: _s2f _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/file.f ---[0m
+[0;36m--- start : _s2f() _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/file.f ---[0m
+[0;32m$item = file_XXX.f[0m
+file_XXX.f
+[1m--- exec: _s2se _XXX _RES file_XXX.f ---[0m
+[1m--- exec: _s2f _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/file_RES.f ---[0m
+[0;36m--- start : _s2f() _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/file_RES.f ---[0m
+[0;32m$item = inner_XXX.d[0m
+inner_XXX.d
+[1m--- exec: _s2se _XXX _RES inner_XXX.d ---[0m
+[0;32m$item = file_inner.f[0m
+[1m--- exec: _s2f _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/inner_RES.d/file_inner.f ---[0m
+[0;36m--- start : _s2f() _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/inner_RES.d/file_inner.f ---[0m
+[0;32m$item = file_inner_XXX.f[0m
+file_inner_XXX.f
+[1m--- exec: _s2se _XXX _RES file_inner_XXX.f ---[0m
+[1m--- exec: _s2f _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/inner_RES.d/file_inner_RES.f ---[0m
+[0;36m--- start : _s2f() _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/tst.d/init_RES.d/inner_RES.d/file_inner_RES.f ---[0m
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sd2d.tst.d/_sd2d.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sf2f.tst
+_sf2f
+_sf2f
+[1m--- exec: _sf2f _XXX _RES tst.d/file_XXX.f ---[0m
+[0;36m--- start : _sf2f() _XXX _RES tst.d/file_XXX.f ---[0m
+[0;32m$init_dir = [0m
+/home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sf2f.tst.d/tst.d/file_XXX.f
+[1m--- exec: _s2se _XXX _RES file_XXX.f ---[0m
+[0;36m--- start : _s2f() _XXX _RES /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sf2f.tst.d/tst.d/file_RES.f ---[0m
+[1m--- exec: cat tst.d/file_RES.f ---[0m
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sf2f.tst.d/_sf2f.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sRf.tst
+_sRf
+_sRf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_sRf.tst.d/_sRf.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_st_err.tst
+_st_err
+_st_err
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_st_err.tst.d/_st_err.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_stE.tst
+_stE
+_stE
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_stE.tst.d/_stE.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_st_exit.tst
+_st_exit
+_st_exit
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_st_exit.tst.d/_st_exit.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_st_info.tst
+_st_info
+_st_info
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_st_info.tst.d/_st_info.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_strc_run2log.tst
+_strc_run2log
+_strc_run2log
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_strc_run2log.tst.d/_strc_run2log.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_str_lib_lst.tst
+_str_lib_lst
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_ststart.tst
+_ststart
+_ststart
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_ststart.tst.d/_ststart.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_tst_arb.tst
+_tst_arb
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_unzip_to.tst
+_unzip_to
+  adding: dir_for_zip/	(in=0) (out=0) (stored 0%)
+  adding: dir_for_zip/src.d/	(in=0) (out=0) (stored 0%)
+  adding: dir_for_zip/src.d/src_in.f	(in=15) (out=15) (stored 0%)
+  adding: dir_for_zip/src.f	(in=13) (out=13) (stored 0%)
+total bytes=28, compressed=28 -> 0% savings
+[0;36m--- start : _unzip_to() dist_init_dir dir.zip ---[0m
+Archive:  dir.zip
+   creating: dir_for_zip/
+   creating: dir_for_zip/src.d/
+ extracting: dir_for_zip/src.d/src_in.f  
+ extracting: dir_for_zip/src.f       
+.
+├── 0
+├── dir_for_zip
+│   ├── src.d
+│   │   └── src_in.f
+│   └── src.f
+├── dist_init_dir
+│   ├── 0
+│   └── dir_for_zip
+│       ├── src.d
+│       │   └── src_in.f
+│       └── src.f
+└── x
+
+5 directories, 7 files
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_unzip_to.tst.d/_unzip_to.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst
+_XXX
+_XXX
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d/_XXX.tst.sh true
+. /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst
+_zip_to
+[1m--- exec: _zip_to tst.d/dist_init_dir/dist.f tst.d/src_init_dir/src.f ---[0m
+[0;36m--- start : _zip_to() tst.d/dist_init_dir/dist.f tst.d/src_init_dir/src.f ---[0m
+  adding: src.f (stored 0%)
+[1m--- exec: mkdir /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/tmp_c6263fb5ccc1414abbb6c33dcbdacb5d ---[0m
+[1m--- cp file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/dist.f.zip file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d ---[0m
+[1m--- exec: cd /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d ---[0m
+[1m--- exec: unzip -o /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d/dist.f.zip ---[0m
+Archive:  /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d/dist.f.zip
+ extracting: src.f                   
+[1m--- exec: diff -q file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d/src.f file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/src_init_dir/src.f ---[0m
+[1m--- exec: _zip_to tst.d/dist_init_dir/dist.d tst.d/src_init_dir/src.d ---[0m
+[0;36m--- start : _zip_to() tst.d/dist_init_dir/dist.d tst.d/src_init_dir/src.d ---[0m
+[1m--- exec: zip -vr dist.d.zip src.d ---[0m
+  adding: src.d/	(in=0) (out=0) (stored 0%)
+  adding: src.d/src_in.f	(in=15) (out=15) (stored 0%)
+total bytes=15, compressed=15 -> 0% savings
+[1m--- exec: mkdir /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d ---[0m
+[1m--- cp file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/dist.d.zip file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d ---[0m
+[1m--- exec: cd /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d ---[0m
+[1m--- exec: unzip -o /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d/dist.d.zip ---[0m
+Archive:  /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d/dist.d.zip
+   creating: src.d/
+ extracting: src.d/src_in.f          
+[1m--- exec: diff -qr file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir/_zip_to.tmp.d/src.d file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/src_init_dir/src.d ---[0m
+tst.d
+├── 0
+├── dist_init_dir
+│   ├── dist.d.zip
+│   └── dist.f.zip
+└── src_init_dir
+    ├── src.d
+    │   └── src_in.f
+    └── src.f
+
+3 directories, 5 files
+in file:///home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/_zip_to.tst.sh true
+_loop_lib_st_rc()
+. /home/st/.d/.rc.d/.st_rc_d.rc >/dev/null
+. /home/st/.d/.rc.d/.sta.rc >/dev/null
+. /home/st/.d/.rc.d/.mane.rc >/dev/null
+. /home/st/.enterrc >/dev/null

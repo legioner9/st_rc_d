@@ -1,0 +1,19 @@
+#!/bin/bash
+
+touch ${HOME}/.d/.path.d/.stb.path
+
+eval "STB_PATH=$(cat ${HOME}/.d/.path.d/.stb.path)"
+
+if [[ -f ${STB_PATH}/.d/.repo.d/.repo.rc ]]; then
+    if ! . ${STB_PATH}/.d/.repo.d/.repo.rc; then
+        echo "in fs=file://${HOME}/.d/.st.rc.d/.stb.rc , line=${LINENO} : : EXEC_FAIL : '. file://${STB_PATH}/.d/.repo.d/.repo.rc' : ${hint} : return 1" >&2
+        return 1
+    fi
+fi
+
+IFS=$' \t\n'
+
+# if command -v _str_lib_lst; then
+#     arr_lib=($(_str_lib_lst))
+#     export PS1='\033[0;32m${arr_lib[*]} \033[0;35m\u@\H \w$(__git_ps1 " (%s)") \$\033[0m '
+# fi

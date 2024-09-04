@@ -1,0 +1,34 @@
+#!/bin/bash
+
+touch ${HOME}/.d/.path.d/.mane.path
+
+eval "MANE_PATH=$(cat ${HOME}/.d/.path.d/.mane.path)"
+
+
+if [[ -f ${MANE_PATH}/.d/.repo.d/.repo.rc ]]; then
+    if ! . ${MANE_PATH}/.d/.repo.d/.repo.rc; then
+        echo "in fs=file://${HOME}/.d/.st.rc.d/mane.rc , line=${LINENO} : : EXEC_FAIL : '. file://${MANE_PATH}/.d/.repo.d/.repo.rc' : ${hint} : return 1" >&2
+        return 1
+    fi
+fi
+
+# touch ${HOME}/.d/.path.d/.sta.path
+
+# eval "STA_PATH=$(cat ${HOME}/.d/.path.d/.sta.path)"
+
+# if [[ -f ${STA_PATH}/.repo.rc ]]; then
+
+#     if ! . ${STA_PATH}/.repo.rc; then
+#         echo "in fs=file://${HOME}/.manerc , line=${LINENO} : : EXEC_FAIL : '. file://${STA_PATH}/.repo.rc' : ${hint} : return 1" >&2
+#         return 1
+#     fi
+# fi
+
+IFS=$' \t\n'
+
+# if command -v _str_lib_lst; then
+#     arr_lib=($(_str_lib_lst))
+#     export PS1='\033[0;32m${arr_lib[*]} \033[0;35m\u@\H \w$(__git_ps1 " (%s)") \$\033[0m '
+# fi
+
+#x

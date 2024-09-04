@@ -1,0 +1,10 @@
+## files
+
+/home/st/.d/.rpn.ax.d/_tst_dir/_dir.a/tst_dir/_dir.a/file_to_ins_1.file
+/home/st/.d/.rpn.ax.d/_tst_dir/.dir.a/tst_dir/_dir.a/file_to_ins_1.file
+/home/st/.d/.rpn.ax.d/_tst_dir/dir.a/tst_dir/dir.a/file_to_ins_1.file
+
+
+    {{HOME}}
+    {{sh_file}}
+    XXX t

@@ -1,0 +1,154 @@
+#!/bin/bash
+
+_bcp_strc() {
+
+    local FNN=${FUNCNAME[0]}
+    local PPWD=$PWD
+    local ARGS=("$@")
+    local NARGS=$#
+
+    if ! [[ -d ${PPWD} ]]; then
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/${FNN}.sh , line=${LINENO}, ${FNN}() :\
+         \${PPWD} root dir NOT_DIR : 'file://${PPWD}' : ${hint} : return 1"
+        return 1
+    fi
+
+    echo -e "${CYAN}--- start : ${FNN}() $@ ---${NORMAL}" #sistem info mesage
+
+    if [[ "-h" == "$1" ]]; then
+        echo -e "
+MAIN: ${FNN} :: bcp mirror ~/.d/.rc.d/.st.rc.d , ~/.d/.rc.d/.<name_repo>.rc to ${ST_RC_D_PATH}/.d/.zip
+HINT: lst <name_repo> ${HOME}/.d/.rc.d/.st.rc.d/.st.data.d/_bcp_strc/file.rc.lst
+TAGS:
+\$1 
+[, \$2]
+CNTL: 
+    _e : body    : _edit ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_bcp_strc.sh
+    _t : tst_dir : _edit ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_bcp_strc.tst.d
+    _d : exec tst_dir_fn : . ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_bcp_strc.tst.d/_bcp_strc.tst.sh
+EXAM: 
+    ${FNN}
+"
+        return 0
+    fi
+
+    if [[ "_e" == "$1" ]]; then
+        _edit ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_bcp_strc.sh
+        return 0
+    fi
+
+    if [[ "_t" == "$1" ]]; then
+        _edit ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_bcp_strc.tst.d
+        return 0
+    fi
+
+    if [[ -d ${ST_RC_D_PATH}/.d/.zip/tmp ]]; then
+        rm -r ${ST_RC_D_PATH}/.d/.zip/tmp
+    fi
+
+    if ! _is_rr; then
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_dpl_strc.sh, line=${LINENO}, ${FNN}()\
+         : : EXEC_FAIL : '_is_rr' : return 1" >&2
+
+        cd $PPWD
+        return 1
+
+    fi
+
+    if [[ "$_W_CONST" == "w-" ]]; then
+        _st_info "\$_W_CONST=$_W_CONST _bcp_strc NOT WORK ; return 0"
+        return 0
+    fi
+
+    # #* BCP .st_rc_d.rc
+
+    # if [[ -f ${ST_RC_D_PATH}/.d/.zip/.st_rc_d.rc.zip ]]; then
+    #     rm ${ST_RC_D_PATH}/.d/.zip/.st_rc_d.rc.zip~
+    #     mv ${ST_RC_D_PATH}/.d/.zip/.st_rc_d.rc.zip ${ST_RC_D_PATH}/.d/.zip/.st_rc_d.rc.zip~
+    # fi
+
+    # zip ${ST_RC_D_PATH}/.d/.zip/.st_rc_d.rc.zip ${HOME}/.d/.rc.d/.st_rc_d.rc
+
+    # #* BCP .mane.rc
+
+    # if [[ -f ${ST_RC_D_PATH}/.d/.zip/.mane.rc.zip ]]; then
+    #     rm ${ST_RC_D_PATH}/.d/.zip/.mane.rc.zip~
+    #     mv ${ST_RC_D_PATH}/.d/.zip/.mane.rc.zip ${ST_RC_D_PATH}/.d/.zip/.mane.rc.zip~
+    # fi
+
+    # zip ${ST_RC_D_PATH}/.d/.zip/.mane.rc.zip ${HOME}/.d/.rc.d/.mane.rc
+
+    # #* BCP .sta.rc
+
+    # if [[ -f ${ST_RC_D_PATH}/.d/.zip/.sta.rc.zip ]]; then
+    #     rm ${ST_RC_D_PATH}/.d/.zip/.sta.rc.zip~
+    #     mv ${ST_RC_D_PATH}/.d/.zip/.sta.rc.zip ${ST_RC_D_PATH}/.d/.zip/.sta.rc.zip~
+    # fi
+
+    # zip ${ST_RC_D_PATH}/.d/.zip/.sta.rc.zip ${HOME}/.d/.rc.d/.sta.rc
+
+    local name_repo=
+
+    # for name_repo in $(_f2e ${HOME}/.d/.rc.d/.st.rc.d/.st.data.d/_bcp_strc/file.rc.lst); do
+
+    #     if [[ -f ${ST_RC_D_PATH}/.d/.zip/.${name_repo}.rc.zip ]]; then
+    #         rm ${ST_RC_D_PATH}/.d/.zip/.${name_repo}.rc.zip~
+    #         mv ${ST_RC_D_PATH}/.d/.zip/.${name_repo}.rc.zip ${ST_RC_D_PATH}/.d/.zip/.${name_repo}.rc.zip~
+    #     fi
+    #     echo -e "${HLIGHT}--- exec: zip ${ST_RC_D_PATH}/.d/.zip/.${name_repo}.rc.zip ${HOME}/.d/.rc.d/.${name_repo}.rc ---${NORMAL}" #start files
+    #     zip ${ST_RC_D_PATH}/.d/.zip/.${name_repo}.rc.zip ${HOME}/.d/.rc.d/.${name_repo}.rc
+    # done
+
+    echo -e "${RED}--------------------- _is_dDIFz ${HOME}/.d ${ST_RC_D_PATH}/.d/.zip/.d.zip: --------------------${NORMAL}"
+    if _is_dDIFz ${HOME}/.d ${ST_RC_D_PATH}/.d/.zip/.d.zip; then
+        echo "in fs= file://${HOME}.st.rc.d/.st.sh.d/_bcp_strc.sh , line=${LINENO}, ${FNN}() : in file://${HOME}/.d NOT _is_dDIFz file://${ST_RC_D_PATH}/.d/.zip/.d.zip :: return 0"
+
+        cd $PPWD
+        return 0
+    fi
+
+    if _is_yes "DO? ZIP file://${HOME}/.d TO file://${ST_RC_D_PATH}/.d/.zip/.d.zip"; then
+        echo -e "${HLIGHT}--- exec: _zip_to file://${ST_RC_D_PATH}/.d/.zip/.d.zip file://${HOME}/.d \
+---${NORMAL}" #start files
+        if ! _zip_to ${ST_RC_D_PATH}/.d/.zip/.d.zip ${HOME}/.d >/dev/null; then
+            echo "in fs= file://${HOME}.st.rc.d/.st.sh.d/_bcp_strc.sh , line=${LINENO}, ${FNN}() : : EXEC_FAIL :\
+ '_zip_to file://${ST_RC_D_PATH}/.d/.zip/.d.zip file://${HOME}/.d' : ${hint} : return 1" >&2
+
+            cd $PPWD
+            return 1
+        fi
+    else
+        cd $PPWD
+        return 0
+    fi
+
+    mkdir ${ST_RC_D_PATH}/.d/.zip/tmp
+
+    cp ${ST_RC_D_PATH}/.d/.zip/.d.zip ${ST_RC_D_PATH}/.d/.zip/tmp
+    cd ${ST_RC_D_PATH}/.d/.zip/tmp || {
+        echo "NOT_DIR: ${ST_RC_D_PATH}/.d/.zip/tmp return 1"
+
+        cd $PPWD
+        return 1
+    }
+
+    unzip .d.zip >/dev/null
+
+    echo -e "${HLIGHT}--- exec: diff -rq ${ST_RC_D_PATH}/.d/.zip/tmp/.d ${HOME}/.d\
+ ---${NORMAL}" #start files
+    if ! diff -rq ${ST_RC_D_PATH}/.d/.zip/tmp/.d ${HOME}/.d >/dev/null; then
+        echo "in fs= file://${HOME}.st.rc.d/.st.sh.d/_bcp_strc.sh , line=${LINENO} : : EXEC_FAIL :\
+ 'diff ${ST_RC_D_PATH}/.d/.zip/tmp/.d ${HOME}/.d' : ${hint} : return 1" >&2
+        diff -r ${ST_RC_D_PATH}/.d/.zip/tmp/.d ${HOME}/.d
+
+        cd $PPWD
+        return 1
+    fi
+
+    rm -r ${ST_RC_D_PATH}/.d/.zip/tmp
+
+    cd $PPWD
+
+    return 0
+
+}

@@ -1,0 +1,18 @@
+# Prefix
+## path
+- u@ (u@dir, u@file ...)  fullpath, relpath, @ if root path (in dir use $PWD)
+- u (udir, ufile ...)  fullpath, relpath
+
+# Name
+## Pseudo bio hierarchy:
+
+- fol (leaf)
+- ram (branch)
+- arb (tree)
+- sil (forest)
+
+## Thing hierarchy:
+
+- tml (template)
+- prc (process)
+

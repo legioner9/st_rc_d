@@ -1,0 +1,64 @@
+#!/bin/bash
+
+___is_d2acc_TST_SH_DEB1() {
+
+    local FNN=${FUNCNAME[0]}
+    local PPWD=$PWD
+    local ARGS=("$@")
+
+    local ARGS0="$1"
+    local ARGS1="$2"
+    local ARGS2="$3"
+    local ARGS3="$4"
+
+    local NARGS=$#
+
+    local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_is_d2acc.sh
+    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_is_d2acc.sh
+    local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_is_d2acc.tst.d
+    local tst_dir_file=${tst_dir}/_is_d2acc.tst.sh.deb1
+    local tst_lst_env=${tst_dir}/.lst/tst_env.lst
+
+    echo -e "${BLUE}--- start ___is_d2acc_TST_SH_DEB1() $* in $tst_dir_file ---${NORMAL}" #sistem info mesage
+
+    _lnv2e ${tst_lst_env}
+
+    cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2
+
+    if true; then
+        echo "_is_d2acc"
+    fi
+
+    # : >${tst_dir}/res
+
+    # cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
+
+    # _is_d2acc >/dev/null
+
+    local dir_err_acc="${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_lnv2ad.tst.d/tst.d/res.d"
+    echo -e "${HLIGHT}--- stat -L -c \"%a %G %U\" \"$dir_err_acc\" ---${NORMAL}" #start files
+    stat -L -c "%a %G %U" "$dir_err_acc"
+    INFO=($(stat -L -c "%a %G %U" "$dir_err_acc"))
+    _ret2e _is_d2acc $dir_err_acc
+    stat -L -c "%a %G %U" "$HOME"
+    _ret2e _is_d2acc ${HOME}
+
+    flag=1
+
+    cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2
+
+    if ! diff -q res pre >/dev/null; then
+        flag=0
+    fi
+
+    if [ 0 -eq "$flag" ]; then
+        echo "in file://${tst_dir_file} fail" >&2
+        diff res pre >&2
+        return 1
+    else
+        echo "in file://${tst_dir_file} true"
+        return 0
+    fi
+}
+
+___is_d2acc_TST_SH_DEB1 "$@"

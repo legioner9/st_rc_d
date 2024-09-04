@@ -1,0 +1,14 @@
+#!/bin/bash
+
+touch ${HOME}/.d/.path.d/.st_rc_d.path
+
+eval "ST_RC_D_PATH=$(cat ${HOME}/.d/.path.d/.st_rc_d.path)"
+
+if [[ -f ${ST_RC_D_PATH}/.d/.repo.d/.repo.rc ]]; then
+    if ! . ${ST_RC_D_PATH}/.d/.repo.d/.repo.rc; then
+        echo "in fs=file://${HOME}/.d/.rc.d/.st_rc_d.rcc , line=${LINENO} : : EXEC_FAIL : '. file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc' : ${hint} : return 1" >&2
+        return 1
+    fi
+fi
+
+IFS=$' \t\n'
