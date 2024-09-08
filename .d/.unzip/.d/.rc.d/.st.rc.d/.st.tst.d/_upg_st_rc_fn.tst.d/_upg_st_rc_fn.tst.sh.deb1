@@ -1,6 +1,6 @@
 #!/bin/bash
 
-___d2mm_TST_SH_DEB1() {
+___upg_st_rc_fn_TST_SH_DEB1() {
 
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
@@ -13,38 +13,27 @@ ___d2mm_TST_SH_DEB1() {
 
     local NARGS=$#
 
-    local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_d2mm.sh
-    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_d2mm.sh
-    local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_d2mm.tst.d
-    local tst_dir_file=${tst_dir}/_d2mm.tst.sh.deb1
+    local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_upg_st_rc_fn.sh
+    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_upg_st_rc_fn.sh
+    local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_upg_st_rc_fn.tst.d
+    local tst_dir_file=${tst_dir}/_upg_st_rc_fn.tst.sh.deb1
     local tst_lst_env=${tst_dir}/.lst/tst_env.lst
 
-    echo -e "${BLUE}--- start ___d2mm_TST_SH_DEB1() $* in $tst_dir_file ---${NORMAL}" #sistem info mesage
+    echo -e "${BLUE}--- start ___upg_st_rc_fn_TST_SH_DEB1() $* in $tst_dir_file ---${NORMAL}" #sistem info mesage
 
     _lnv2e ${tst_lst_env}
 
     cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2
 
     if true; then
-        echo "_d2mm"
+        echo "_upg_st_rc_fn"
     fi
 
     : >${tst_dir}/res
 
-    cd ${HOME}/.d/.rpn.ax.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${HOME}/.d/.rpn.ax.d" >&2
-    # cd ${HOME}/.d/.rpn.ax.d/df2mm || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${HOME}/.d/.rpn.ax.d/df2mm" >&2
-
-    local result_=''
-
-    _d2mm df2mm result_ 2
-
-    echo -e "${GREEN}\$result_ = $result_${NORMAL}" #print variable
-
-    cat $result_
-
     # cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
 
-    # _d2mm >/dev/null
+    # _upg_st_rc_fn >/dev/null
 
     flag=1
     
@@ -64,4 +53,4 @@ ___d2mm_TST_SH_DEB1() {
     fi
 }
 
-___d2mm_TST_SH_DEB1 "$@"
+___upg_st_rc_fn_TST_SH_DEB1 "$@"

@@ -47,9 +47,9 @@ PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 05092024024522
+DATE: 09092024012703
 
-DATX: 1725479122
+DATX: 1725820023
 -->
 
 
@@ -164,7 +164,7 @@ DATX: 1725479122
       - локальная версия README.md /.d/.mul/rbld_readme.mul/.prc/README.md
     - много локальных репозиториев push в много удаленных репозиториев ( как локальных так и в сети ) \{push many to many}
     - перед git add проверить что нет больших файлов (>50Mb) \{flow hook}
-    - сделать .md файл используя файлы из директории - вставить картинки и т.п. \{file gennerate}
+    - сделать .md файл используя файлы из директории - вставить картинки и т.п. \{file generate}
     - сделать локальную базу знаний на файлах с поиском по тегам и каталогом .md файл \{knowledge base}
     - сделать унифицированые по поведнию и удобные в испльзовании юзером обертки над стандартными утилитами os \{user wrapper}
     - обеспечить бэкап с последующим восстановлением файлов и настроек программ \{bcp dpl}
@@ -411,7 +411,7 @@ DATX: 1725479122
 
 - NAME: _bm7z
 - PATH: /REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_bm7z.sh
-- MAIN: _bm7z :: cr multi-valume arh from src_file_upath $1 with walue (mb) $2 to dist_dir_upath $3 as dir 'basename src_file_upath'.bm7z
+- MAIN: _bm7z :: cr multi-valume arh from src_file_upath $1 with value (mb) $2 to dist_dir_upath $3 as dir 'basename src_file_upath'.bm7z
 - TAGS: 
 
 ------------------------------------------------
@@ -491,7 +491,7 @@ DATX: 1725479122
 
 - NAME: _d2mm
 - PATH: /REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2mm.sh
-- MAIN: _d2mm :: menu $1: dir with file with lst $2: ptr result $3 0 or num menu files from dir $4 0 or num menu string from file choiced from prev menu
+- MAIN: _d2mm :: choice file from dir : $1 upath dir $2 ptr_result $3 num (0|num_menu)
 - TAGS: 
 
 ------------------------------------------------
@@ -1288,6 +1288,16 @@ DATX: 1725479122
 ------------------------------------------------
 
 
+[_tmp](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_tmp.sh)
+
+- NAME: _tmp
+- PATH: /REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_tmp.sh
+- MAIN: _tmp :: 
+- TAGS: 
+
+------------------------------------------------
+
+
 [_tst_arb](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_tst_arb.sh)
 
 - NAME: _tst_arb
@@ -1303,6 +1313,16 @@ DATX: 1725479122
 - NAME: _unzip_to
 - PATH: /REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_unzip_to.sh
 - MAIN: _unzip_to :: unzip to $1 dir_dist from zip path_src file [-f]
+- TAGS: 
+
+------------------------------------------------
+
+
+[_upg_st_rc_fn](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_upg_st_rc_fn.sh)
+
+- NAME: _upg_st_rc_fn
+- PATH: /REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_upg_st_rc_fn.sh
+- MAIN: _upg_st_rc_fn :: 
 - TAGS: 
 
 ------------------------------------------------

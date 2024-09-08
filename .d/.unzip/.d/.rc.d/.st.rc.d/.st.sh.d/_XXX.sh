@@ -76,6 +76,8 @@ EXAM:
         return 0
     fi
 
+    #? ----- START _XXX body -----
+
     # hint="\$1: \$2: "
     # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
     #     return 1
@@ -88,6 +90,8 @@ EXAM:
     # ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
 
     #* ${HOME}.d/.rc.d/.st.rc.d/.st.d
+
+    #? ----- END _XXX body -----
 
     cd $PPWD
     return 0

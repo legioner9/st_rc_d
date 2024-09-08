@@ -7,8 +7,15 @@ ___d2mm_TST() {
         return 1
     fi
 
+    local ARGS0="$1"
+    local ARGS1="$2"
+    local ARGS2="$3"
+    local ARGS3="$4"
+
+    local NARGS=$#
+
     local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_d2mm.sh
-    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_d2mm.sh    
+    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_d2mm.sh
     local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_d2mm.tst.d
     local tst_dir_file=${tst_dir}/_d2mm.tst.sh
 
@@ -25,4 +32,4 @@ ___d2mm_TST() {
     fi
 }
 
-___d2mm_TST
+___d2mm_TST "$@"

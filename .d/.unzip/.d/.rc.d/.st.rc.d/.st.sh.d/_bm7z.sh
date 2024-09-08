@@ -32,7 +32,7 @@ _bm7z() {
 
     if [[ "-h" == "$1" ]]; then
         echo -e "
-MAIN: ${FNN} :: cr multi-valume arh from src_file_upath \$1 with walue (mb) \$2 to dist_dir_upath \$3 as dir 'basename src_file_upath'.bm7z
+MAIN: ${FNN} :: cr multi-valume arh from src_file_upath \$1 with value (mb) \$2 to dist_dir_upath \$3 as dir 'basename src_file_upath'.bm7z
 TAGS:
 \$1 
 [, \$2]
