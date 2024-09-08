@@ -54,27 +54,32 @@ EXAM:
 
     if [[ "_e" == "$1" ]]; then
         _edit ${sh_file}
+        cd $PPWD
         return 0
     fi
 
     if [[ "_t" == "$1" ]]; then
         _edit ${tst_dir}
+        cd $PPWD
         return 0
     fi
 
     if [[ "_d" == "$1" ]]; then
         . ${tst_dir_file}
+        cd $PPWD
         return 0
     fi
 
     if [[ "_f1" == "$1" ]]; then
         . ${flow_dir_file_1}
+        cd $PPWD
         return 0
     fi
 
     # hint="\$1: \$2: "
     # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
     #     return 1
+    #     cd $PPWD
     # fi
 
     #[[ptr_path]]
