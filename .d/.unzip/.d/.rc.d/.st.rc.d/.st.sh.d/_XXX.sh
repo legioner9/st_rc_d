@@ -25,6 +25,8 @@ _XXX() {
     local flow_dir_file_1=${tst_dir}/${FNN}.tst.sh.deb1
     local tst_lst_env=${tst_dir}/.lst/tst_env.lst
 
+    local hie_file=${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/${FNN}.hie
+
     echo -e "${CYAN}--- start : ${FNN}() $@ ---${NORMAL}" #sistem info mesage
 
     #? _lnv2e ${tst_lst_env}
@@ -41,10 +43,14 @@ TAGS:
 \$1 
 [, \$2]
 CNTL: 
-    _e  : _edit body      : _edit ${sh_file}
-    _t  : _edit tst_dir   : _edit ${tst_dir}
-    _d  : exec tst_dir_fn : . ${tst_dir_file}
-    _f1 : exec tst_dir_fn : . ${flow_dir_file_1}
+    _e      : _edit body            : _edit file://${sh_file}
+    _t      : _edit tst_dir         : _edit file://${tst_dir}
+    _d      : exec tst_dir_fn       : . file://${tst_dir_file}
+    _f1     : exec flow_dir_file_1  : . file://${flow_dir_file_1}
+    _f1_e   : _edit flow_dir_file_1 : _edit file://${flow_dir_file_1}
+    _hie_m  : more hie_file         : more file://${hie_file} 
+    _hie_e  : _edit hie_file        : _edit file://${hie_file} 
+
 RETU: 
 EXAM: 
     ${FNN}
@@ -72,6 +78,24 @@ EXAM:
 
     if [[ "_f1" == "$1" ]]; then
         . ${flow_dir_file_1}
+        cd $PPWD
+        return 0
+    fi
+
+    if [[ "_f1_e" == "$1" ]]; then
+        _edit ${flow_dir_file_1}
+        cd $PPWD
+        return 0
+    fi
+
+    if [[ "_hie_m" == "$1" ]]; then
+        more file://${hie_file}
+        cd $PPWD
+        return 0
+    fi
+
+    if [[ "_hie_e" == "$1" ]]; then
+        _edit file://${hie_file}
         cd $PPWD
         return 0
     fi

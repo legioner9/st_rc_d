@@ -82,20 +82,38 @@ EXAM:
 
     _is_yes "remove files '$1' function from file://${HOME}/.d/.rc.d/.st.rc.d" || {
         _st_info "REJECT_ACTION 'remove files '$1' function from file://${HOME}/.d/.rc.d/.st.rc.d' return 0 "
-        return 0 
+        return 0
     }
 
-    rm ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh || {
-        _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh' "
-    }
+    echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ] ---${NORMAL}" #start files
+    [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ] &&
+        (rm ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ||
+            {
+                _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh' "
+            })
 
-    rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d || {
-        _st_info "FAIL_EXEC : 'rm -r file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d' "
-    }
+    echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d ] ---${NORMAL}" #start files
+    [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d ] &&
+        (rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d ||
+            {
+                _st_info "FAIL_EXEC : 'rm -r file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d' "
+            })
 
-    rm ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst || {
-        _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst' "
-    }
+    echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst ] ---${NORMAL}" #start files
+    [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst ] &&
+        (rm ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst ||
+            {
+                _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst' "
+            })
+
+    # /home/st/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie
+
+    echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie ] ---${NORMAL}" #start files
+    [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie ] &&
+        (rm ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie ||
+            {
+                _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie' "
+            })
 
     cd $PPWD
     return 0

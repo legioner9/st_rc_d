@@ -33,7 +33,8 @@ _gig_st_rc_fn() {
         echo -e "
 MAIN: ${FUNCNAME} :: generate \$1 st_rc_fn like _XXX
 TAGS:
-\$1 name st_rc_fn
+\$1 ('name' cr 'name' stl function |
+    '_f1' : cr '_tst' stl function, that function not used - only demo )
 [, \$2]
 CNTL: 
     _e  : _edit body      : _edit ${sh_file}
@@ -73,29 +74,45 @@ EXAM:
     fi
 
     if [[ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ]]; then
-        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.tst.d , line=${LINENO}, ${FNN}() : FILE_EXIST : '${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh' : ${hint} : return 1" >&2
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh , line=${LINENO}, ${FNN}() : FILE_EXIST : '${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh' : ${hint} : return 1" >&2
         return 1
     fi
 
-    # echo -e "${HLIGHT}--- exec: _sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- exec: _sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d ---${NORMAL}" #start files
 
     if ! _sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d; then
 
-        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.tst.d , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d' : ${hint} : return 1" >&2
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d' : ${hint} : return 1" >&2
         return 1
 
     fi
 
     if ! _sf2f _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst; then
 
-        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.tst.d , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst' : ${hint} : return 1" >&2
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst' : ${hint} : return 1" >&2
         return 1
 
     fi
 
     if ! _sf2f _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_XXX.sh; then
 
-        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.tst.d , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_XXX.sh' : ${hint} : return 1" >&2
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_XXX.sh' : ${hint} : return 1" >&2
+        return 1
+
+    fi
+
+    # ${HOME}t/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie
+    # ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie
+
+    _st_info "NOT edit file://${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie THAT COPY OF file://${HOME}t/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie"
+
+    # ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie
+    echo -e "${HLIGHT}--- cp file://${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie file://${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie ---${NORMAL}" #start files
+    cp ${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie
+
+    if ! _sf2f _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie; then
+
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.tst.d , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie' : ${hint} : return 1" >&2
         return 1
 
     fi

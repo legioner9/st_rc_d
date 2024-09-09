@@ -1,6 +1,6 @@
 #!/bin/bash
 
-___tmp_TST_SH() {
+___tst_TST_SH_DEB1() {
 
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
@@ -13,22 +13,27 @@ ___tmp_TST_SH() {
 
     local NARGS=$#
 
-    local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_tmp.sh
-    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_tmp.sh
-    local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_tmp.tst.d
-    local tst_dir_file=${tst_dir}/_tmp.tst.sh
+    local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_tst.sh
+    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_tst.sh
+    local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_tst.tst.d
+    local tst_dir_file=${tst_dir}/_tst.tst.sh.deb1
+    local tst_lst_env=${tst_dir}/.lst/tst_env.lst
+
+    echo -e "${BLUE}--- start ___tst_TST_SH_DEB1() $* in $tst_dir_file ---${NORMAL}" #sistem info mesage
+
+    _lnv2e ${tst_lst_env}
 
     cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2
 
     if true; then
-        echo "_tmp"
+        echo "_tst"
     fi
 
     : >${tst_dir}/res
 
     # cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
 
-    # _tmp >/dev/null
+    # _tst >/dev/null
 
     flag=1
     
@@ -48,4 +53,4 @@ ___tmp_TST_SH() {
     fi
 }
 
-___tmp_TST_SH "$@"
+___tst_TST_SH_DEB1 "$@"

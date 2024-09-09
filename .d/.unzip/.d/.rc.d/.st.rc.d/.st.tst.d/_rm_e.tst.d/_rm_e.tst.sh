@@ -1,6 +1,6 @@
- #!/bin/bash
+#!/bin/bash
 
-___gig_st_rc_fn_TST_SH_DEB1() {
+___rm_e_TST_SH() {
 
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
@@ -13,33 +13,22 @@ ___gig_st_rc_fn_TST_SH_DEB1() {
 
     local NARGS=$#
 
-    local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh
-    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.sh
-    local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.tst.d
-    local tst_dir_file=${tst_dir}/_gig_st_rc_fn.tst.sh.deb1
-    local tst_lst_env=${tst_dir}/.lst/tst_env.lst
-
-    echo -e "${BLUE}--- start ___gig_st_rc_fn_TST_SH_DEB1() $* in $tst_dir_file ---${NORMAL}" #sistem info mesage
-
-    _lnv2e ${tst_lst_env}
+    local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_rm_e.sh
+    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_rm_e.sh
+    local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_rm_e.tst.d
+    local tst_dir_file=${tst_dir}/_rm_e.tst.sh
 
     cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2
 
     if true; then
-        echo "_gig_st_rc_fn"
+        echo "_rm_e"
     fi
 
-    # : >${tst_dir}/res
-
-    _gig_st_rc_fn _tmp
-
-    _tmp -h
-    _tmp _e
-    _tmp _f1
+    : >${tst_dir}/res
 
     # cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
 
-    # _gig_st_rc_fn >/dev/null
+    # _rm_e >/dev/null
 
     flag=1
     
@@ -59,4 +48,4 @@ ___gig_st_rc_fn_TST_SH_DEB1() {
     fi
 }
 
-___gig_st_rc_fn_TST_SH_DEB1 "$@"
+___rm_e_TST_SH "$@"
