@@ -68,7 +68,7 @@ ${NORMAL}"
 
             cp ${tml_hie} ${hie_dir}/${item}.hie
 
-            if ! _sf2f _XXX ${item} ${hie_dir}/${item}.hie; then
+            if ! _s2f _XXX ${item} ${hie_dir}/${item}.hie; then
 
                 echo "in fs= file://${path_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sf2f _XXX ${item} ${hie_dir}/${item}.hie' : ${hint} : return 1" >&2
                 # return 1
