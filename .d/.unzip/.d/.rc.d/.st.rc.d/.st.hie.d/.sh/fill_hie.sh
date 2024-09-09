@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- README_rnd7_6242c29() $* in file://${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md_ufl4---${NORMAL}" #started functions
+echo -e "${CYAN}--- fill_hie_rnd7_4acce45() $* in file://${ST_RC_D_PATH}/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/.sh/fill_hie.sh---${NORMAL}" #started functions
 
-README_rnd7_6242c29() {
+fill_hie_rnd7_4acce45() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ README_rnd7_6242c29() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md_ufl4"
+    local path_file="${ST_RC_D_PATH}/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/.sh/fill_hie.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -55,10 +55,30 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
+    local item=''
+    local sh_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d
+    local hie_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d
+
+    local tml_hie=${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie
+
+    for item in $(ls ${sh_dir}); do
+        item=$(_prs_f -n $item)
+        echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+        if ! [ -f ${hie_dir}/${item}.hie ]; then
+
+            cp ${tml_hie} ${hie_dir}/${item}.hie
+
+            if ! _sf2f _XXX ${item} ${hie_dir}/${item}.hie; then
+
+                echo "in fs= file://${path_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sf2f _XXX ${item} ${hie_dir}/${item}.hie' : ${hint} : return 1" >&2
+                # return 1
+
+            fi
+
+        fi
+    done
+
     #{{body_fn}}
-
-ufl_stl0 4 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md
-
 
     #! END BODY FN ---------------------------------------
 
@@ -66,4 +86,4 @@ ufl_stl0 4 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt ${ST_RC_D_PATH}/.d/.mul/
 
 }
 
-README_rnd7_6242c29 "$@"
+fill_hie_rnd7_4acce45 "$@"
