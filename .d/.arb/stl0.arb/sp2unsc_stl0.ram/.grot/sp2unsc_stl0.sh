@@ -27,10 +27,10 @@ sp2unsc_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: space 2 underscore
+MAIN: ${FNN} :: space 2 underscore 2 stdout
 TAGS:
 ARGS: 
-\$1
+\$1 string 
 [ ,\$2 num_menu ]
 CNTL: 
     _go     : _edit ${d_name}/${FNN}.sh
@@ -69,10 +69,10 @@ ${NORMAL}"
         fi
     fi
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    # fi
+    hint="\$1: string"
+    if _isn_from ${NARGS} 1 1 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
 
     #[[ptr_path]]
     #! ptr_path
@@ -81,6 +81,8 @@ ${NORMAL}"
 
     # local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/sp2unsc_stl0
     # echo -e "${GREEN}\$dir_fn_data = file://$dir_fn_data${NORMAL}"
+
+    _s2se ' ' '_' "${ARGS[0]}"
 
     cd ${PPWD}
     return 0

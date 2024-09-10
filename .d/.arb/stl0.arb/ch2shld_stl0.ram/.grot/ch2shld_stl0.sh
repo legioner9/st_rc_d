@@ -27,11 +27,11 @@ ch2shld_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: shield flow from dir with char.lst
 TAGS:
 ARGS: 
 \$1 0 or num menu shield flow from dir with char.lst
-[ ,\$2 num_menu ]
+\$2 string
 CNTL: 
     _go     : _edit ${d_name}/${FNN}.sh
     _tst    : . ${d_name}/_tst/exec.tst
@@ -84,9 +84,41 @@ ${NORMAL}"
     local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ch2shld_stl0
     local dir_lst=${dir_fn_data}/ch.lst
 
-    local result_=''
-    _d2mm ${dir_lst} result_ 0  
-    echo $result_
+    local _result_=''
+    _d2mm ${dir_lst} _result_ ${ARGS[0]} >/dev/null
+
+    # echo -e "${GREEN}\$_result_ = $_result_${NORMAL}" #print variable
+
+    # cat $_result_
+
+    local ARGS1=${ARGS[1]}
+    # ARGS1=$(sp2unsc_stl0 "${ARGS1}")
+
+    # echo -e "${GREEN}\$ARGS1 = $ARGS1${NORMAL}" #print variable
+
+    #! _s2se '&' '\\&' 'ca_sd&3'
+
+    local x=$(eval "_s2se '\\\\' '\\\\\\\\' '${ARGS1}'")
+    ARGS1=$x
+    # echo -e "1 ${GREEN}\$ARGS1 = $ARGS1${NORMAL}" #print variable
+
+    # _s2se '\\' '\\\\' 'ca sd&3\*_<>'
+    local item=
+    # cat $_result_
+    IFS=$'\n'
+    for item in $(cat "${_result_}"); do
+        # ch_item=$(_s2se )
+        # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+        # ARGS1=$(_s2se $item \\$item ${ARGS1})
+        # echo -e "${HLIGHT}--- _s2se $item '${ARGS1}' ---${NORMAL}" #start files
+        x=$(eval _s2se $item '${ARGS1}')
+        ARGS1=${x}
+        # echo -e "2 ${GREEN}\$ARGS1 = $ARGS1${NORMAL}" #print variable
+
+    done
+    IFS=$' \n\t'
+    # echo -e "3 ${GREEN}\$ARGS1 = $ARGS1${NORMAL}" #print variable
+    echo ${ARGS1}
 
     cd ${PPWD}
     return 0
