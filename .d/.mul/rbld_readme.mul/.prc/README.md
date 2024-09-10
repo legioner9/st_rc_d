@@ -8,30 +8,30 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
-- [Ave Marcus tshemsedinov](#ave-marcus-tshemsedinov)
-  - [Gratia](#gratia)
-- [Manifesto](#manifesto)
-  - [Gradus in saxa](#gradus-in-saxa)
-- [Sfondo](#sfondo)
-  - [Contextus culturalis](#contextus-culturalis)
-  - [Fuoco dentro](#fuoco-dentro)
-- [Quid possum facere](#quid-possum-facere)
-- [Bibliotheca Lapidum - Theoria](#bibliotheca-lapidum---theoria)
-  - [Lexicon](#lexicon)
-  - [Quid est](#quid-est)
-  - [Limitations](#limitations)
+- [Да здравствует Марк tshemsedinov](#да-здравствует-марк-tshemsedinov)
+  - [Благодарность](#благодарность)
+- [Явление миру](#явление-миру)
+  - [Шаги по камням](#шаги-по-камням)
+- [Фон](#фон)
+  - [Культурологический контекст](#культурологический-контекст)
+  - [Огонь внутри](#огонь-внутри)
+- [Что я могу сделать](#что-я-могу-сделать)
+- [Библиотека камней - Теория](#библиотека-камней---теория)
+  - [Словарь](#словарь)
+  - [Что это](#что-это)
+  - [Ограничения](#ограничения)
     - [Ограничение сложности stl](#ограничение-сложности-stl)
     - [Требования к fn\_elem](#требования-к-fn_elem)
     - [Требования к os\_sl](#требования-к-os_sl)
     - [Тестируемость](#тестируемость)
     - [Расширяемость](#расширяемость)
     - [Производительность](#производительность)
-  - [Genera et mores](#genera-et-mores)
-- [Bibliotheca Lapidum - Usu](#bibliotheca-lapidum---usu)
-  - [Deminutio abstractionis](#deminutio-abstractionis)
-    - [Basic principiis](#basic-principiis)
-    - [Basic technologiae](#basic-technologiae)
-- [Quid est hic](#quid-est-hic)
+  - [Типы и поведение](#типы-и-поведение)
+- [Библиотека камней - Практика](#библиотека-камней---практика)
+  - [Понижение абстракций](#понижение-абстракций)
+    - [Базовые принципы](#базовые-принципы)
+    - [Базовые технологии](#базовые-технологии)
+- [Что здесь есть](#что-здесь-есть)
   - [STL](#stl)
     - [ОБЩЕЕ поведение функций STL:](#общее-поведение-функций-stl)
     - [\_abs\_path](#_abs_path)
@@ -131,7 +131,7 @@ Start Contents Menu
     - [\_XXX](#_xxx)
     - [\_zip\_to](#_zip_to)
 - [Install stl](#install-stl)
-- [Libero capitulum](#libero-capitulum)
+- [Неупорядоченные заметки](#неупорядоченные-заметки)
 
 <!-- /TOC -->
 
@@ -144,9 +144,9 @@ PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 10092024003826
+DATE: 10092024120111
 
-DATX: 1725903506
+DATX: 1725944471
 -->
 
 
@@ -154,11 +154,11 @@ DATX: 1725903506
 
 
 
-# Ave Marcus tshemsedinov
+# Да здравствует Марк tshemsedinov
 
-Да здравствует Марк tshemsedinov* (лат.)
+Ave Marcus tshemsedinov* (лат.)
 
-*) Cuius fides est lux
+*) Cuius fides est lux (лат.)
 
     
 
@@ -166,9 +166,9 @@ DATX: 1725903506
 
 
 
-## Gratia
+## Благодарность
 
-Благодарность (лат.)
+Gratia (лат.)
 
 - vitlav
     
@@ -177,9 +177,9 @@ DATX: 1725903506
 
 
 
-# Manifesto
-    
-Явление миру (лат.)
+# Явление миру 
+
+Manifesto
 
 Библиотеки stlu это инструмент создаваемый пользователем для создания автоматизации пользовательских задач.
 
@@ -187,10 +187,10 @@ DATX: 1725903506
 
 
 
-## Gradus in saxa 
+## Шаги по камням
 
-Шаги по камням (лат.)
-    
+Gradus in saxa (лат.)
+   
 
 [001.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.man)
 
@@ -205,9 +205,9 @@ DATX: 1725903506
 
 
 
-# Sfondo
+# Фон 
 
-Фон (лат.)
+Sfondo (лат.)  
 
 Понимание поступков иногда кроется в том как человек видит реальность и в том что его терзает 
     
@@ -216,9 +216,9 @@ DATX: 1725903506
 
 
 
-## Contextus culturalis
+## Культурологический контекст
 
-Культурологический контекст (лат.)
+Contextus culturalis (лат.)
 
 Эпоха Виндовс характеризуемая тонким юзером, довольствующимся графическим интерфейсом с кнопками, созданным глобальными корпорациями, подходит к концу. Графические итерфейсы истощили под собой все имеющиеся в распоряжнении человечества вычислительные мощности в погоне за призрачным удовлетворения пользователя, при этом нарастающая сложность информационных систем усугубляется падающей квалификацией программистов пытающихся их (системы) поддерживать (спасать). Если умножить это пониманием того, что корпорации строились на диктате гегемона над всеми остальными - и диктату этому пришел конец - то вопрос таков - что будем выращивать на руинах?
 
@@ -234,9 +234,9 @@ DATX: 1725903506
 
 
 
-## Fuoco dentro
+## Огонь внутри
 
-Огонь внутри (лат.)
+Fuoco dentro (лат.)
 
 - написать код просто - не потерять его вообще возможно?
 - баланса между системным и прикладным кодом не существует? 
@@ -246,12 +246,12 @@ DATX: 1725903506
 
 
 
-# Quid possum facere
-    
-Что я могу сделать (лат.)
+# Что я могу сделать
+
+Quid possum facere (лат.)
+
 
 [001.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/002.d/001.txt.man)
-
 
 
 
@@ -273,17 +273,19 @@ DATX: 1725903506
 
 
 
-# Bibliotheca Lapidum - Theoria
+# Библиотека камней - Теория
+
+Bibliotheca Lapidum - Theoria (лат.)
     
-Библиотека камней - Теория (лат.)
+
 
 [001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/001.pref.txt.man)
 
 
 
-## Lexicon
+## Словарь
 
-Словарь (лат.)
+Lexicon (лат.)
 
     stl                 - библиотека первого уровня абстракции от опрационной системы
     stlu                - библиотека из древа с корнем stl
@@ -306,9 +308,9 @@ DATX: 1725903506
 
 
 
-## Quid est
+## Что это
 
-Что это (лат.)
+Quid est (лат.)
 
 - stl
   - Состоит только из доверенного кода
@@ -321,9 +323,9 @@ DATX: 1725903506
 
 
 
-## Limitations
+## Ограничения
 
-Ограничения (лат.)
+Limitations (лат.)
 
 ### Ограничение сложности stl
 
@@ -361,9 +363,11 @@ DATX: 1725903506
 
 
 
-## Genera et mores
+## Типы и поведение
 
-Типы и поведение (лат.)
+Genera et mores (лат.)
+
+
 
 - Типы
   - Гитхуки в репозитории
@@ -381,26 +385,30 @@ DATX: 1725903506
 
 
 
-# Bibliotheca Lapidum - Usu
+# Библиотека камней - Практика
 
-Библиотека камней - Практика (лат.)  
+Bibliotheca Lapidum - Usu (лат.)
+
+  
 
 [001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.man)
 
 
 
-## Deminutio abstractionis 
+## Понижение абстракций
 
-Понижение абстракций (лат.)
+Deminutio abstractionis (лат.)
+
+
     
 
 [001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.man)
 
 
 
-### Basic principiis
+### Базовые принципы
 
-Базовые принципы (лат.)
+Basic principiis (лат.)
 
 - stlu : описание поведения и интерфейсов:
   - при возникновении ошибки генерируется stack error который должен содержать:
@@ -442,9 +450,9 @@ DATX: 1725903506
 
 
 
-### Basic technologiae
+### Базовые технологии
 
-Базовые технологии (лат.)
+Basic technologiae (лат.)
 
 - os    - altlinux  (ALT operating systems Russian software company)
 - os_cl - gcc       (the GNU Compiler)
@@ -455,9 +463,11 @@ DATX: 1725903506
 
 
 
-# Quid est hic
+# Что здесь есть
 
-Что здесь есть (лат.)
+Quid est hic (лат.)
+
+
     
 
 [001.01pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01pref.txt.man)
@@ -1788,9 +1798,11 @@ Enter to continue"
 
 
 
-# Libero capitulum
+# Неупорядоченные заметки
 
-Неупорядоченные заметки (лат.)
+Libero capitulum (лат.)
+
+
     
 
 

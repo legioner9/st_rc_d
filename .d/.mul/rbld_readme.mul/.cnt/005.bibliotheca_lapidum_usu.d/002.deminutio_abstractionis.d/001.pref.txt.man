@@ -1,4 +1,6 @@
-## Deminutio abstractionis 
+## Понижение абстракций
 
-Понижение абстракций (лат.)
+Deminutio abstractionis (лат.)
+
+
     

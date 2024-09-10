@@ -1,5 +1,4 @@
 
-
 - Демонстрация возможностей stlu
     - данный README.md динамически создается из директории /.d/.mul/rbld_readme.mul/.cnt
       - локальная версия README.md /.d/.mul/rbld_readme.mul/.prc/README.md

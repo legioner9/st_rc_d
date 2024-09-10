@@ -1,6 +1,6 @@
-### Basic technologiae
+### Базовые технологии
 
-Базовые технологии (лат.)
+Basic technologiae (лат.)
 
 - os    - altlinux  (ALT operating systems Russian software company)
 - os_cl - gcc       (the GNU Compiler)
