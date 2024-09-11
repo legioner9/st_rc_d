@@ -32,8 +32,8 @@ Start Contents Menu
     - [Базовые принципы](#базовые-принципы)
     - [Базовые технологии](#базовые-технологии)
 - [Что здесь есть](#что-здесь-есть)
-  - [STL](#stl)
-    - [ОБЩЕЕ поведение функций STL:](#общее-поведение-функций-stl)
+  - [ОБЩЕЕ поведение функций STL](#общее-поведение-функций-stl)
+  - [Состав библиотеки STL](#состав-библиотеки-stl)
     - [\_abs\_path](#_abs_path)
     - [\_arb\_up](#_arb_up)
     - [\_arh\_st\_rc\_fn](#_arh_st_rc_fn)
@@ -146,9 +146,9 @@ PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 1726045415_11092024160335
+DATE: 1726047064_11092024163104
 
-DATX: 1726045415
+DATX: 1726047064
 -->
 
 
@@ -472,20 +472,15 @@ Quid est hic (лат.)
 
     
 
-[001.01pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01pref.txt.man)
+[001.01.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.txt.man)
 
 
 
-## STL
+## ОБЩЕЕ поведение функций STL
 
-Состав библиотеки STL
-    
+`${ST_RC_D_PATH}` - путь к git директории проекта STL
 
-[001.02.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.txt.man)
-
-
-
-### ОБЩЕЕ поведение функций STL:
+`${ST_RC_D_DATA_PATH}` - путь к git директории с пользовательскими данными проекта STL
 
 .hie - `${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/[name_fn].hie` текстовый файл - Объяснение смысла и конкретные пояснения для сущности [name_fn]
 
@@ -500,6 +495,16 @@ Quid est hic (лат.)
   - .lst список имен переменных 
   - pre текстовый файл - предопределяемый образец
 - дале возвращается результат `diff res pre` с соответствующим стеком
+
+.data \$${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d$/[name_fn].d 
+    
+
+[001.02.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.pref.txt.man)
+
+
+
+## Состав библиотеки STL
+
     
 
 [002.files_stl.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.txt.man)

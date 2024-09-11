@@ -108,7 +108,7 @@ EXAM:
 
     # ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie
     echo -e "${HLIGHT}--- cp file://${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie file://${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie ---${NORMAL}" #start files
-    cp ${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie
+    cp ${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie
 
     if ! _s2f _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie; then
 
@@ -131,6 +131,8 @@ EXAM:
         return 1
 
     fi
+
+    # -------------------------------------------------------------------
 
     # if ! [[ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ]]; then
 

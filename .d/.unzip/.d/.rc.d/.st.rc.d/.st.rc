@@ -205,7 +205,7 @@ fi
 if [[ -f ${HOME}/.tmp_dir_st_rc ]]; then
     eval "TMP_DIR_ST_RC=$(cat ${HOME}/.tmp_dir_st_rc)"
     if [[ -z "${TMP_DIR_ST_RC}" ]]; then
-        _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${TMP_DIR} from ${HOME}/.tmp_dir' : ${hint} : return 1"
+        _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${TMP_DIR_ST_RC} from ${HOME}/.tmp_dir' : ${hint} : return 1"
         return 1
     fi
     if [[ -d ${TMP_DIR_ST_RC} ]]; then

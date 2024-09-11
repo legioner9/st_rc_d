@@ -85,35 +85,45 @@ EXAM:
         return 0
     }
 
-    echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ] ---${NORMAL}" #start files
-    [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ] &&
-        (rm ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ||
-            {
-                _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh' "
-            })
+    rm ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh
 
-    echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d ] ---${NORMAL}" #start files
-    [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d ] &&
-        (rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d ||
-            {
-                _st_info "FAIL_EXEC : 'rm -r file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d' "
-            })
+    # echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ] ---${NORMAL}" #start files
+    # [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ] &&
+    #     (rm ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ||
+    #         {
+    #             _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh' "
+    #         })
 
-    echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst ] ---${NORMAL}" #start files
-    [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst ] &&
-        (rm ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst ||
-            {
-                _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst' "
-            })
+    rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d
+
+    # echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d ] ---${NORMAL}" #start files
+    # [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d ] &&
+    #     (rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d ||
+    #         {
+    #             _st_info "FAIL_EXEC : 'rm -r file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst.d' "
+    #         })
+
+    rm ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst
+
+    # echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst ] ---${NORMAL}" #start files
+    # [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst ] &&
+    #     (rm ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst ||
+    #         {
+    #             _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/$1.tst' "
+    #         })
 
     # /home/st/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie
 
-    echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie ] ---${NORMAL}" #start files
-    [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie ] &&
-        (rm ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie ||
-            {
-                _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie' "
-            })
+    rm ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie
+
+    # echo -e "${HLIGHT}--- [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie ] ---${NORMAL}" #start files
+    # [ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie ] &&
+    #     (rm ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie ||
+    #         {
+    #             _st_info "FAIL_EXEC : 'rm file://${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie' "
+    #         })
+
+    rm -r ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/$1.d
 
     cd $PPWD
     return 0
