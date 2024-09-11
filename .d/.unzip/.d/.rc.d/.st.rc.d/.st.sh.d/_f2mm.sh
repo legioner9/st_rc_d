@@ -43,7 +43,7 @@ EXAM:
     fi
 
     if [[ "_e" == "$1" ]]; then
-        _edit $sh_file}
+        _edit ${sh_file}
         return 0
     fi
 

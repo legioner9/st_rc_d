@@ -69,9 +69,12 @@ EXAM:
     #{_{ptr_path}}
 
     #* ${HOME}.d/.rc.d/.st.rc.d/.st.d
-
+    local dt=
+    local st=
     if [ -z "$1" ]; then
-        date +%d%m%Y%H%M%S
+        dt=$(date +%d%m%Y%H%M%S)
+        st=$(date +%s)
+        echo "${st}_${dt}"
     fi
 
     cd $PPWD

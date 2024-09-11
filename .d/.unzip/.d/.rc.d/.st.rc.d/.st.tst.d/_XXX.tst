@@ -19,6 +19,7 @@ ___XXX_TST() {
     local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d
     local tst_dir_file=${tst_dir}/_XXX.tst.sh
 
+
     # if ! [[ $(. ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d/_XXX.tst.sh) == "_XXX" ]]; then
     #     echo "in fs=file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst , line=${LINENO}, pwd=${PWD}" >&2
     #     echo "EXEC_FAIL : '\$(. ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d/_XXX.tst.sh) == _XXX' : return 1" >&2

@@ -36,6 +36,7 @@ Start Contents Menu
     - [ОБЩЕЕ поведение функций STL:](#общее-поведение-функций-stl)
     - [\_abs\_path](#_abs_path)
     - [\_arb\_up](#_arb_up)
+    - [\_arh\_st\_rc\_fn](#_arh_st_rc_fn)
     - [\_bcp\_strc](#_bcp_strc)
     - [\_bm7z](#_bm7z)
     - [\_color\_self](#_color_self)
@@ -53,6 +54,7 @@ Start Contents Menu
     - [\_ddr2ae](#_ddr2ae)
     - [\_ddr2Ae](#_ddr2ae-1)
     - [\_ddr2e](#_ddr2e)
+    - [\_def\_const](#_def_const)
     - [\_df2ae](#_df2ae)
     - [\_df2Ae](#_df2ae-1)
     - [\_df2e](#_df2e)
@@ -144,9 +146,9 @@ PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 10092024120111
+DATE: 1726045415_11092024160335
 
-DATX: 1725944471
+DATX: 1726045415
 -->
 
 
@@ -529,6 +531,18 @@ Quid est hic (лат.)
 ------------------------------------------------
 
 
+### _arh_st_rc_fn
+[_arh_st_rc_fn.sh](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_arh_st_rc_fn.sh)
+
+- PATH: /REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_arh_st_rc_fn.sh
+- MAIN: _arh_st_rc_fn :: arh to 
+- TAGS: @arh
+
+[_arh_st_rc_fn.hie](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_arh_st_rc_fn.hie)
+
+------------------------------------------------
+
+
 ### _bcp_strc
 [_bcp_strc.sh](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_bcp_strc.sh)
 
@@ -729,6 +743,18 @@ Quid est hic (лат.)
 - TAGS: 
 
 [_ddr2e.hie](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_ddr2e.hie)
+
+------------------------------------------------
+
+
+### _def_const
+[_def_const.sh](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_def_const.sh)
+
+- PATH: /REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_def_const.sh
+- MAIN: _def_const :: 
+- TAGS: 
+
+[_def_const.hie](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_def_const.hie)
 
 ------------------------------------------------
 
@@ -1802,6 +1828,7 @@ Enter to continue"
 
 Libero capitulum (лат.)
 
+- ${HOME}/tmp_dir_st_rc временная user директория - очищается при перезапуске оболочки
 
     
 

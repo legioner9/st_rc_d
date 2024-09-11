@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_XXX() {
+_def_const() {
 
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
@@ -24,9 +24,6 @@ _XXX() {
     local tst_dir_file=${tst_dir}/${FNN}.tst.sh
     local flow_dir_file_1=${tst_dir}/${FNN}.tst.sh.deb1
     local tst_lst_env=${tst_dir}/.lst/tst_env.lst
-
-    local datd_dir=${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/${FNN}.d
-
 
     local hie_file=${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/${FNN}.hie
 
@@ -92,18 +89,18 @@ EXAM:
     fi
 
     if [[ "_hie_m" == "$1" ]]; then
-        more ${hie_file}
+        more file://${hie_file}
         cd $PPWD
         return 0
     fi
 
     if [[ "_hie_e" == "$1" ]]; then
-        _edit ${hie_file}
+        _edit file://${hie_file}
         cd $PPWD
         return 0
     fi
 
-    #? ----- START _XXX body -----
+    #? ----- START _def_const body -----
 
     # hint="\$1: \$2: "
     # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
@@ -118,9 +115,13 @@ EXAM:
 
     #* ${HOME}.d/.rc.d/.st.rc.d/.st.d
 
-    #? ----- END _XXX body -----
+    ALL_CHAR="\`-=~!@#$%^&*()_+[]{};\:|,./><?'"
+
+    #? ----- END _def_const body -----
 
     cd $PPWD
     return 0
 
 }
+
+_def_const @

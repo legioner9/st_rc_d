@@ -110,9 +110,24 @@ EXAM:
     echo -e "${HLIGHT}--- cp file://${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie file://${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie ---${NORMAL}" #start files
     cp ${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl/_XXX/tml.hie ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie
 
-    if ! _sf2f _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie; then
+    if ! _s2f _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/$1.hie; then
 
         echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_gig_st_rc_fn.tst.d , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie' : ${hint} : return 1" >&2
+        return 1
+
+    fi
+
+    # ${HOME}/.d/.rpn.ax.d/tml.ax.d/.data/stl/_XXX ->  ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d
+
+    _st_info "NOT edit file://${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d THAT COPY OF file://${HOME}/.d/.rpn.ax.d/tml.ax.d/.data/stl/_XXX"
+
+    # ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie
+    echo -e "${HLIGHT}--- cp -r ${HOME}/.d/.rpn.ax.d/tml.ax.d/.data/stl/_XXX/. ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d ---${NORMAL}" #start files
+    cp -r ${HOME}/.d/.rpn.ax.d/tml.ax.d/.data/stl/_XXX/. ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d
+
+    if ! _sd2d _XXX $1 ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d; then
+
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d' : ${hint} : return 1" >&2
         return 1
 
     fi
