@@ -154,13 +154,13 @@ PPWD: /.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 1726142452_12092024190052
+DATE: 1726162561_13092024003601
 
-DATX: 1726142452
+DATX: 1726162561
 -->
 
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/001.pref.txt.md)
 
 
 
@@ -172,7 +172,7 @@ Ave Marcus tshemsedinov* (лат.)
 
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/002.gratia.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/002.gratia.d/001.pref.txt.md)
 
 
 
@@ -184,7 +184,7 @@ Gratia (лат.)
 - larchanka
     
 
-[001.pef.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/001.pef.txt.man)
+[001.pef.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/001.pef.txt.md)
 
 
 
@@ -194,7 +194,7 @@ Manifesto
 
 Библиотеки stlu это инструмент создаваемый пользователем для создания автоматизации пользовательских задач.
 
-[001.pef.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.man)
+[001.pef.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.md)
 
 
 
@@ -203,7 +203,7 @@ Manifesto
 Gradus in saxa (лат.)
    
 
-[001.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.man)
+[001.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.md)
 
 
 
@@ -212,7 +212,7 @@ Gradus in saxa (лат.)
 - Следует знать как используется недоверенный код    
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/001.pref.txt.md)
 
 
 
@@ -223,7 +223,7 @@ Sfondo (лат.)
 Понимание поступков иногда кроется в том как человек видит реальность и в том что его терзает 
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/002.contextus_culturalis.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/002.contextus_culturalis.d/001.pref.txt.md)
 
 
 
@@ -241,7 +241,7 @@ Contextus culturalis (лат.)
 
 
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/003.fuoco_dentro.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/003.fuoco_dentro.d/001.pref.txt.md)
 
 
 
@@ -253,7 +253,7 @@ Fuoco dentro (лат.)
 - баланса между системным и прикладным кодом не существует? 
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/001.pref.txt.md)
 
 
 
@@ -262,7 +262,7 @@ Fuoco dentro (лат.)
 Quid possum facere (лат.)
 
 
-[001.txt.man](/.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/002.d/001.txt.man)
+[001.txt.md](/.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/002.d/001.txt.md)
 
 
 
@@ -280,7 +280,7 @@ Quid possum facere (лат.)
  
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/001.pref.txt.md)
 
 
 
@@ -290,7 +290,7 @@ Bibliotheca Lapidum - Theoria (лат.)
     
 
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/001.pref.txt.md)
 
 
 
@@ -315,7 +315,7 @@ Lexicon (лат.)
     upath               - тип указания пути файловой системы
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.md)
 
 
 
@@ -330,7 +330,7 @@ Quid est (лат.)
   - Последующее за stl древо библиотек - stlu
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/004.limitations.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/004.limitations.d/001.pref.txt.md)
 
 
 
@@ -370,7 +370,7 @@ Limitations (лат.)
 - Управляемость автоматизации рутинных действий для юзера ценнее производительности
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/005.genera_at_mores.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/005.genera_at_mores.d/001.pref.txt.md)
 
 
 
@@ -392,7 +392,7 @@ Genera et mores (лат.)
   - информация и ее обработка связаны только через интерфейсы
   - создавать регулярные структуры только генерацией с параметрами - копипаст недоверенная операция 
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/001.pref.txt.md)
 
 
 
@@ -402,7 +402,7 @@ Bibliotheca Lapidum - Usu (лат.)
 
   
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.md)
 
 
 
@@ -413,7 +413,7 @@ Deminutio abstractionis (лат.)
 
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.md)
 
 
 
@@ -457,7 +457,7 @@ Basic principiis (лат.)
 
 
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/003.basic_technologiae.txt.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/003.basic_technologiae.txt.d/001.pref.txt.md)
 
 
 
@@ -470,7 +470,7 @@ Basic technologiae (лат.)
 - os_sl - bash      (the GNU Project's shell—the Bourne Again SHell)
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/001.pref.txt.md)
 
 
 
@@ -481,7 +481,7 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/001.pref.txt.md)
 
 
 
@@ -489,7 +489,7 @@ Quid est hic (лат.)
 
 
 
-[002.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.txt.man)
+[002.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.txt.md)
 
 
 
@@ -515,7 +515,7 @@ Quid est hic (лат.)
     
 
 
-[003.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/003.txt.man)
+[003.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/003.txt.md)
 
 
 
@@ -525,7 +525,7 @@ Quid est hic (лат.)
 
     
 
-[004.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/004.txt.man)
+[004.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/004.txt.md)
 
 
 
@@ -558,14 +558,14 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/001.pref.txt.md)
 
 
 
 ## ОБЩЕЕ поведение функций STL
     
 
-[002.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.txt.man)
+[002.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.txt.md)
 
 
 
@@ -594,14 +594,14 @@ Quid est hic (лат.)
 - .tml шаблоны
     
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.d/001.pref.txt.md)
 
 
 
 ## Unsort
     
 
-[002.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.d/002.pref.txt.man)
+[002.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.d/002.pref.txt.md)
 
 
 
@@ -614,7 +614,7 @@ Quid est hic (лат.)
 - `_d2mm` пример выбора файла из директории
     
 
-[001.03.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.pref.txt.man)
+[001.03.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.pref.txt.md)
 
 
 
@@ -622,7 +622,7 @@ Quid est hic (лат.)
 
     
 
-[002.files_stl.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.txt.man)
+[002.files_stl.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.txt.md)
 
 
 
@@ -1829,7 +1829,7 @@ Quid est hic (лат.)
 
 
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/001.pref.txt.md)
 
 
 
@@ -1964,7 +1964,7 @@ Enter to continue"
 
 ```
 
-[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.man)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.md)
 
 
 
