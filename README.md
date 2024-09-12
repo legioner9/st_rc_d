@@ -37,6 +37,8 @@ Start Contents Menu
     - [Подсказки в именовании файлов или директорий](#подсказки-в-именовании-файлов-или-директорий)
     - [Подсказки в расширениях файлов - wellknown - `wnext`](#подсказки-в-расширениях-файлов---wellknown---wnext)
   - [ОБЩЕЕ поведение функций STL](#общее-поведение-функций-stl)
+  - [Unsort](#unsort)
+    - [Select (меню выбора) в параметре функции](#select-меню-выбора-в-параметре-функции)
   - [Состав библиотеки STL](#состав-библиотеки-stl)
     - [\_abs\_path](#_abs_path)
     - [\_arb\_up](#_arb_up)
@@ -152,9 +154,9 @@ PPWD: /.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 1726117177_12092024115937
+DATE: 1726142452_12092024190052
 
-DATX: 1726117177
+DATX: 1726142452
 -->
 
 
@@ -179,6 +181,7 @@ Ave Marcus tshemsedinov* (лат.)
 Gratia (лат.)
 
 - vitlav
+- larchanka
     
 
 [001.pef.txt.man](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/001.pef.txt.man)
@@ -589,6 +592,26 @@ Quid est hic (лат.)
 - .prc процедуры
 - .lst списки
 - .tml шаблоны
+    
+
+[001.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.d/001.pref.txt.man)
+
+
+
+## Unsort
+    
+
+[002.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.d/002.pref.txt.man)
+
+
+
+### Select (меню выбора) в параметре функции
+
+- Если параметром функции является меню, то
+  - 0 означает, что при вызове user сможет в интерактивном меню select выбрать нужный пункт меню - после этого в контекст функции попадет сущность соответствующая этому пункту (путь к выбранному файлу, срока аргументов и т.п.)
+  - N сразу указывает на пункт меню 
+
+- `_d2mm` пример выбора файла из директории
     
 
 [001.03.pref.txt.man](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.pref.txt.man)
