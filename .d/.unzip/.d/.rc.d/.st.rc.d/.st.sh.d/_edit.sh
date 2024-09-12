@@ -43,6 +43,12 @@ TAGS:
     #     echo -e "${ULINE} code $ptr_path${NORMAL}" #repit commands
     #     mc $2 "$ptr_path"
 
+    [ -e $ptr_path ] || {
+        _st_err "in fs= file:///${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_edit.sh , line=${LINENO}, EXEC: _edit $@ : NOT_ENTETY : 'file://$ptr_path' : return 1"
+        cd $PPWD
+        return 1
+    }
+
     if type "codium"; then
         echo -e "${ULINE} codium $ptr_path${NORMAL}" #repit commands
         codium $2 "$ptr_path"

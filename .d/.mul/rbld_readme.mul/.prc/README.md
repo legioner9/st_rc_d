@@ -32,6 +32,10 @@ Start Contents Menu
     - [Базовые принципы](#базовые-принципы)
     - [Базовые технологии](#базовые-технологии)
 - [Что здесь есть](#что-здесь-есть)
+  - [ОБЩЕЕ поведение библиотеки STL](#общее-поведение-библиотеки-stl)
+    - [Правила именования функций](#правила-именования-функций)
+    - [Подсказки в именовании файлов или директорий](#подсказки-в-именовании-файлов-или-директорий)
+    - [Подсказки в расширениях файлов - wellknown - `wnext`](#подсказки-в-расширениях-файлов---wellknown---wnext)
   - [ОБЩЕЕ поведение функций STL](#общее-поведение-функций-stl)
   - [Состав библиотеки STL](#состав-библиотеки-stl)
     - [\_abs\_path](#_abs_path)
@@ -118,6 +122,7 @@ Start Contents Menu
     - [\_sd2d](#_sd2d)
     - [\_sdd2d](#_sdd2d)
     - [\_sf2f](#_sf2f)
+    - [\_source\_w1\_isf](#_source_w1_isf)
     - [\_sRf](#_srf)
     - [\_st\_err](#_st_err)
     - [\_stE](#_ste)
@@ -127,6 +132,7 @@ Start Contents Menu
     - [\_strc\_run2log](#_strc_run2log)
     - [\_str\_lib\_lst](#_str_lib_lst)
     - [\_ststart](#_ststart)
+    - [\_tmp](#_tmp)
     - [\_tst\_arb](#_tst_arb)
     - [\_unzip\_to](#_unzip_to)
     - [\_upg\_st\_rc\_fn](#_upg_st_rc_fn)
@@ -146,9 +152,9 @@ PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 1726048184_11092024164944
+DATE: 1726117177_12092024115937
 
-DATX: 1726048184
+DATX: 1726117177
 -->
 
 
@@ -472,11 +478,94 @@ Quid est hic (лат.)
 
     
 
-[001.01.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.txt.man)
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/001.pref.txt.man)
+
+
+
+## ОБЩЕЕ поведение библиотеки STL
+
+
+
+[002.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.txt.man)
+
+
+
+### Правила именования функций
+
+- если [fn_stl] результатом является только возврат 0 или 1 при действии и производится [flow], то именование следующее:
+
+    `_is_[flow]`
+
+  - например определяется ответ `y` или `n` в качестве утверждения, то именование следующее:
+
+    `_is_yes`
+
+- если [fn_stl] n-обертка (в системе уже есть n-1 оберток) над [fn_elem] и производится [w_flow] изменение поведения, то именование следующее:
+     
+     `_[fn_elem]_wn_[w_flow]`
+
+  - например первая обертка над source состоящая в проверке существования запускаемого файла, то имя следующее:   
+
+    `_source_w1_isf`
+
+
+    
+
+
+[003.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/003.txt.man)
+
+
+
+### Подсказки в именовании файлов или директорий
+
+- если в имени файла или директории содержится `.ax.`, то удаление файла или файлов из директории будет иметь негативные последствия - допускается изменение файла или добавление файлов в директорию - иными словами ссылки на эти сущности используются в STL 
+
+    
+
+[004.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/004.txt.man)
+
+
+
+### Подсказки в расширениях файлов - wellknown - `wnext`
+- `wnext`
+  - `.lst` список
+  - `.prc` файл с процедурой
+  - `.cnt` контекст
+  - `.env` окружение
+  - `.hie` пояснение по смыслу - формат .md
+  - `.tml` текстовый макет
+  - `.man` общие пояснения - формат .md
+  - `.tst` тестовый
+
+
+  - `.ham` хук в обертках над git
+  - `.mul` директория содержащая `wnext` директории 
+
+  - `.sil` структура "лес"
+  - `.arb` структура "дерево"
+  - `.ram` структура "ветка"
+  - `.fol` файл "лист"
+  - `.grot` структура "дупло" - "кроличья нора"
+  - `.repo` структура "коробка"
+  
+  - `.exa` пример
+  - `.anc` файл с сылками
+  
+
+
+    
+
+[001.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/001.pref.txt.man)
 
 
 
 ## ОБЩЕЕ поведение функций STL
+    
+
+[002.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.txt.man)
+
+
+
 
 `${ST_RC_D_PATH}` - путь к git директории проекта STL
 
@@ -496,10 +585,13 @@ Quid est hic (лат.)
   - pre текстовый файл - предопределяемый образец
 - дале возвращается результат `diff res pre` с соответствующим стеком
 
-.data \$${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d$/[name_fn].d 
+.data `${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/[name_fn].d` - пользовательские данные для name_fn, состав этой директории:
+- .prc процедуры
+- .lst списки
+- .tml шаблоны
     
 
-[001.02.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.pref.txt.man)
+[001.03.pref.txt.man](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.pref.txt.man)
 
 
 
@@ -1521,6 +1613,18 @@ Quid est hic (лат.)
 ------------------------------------------------
 
 
+### _source_w1_isf
+[_source_w1_isf.sh](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_source_w1_isf.sh)
+
+- PATH: /REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_source_w1_isf.sh
+- MAIN: _source_w1_isf :: 
+- TAGS: 
+
+[_source_w1_isf.hie](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_source_w1_isf.hie)
+
+------------------------------------------------
+
+
 ### _sRf
 [_sRf.sh](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_sRf.sh)
 
@@ -1625,6 +1729,18 @@ Quid est hic (лат.)
 - TAGS: 
 
 [_ststart.hie](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_ststart.hie)
+
+------------------------------------------------
+
+
+### _tmp
+[_tmp.sh](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_tmp.sh)
+
+- PATH: /REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_tmp.sh
+- MAIN: _tmp :: 
+- TAGS: 
+
+[_tmp.hie](/REPOBARE/_repo/st_rc_d/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_tmp.hie)
 
 ------------------------------------------------
 
@@ -1835,7 +1951,7 @@ Libero capitulum (лат.)
 
 - ${HOME}/tmp_dir_st_rc временная user директория - очищается при перезапуске оболочки
 
-- файлы файлы стилей для интерприетатора md2html [md_css](/.d/.unzip/.d/.cdn.d/md_css)
+- файлы стилей для интерпретатора md2html [md_css](/.d/.unzip/.d/.cdn.d/md_css)
 
 
 

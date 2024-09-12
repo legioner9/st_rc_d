@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_XXX() {
+_tmp() {
 
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
@@ -109,7 +109,7 @@ EXAM:
         return 0
     fi
 
-    #? ----- START _XXX body -----
+    #? ----- START _tmp body -----
 
     # hint="\$1: \$2: "
     # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
@@ -124,7 +124,7 @@ EXAM:
 
     #* ${HOME}.d/.rc.d/.st.rc.d/.st.d
 
-    #? ----- END _XXX body -----
+    #? ----- END _tmp body -----
 
     cd $PPWD
     return 0

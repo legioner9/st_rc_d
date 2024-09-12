@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_XXX() {
+_source_w1_isf() {
 
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
@@ -109,22 +109,40 @@ EXAM:
         return 0
     fi
 
-    #? ----- START _XXX body -----
+    #? ----- START _source_w1_isf body -----
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    #     cd $PPWD
-    # fi
+    # hint="\$1: "
+    if _isn_from ${NARGS} 1 1 "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+        cd $PPWD
+    fi
 
     #[[ptr_path]]
     #! ptr_path
-    # local ptr_path_1="$1"
-    # ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+    local ptr_path_1="$1"
+    ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
 
     #* ${HOME}.d/.rc.d/.st.rc.d/.st.d
 
-    #? ----- END _XXX body -----
+    if [ -f ${ptr_path_1} ]; then
+
+        if ! source ${ptr_path_1}; then
+
+            _st_err "in fs= file://${sh_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'source ${ptr_path_1}' : ${hint} : return 1"
+            cd $PPWD
+            return 1
+
+        fi
+
+    else
+
+        _st_err "in fs= file://${sh_file} , line=${LINENO}, EXEC: ${FNN} $* : NOT_FILE : 'file://${ptr_path_1}' : ${hint} : return 1"
+        cd $PPWD
+        return 1
+
+    fi
+
+    #? ----- END _source_w1_isf body -----
 
     cd $PPWD
     return 0
