@@ -22,6 +22,7 @@ mm_start_stl0() {
 
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/mm_start_stl0.ram/.grot/mm_start_stl0.sh
     local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/mm_start_stl0.ram/.grot/mm_start_stl0.sh)
+    local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0
 
     echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
@@ -33,7 +34,7 @@ ARGS:
 \$1
 [ ,\$2 num_menu ]
 CNTL: 
-    _lst    : _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0
+    _data_e : _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0
     _go     : _edit ${d_name}/${FNN}.sh
     _tst    : . ${d_name}/_tst/exec.tst
     _flow_1 : . ${d_name}/_tst/_flow_tst.sh.v1
@@ -51,7 +52,7 @@ ${NORMAL}"
         return 0
     fi
 
-    if [[ "_lst" == "$1" ]]; then
+    if [[ "_data_e" == "$1" ]]; then
         _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0
         return 0
     fi
@@ -85,7 +86,7 @@ ${NORMAL}"
     # local ptr_path="$1"
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
-    local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0
+    # local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0
 
     echo -e "${GREEN}\$dir_fn_data = file://$dir_fn_data${NORMAL}" #print variable
 
