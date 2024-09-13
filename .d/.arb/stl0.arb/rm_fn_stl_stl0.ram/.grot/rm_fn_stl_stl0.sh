@@ -2,14 +2,14 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/tmp_stl0.ram/.grot/tmp_stl0.sh"
+filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/rm_fn_stl_stl0.ram/.grot/rm_fn_stl_stl0.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-tmp_stl0() {
+rm_fn_stl_stl0() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
@@ -18,18 +18,18 @@ tmp_stl0() {
     local hint=
     local estat=
 
-    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/tmp_stl0
+    #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/rm_fn_stl_stl0
 
-    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/tmp_stl0.ram/.grot/tmp_stl0.sh
-    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/tmp_stl0.ram/.grot/tmp_stl0.sh)
+    local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/rm_fn_stl_stl0.ram/.grot/rm_fn_stl_stl0.sh
+    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/rm_fn_stl_stl0.ram/.grot/rm_fn_stl_stl0.sh)
 
-    local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/tmp_stl0.d
+    local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/rm_fn_stl_stl0
 
     #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: remove files \$1_stl0
 TAGS:
 ARGS: 
 \$1
@@ -55,12 +55,6 @@ ${NORMAL}"
     fi
 
     if [[ "_tst" == "$1" ]]; then
-        # if [[ -f ${d_name}/_tst/exec.tst ]]; then
-        #     . ${d_name}/_tst/exec.tst
-        # else
-        #     echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/exec.tst' : ${hint} : return 1" >&2
-        #     return 1
-        # fi
         if ! _source_w1_isf ${d_name}/_tst/exec.tst; then
             _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf ${d_name}/_tst/exec.tst' : ${hint} : return 1"
             cd $PPWD
@@ -79,13 +73,6 @@ ${NORMAL}"
     fi
 
     if [[ "_flow_1" == "$1" ]]; then
-        # if [[ -f ${d_name}/_tst/_flow_tst.sh.v1 ]]; then
-        #     . ${d_name}/_tst/_flow_tst.sh.v1
-        #     return 0
-        # else
-        #     echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1" >&2
-        #     return 1
-        # fi
         if ! _source_w1_isf ${d_name}/_tst/_flow_tst.sh.v1; then
             _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf ${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1"
             cd $PPWD
@@ -103,8 +90,17 @@ ${NORMAL}"
     # local ptr_path="$1"
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
-    # local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/tmp_stl0
+    # local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/rm_fn_stl_stl0
     # echo -e "${GREEN}\$dir_fn_data = file://$dir_fn_data${NORMAL}"
+
+    #* ${ST_RC_D_PATH}/.d/.arb/stl0.arb/$1.ram
+    #* ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/$1
+
+    echo -e "${HLIGHT}--- rm -r file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/${1}_stl0.ram ---${NORMAL}" #start files
+    rm -r ${ST_RC_D_PATH}/.d/.arb/stl0.arb/${1}_stl0.ram
+
+    echo -e "${HLIGHT}--- rm -r file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/${1}_stl0 ---${NORMAL}" #start files
+    rm -r ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/${1}_stl0
 
     cd ${PPWD}
     return 0

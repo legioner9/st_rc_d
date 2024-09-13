@@ -1,13 +1,13 @@
 #!/bin/bash
 
-__tmp_stl0_TST() {
+__rm_fn_stl_tit_stl0_FLOW() {
 
-    if ! command -v tmp >/dev/null; then
-        echo "TYPE_ERROR : tmp" >&2
+    if ! command -v rm_fn_stl >/dev/null; then
+        echo "TYPE_ERROR : rm_fn_stl" >&2
         return 1
     fi
 
-    local filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/tmp_stl0.ram/.grot/_tst/exec._tst
+    local filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/rm_fn_stl_stl0.ram/.grot/_tit/exec._tit
 
     local idir=$(pwd)
 
@@ -48,7 +48,7 @@ __tmp_stl0_TST() {
 
 }
 
-if ! __tmp_stl0_TST "$@"; then
-    _st_exit "in fs= file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/tmp_stl0.ram/.grot/_tst/exec._tst , line=${LINENO}: : EXEC_FAIL : '__tmp_stl0_TST ' : ${hint} : return 1"
+if ! __rm_fn_stl_tit_stl0_FLOW "$@"; then
+    _st_exit "in fs= file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/rm_fn_stl_stl0.ram/.grot/_tit/exec._tit , line=${LINENO}: : EXEC_FAIL : '__rm_fn_stl_stl0_TST ' : ${hint} : return 1"
     return 1
 fi

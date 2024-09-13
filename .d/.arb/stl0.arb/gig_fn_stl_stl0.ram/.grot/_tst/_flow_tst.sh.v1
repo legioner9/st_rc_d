@@ -14,6 +14,12 @@ cd "${idir}" || {
 
 # cr_tst_dir_ <dat &>>res
 
+echo -e "${HLIGHT}--- rm_fn_stl_stl0 _tmp ---${NORMAL}" #start files
+rm_fn_stl_stl0 tmp
+
+echo -e "${HLIGHT}--- gig_fn_stl_stl0 _tmp ---${NORMAL}" #start files
+gig_fn_stl_stl0 tmp
+
 
 
 #{body_sh}

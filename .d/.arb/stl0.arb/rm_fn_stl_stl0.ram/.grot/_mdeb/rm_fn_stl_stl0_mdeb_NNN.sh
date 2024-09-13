@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/tmp_stl0.ram/.grot/_mdeb/tmp_stl0_mdeb_NNN.sh"
+filename="${ST_RC_D_PATH}/.d/.arb/stl0.arb/rm_fn_stl_stl0.ram/.grot/_mdeb/rm_fn_stl_stl0_mdeb_NNN.sh"
 
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
@@ -10,13 +10,13 @@ idir=$(pwd)
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-tmp_stl0_mdeb_NNN() {
-     if ! command -v tmp; then
-        echo "TYPE_ERROR : tmp" >&2
+rm_fn_stl_stl0_mdeb_NNN() {
+     if ! command -v rm_fn_stl; then
+        echo "TYPE_ERROR : rm_fn_stl" >&2
         return 1
     fi
 
-    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/tmp_stl0.ram/.grot/_tst/_flow_tst.sh
+    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/rm_fn_stl_stl0.ram/.grot/_tst/_flow_tst.sh
 
     local PW=$(pwd)
     local idir="$(dirname ${filename})"
@@ -47,7 +47,7 @@ tmp_stl0_mdeb_NNN() {
     }
 }
 
-tmp_stl0_mdeb_NNN "$@"
+rm_fn_stl_stl0_mdeb_NNN "$@"
 
 cd "${idir}"
 unset filename
