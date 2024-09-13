@@ -55,7 +55,13 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
-    ufl_stl0 7 1 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.md
+    local frm_file=${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file
+
+    ufl_stl0 7 1 ${frm_file}.local.md
+
+    cp -f ${frm_file}.local.md ${frm_file}.git.md
+
+    _s2f '/REPOBARE/_repo/st_rc_d/' '/' ${frm_file}.git.md
 
     . README.md_ufl4
 
@@ -69,7 +75,11 @@ ${NORMAL}"
 
     _s2f '/REPOBARE/_repo/st_rc_d/' '/' ${ST_RC_D_PATH}/README.md
 
-    _edit ${ST_RC_D_PATH}/README.md 
+    # REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.md
+
+    # '[Все функции STL](/REPOBARE/_repo/st_rc_d/' 'd'
+
+    _edit ${ST_RC_D_PATH}/README.md
 
     #{{body_fn}}
 

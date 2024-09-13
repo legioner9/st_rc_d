@@ -40,7 +40,8 @@ Start Contents Menu
     - [Функция библиотеки STL](#функция-библиотеки-stl)
       - [Поведение функции STL](#поведение-функции-stl)
   - [Состав библиотеки STL](#состав-библиотеки-stl)
-      - [Все функции STL](#все-функции-stl)
+      - [Все функции STL (local)](#все-функции-stl-local)
+      - [Все функции STL (git)](#все-функции-stl-git)
   - [Библиотека STL0](#библиотека-stl0)
     - [Поведение библиотеки STL0](#поведение-библиотеки-stl0)
   - [Функция библиотеки STL0](#функция-библиотеки-stl0)
@@ -61,9 +62,9 @@ PPWD: /.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 1726235710_13092024205510
+DATE: 1726237081_13092024211801
 
-DATX: 1726235710
+DATX: 1726237081
 -->
 
 
@@ -522,10 +523,8 @@ Quid est hic (лат.)
 
 ## Состав библиотеки STL
 
-#### [Все функции STL](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.md)
-
-[002.files_stl.file.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.md)
-
+#### [Все функции STL (local)](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.local.md)
+#### [Все функции STL (git)](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.git.md)
 
 [001.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/003.d/001.txt.md)
 
