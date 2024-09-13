@@ -55,7 +55,7 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
-    ufl_stl0 7 1 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.txt.md
+    ufl_stl0 7 1 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.md
 
     . README.md_ufl4
 

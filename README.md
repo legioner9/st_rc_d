@@ -32,114 +32,21 @@ Start Contents Menu
     - [Базовые принципы](#базовые-принципы)
     - [Базовые технологии](#базовые-технологии)
 - [Что здесь есть](#что-здесь-есть)
-  - [ОБЩЕЕ поведение библиотеки STL](#общее-поведение-библиотеки-stl)
-    - [Правила именования функций](#правила-именования-функций)
-    - [Подсказки в именовании файлов или директорий](#подсказки-в-именовании-файлов-или-директорий)
-    - [Подсказки в расширениях файлов - wellknown - `wnext`](#подсказки-в-расширениях-файлов---wellknown---wnext)
-  - [ОБЩЕЕ поведение функций STL](#общее-поведение-функций-stl)
-  - [Unsort](#unsort)
-    - [Select (меню выбора) в параметре функции](#select-меню-выбора-в-параметре-функции)
+    - [Библиотека STL](#библиотека-stl)
+      - [Поведение библиотеки STL](#поведение-библиотеки-stl)
+        - [Правила именования функций](#правила-именования-функций)
+        - [Подсказки в именовании файлов или директорий](#подсказки-в-именовании-файлов-или-директорий)
+        - [Подсказки в расширениях файлов - wellknown - `wnext`](#подсказки-в-расширениях-файлов---wellknown---wnext)
+    - [Функция библиотеки STL](#функция-библиотеки-stl)
+      - [Поведение функции STL](#поведение-функции-stl)
   - [Состав библиотеки STL](#состав-библиотеки-stl)
-    - [\_abs\_path](#_abs_path)
-    - [\_arb\_up](#_arb_up)
-    - [\_arh\_st\_rc\_fn](#_arh_st_rc_fn)
-    - [\_bcp\_strc](#_bcp_strc)
-    - [\_bm7z](#_bm7z)
-    - [\_color\_self](#_color_self)
-    - [\_c\_up](#_c_up)
-    - [\_d2ae](#_d2ae)
-    - [\_d2Ae](#_d2ae-1)
-    - [\_d2e](#_d2e)
-    - [\_d2f\_marg](#_d2f_marg)
-    - [\_d2f](#_d2f)
-    - [\_d2mm](#_d2mm)
-    - [\_date](#_date)
-    - [\_dd2ae](#_dd2ae)
-    - [\_dd2Ae](#_dd2ae-1)
-    - [\_dd2e](#_dd2e)
-    - [\_ddr2ae](#_ddr2ae)
-    - [\_ddr2Ae](#_ddr2ae-1)
-    - [\_ddr2e](#_ddr2e)
-    - [\_def\_const](#_def_const)
-    - [\_df2ae](#_df2ae)
-    - [\_df2Ae](#_df2ae-1)
-    - [\_df2e](#_df2e)
-    - [\_dfr2ae](#_dfr2ae)
-    - [\_dfr2Ae](#_dfr2ae-1)
-    - [\_dfr2e](#_dfr2e)
-    - [\_dig2base](#_dig2base)
-    - [\_dig\_ibase2obase](#_dig_ibase2obase)
-    - [\_dis\_git](#_dis_git)
-    - [\_dpl\_strc](#_dpl_strc)
-    - [\_dr2ae](#_dr2ae)
-    - [\_dr2Ae](#_dr2ae-1)
-    - [\_dr2e](#_dr2e)
-    - [\_dSYd](#_dsyd)
-    - [\_edir](#_edir)
-    - [\_edit](#_edit)
-    - [\_elib](#_elib)
-    - [\_eval](#_eval)
-    - [\_f2ad](#_f2ad)
-    - [\_f2d](#_f2d)
-    - [\_f2e](#_f2e)
-    - [\_f2f](#_f2f)
-    - [\_f2mm](#_f2mm)
-    - [\_flur](#_flur)
-    - [\_fn2var](#_fn2var)
-    - [\_fnCMPenv](#_fncmpenv)
-    - [\_gig\_st\_rc\_fn](#_gig_st_rc_fn)
-    - [\_iac\_lcu\_in\_d](#_iac_lcu_in_d)
-    - [\_is\_d2acc](#_is_d2acc)
-    - [\_is\_dDIFz](#_is_ddifz)
-    - [\_is\_dNTf](#_is_dntf)
-    - [\_isn\_from](#_isn_from)
-    - [\_isn\_od](#_isn_od)
-    - [\_is\_reINs](#_is_reins)
-    - [\_is\_rndx\_f](#_is_rndx_f)
-    - [\_is\_root](#_is_root)
-    - [\_is\_rr](#_is_rr)
-    - [\_is\_sINs](#_is_sins)
-    - [\_is\_yes](#_is_yes)
-    - [\_l2f](#_l2f)
-    - [\_lcu2d](#_lcu2d)
-    - [\_lcur2d](#_lcur2d)
-    - [\_lf2f](#_lf2f)
-    - [\_lnv2ad](#_lnv2ad)
-    - [\_lnv2d](#_lnv2d)
-    - [\_lnv2e](#_lnv2e)
-    - [\_nr2mm](#_nr2mm)
-    - [\_parr3e](#_parr3e)
-    - [\_prs\_f](#_prs_f)
-    - [\_re](#_re)
-    - [\_ret2e](#_ret2e)
-    - [\_rm\_st\_rc\_fn](#_rm_st_rc_fn)
-    - [\_rnd2e](#_rnd2e)
-    - [\_rndxf2e](#_rndxf2e)
-    - [\_rpr\_strc](#_rpr_strc)
-    - [\_rr](#_rr)
-    - [\_s2ad](#_s2ad)
-    - [\_s2d](#_s2d)
-    - [\_s2f](#_s2f)
-    - [\_s2se](#_s2se)
-    - [\_sd2d](#_sd2d)
-    - [\_sdd2d](#_sdd2d)
-    - [\_sf2f](#_sf2f)
-    - [\_source\_w1\_isf](#_source_w1_isf)
-    - [\_sRf](#_srf)
-    - [\_st\_err](#_st_err)
-    - [\_stE](#_ste)
-    - [\_st\_exit](#_st_exit)
-    - [\_st\_info](#_st_info)
-    - [\_st\_pause](#_st_pause)
-    - [\_strc\_run2log](#_strc_run2log)
-    - [\_str\_lib\_lst](#_str_lib_lst)
-    - [\_ststart](#_ststart)
-    - [\_tmp](#_tmp)
-    - [\_tst\_arb](#_tst_arb)
-    - [\_unzip\_to](#_unzip_to)
-    - [\_upg\_st\_rc\_fn](#_upg_st_rc_fn)
-    - [\_XXX](#_xxx)
-    - [\_zip\_to](#_zip_to)
+      - [Все функции STL](#все-функции-stl)
+  - [Библиотека STL0](#библиотека-stl0)
+    - [Поведение библиотеки STL0](#поведение-библиотеки-stl0)
+  - [Функция библиотеки STL0](#функция-библиотеки-stl0)
+    - [Поведение функции STL0](#поведение-функции-stl0)
+  - [Unsort](#unsort)
+      - [Select (меню выбора) в параметре функции](#select-меню-выбора-в-параметре-функции)
 - [Install stl](#install-stl)
 - [Неупорядоченные заметки](#неупорядоченные-заметки)
 
@@ -154,9 +61,9 @@ PPWD: /.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 1726162561_13092024003601
+DATE: 1726235710_13092024205510
 
-DATX: 1726162561
+DATX: 1726235710
 -->
 
 
@@ -481,19 +388,27 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/001.pref.txt.md)
+[001.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/001.txt.md)
 
 
 
-## ОБЩЕЕ поведение библиотеки STL
+### Библиотека STL
+
+    
+
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/001.pref.txt.md)
 
 
 
-[002.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.txt.md)
+#### Поведение библиотеки STL
 
 
 
-### Правила именования функций
+[002.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/002.txt.md)
+
+
+
+##### Правила именования функций
 
 - если [fn_stl] результатом является только возврат 0 или 1 при действии и производится [flow], то именование следующее:
 
@@ -515,21 +430,21 @@ Quid est hic (лат.)
     
 
 
-[003.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/003.txt.md)
+[003.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/003.txt.md)
 
 
 
-### Подсказки в именовании файлов или директорий
+##### Подсказки в именовании файлов или директорий
 
 - если в имени файла или директории содержится `.ax.`, то удаление файла или файлов из директории будет иметь негативные последствия - допускается изменение файла или добавление файлов в директорию - иными словами ссылки на эти сущности используются в STL 
 
     
 
-[004.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/004.txt.md)
+[004.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/004.txt.md)
 
 
 
-### Подсказки в расширениях файлов - wellknown - `wnext`
+##### Подсказки в расширениях файлов - wellknown - `wnext`
 - `wnext`
   - `.lst` список
   - `.prc` файл с процедурой
@@ -562,10 +477,17 @@ Quid est hic (лат.)
 
 
 
-## ОБЩЕЕ поведение функций STL
+### Функция библиотеки STL
     
 
-[002.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.txt.md)
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.d/001.pref.txt.md)
+
+
+
+#### Поведение функции STL
+    
+
+[002.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.d/002.txt.md)
 
 
 
@@ -594,18 +516,59 @@ Quid est hic (лат.)
 - .tml шаблоны
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.d/001.pref.txt.md)
+[001.03.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.pref.txt.md)
+
+
+
+## Состав библиотеки STL
+
+#### [Все функции STL](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.md)
+
+[002.files_stl.file.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.md)
+
+
+[001.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/003.d/001.txt.md)
+
+
+
+## Библиотека STL0
+
+    
+
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/003.d/002.d/001.pref.txt.md)
+
+
+
+### Поведение библиотеки STL0
+
+
+
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/004.d/001.pref.txt.md)
+
+
+
+## Функция библиотеки STL0
+    
+
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/004.d/002.d/001.pref.txt.md)
+
+
+
+### Поведение функции STL0
+    
+
+[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/001.pref.txt.md)
 
 
 
 ## Unsort
     
 
-[002.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.d/002.pref.txt.md)
+[002.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/002.pref.txt.md)
 
 
 
-### Select (меню выбора) в параметре функции
+#### Select (меню выбора) в параметре функции
 
 - Если параметром функции является меню, то
   - 0 означает, что при вызове user сможет в интерактивном меню select выбрать нужный пункт меню - после этого в контекст функции попадет сущность соответствующая этому пункту (путь к выбранному файлу, срока аргументов и т.п.)
@@ -613,1221 +576,6 @@ Quid est hic (лат.)
 
 - `_d2mm` пример выбора файла из директории
     
-
-[001.03.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.pref.txt.md)
-
-
-
-## Состав библиотеки STL
-
-    
-
-[002.files_stl.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.txt.md)
-
-
-
-
-### _abs_path
-[_abs_path.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_abs_path.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_abs_path.sh
-- MAIN: _abs_path :: echo abs_path if $1 PWD $2 ptr to upath or @ instead empty $2
-- TAGS: 
-
-[_abs_path.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_abs_path.hie)
-
-------------------------------------------------
-
-
-### _arb_up
-[_arb_up.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_arb_up.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_arb_up.sh
-- MAIN: _arb_up :: 
-- TAGS: 
-
-[_arb_up.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_arb_up.hie)
-
-------------------------------------------------
-
-
-### _arh_st_rc_fn
-[_arh_st_rc_fn.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_arh_st_rc_fn.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_arh_st_rc_fn.sh
-- MAIN: _arh_st_rc_fn :: arh to 
-- TAGS: @arh
-
-[_arh_st_rc_fn.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_arh_st_rc_fn.hie)
-
-------------------------------------------------
-
-
-### _bcp_strc
-[_bcp_strc.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_bcp_strc.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_bcp_strc.sh
-- MAIN: _bcp_strc :: bcp mirror ~/.d/.rc.d/.st.rc.d , ~/.d/.rc.d/.<name_repo>.rc to /.d/.zip
-- TAGS: 
-
-[_bcp_strc.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_bcp_strc.hie)
-
-------------------------------------------------
-
-
-### _bm7z
-[_bm7z.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_bm7z.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_bm7z.sh
-- MAIN: _bm7z :: cr multi-valume arh from src_file_upath $1 with value (mb) $2 to dist_dir_upath $3 as dir 'basename src_file_upath'.bm7z
-- TAGS: 
-
-[_bm7z.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_bm7z.hie)
-
-------------------------------------------------
-
-
-### _color_self
-[_color_self.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_color_self.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_color_self.sh
-- MAIN: _color_self :: 
-- TAGS: 
-
-[_color_self.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_color_self.hie)
-
-------------------------------------------------
-
-
-### _c_up
-[_c_up.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_c_up.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_c_up.sh
-- MAIN: _c_up :: exec rec in dir nfile with ext=.sh
-- TAGS: 
-
-[_c_up.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_c_up.hie)
-
-------------------------------------------------
-
-
-### _d2ae
-[_d2ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2ae.sh
-- MAIN: _d2ae :: like ls (NOT uprev) $1 (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_d2ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_d2ae.hie)
-
-------------------------------------------------
-
-
-### _d2Ae
-[_d2Ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2Ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2Ae.sh
-- MAIN: _d2Ae :: like ls (-A, NOT uprev) $1 (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_d2Ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_d2Ae.hie)
-
-------------------------------------------------
-
-
-### _d2e
-[_d2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2e.sh
-- MAIN: _d2e :: like ls (uprev) $1 (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_d2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_d2e.hie)
-
-------------------------------------------------
-
-
-### _d2f_marg
-[_d2f_marg.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2f_marg.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2f_marg.sh
-- MAIN: _d2f_marg :: $1 file result (3d arg _d2f) $2 0 or num  or '-h' (menu from st.d/.mul/_d2f_marg/x.h) flow from /.d/.rc.d/.st.rc.d/.st.d/.mul/_d2f_marg (1d arg _d2f: x.flow/x.insert.d, 2d arg _d2f: x.flow/x.tml )
-- TAGS: 
-
-[_d2f_marg.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_d2f_marg.hie)
-
-------------------------------------------------
-
-
-### _d2f
-[_d2f.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2f.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2f.sh
-- MAIN: _d2f :: $1 dir with <reciver>.insert files $2 .tml file with {{<reciver>}} $3 path to file result
-- TAGS: 
-
-[_d2f.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_d2f.hie)
-
-------------------------------------------------
-
-
-### _d2mm
-[_d2mm.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2mm.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_d2mm.sh
-- MAIN: _d2mm :: choice file from dir : $1 upath dir $2 ptr_result $3 num (0|num_menu)
-- TAGS: 
-
-[_d2mm.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_d2mm.hie)
-
-------------------------------------------------
-
-
-### _date
-[_date.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_date.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_date.sh
-- MAIN: _date :: 
-- TAGS: 
-
-[_date.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_date.hie)
-
-------------------------------------------------
-
-
-### _dd2ae
-[_dd2ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dd2ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dd2ae.sh
-- MAIN: _dd2ae :: like ls (NOT uprev) (only dir) $1 (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_dd2ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dd2ae.hie)
-
-------------------------------------------------
-
-
-### _dd2Ae
-[_dd2Ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dd2Ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dd2Ae.sh
-- MAIN: _dd2Ae :: like ls (-A, NOT uprev) (only dir) $1 (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_dd2Ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dd2Ae.hie)
-
-------------------------------------------------
-
-
-### _dd2e
-[_dd2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dd2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dd2e.sh
-- MAIN: _dd2e :: like ls (uprev) (only dir) $1 (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_dd2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dd2e.hie)
-
-------------------------------------------------
-
-
-### _ddr2ae
-[_ddr2ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ddr2ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ddr2ae.sh
-- MAIN: _ddr2ae :: recuce _dd2e : $1 like ls (NOT uprev) (only dir) (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_ddr2ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_ddr2ae.hie)
-
-------------------------------------------------
-
-
-### _ddr2Ae
-[_ddr2Ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ddr2Ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ddr2Ae.sh
-- MAIN: _ddr2Ae :: recuce _dd2e : $1 like ls (-A, NOT uprev) (only dir) (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_ddr2Ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_ddr2Ae.hie)
-
-------------------------------------------------
-
-
-### _ddr2e
-[_ddr2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ddr2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ddr2e.sh
-- MAIN: _ddr2e :: recuce _dd2e : $1 like ls (uprev) (only dir) (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_ddr2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_ddr2e.hie)
-
-------------------------------------------------
-
-
-### _def_const
-[_def_const.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_def_const.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_def_const.sh
-- MAIN: _def_const :: 
-- TAGS: 
-
-[_def_const.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_def_const.hie)
-
-------------------------------------------------
-
-
-### _df2ae
-[_df2ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_df2ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_df2ae.sh
-- MAIN: _df2ae :: like ls (NOT uprev) (only file) $1 (@|path)  @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_df2ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_df2ae.hie)
-
-------------------------------------------------
-
-
-### _df2Ae
-[_df2Ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_df2Ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_df2Ae.sh
-- MAIN: _df2Ae :: like ls (-A, NOT uprev) (only file) $1 (@|path)  @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_df2Ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_df2Ae.hie)
-
-------------------------------------------------
-
-
-### _df2e
-[_df2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_df2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_df2e.sh
-- MAIN: _df2e :: like ls (uprev) (only file) $1 (@|path)  @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_df2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_df2e.hie)
-
-------------------------------------------------
-
-
-### _dfr2ae
-[_dfr2ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dfr2ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dfr2ae.sh
-- MAIN: _dfr2ae :: 
-- TAGS: 
-
-[_dfr2ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dfr2ae.hie)
-
-------------------------------------------------
-
-
-### _dfr2Ae
-[_dfr2Ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dfr2Ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dfr2Ae.sh
-- MAIN: _dfr2Ae :: 
-- TAGS: 
-
-[_dfr2Ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dfr2Ae.hie)
-
-------------------------------------------------
-
-
-### _dfr2e
-[_dfr2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dfr2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dfr2e.sh
-- MAIN: _dfr2e :: recuce _df2e : $1 like ls (only file) (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_dfr2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dfr2e.hie)
-
-------------------------------------------------
-
-
-### _dig2base
-[_dig2base.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dig2base.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dig2base.sh
-- MAIN: _dig2base :: digit $1 to diggit on base $2 
-- TAGS: 
-
-[_dig2base.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dig2base.hie)
-
-------------------------------------------------
-
-
-### _dig_ibase2obase
-[_dig_ibase2obase.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dig_ibase2obase.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dig_ibase2obase.sh
-- MAIN: _dig_ibase2obase :: digit $1 in ibase $2  to diggit on obase $3
-- TAGS: 
-
-[_dig_ibase2obase.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dig_ibase2obase.hie)
-
-------------------------------------------------
-
-
-### _dis_git
-[_dis_git.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dis_git.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dis_git.sh
-- MAIN: _dis_git :: if diss with git HEAD in dir or pwd return 0 else 1 
-- TAGS: @git @diss
-
-[_dis_git.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dis_git.hie)
-
-------------------------------------------------
-
-
-### _dpl_strc
-[_dpl_strc.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dpl_strc.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dpl_strc.sh
-- MAIN: _dpl_strc :: 
-- TAGS: 
-
-[_dpl_strc.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dpl_strc.hie)
-
-------------------------------------------------
-
-
-### _dr2ae
-[_dr2ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dr2ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dr2ae.sh
-- MAIN: _dr2ae :: recuce _d2e : like ls $1 (NOT uprev) (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_dr2ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dr2ae.hie)
-
-------------------------------------------------
-
-
-### _dr2Ae
-[_dr2Ae.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dr2Ae.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dr2Ae.sh
-- MAIN: _dr2Ae :: recuce _d2e : like ls $1 (-A, NOT uprev) (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_dr2Ae.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dr2Ae.hie)
-
-------------------------------------------------
-
-
-### _dr2e
-[_dr2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dr2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dr2e.sh
-- MAIN: _dr2e :: recuce _d2e : like ls $1 (uprev) (@|path) @ if path='' [, $2 .ext]
-- TAGS: 
-
-[_dr2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dr2e.hie)
-
-------------------------------------------------
-
-
-### _dSYd
-[_dSYd.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dSYd.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_dSYd.sh
-- MAIN: _dSYd :: rsync mirror dir_src path $1 to dir_dist path $2 
-- TAGS: 
-
-[_dSYd.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_dSYd.hie)
-
-------------------------------------------------
-
-
-### _edir
-[_edir.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_edir.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_edir.sh
-- MAIN: _edir :: 
-- TAGS: 
-
-[_edir.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_edir.hie)
-
-------------------------------------------------
-
-
-### _edit
-[_edit.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_edit.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_edit.sh
-- MAIN: _edit :: 
-- TAGS: 
-
-[_edit.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_edit.hie)
-
-------------------------------------------------
-
-
-### _elib
-[_elib.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_elib.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_elib.sh
-- MAIN: _elib :: 
-- TAGS: 
-
-[_elib.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_elib.hie)
-
-------------------------------------------------
-
-
-### _eval
-[_eval.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_eval.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_eval.sh
-- MAIN: _eval :: eval string with delim 
- from stdin or < file or $1 file or << here doc or <<< here string
-- TAGS: 
-
-[_eval.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_eval.hie)
-
-------------------------------------------------
-
-
-### _f2ad
-[_f2ad.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2ad.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2ad.sh
-- MAIN: _f2ad :: insert $1 file after str $2 in ALL (without prevent) file from dir $3
-- TAGS: 
-
-[_f2ad.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_f2ad.hie)
-
-------------------------------------------------
-
-
-### _f2d
-[_f2d.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2d.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2d.sh
-- MAIN: _f2d :: insert $1 file after str $2 in ALL (without prevent) file from dir $3
-- TAGS: 
-
-[_f2d.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_f2d.hie)
-
-------------------------------------------------
-
-
-### _f2e
-[_f2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2e.sh
-- MAIN: _f2e :: if [[ {str0:1} != # ]] ; eval echo str from file $1 
-- TAGS: 
-
-[_f2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_f2e.hie)
-
-------------------------------------------------
-
-
-### _f2f
-[_f2f.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2f.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2f.sh
-- MAIN: _f2f :: insert $1 file after str $2 in file $3
-- TAGS: 
-
-[_f2f.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_f2f.hie)
-
-------------------------------------------------
-
-
-### _f2mm
-[_f2mm.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2mm.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_f2mm.sh
-- MAIN: _f2mm :: menu $1: file with lst $2: ptr result $3 0 or num menu
-- TAGS: 
-
-[_f2mm.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_f2mm.hie)
-
-------------------------------------------------
-
-
-### _flur
-[_flur.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_flur.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_flur.sh
-- MAIN: _flur :: treat stdin accoding menu with treat files
-- TAGS: 
-
-[_flur.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_flur.hie)
-
-------------------------------------------------
-
-
-### _fn2var
-[_fn2var.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_fn2var.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_fn2var.sh
-- MAIN: _fn2var :: $1=_do : replace _fn to ${_fn_stf} in dir strcl, $1=_n : 
-- TAGS: 
-
-[_fn2var.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_fn2var.hie)
-
-------------------------------------------------
-
-
-### _fnCMPenv
-[_fnCMPenv.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_fnCMPenv.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_fnCMPenv.sh
-- MAIN: _fnCMPenv :: compare env /.d/.rc.d/.st.rc.d/.st.config.d/fn_name.sh with real /.d/.rc.d/.st.rc.d/.st.sh.d
-- TAGS: @cmp @env 
-
-[_fnCMPenv.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_fnCMPenv.hie)
-
-------------------------------------------------
-
-
-### _gig_st_rc_fn
-[_gig_st_rc_fn.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh
-- MAIN: _gig_st_rc_fn :: generate $1 st_rc_fn like _XXX
-- TAGS: 
-
-[_gig_st_rc_fn.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_gig_st_rc_fn.hie)
-
-------------------------------------------------
-
-
-### _iac_lcu_in_d
-[_iac_lcu_in_d.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_iac_lcu_in_d.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_iac_lcu_in_d.sh
-- MAIN: _iac_lcu_in_d :: create --force __.lcu in $1 u@dir
-- TAGS: 
-
-[_iac_lcu_in_d.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_iac_lcu_in_d.hie)
-
-------------------------------------------------
-
-
-### _is_d2acc
-[_is_d2acc.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_d2acc.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_d2acc.sh
-- MAIN: _is_d2acc :: IS for access (w , x) for sys_user for $1 dir  
-- TAGS: 
-
-[_is_d2acc.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_is_d2acc.hie)
-
-------------------------------------------------
-
-
-### _is_dDIFz
-[_is_dDIFz.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_dDIFz.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_dDIFz.sh
-- MAIN: _is_dDIFz :: is? diff dir $1 with unzip $2
-- TAGS: 
-
-[_is_dDIFz.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_is_dDIFz.hie)
-
-------------------------------------------------
-
-
-### _is_dNTf
-[_is_dNTf.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_dNTf.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_dNTf.sh
-- MAIN: _is_dNTf :: is? cmp dir $1 recurce any node -nt that $2 file
-- TAGS: 
-
-[_is_dNTf.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_is_dNTf.hie)
-
-------------------------------------------------
-
-
-### _isn_from
-[_isn_from.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_isn_from.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_isn_from.sh
-- MAIN: _isn_from :: true if $1 < $2 or $1 >$3
-- TAGS: 
-
-[_isn_from.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_isn_from.hie)
-
-------------------------------------------------
-
-
-### _isn_od
-[_isn_od.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_isn_od.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_isn_od.sh
-- MAIN: _isn_od :: true if $1 not number
-- TAGS: 
-
-[_isn_od.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_isn_od.hie)
-
-------------------------------------------------
-
-
-### _is_reINs
-[_is_reINs.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_reINs.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_reINs.sh
-- MAIN: _is_reINs :: if regexp $1 in string $2 return 0 else return 1
-- TAGS: 
-
-[_is_reINs.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_is_reINs.hie)
-
-------------------------------------------------
-
-
-### _is_rndx_f
-[_is_rndx_f.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_rndx_f.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_rndx_f.sh
-- MAIN: _is_rndx_f :: is? $1 file contane str 'RNDX: $(_rnd2e)'
-- TAGS: 
-
-[_is_rndx_f.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_is_rndx_f.hie)
-
-------------------------------------------------
-
-
-### _is_root
-[_is_root.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_root.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_root.sh
-- MAIN: _is_root :: 
-- TAGS: 
-
-[_is_root.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_is_root.hie)
-
-------------------------------------------------
-
-
-### _is_rr
-[_is_rr.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_rr.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_rr.sh
-- MAIN: _is_rr :: return 1 if _rr with (err or >&2)
-- TAGS: 
-
-[_is_rr.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_is_rr.hie)
-
-------------------------------------------------
-
-
-### _is_sINs
-[_is_sINs.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_sINs.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_sINs.sh
-- MAIN: _is_sINs :: if string $1 in string $2 return 0 else return 1
-- TAGS: @IN @str
-
-[_is_sINs.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_is_sINs.hie)
-
-------------------------------------------------
-
-
-### _is_yes
-[_is_yes.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_yes.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_is_yes.sh
-- MAIN: _is_yes :: return 0 only answer for question type 'y' 
-- TAGS: 
-
-[_is_yes.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_is_yes.hie)
-
-------------------------------------------------
-
-
-### _l2f
-[_l2f.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_l2f.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_l2f.sh
-- MAIN: _l2f :: 
-- TAGS: 
-
-[_l2f.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_l2f.hie)
-
-------------------------------------------------
-
-
-### _lcu2d
-[_lcu2d.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lcu2d.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lcu2d.sh
-- MAIN: _lcu2d :: add LCUflow to u@path dir $1
-- TAGS: 
-
-[_lcu2d.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_lcu2d.hie)
-
-------------------------------------------------
-
-
-### _lcur2d
-[_lcur2d.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lcur2d.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lcur2d.sh
-- MAIN: _lcur2d :: recucively add LCUflow to u@path dir $1
-- TAGS: 
-
-[_lcur2d.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_lcur2d.hie)
-
-------------------------------------------------
-
-
-### _lf2f
-[_lf2f.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lf2f.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lf2f.sh
-- MAIN: _lf2f :: 
-- TAGS: 
-
-[_lf2f.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_lf2f.hie)
-
-------------------------------------------------
-
-
-### _lnv2ad
-[_lnv2ad.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lnv2ad.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lnv2ad.sh
-- MAIN: _lnv2ad :: insert list name value cntx from $1 file.lst to dir (-A, NOT prev) $2
-- TAGS: 
-
-[_lnv2ad.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_lnv2ad.hie)
-
-------------------------------------------------
-
-
-### _lnv2d
-[_lnv2d.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lnv2d.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lnv2d.sh
-- MAIN: _lnv2d :: insert list name value cntx from $1 file.lst to dir (with prev) $2
-- TAGS: 
-
-[_lnv2d.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_lnv2d.hie)
-
-------------------------------------------------
-
-
-### _lnv2e
-[_lnv2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lnv2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_lnv2e.sh
-- MAIN: _lnv2e :: print list name value cntx from $1 file.lst
-- TAGS: 
-
-[_lnv2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_lnv2e.hie)
-
-------------------------------------------------
-
-
-### _nr2mm
-[_nr2mm.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_nr2mm.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_nr2mm.sh
-- MAIN: _nr2mm :: $1: parr [n]ame mm, $2: parr [r]es [mm], $3: parr string result $4 0 or num menu
-- TAGS: 
-
-[_nr2mm.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_nr2mm.hie)
-
-------------------------------------------------
-
-
-### _parr3e
-[_parr3e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_parr3e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_parr3e.sh
-- MAIN: _parr3e :: $1: parr treat echo
-- TAGS: 
-
-[_parr3e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_parr3e.hie)
-
-------------------------------------------------
-
-
-### _prs_f
-[_prs_f.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_prs_f.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_prs_f.sh
-- MAIN: _prs_f ::
-- TAGS: 
-
-[_prs_f.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_prs_f.hie)
-
-------------------------------------------------
-
-
-### _re
-[_re.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_re.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_re.sh
-- MAIN: _re :: 
-- TAGS: 
-
-[_re.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_re.hie)
-
-------------------------------------------------
-
-
-### _ret2e
-[_ret2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ret2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ret2e.sh
-- MAIN: _ret2e :: echo return $@
-- TAGS: 
-
-[_ret2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_ret2e.hie)
-
-------------------------------------------------
-
-
-### _rm_st_rc_fn
-[_rm_st_rc_fn.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rm_st_rc_fn.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rm_st_rc_fn.sh
-- MAIN: _rm_st_rc_fn :: rm any files $1 name fn from .d/.rc.d
-- TAGS: 
-
-[_rm_st_rc_fn.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_rm_st_rc_fn.hie)
-
-------------------------------------------------
-
-
-### _rnd2e
-[_rnd2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rnd2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rnd2e.sh
-- MAIN: _rnd2e :: echo [\w|\d]{32}
-- TAGS: @rnd
-
-[_rnd2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_rnd2e.hie)
-
-------------------------------------------------
-
-
-### _rndxf2e
-[_rndxf2e.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rndxf2e.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rndxf2e.sh
-- MAIN: _rndxf2e :: stdout
-- TAGS: 
-
-[_rndxf2e.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_rndxf2e.hie)
-
-------------------------------------------------
-
-
-### _rpr_strc
-[_rpr_strc.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rpr_strc.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rpr_strc.sh
-- MAIN: _rpr_strc :: repire strc : 
-- TAGS: 
-
-[_rpr_strc.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_rpr_strc.hie)
-
-------------------------------------------------
-
-
-### _rr
-[_rr.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rr.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_rr.sh
-- MAIN: _rr :: 
-- TAGS: 
-
-[_rr.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_rr.hie)
-
-------------------------------------------------
-
-
-### _s2ad
-[_s2ad.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_s2ad.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_s2ad.sh
-- MAIN: _s2ad :: insert $1 str into str $2 in ALL (without prevent) file from dir $3
-- TAGS: 
-
-[_s2ad.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_s2ad.hie)
-
-------------------------------------------------
-
-
-### _s2d
-[_s2d.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_s2d.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_s2d.sh
-- MAIN: _s2d :: insert $1 str into str $2 in (with prevent) file from dir $3
-- TAGS: 
-
-[_s2d.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_s2d.hie)
-
-------------------------------------------------
-
-
-### _s2f
-[_s2f.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_s2f.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_s2f.sh
-- MAIN: _s2f :: reciver_string: $1 inserter_string: $2 in reciver_result_file: $3 
-- TAGS: 
-
-[_s2f.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_s2f.hie)
-
-------------------------------------------------
-
-
-### _s2se
-[_s2se.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_s2se.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_s2se.sh
-- MAIN: _s2se :: stdout $1 reciver_string $2 inserter_string (if $2 will be emty - $2=@ ) $3 reciver_result_string
-- TAGS: 
-
-[_s2se.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_s2se.hie)
-
-------------------------------------------------
-
-
-### _sd2d
-[_sd2d.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_sd2d.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_sd2d.sh
-- MAIN: _sd2d :: cp dir ${ARGS[2]} to . with replace ${ARGS[0]} to ${ARGS[1]} in files and name node
-- TAGS: 
-
-[_sd2d.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_sd2d.hie)
-
-------------------------------------------------
-
-
-### _sdd2d
-[_sdd2d.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_sdd2d.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_sdd2d.sh
-- MAIN: _sdd2d :: cp dir ${ARGS[2]} to ${ARGS[3]} with replace ${ARGS[0]} to ${ARGS[1]} in files and name node
-- TAGS: 
-
-[_sdd2d.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_sdd2d.hie)
-
-------------------------------------------------
-
-
-### _sf2f
-[_sf2f.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_sf2f.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_sf2f.sh
-- MAIN: _sf2f :: cp file ${ARGS[2]} to . with replace ${ARGS[0]} to ${ARGS[1]} in file and name file
-- TAGS: 
-
-[_sf2f.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_sf2f.hie)
-
-------------------------------------------------
-
-
-### _source_w1_isf
-[_source_w1_isf.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_source_w1_isf.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_source_w1_isf.sh
-- MAIN: _source_w1_isf :: 
-- TAGS: 
-
-[_source_w1_isf.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_source_w1_isf.hie)
-
-------------------------------------------------
-
-
-### _sRf
-[_sRf.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_sRf.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_sRf.sh
-- MAIN: _sRf :: remove string $1 from file $2
-- TAGS: 
-
-[_sRf.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_sRf.hie)
-
-------------------------------------------------
-
-
-### _st_err
-[_st_err.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_st_err.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_st_err.sh
-- MAIN: _st_err :: info>&2, return 1
-- TAGS: 
-
-[_st_err.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_st_err.hie)
-
-------------------------------------------------
-
-
-### _stE
-[_stE.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_stE.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_stE.sh
-- MAIN: _stE :: catalog strc_fn form /.d/.rc.d/.st.rc.d/st.sh.d
-- TAGS: 
-
-[_stE.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_stE.hie)
-
-------------------------------------------------
-
-
-### _st_exit
-[_st_exit.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_st_exit.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_st_exit.sh
-- MAIN: _st_exit :: info>&2, pause, return 1 or ^C
-- TAGS: 
-
-[_st_exit.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_st_exit.hie)
-
-------------------------------------------------
-
-
-### _st_info
-[_st_info.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_st_info.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_st_info.sh
-- MAIN: _st_info :: only message
-- TAGS: 
-
-[_st_info.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_st_info.hie)
-
-------------------------------------------------
-
-
-### _st_pause
-[_st_pause.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_st_pause.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_st_pause.sh
-- MAIN: _st_pause :: echo args and wait ENTER or ^C 
-- TAGS: @pause @read
-
-[_st_pause.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_st_pause.hie)
-
-------------------------------------------------
-
-
-### _strc_run2log
-[_strc_run2log.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_strc_run2log.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_strc_run2log.sh
-- MAIN: _strc_run2log :: . '/.d/.rc.d/.st.rc.d/.st.rc' ?> '/.d/.rc.d/.st.rc.d/.st.log.d/run_st_rc.log'
-- TAGS: 
-
-[_strc_run2log.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_strc_run2log.hie)
-
-------------------------------------------------
-
-
-### _str_lib_lst
-[_str_lib_lst.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_str_lib_lst.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_str_lib_lst.sh
-- MAIN: _str_lib_lst :: _f2e ${HOME}/.d/.lst.d/.st.lst
-- TAGS: 
-
-[_str_lib_lst.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_str_lib_lst.hie)
-
-------------------------------------------------
-
-
-### _ststart
-[_ststart.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ststart.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_ststart.sh
-- MAIN: _ststart :: . ${HOME}/.d/.rc.d/.st.rc.d/.st.rc
-- TAGS: 
-
-[_ststart.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_ststart.hie)
-
-------------------------------------------------
-
-
-### _tmp
-[_tmp.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_tmp.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_tmp.sh
-- MAIN: _tmp :: 
-- TAGS: 
-
-[_tmp.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_tmp.hie)
-
-------------------------------------------------
-
-
-### _tst_arb
-[_tst_arb.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_tst_arb.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_tst_arb.sh
-- MAIN: _tst_arb :: 
-- TAGS: 
-
-[_tst_arb.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_tst_arb.hie)
-
-------------------------------------------------
-
-
-### _unzip_to
-[_unzip_to.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_unzip_to.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_unzip_to.sh
-- MAIN: _unzip_to :: unzip to $1 dir_dist from zip path_src file [-f]
-- TAGS: 
-
-[_unzip_to.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_unzip_to.hie)
-
-------------------------------------------------
-
-
-### _upg_st_rc_fn
-[_upg_st_rc_fn.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_upg_st_rc_fn.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_upg_st_rc_fn.sh
-- MAIN: _upg_st_rc_fn :: 
-- TAGS: 
-
-[_upg_st_rc_fn.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_upg_st_rc_fn.hie)
-
-------------------------------------------------
-
-
-### _XXX
-[_XXX.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_XXX.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_XXX.sh
-- MAIN: _XXX :: 
-- TAGS: 
-
-[_XXX.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_XXX.hie)
-
-------------------------------------------------
-
-
-### _zip_to
-[_zip_to.sh](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_zip_to.sh)
-
-- PATH: /.d/.unzip/.d/.rc.d/.st.rc.d/.st.sh.d/_zip_to.sh
-- MAIN: _zip_to :: zip $1 dist file $2 src node (-f|-d) with check in ${dir_dist}/_zip_to.tmp.d
-- TAGS: @zip
-
-[_zip_to.hie](/.d/.unzip/.d/.rc.d/.st.rc.d/.st.hie.d/_zip_to.hie)
-
-------------------------------------------------
-
-
 
 [001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/001.pref.txt.md)
 

@@ -52,7 +52,7 @@ CNTL:
     _f1_e   : _edit flow_dir_file_1 : _edit file://${flow_dir_file_1}
     _hie_m  : more hie_file         : more file://${hie_file} 
     _hie_e  : _edit hie_file        : _edit file://${hie_file} 
-    _data_e : _edit hie_file        : _edit file://${datd_dir} 
+    _data_e : _edit data_dir        : _edit file://${datd_dir} 
 
 RETU: 
 EXAM: 
