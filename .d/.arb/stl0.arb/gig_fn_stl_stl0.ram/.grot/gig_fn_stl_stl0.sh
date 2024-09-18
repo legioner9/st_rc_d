@@ -72,6 +72,16 @@ ${NORMAL}"
         fi
     fi
 
+    if [[ "_tst_e" == "$1" ]]; then
+        _edit ${d_name}/_tst
+        return 0
+    fi
+
+    if [[ "_data_e" == "$1" ]]; then
+        _edit ${fn_data_dir}
+        return 0
+    fi
+
     if command -v ${1}_stl0; then
         hint="\$1: name create ${1}_stl0"
         _st_err "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_TRUE : 'command -v $1_stl0' : ${hint} : return 1" >&2
@@ -79,6 +89,10 @@ ${NORMAL}"
     fi
 
     # local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/gig_fn_stl_stl0
+
+    # /home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/gig_fn_stl_stl0.ram/.grot/gig_fn_stl_stl0.hie
+
+    # cp ${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl0/XXX/tml.hie ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/XXX_stl0.d
 
     # _sd2d _XXX $1 ${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram
     #  _sd2d _XXX $1 ${ST_RC_D_PATH}/.d/.arb/smp0.arb
