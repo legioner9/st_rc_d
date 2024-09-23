@@ -27,7 +27,7 @@ ufl_stl0() {
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
     local d_name=$(dirname ${fn_sh_file})
 
-    echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
+    echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file} ---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
