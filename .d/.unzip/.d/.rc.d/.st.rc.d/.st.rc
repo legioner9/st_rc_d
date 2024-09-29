@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IFS=$' \t\n'
+unset IFS
 
 path_to_data=${HOME}/.d/.rc.d/.st.rc.d/.st.path.d/.repo.data
 
@@ -121,7 +121,7 @@ _loop_lib_st_rc() {
 
         if [[ -f ${item} ]]; then
 
-            IFS=$' \t\n'
+            unset IFS
             echo ". ${item} >/dev/null"
             if ! . ${item} >/dev/null; then
                 echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc ${LINENO} _loop_lib_st_rc() : FAIL_EXEC : . file://$item return 1" >&2
@@ -136,7 +136,7 @@ _loop_lib_st_rc() {
     done
 }
 
-IFS=$' \t\n'
+unset IFS
 
 echo "_loop_lib_st_rc()"
 if ! _loop_lib_st_rc; then

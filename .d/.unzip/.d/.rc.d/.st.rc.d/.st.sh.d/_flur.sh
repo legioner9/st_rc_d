@@ -119,7 +119,7 @@ DEMO:
 
     done <"${2:-/dev/stdin}"
 
-    IFS=$' \t\n'
+    unset IFS
 
     cd $PPWD
     return 0

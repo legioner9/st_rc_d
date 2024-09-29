@@ -1,0 +1,12 @@
+tst.d/001.rr.d/__.lcu
+tst.d/001.rr.d/002.rr.d/__.lcu
+tst.d/001.rr.d/002.rr.d/004.a.file1
+tst.d/001.rr.d/002.rr.d/005.b.file1
+tst.d/001.rr.d/004.a.file1
+tst.d/001.rr.d/005.b.file1
+tst.d/002.rr.d/003.rr.d/__.lcu
+tst.d/002.rr.d/003.rr.d/000.b.file1
+tst.d/002.rr.d/003.rr.d/004.b.file1
+tst.d/002.rr.d/003.rr.d/005.a.file1
+tst.d/002.rr.d/004.b.file1
+tst.d/002.rr.d/005.a.file1

@@ -11,4 +11,4 @@ if [[ -f ${ST_RC_D_PATH}/.d/.repo.d/.repo.rc ]]; then
     fi
 fi
 
-IFS=$' \t\n'
+unset IFS

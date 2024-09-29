@@ -359,7 +359,7 @@ __gitcomp ()
 	--*=)
 		;;
 	--no-*)
-		local c i=0 IFS=$' \t\n'
+		local c i=0 unset IFS
 		for c in $1; do
 			if [[ $c == "--" ]]; then
 				continue
@@ -375,7 +375,7 @@ __gitcomp ()
 		done
 		;;
 	*)
-		local c i=0 IFS=$' \t\n'
+		local c i=0 unset IFS
 		for c in $1; do
 			if [[ $c == "--" ]]; then
 				c="--no-...${4-}"

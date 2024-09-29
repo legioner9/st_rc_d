@@ -1,0 +1,16 @@
+[0;32m$ptr_path_1 = /home/st/.d/.rpn.ax.d/_lcu2_/tst.d/__.lcu[0m
+
+[1m[40m[34mPATH: file:///home/st/.d/.rpn.ax.d/_lcu2_/tst.d/__.lcu [0m
+[1m[40m[35mRNDX: 287300326ed14b37bfc014affd4e6899 [0m
+[1m[40m[36mMAIN: that MAIN section [0m
+[1m[40m[31mTAGS: @fs @fn [0m    
+
+
+PATH: /home/st/.d/.rpn.ax.d/_lcu2_/tst.d/__.lcu 
+RNDX: 287300326ed14b37bfc014affd4e6899 
+MAIN: that MAIN section 
+TAGS: @fs @fn    
+
+287300326ed14b37bfc014affd4e6899
+that MAIN section
+fs fn

@@ -11,7 +11,7 @@ if [[ -f ${STB_PATH}/.d/.repo.d/.repo.rc ]]; then
     fi
 fi
 
-IFS=$' \t\n'
+unset IFS
 
 # if command -v _str_lib_lst; then
 #     arr_lib=($(_str_lib_lst))

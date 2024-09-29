@@ -11,7 +11,7 @@ TAGS:
 "
         return 0
     fi
-    IFS=$' \t\n'
+    unset IFS
 
     # cd_h "$1" "$filename" "$LINENO"
     if [[ -d "$1" ]]; then

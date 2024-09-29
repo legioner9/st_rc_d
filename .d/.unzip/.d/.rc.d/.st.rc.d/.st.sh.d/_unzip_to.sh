@@ -16,7 +16,7 @@ _unzip_to() {
 
     if [[ "-h" == "$1" ]]; then
         echo -e "
-MAIN: ${FUNCNAME} :: unzip to \$1 dir_dist from zip path_src file [-f]
+MAIN: ${FUNCNAME} :: unzip to \$1 dir_dist from zip \$2 path_src file [-f]
 TAGS:
     \$1 dist dir 
     \$2 src zip file
@@ -93,8 +93,9 @@ EXAM:
 
     unzip -o ${file_src}
 
+if ! [ ${path_dist}/${file_src} == ${path_src} ];then
     rm ${path_dist}/${file_src}
-
+fi
     cd $PPWD
     return 0
 

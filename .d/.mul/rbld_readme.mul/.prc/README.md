@@ -48,6 +48,7 @@ Start Contents Menu
     - [Поведение функции STL0](#поведение-функции-stl0)
   - [Unsort](#unsort)
       - [Select (меню выбора) в параметре функции](#select-меню-выбора-в-параметре-функции)
+      - [UPG stl\_fn](#upg-stl_fn)
 - [Install stl](#install-stl)
 - [Неупорядоченные заметки](#неупорядоченные-заметки)
 
@@ -62,9 +63,9 @@ PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 1726371347_15092024103547
+DATE: 1727593183_29092024135943
 
-DATX: 1726371347
+DATX: 1727593183
 -->
 
 
@@ -90,6 +91,7 @@ Gratia (лат.)
 
 - vitlav
 - larchanka
+- a3rus
     
 
 [001.pef.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/001.pef.txt.md)
@@ -563,7 +565,7 @@ Quid est hic (лат.)
 ## Unsort
     
 
-[002.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/002.pref.txt.md)
+[002.select.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/002.select.txt.md)
 
 
 
@@ -574,6 +576,19 @@ Quid est hic (лат.)
   - N сразу указывает на пункт меню 
 
 - `_d2mm` пример выбора файла из директории
+    
+
+[003.upg_fn.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/003.upg_fn.txt.md)
+
+
+
+#### UPG stl_fn
+
+- для upg_[name_fn]:
+  - создаем [name_fn]_
+  - тестируем на наследование поведения
+    - делаем bcp [name_fn] с перемещением файлов
+    - заменяем [name_fn]_ на [name_fn] во сех файлах и директориях [name_fn]_ (like _gig_st_rc_fn _XXX -> [name_fn])
     
 
 [001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/001.pref.txt.md)

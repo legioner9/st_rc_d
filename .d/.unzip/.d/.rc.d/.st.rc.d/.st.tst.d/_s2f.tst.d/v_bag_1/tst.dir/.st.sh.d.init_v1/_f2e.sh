@@ -30,6 +30,6 @@ TAGS:
             eval echo "$item"
         fi
     done
-    IFS=$' \t\n'
+    unset IFS
 
 }

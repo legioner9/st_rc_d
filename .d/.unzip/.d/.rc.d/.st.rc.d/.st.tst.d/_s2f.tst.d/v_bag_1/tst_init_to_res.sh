@@ -14,12 +14,12 @@ cp -r ./.st.sh.d.init/. ./.st.sh.d.res
 
 cat .st.sh.d.res/.st.lst
 echo
-# IFS=$' \t\n'
+# unset IFS
 _s2f "/\.st\.rc\.d" "/\.d/\.rc\.d/\.st\.rc\.d" .st.sh.d.res/.st.lst
 # _s2f '/.d/.rc.d/.st.rc.d' '/.d/.rc.d/.d/.rc.d/.st.rc.d' /home/st/.d/.rc.d/.st.rc.d/.st.tst.d/_s2f.tst.d/v_bag_1/tst.dir/.st.sh.d.res/.st.lst
-IFS=$' \t\n'
+unset IFS
 # _s2f "/.d/.rc.d/.st.rc.d" "/.d/.rc.d/.d/.rc.d/.st.rc.d" .st.sh.d.res/tst.sh
-IFS=$' \t\n'
+unset IFS
 # cat .st.sh.d.res/.st.lst
 # echo
 # cat .st.sh.d.res/tst.sh
