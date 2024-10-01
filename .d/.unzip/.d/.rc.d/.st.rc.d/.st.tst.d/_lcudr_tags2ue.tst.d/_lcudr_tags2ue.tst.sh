@@ -30,6 +30,10 @@ ___lcudr_tags2ue_TST_SH() {
 
     # _lcudr_tags2ue >/dev/null
 
+         cd ${HOME}/.d/.rpn.ax.d/_lcu2_/tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd file://${HOME}/.d/.rpn.ax.d/_lcu2_/tst.d" >&2
+
+    _lcudr_tags2ue @ >>${tst_dir}/res
+
     flag=1
     
     cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2

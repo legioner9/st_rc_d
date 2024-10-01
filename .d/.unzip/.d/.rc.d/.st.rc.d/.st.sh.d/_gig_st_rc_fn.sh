@@ -132,6 +132,18 @@ EXAM:
 
     fi
 
+    local user_datd_dir=${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/${1}.d
+
+    echo -e "${HLIGHT}--- cp -r ${HOME}/.d/.rpn.ax.d/tml.ax.d/.data/stl/_XXX/. ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d ---${NORMAL}" #start files
+    cp -r ${HOME}/.d/.rpn.ax.d/tml.ax.d/.data/stl/_XXX/. ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d
+
+    if ! _sd2d _XXX $1 ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d; then
+
+        echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_gig_st_rc_fn.sh , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_sd2d _XXX $1 ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_XXX.d' : ${hint} : return 1" >&2
+        return 1
+
+    fi
+
     # -------------------------------------------------------------------
 
     # if ! [[ -f ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/$1.sh ]]; then

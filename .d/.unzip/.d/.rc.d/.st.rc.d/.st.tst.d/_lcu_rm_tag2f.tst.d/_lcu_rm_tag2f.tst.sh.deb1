@@ -1,0 +1,75 @@
+#!/bin/bash
+
+___lcu_rm_tag2f_TST_SH_DEB1() {
+
+    local FNN=${FUNCNAME[0]}
+    local PPWD=$PWD
+    local ARGS=("$@")
+
+    local ARGS0="$1"
+    local ARGS1="$2"
+    local ARGS2="$3"
+    local ARGS3="$4"
+
+    local NARGS=$#
+
+    local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_lcu_rm_tag2f.sh
+    local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_lcu_rm_tag2f.sh
+    local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_lcu_rm_tag2f.tst.d
+    local tst_dir_file=${tst_dir}/_lcu_rm_tag2f.tst.sh.deb1
+    local tst_lst_env=${tst_dir}/.lst/tst_env.lst
+
+    local comm_dir_tst=${HOME}/.d/.rpn.ax.d
+
+    echo -e "${BLUE}--- start ___lcu_rm_tag2f_TST_SH_DEB1() $* in $tst_dir_file ---${NORMAL}" #sistem info mesage
+
+    _lnv2e ${tst_lst_env}
+
+    cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2
+
+    if true; then
+        echo "_lcu_rm_tag2f"
+    fi
+
+    : >${tst_dir}/res
+
+    cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
+
+    cp -f init.__.lcu __.lcu
+
+    # _lcu_iss_mm_add_tag2f __.lcu ${tst_datd_dir} 0
+
+    echo -e "${HLIGHT}--- _lcu2e __.lcu _tags ---${NORMAL}" #start files
+    _lcu2e __.lcu _tags
+    echo -e "${HLIGHT}--- _lcu_rm_tag2f hw __.lcu ---${NORMAL}" #start files
+    _lcu_rm_tag2f kdt ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_lcu_rm_tag2f.tst.d/tst.d/__.lcu
+    echo -e "${HLIGHT}--- _lcu2e __.lcu _tags ---${NORMAL}" #start files
+    _lcu2e __.lcu _tags
+
+    # tree
+
+    # _lcu_rm_tag2f >/dev/null
+
+    # _s2f "${HOME}" '${HOME}' ${tst_dir}/res
+
+    flag=1
+
+    cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2
+
+    if ! diff -q res pre >/dev/null; then
+        flag=0
+    fi
+
+    if [ 0 -eq "$flag" ]; then
+        echo "in file://${tst_dir_file} fail" >&2
+        diff res pre >&2
+        cd ${PPWD}
+        return 1
+    else
+        echo "in file://${tst_dir_file} true"
+        cd ${PPWD}
+        return 0
+    fi
+}
+
+___lcu_rm_tag2f_TST_SH_DEB1 "$@"

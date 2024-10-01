@@ -6,15 +6,15 @@ path_to_data=${HOME}/.d/.rc.d/.st.rc.d/.st.path.d/.repo.data
 
 if [[ -f ${path_to_data} ]]; then
 
-    eval STRC_DATA_PATH=$(cat ${path_to_data})
+    eval ST_RC_D_DATA_PATH=$(cat ${path_to_data})
 
-    if [[ -z ${STRC_DATA_PATH} ]]; then
-        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DEFINE : '\${STRC_DATA_PATH} in file://${path_to_data}' : ${hint} : return 1" >&2
+    if [[ -z ${ST_RC_D_DATA_PATH} ]]; then
+        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DEFINE : '\${ST_RC_D_DATA_PATH} in file://${path_to_data}' : ${hint} : return 1" >&2
         return 1
     fi
 
-    if ! [[ -d ${STRC_DATA_PATH} ]]; then
-        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DIR : '\${STRC_DATA_PATH} in file://${path_to_data}' : ${hint} : return 1" >&2
+    if ! [[ -d ${ST_RC_D_DATA_PATH} ]]; then
+        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DIR : '\${ST_RC_D_DATA_PATH} in file://${path_to_data}' : ${hint} : return 1" >&2
         return 1
     fi
 

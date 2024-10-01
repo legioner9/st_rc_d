@@ -26,6 +26,7 @@ _lcudr_tags2ue() {
     local tst_lst_env=${tst_dir}/.lst/tst_env.lst
 
     local datd_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/${FNN}.d
+    local user_datd_dir=${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/${FNN}.d
 
     local hie_file=${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/${FNN}.hie
 

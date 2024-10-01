@@ -36,6 +36,8 @@ ___d2mm_TST_SH_DEB1() {
 
     local result_=''
 
+    _d2mm df2mm result_ 0
+    
     _d2mm df2mm result_ 2
 
     echo -e "${GREEN}\$result_ = $result_${NORMAL}" #print variable

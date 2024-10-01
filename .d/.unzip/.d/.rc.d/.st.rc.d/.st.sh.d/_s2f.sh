@@ -45,6 +45,10 @@ NB!!: escaping in \$2 '\[' '\]' '\\\$' '\^' '\\\\\' and in \$1 '\.'
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
+    echo -e "${GREEN}\$1 = $1${NORMAL}" #print variable
+    echo -e "${GREEN}\$2 = $2${NORMAL}" #print variable
+    echo -e "${GREEN}\$3 = file://$3${NORMAL}" #print variable
+
     # sed -i "s|$1|$2|g" "$3"
     if [ "@" == "$2" ]; then
         eval "sed -i 's|$1||g' $3"

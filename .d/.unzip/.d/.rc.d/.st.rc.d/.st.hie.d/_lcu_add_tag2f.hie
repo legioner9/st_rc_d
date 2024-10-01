@@ -1,0 +1,20 @@
+# HIE _lcu_add_tag2f
+
+## CAUSA:
+ПРИЧИНА создания:
+добавить тег $1 в файл.lcu $2
+
+
+## FORMULA:
+СХЕМА решения:
+str=$(_lsu2e $2 _s | grep TAGS:)
+str="$str @$1"
+
+
+## DOGMA:
+РЕШЕНИЕ задачи:
+
+### TST
+
+### FLOW_1
+ 

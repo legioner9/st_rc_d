@@ -25,7 +25,8 @@ _tmp() {
     local flow_dir_file_1=${tst_dir}/${FNN}.tst.sh.deb1
     local tst_lst_env=${tst_dir}/.lst/tst_env.lst
 
-    local datd_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/${FNN}.d
+    local data_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/${FNN}.d
+    local user_datd_dir=${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/${FNN}.d
 
     local hie_file=${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/${FNN}.hie
 
@@ -52,7 +53,8 @@ CNTL:
     _f1_e   : _edit flow_dir_file_1 : _edit file://${flow_dir_file_1}
     _hie_m  : more hie_file         : more file://${hie_file} 
     _hie_e  : _edit hie_file        : _edit file://${hie_file} 
-    _data_e : _edit data_dir        : _edit file://${datd_dir} 
+    _data_e : _edit data_dir        : _edit file://${data_dir} 
+    _user_datd_dir_e : _edit user_datd_dir : _edit file://${user_datd_dir} 
 
 RETU: 
 EXAM: 
@@ -104,7 +106,13 @@ EXAM:
     fi
 
     if [[ "_data_e" == "$1" ]]; then
-        _edit ${datd_dir}
+        _edit ${data_dir}
+        cd $PPWD
+        return 0
+    fi
+
+    if [[ "_user_datd_dir_e" == "$1" ]]; then
+        _edit ${user_datd_dir}
         cd $PPWD
         return 0
     fi
@@ -113,8 +121,8 @@ EXAM:
 
     # hint="\$1: \$2: "
     # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
     #     cd $PPWD
+    #     return 1
     # fi
 
     #[[ptr_path]]

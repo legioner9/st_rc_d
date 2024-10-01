@@ -1,0 +1,19 @@
+# HIE _lcu_rm_tag2f
+
+## CAUSA:
+ПРИЧИНА создания:
+удаление lcu_tag $1 from file.lcu $2
+
+
+## FORMULA:
+СХЕМА решения:
+_s2e "@$1" @ "$2"
+
+
+## DOGMA:
+РЕШЕНИЕ задачи:
+
+### TST
+
+### FLOW_1
+ 
