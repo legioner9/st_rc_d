@@ -46,10 +46,14 @@ Start Contents Menu
     - [Поведение библиотеки STL0](#поведение-библиотеки-stl0)
   - [Функция библиотеки STL0](#функция-библиотеки-stl0)
     - [Поведение функции STL0](#поведение-функции-stl0)
+  - [LCU](#lcu)
+    - [Что это](#что-это-1)
+    - [naming](#naming)
+    - [add to flcu](#add-to-flcu)
+    - [search among flcu](#search-among-flcu)
   - [Unsort](#unsort)
       - [Select (меню выбора) в параметре функции](#select-меню-выбора-в-параметре-функции)
       - [UPG stl\_fn](#upg-stl_fn)
-      - [LCU flow](#lcu-flow)
 - [Install stl](#install-stl)
 - [Неупорядоченные заметки](#неупорядоченные-заметки)
 
@@ -64,9 +68,9 @@ PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1727777883_01102024171803
+DATE: 1727785273_01102024192113
 
-DATX: 1727777883
+DATX: 1727785273
 -->
 
 
@@ -559,6 +563,54 @@ Quid est hic (лат.)
 ### Поведение функции STL0
     
 
+[001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/005.d/001.pref.txt.md)
+
+
+
+## LCU
+    
+
+[099.upg_fn.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/005.d/099.upg_fn.txt.md)
+
+
+
+### Что это
+- LCU - обработка файловой системы основаная на соответствии директории и файла __.lcu 
+  - характеристики
+    - директоря определяет содержание своих поддиректорий
+  - возможности обработки fs
+    - поиск по тегам
+    - поиск по мейн содержимому
+  - требования к занесению информации
+    - ограниченное whellknown количество тегов
+      - добавление тега в файл отлько из уже существующих (alrtag)
+      - 
+### naming
+
+- секция .lcu loc
+  - RNDX locr
+  - MAIN locm
+  - TAGS loct
+    - логика названий 
+      - All all
+        - locAll loc RNDX and MAIN and TAGS
+      - A and
+        - locrAm loc RNDX and MAIN
+      - O or
+        - locrOt loc RNDX or TAGS
+- file.lcu == flcu
+- env_dirs - pull directory as united for treat LSU
+### add to flcu
+
+- nrdx
+- tags
+- main
+
+### search among flcu
+
+
+    
+
 [001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/001.pref.txt.md)
 
 
@@ -590,28 +642,6 @@ Quid est hic (лат.)
   - тестируем на наследование поведения
     - делаем bcp [name_fn] с перемещением файлов
     - заменяем [name_fn]_ на [name_fn] во сех файлах и директориях [name_fn]_ (like _gig_st_rc_fn _XXX -> [name_fn])
-    
-
-[004.upg_fn.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/004.upg_fn.txt.md)
-
-
-
-#### LCU flow
-
-- секция .lcu loc
-  - RNDX locr
-  - MAIN locm
-  - TAGS loct
-- логика названий 
-  - All all
-    - locAll loc RNDX and MAIN and TAGS
-  - A and
-    - locrAm loc RNDX and MAIN
-  - O or
-    - locrOt loc RNDX or TAGS
-
-
-
     
 
 [001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/001.pref.txt.md)
