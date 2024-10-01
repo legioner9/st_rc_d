@@ -5,9 +5,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1727772089_01102024154129
+DATE: 1727777883_01102024171803
 
-DATX: 1727772089
+DATX: 1727777883
 -->
 
 
@@ -531,6 +531,28 @@ Quid est hic (лат.)
   - тестируем на наследование поведения
     - делаем bcp [name_fn] с перемещением файлов
     - заменяем [name_fn]_ на [name_fn] во сех файлах и директориях [name_fn]_ (like _gig_st_rc_fn _XXX -> [name_fn])
+    
+
+[004.upg_fn.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/004.upg_fn.txt.md)
+
+
+
+#### LCU flow
+
+- секция .lcu loc
+  - RNDX locr
+  - MAIN locm
+  - TAGS loct
+- логика названий 
+  - All all
+    - locAll loc RNDX and MAIN and TAGS
+  - A and
+    - locrAm loc RNDX and MAIN
+  - O or
+    - locrOt loc RNDX or TAGS
+
+
+
     
 
 [001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/001.pref.txt.md)
