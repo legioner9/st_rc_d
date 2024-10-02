@@ -35,17 +35,29 @@ ___lcu_is_z_TST_SH_DEB1() {
 
     cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
 
-    _lcu_is_z @ full/__.lcu
-    _lcu_is_z _main full/__.lcu
-    _lcu_is_z _tags full/__.lcu
+    ret2e _lcu_is_z full/__.lcu @
 
-    _lcu_is_z @ main/__.lcu
-    _lcu_is_z _main main/__.lcu
-    _lcu_is_z _tags main/__.lcu
+    ret2e _lcu_is_z full/__.lcu _main
 
-    _lcu_is_z @ main/__.lcu
-    _lcu_is_z _main main/__.lcu
-    _lcu_is_z _tags main/__.lcu
+    ret2e _lcu_is_z full/__.lcu _tags
+
+    ret2e _lcu_is_z main/__.lcu
+
+    ret2e _lcu_is_z main/__.lcu _main
+
+    ret2e _lcu_is_z main/__.lcu _tags
+
+    ret2e _lcu_is_z tags/__.lcu @
+
+    ret2e _lcu_is_z tags/__.lcu _main
+
+    ret2e _lcu_is_z tags/__.lcu _tags
+
+    ret2e _lcu_is_z null/__.lcu @
+
+    ret2e _lcu_is_z null/__.lcu _main
+
+    ret2e _lcu_is_z null/__.lcu _tags
 
     # tree
 

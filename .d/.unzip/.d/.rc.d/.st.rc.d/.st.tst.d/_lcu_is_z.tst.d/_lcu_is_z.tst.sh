@@ -28,8 +28,23 @@ ___lcu_is_z_TST_SH() {
 
     : >${tst_dir}/res
 
-    # cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
+    cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
 
+    ret2e _lcu_is_z full/__.lcu @ >>${tst_dir}/res
+    ret2e _lcu_is_z full/__.lcu _main >>${tst_dir}/res
+    ret2e _lcu_is_z full/__.lcu _tags >>${tst_dir}/res
+
+    ret2e _lcu_is_z main/__.lcu >>${tst_dir}/res
+    ret2e _lcu_is_z main/__.lcu _main >>${tst_dir}/res
+    ret2e _lcu_is_z main/__.lcu _tags >>${tst_dir}/res
+
+    ret2e _lcu_is_z tags/__.lcu @ >>${tst_dir}/res
+    ret2e _lcu_is_z tags/__.lcu _main >>${tst_dir}/res
+    ret2e _lcu_is_z tags/__.lcu _tags >>${tst_dir}/res
+
+    ret2e _lcu_is_z null/__.lcu @ >>${tst_dir}/res
+    ret2e _lcu_is_z null/__.lcu _main >>${tst_dir}/res
+    ret2e _lcu_is_z null/__.lcu _tags >>${tst_dir}/res
     # tree
 
     # _lcu_is_z >/dev/null

@@ -13,7 +13,7 @@ _lcu_is_z() {
 
     local NARGS=$#
 
-    local hint="hint->"
+    local hint="hint-> \$1 file.lcu \$2 (@|_main|_tags)"
     local item=
 
     #* local fn_data_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.d
@@ -30,7 +30,7 @@ _lcu_is_z() {
 
     local hie_file=${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/${FNN}.hie
 
-    echo -e "${CYAN}--- start : ${FNN}() $@ ---${NORMAL}" #sistem info mesage
+    # echo -e "${CYAN}--- start : ${FNN}() $@ ---${NORMAL}" #sistem info mesage
 
     #? _lnv2e ${tst_lst_env}
 
@@ -41,10 +41,12 @@ _lcu_is_z() {
 
     if [[ "-h" == "$1" ]]; then
         echo -e "
-MAIN: ${FNN} :: is empty in \$1 file.lcu (@ loc )
+MAIN: ${FNN} :: is empty in \$1 file.lcu \$2 (@|_main|_tags)
 TAGS: 
 \$1 file.lcu
-[, \$2]
+\$2 (@ | - empty locmAt = main && tags
+ _main | - empty locm = main
+ _tags) - empty loct = tags
 CNTL: 
     _e      : _edit body            : _edit file://${sh_file}
     _t      : _edit tst_dir         : _edit file://${tst_dir}
@@ -61,6 +63,7 @@ RETU: true if:
     _main | - empty locm = main
     _tags) - empty loct = tags
 EXAM: 
+    _lcu_
     ${FNN}
 "
         return 0
@@ -123,21 +126,78 @@ EXAM:
     #? ----- START _lcu_is_z body -----
 
     # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     cd $PPWD
-    #     return 1
-    # fi
+    if _isn_from ${NARGS} 2 2 "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND '2' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        cd $PPWD
+        return 1
+    fi
 
     #[[ptr_path]]
     #! ptr_path
-    # local ptr_path_1="$1"
-    # ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+    local ptr_path_1="$1"
+    ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+
+    [ -f ${ptr_path_1} ] || {
+        _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : NOT_FILE (\$1) : 'file://path_file' : ${hint} : return 1"
+        cd $PPWD
+        return 1
+    }
 
     #* ${HOME}.d/.rc.d/.st.rc.d/.st.d
 
     #? ----- END _lcu_is_z body -----
 
-    cd $PPWD
-    return 0
+    # local rndx
+    # rndx=$(cat ${ptr_path_1} | grep "RNDX:")
+    local tags
+    tags=$(cat ${ptr_path_1} | grep "TAGS:")
+    tags=${tags:5}
+    tags=$(_sTRMe "${tags}")
+    
+    local main
+    main=$(cat ${ptr_path_1} | grep "MAIN:")
+    main=${main:5}
+    main=$(_sTRMe "${main}")
 
+
+    # echo -e "${GREEN}\$tags = '$tags'${NORMAL}" #print variable
+    # echo -e "${GREEN}\$main = '$main'${NORMAL}" #print variable
+
+    if [ "$2" != "@" ] && [ "$2" != "_main" ] && [ "$2" != "_tags" ]; then
+        _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : (\$2): NOT_IN_CONDITION : '(@|_main|_tags)' : ${hint} : return 1"
+        cd $PPWD
+        return 1
+    fi
+
+    [ "$2" == "@" ] && {
+        if [ -z "$tags" ] && [ -z "$main" ]; then
+            cd $PPWD
+            return 0
+        else
+            cd $PPWD
+            return 1
+        fi
+    }
+
+    [ "$2" == "_main" ] && {
+        if [ -z "$main" ]; then
+            cd $PPWD
+            return 0
+        else
+            cd $PPWD
+            return 1
+
+        fi
+    }
+
+    [ "$2" == "_tags" ] && {
+        if [ -z "$tags" ]; then
+            cd $PPWD
+            return 0
+        else
+            cd $PPWD
+            return 1
+
+        fi
+    }
+    return 0
 }
