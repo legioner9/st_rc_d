@@ -92,10 +92,12 @@ ${NORMAL}"
 
     # /home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/gig_fn_stl_stl0.ram/.grot/gig_fn_stl_stl0.hie
 
-    # cp ${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl0/XXX/tml.hie ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/XXX_stl0.d
+    cp ${HOME}/.d/.rpn.ax.d/tml.ax.d/.hie/stl0/XXX/tml.hie ${fn_data_dir}/_XXX_stl0.ram/.grot/_XXX_stl0.hie
 
     # _sd2d _XXX $1 ${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram
     #  _sd2d _XXX $1 ${ST_RC_D_PATH}/.d/.arb/smp0.arb
+
+    _s2f _XXX _XXX_stl0 ${fn_data_dir}/_XXX_stl0.ram/.grot/_XXX_stl0.hie
     _sdd2d _XXX $1 ${fn_data_dir}/_XXX_stl0.ram ${ST_RC_D_PATH}/.d/.arb/stl0.arb
 
     _st_info "NOT edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/XXX_stl0 THAT COPY OF file://${HOME}/.d/.rpn.ax.d/tml.ax.d/.data/stl/_XXX"
