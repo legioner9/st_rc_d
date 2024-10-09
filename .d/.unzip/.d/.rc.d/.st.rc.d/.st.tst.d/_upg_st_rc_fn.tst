@@ -19,6 +19,7 @@ ___upg_st_rc_fn_TST() {
     local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_upg_st_rc_fn.tst.d
     local tst_dir_file=${tst_dir}/_upg_st_rc_fn.tst.sh
 
+
     # if ! [[ $(. ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_upg_st_rc_fn.tst.d/_upg_st_rc_fn.tst.sh) == "_upg_st_rc_fn" ]]; then
     #     echo "in fs=file://${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_upg_st_rc_fn.tst , line=${LINENO}, pwd=${PWD}" >&2
     #     echo "EXEC_FAIL : '\$(. ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_upg_st_rc_fn.tst.d/_upg_st_rc_fn.tst.sh) == _upg_st_rc_fn' : return 1" >&2

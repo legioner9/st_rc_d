@@ -41,7 +41,8 @@ ___lculdr_tags2ue_TST_SH_DEB1() {
 
     # _s2f "${HOME}" '${HOME}' ${tst_dir}/res
 
-    local user_datd_dir_lst=${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_lculdr_tags2ue.d/.lst
+    local user_datd_dir_lst=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_lculdr_tags2ue.d/.lst
+
 
     # _lculdr_tags2ue $user_datd_dir_lst 0
     _lculdr_tags2ue $user_datd_dir_lst 1

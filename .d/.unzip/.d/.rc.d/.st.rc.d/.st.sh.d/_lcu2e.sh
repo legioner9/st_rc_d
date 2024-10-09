@@ -181,7 +181,7 @@ ${tags}
         return 1
     fi
 
-    echo -e "${GREEN}\$ptr_path_1 = $ptr_path_1${NORMAL}" #print variable
+    # echo -e "${GREEN}\$ptr_path_1 = $ptr_path_1${NORMAL}" #print variable
 
     # cat ${ptr_path_1}
 

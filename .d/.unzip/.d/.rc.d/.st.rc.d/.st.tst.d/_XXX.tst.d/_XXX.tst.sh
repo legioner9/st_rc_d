@@ -16,7 +16,11 @@ ___XXX_TST_SH() {
     local sh_file=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_XXX.sh
     local tst_file=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.sh
     local tst_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_XXX.tst.d
-    local tst_dir_file=${tst_dir}/_XXX.tst.sh
+    local tst_dir_file=${tst_dir}/_XXX.tst.sh.deb1
+    local tst_lst_env=${tst_dir}/.lst/tst_env.lst
+
+    local data_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_XXX.d
+    local data_dir_lst=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_XXX.d/.lst
 
     local comm_dir_tst=${HOME}/.d/.rpn.ax.d
 
@@ -35,6 +39,8 @@ ___XXX_TST_SH() {
     # _XXX >/dev/null
 
     # _s2f "${HOME}" '${HOME}' ${tst_dir}/res
+
+    #* {{fn_tst_body}}
 
     flag=1
 

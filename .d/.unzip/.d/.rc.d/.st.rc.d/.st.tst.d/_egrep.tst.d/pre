@@ -1,0 +1,26 @@
+tesed strings: begin
+
+    regtt
+    uuugt
+    muy
+    
+tesed strings: end
+-- _egrep gt --
+regtt
+uuugt
+-- _egrep gt --
+regtt
+uuugt
+-- _egrep eg|mu --
+regtt
+muy
+-- _egrep gt&uu --
+uuugt
+-- _egrep gt --
+regtt
+uuugt
+-- _egrep eg|mu --
+regtt
+muy
+-- _egrep gt&uu --
+uuugt

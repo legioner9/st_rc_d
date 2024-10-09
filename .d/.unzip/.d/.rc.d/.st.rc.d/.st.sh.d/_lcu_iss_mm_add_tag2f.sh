@@ -13,7 +13,7 @@ _lcu_iss_mm_add_tag2f() {
 
     local NARGS=$#
 
-    local hint="hint->\$1=file.lcu \$2=${env_dir} \$3=n"
+    local hint="hint->\$1 flcu \$2 dir with env_lcu \$3 num menu (num file.lst - lst dlcu)"
     local item=
 
     #* local fn_data_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.d
@@ -41,7 +41,7 @@ _lcu_iss_mm_add_tag2f() {
 
     if [[ "-h" == "$1" ]]; then
         echo -e "
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: \$1 flcu \$2 dir with env_lcu \$3 num menu (num file.lst - lst dlcu)
 TAGS: 
 \$1 
 [, \$2]
@@ -119,11 +119,10 @@ EXAM:
 
     #? ----- START _lcu_iss_mm_add_tag2f body -----
 
-    # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     cd $PPWD
-    #     return 1
-    # fi
+    if _isn_from ${NARGS} 3 3 "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND '3' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        cd $PPWD
+        return 1
+    fi
 
     #[[ptr_path]]
     #! ptr_path
@@ -131,7 +130,7 @@ EXAM:
     ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
 
     [ -f $ptr_path_1 ] || {
-        _st_exit "in fs= file://${sh_file} , line=${LINENO}, EXEC: ${FNN} $* : NOT_FILE (\$1) : 'file://path_file' : ${hint} : return 1"
+        _st_exit "in fs= file://${sh_file} , line=${LINENO}, EXEC: ${FNN} $* : NOT_FILE (\$1) : 'file://$ptr_path_1' : ${hint} : return 1"
         cd $PPWD
         return 1
     }
@@ -176,10 +175,7 @@ EXAM:
 
     # echo -e "${sorted_uniq_tag[*]}" #print variable
 
-    echo -e "${HLIGHT}--- _lcu2e ${file_lcu} ---${NORMAL}" #start files
-    _lcu2e ${file_lcu}
-
-    local res_mm_=
+    echo -e "${HLIGHT}--- _nr2mm sorted_uniq_tag sorted_uniq_tag res_mm_ 0 ---${NORMAL}" #start files
     _nr2mm sorted_uniq_tag sorted_uniq_tag res_mm_ 0 || {
         _st_exit "in fs= file://${sh_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_nr2mm sorted_uniq_tag sorted_uniq_tag res_mm_ 0' : ${hint} : return 1"
         cd $PPWD

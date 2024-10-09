@@ -13,7 +13,6 @@ _XXX() {
 
     local NARGS=$#
 
-    local hint="hint->"
     local item=
 
     #* local fn_data_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.d
@@ -26,41 +25,19 @@ _XXX() {
     local tst_lst_env=${tst_dir}/.lst/tst_env.lst
 
     local data_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/${FNN}.d
-    local user_datd_dir=${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/${FNN}.d
+    local data_dir_lst=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/${FNN}.d/.lst
+    local data_dir_prc=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/${FNN}.d/.prc
+    local data_dir_tml=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/${FNN}.d/.tml
+
+    local comm_dir_tst=${HOME}/.d/.rpn.ax.d
 
     local hie_file=${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/${FNN}.hie
-
-    echo -e "${CYAN}--- start : ${FNN}() $@ ---${NORMAL}" #sistem info mesage
 
     #? _lnv2e ${tst_lst_env}
 
     if ! [[ -d ${PPWD} ]]; then
         echo "in fs= file://${sh_file} , line=${LINENO}, ${FNN}() : \${PWD} NOT_DIR : 'file://${PPWD}' : ${hint} : return 1"
         return 1
-    fi
-
-    if [[ "-h" == "$1" ]]; then
-        echo -e "
-MAIN: ${FNN} :: 
-TAGS: 
-\$1 
-[, \$2]
-CNTL: 
-    _e      : _edit body            : _edit file://${sh_file}
-    _t      : _edit tst_dir         : _edit file://${tst_dir}
-    _d      : exec tst_dir_fn       : . file://${tst_dir_file}
-    _f1     : exec flow_dir_file_1  : . file://${flow_dir_file_1}
-    _f1_e   : _edit flow_dir_file_1 : _edit file://${flow_dir_file_1}
-    _hie_m  : more hie_file         : more file://${hie_file} 
-    _hie_e  : _edit hie_file        : _edit file://${hie_file} 
-    _data_e : _edit data_dir        : _edit file://${data_dir} 
-    _user_datd_dir_e : _edit user_datd_dir : _edit file://${user_datd_dir} 
-
-RETU: 
-EXAM: 
-    ${FNN}
-"
-        return 0
     fi
 
     if [[ "_e" == "$1" ]]; then
@@ -111,26 +88,76 @@ EXAM:
         return 0
     fi
 
-    if [[ "_user_datd_dir_e" == "$1" ]]; then
-        _edit ${user_datd_dir}
-        cd $PPWD
+    #? ----- START _XXX body_prepeare -----
+
+    local hint="hint->"
+    if [[ "-h" == "$1" ]]; then
+        echo -e "
+MAIN: ${FNN} :: 
+TAGS: 
+\$1 
+[, \$2]
+[, \$N last arg DEBAG CNTL
+    if '_i' debag action, use: [ \$di -eq 1 ] && {debag action} ]
+
+UCNT:
+    _?
+CNTL: 
+    _e      : _edit body            : _edit file://${sh_file}
+    _t      : _edit tst_dir         : _edit file://${tst_dir}
+    _d      : exec tst_dir_fn       : . file://${tst_dir_file}
+    _f1     : exec flow_dir_file_1  : . file://${flow_dir_file_1}
+    _f1_e   : _edit flow_dir_file_1 : _edit file://${flow_dir_file_1}
+    _hie_m  : more hie_file         : more file://${hie_file} 
+    _hie_e  : _edit hie_file        : _edit file://${hie_file} 
+    _data_e : _edit data_dir        : _edit file://${data_dir} 
+
+RETU: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
+ERNO: ( if ... return 0 | if ... return 1 )
+EXAM: 
+    ${FNN}
+"
         return 0
     fi
 
-    #? ----- START _XXX body -----
-
+    #* check _isn_from
     # hint="\$1: \$2: "
     # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
     #     cd $PPWD
     #     return 1
     # fi
 
+    #* path -> u@path
     #[[ptr_path]]
     #! ptr_path
     # local ptr_path_1="$1"
     # ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
 
-    #* ${HOME}.d/.rc.d/.st.rc.d/.st.d
+    # [[ "${arg_arr[*]}" == *$arg* ]]
+
+    #* DEBAG CNTL
+    # local di=
+    # if [ -n "$N" ]; then
+    #     if [ "$N" == "_i" ]; then
+    #         di=1
+    #     else
+    #         di=0
+    #     fi
+    # else
+    #     di=0
+    # fi
+    #* [ $di -eq 1 ] && echo "info"
+
+    #* greeting
+    # [ $di -eq 1 ] && echo -e "${CYAN}--- start : ${FNN}() $@ ---${NORMAL}" #sistem info mesage
+
+    #* rename args
+    #* check cntl
+    #* inname cntl
+
+    #? ----- START _XXX body_flow -----
+
+    #* {{fn_sh_body}}
 
     #? ----- END _XXX body -----
 

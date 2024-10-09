@@ -1,11 +1,11 @@
-#!/bin/bash
+ #!/bin/bash
 
 _arb_up() {
     echo -e "${CYAN}--- _arb_up() \$1 = $1---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
         echo -e "
-MAIN: ${FUNCNAME} :: 
+MAIN: ${FUNCNAME} :: exec all .sh file from .arb for lib structure with err return
 TAGS:
 \$1 
 [, \$2]

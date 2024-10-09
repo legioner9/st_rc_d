@@ -29,7 +29,7 @@ ___lculdr_tags2ue_TST_SH() {
     : >${tst_dir}/res
 
     # cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
-    local user_datd_dir_lst=${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_lculdr_tags2ue.d/.lst
+    local user_datd_dir_lst=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_lculdr_tags2ue.d/.lst
 
     # _lculdr_tags2ue $user_datd_dir_lst 0
     _lculdr_tags2ue $user_datd_dir_lst 1 >>${tst_dir}/res

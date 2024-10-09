@@ -130,8 +130,8 @@ EXAM:
     echo -e "${HLIGHT}--- rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/$1.d ---${NORMAL}" #start files
     rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/$1.d
 
-    echo -e "${HLIGHT}--- rm -r ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/${1}.d ---${NORMAL}" #start files
-    rm -r ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/${1}.d
+    # echo -e "${HLIGHT}--- rm -r ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/${1}.d ---${NORMAL}" #start files
+    # rm -r ${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/${1}.d
 
     cd $PPWD
     return 0

@@ -1,0 +1,2 @@
+${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_lcu_iss_mm_exi_tag2f.d/.d/.lcu/tst.d/tst2.d
+${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_lcu_iss_mm_exi_tag2f.d/.d/.lcu/tst2.d/tst2.d

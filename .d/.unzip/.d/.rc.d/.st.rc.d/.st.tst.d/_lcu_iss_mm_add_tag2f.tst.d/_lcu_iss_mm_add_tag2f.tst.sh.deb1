@@ -37,7 +37,7 @@ ___lcu_iss_mm_add_tag2f_TST_SH_DEB1() {
 
     cp -f init.__.lcu __.lcu
 
-    local tst_datd_dir=${ST_RC_D_DATA_PATH}/.d/.st.rc.data.d/_lcu_iss_mm_add_tag2f.d/.lst
+    local tst_datd_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_lcu_iss_mm_add_tag2f.d/.lst
 
     # _lcu_iss_mm_add_tag2f __.lcu ${tst_datd_dir} 0
     _lcu_iss_mm_add_tag2f __.lcu ${tst_datd_dir} 1

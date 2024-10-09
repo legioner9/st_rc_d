@@ -54,7 +54,7 @@ Start Contents Menu
   - [Unsort](#unsort)
       - [Select (меню выбора) в параметре функции](#select-меню-выбора-в-параметре-функции)
       - [UPG stl\_fn](#upg-stl_fn)
-- [Install stl](#install-stl)
+- [Install STL \[and STL0\]](#install-stl-and-stl0)
 - [Неупорядоченные заметки](#неупорядоченные-заметки)
 
 <!-- /TOC -->
@@ -68,9 +68,9 @@ PPWD: /.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1727801838_01102024235718
+DATE: 1728456725_09102024135205
 
-DATX: 1727801838
+DATX: 1728456725
 -->
 
 
@@ -599,7 +599,8 @@ Quid est hic (лат.)
       - O or
         - locrOt loc RNDX or TAGS
 - file.lcu == flcu
-- env_dirs - pull directory as united for treat LSU
+- env_dirs - pull directory as united for treat LSU == env_lcu
+- dir with flcu == dlcu
 ### add to flcu
 
 - nrdx
@@ -648,136 +649,19 @@ Quid est hic (лат.)
 
 
 
-# Install stl
+# Install STL [and STL0]
     
 
-[002.inst_stl.code.sh](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/002.inst_stl.code.sh)
-
-
-```sh
-
-#!/bin/bash
-
-# THIS file (demo version) install stl for user
-
-read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
-
-cd "${PATH_TO_CLONE}" || {
-    echo "in file: inst_st_rc_d.sh : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
-    return 1
-}
-
-git clone git@gitflic.ru:legioner9/st_rc_d.git
-
-cp "${PATH_TO_CLONE}"/st_rc_d/.d/.zip/.d.zip "${HOME}"
-
-unzip .d.zip
-
-if ! grep -F 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then' <~/.bashrc; then
-    echo 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then if ! . ~/.d/.rc.d/.st.rc.d/.st.rc ; then echo "in ~/.bashrc : FAIL . ~/.d/.rc.d/.st.rc.d/.st.rc : return 1" >&2;return 1;fi fi' >>~/.bashrc
-fi
-
-bash
-
-```
-
-[003.rm_stl.code.sh](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/003.rm_stl.code.sh)
-
-
-```sh
-
-#!/bin/bash
-
-# THIS file (demo version) delele stl for user
-
-read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
-
-cd "${PATH_TO_CLONE}" || {
-    echo "in file: rm_st_rc_d.sh , line=${LINENO} : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
-    return 1
-}
-
-rm -rf st_rc_d || {
-    echo "in file: rm_st_rc_d.sh , line=${LINENO} : FAILEXEC : 'rm -rf st_rc_d' : be continue"
-    read -rp "Delete ${PATH_TO_CLONE}/st_rc_d : Enter to continue"
-}
-
-read -rp "Delete from ~/.bashrc code \
-starting with 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then' \
-and restart you shell : \
-Enter to continue"
+[002.cli.txt.md](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/002.cli.txt.md)
 
 
 
-```
+    $ curl https://raw.githubusercontent.com/legioner9/st_rc_d/refs/heads/master/.d/.sh/main_install_stl.sh | sh
 
-[004.inst_stl_and_data.code.sh](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/004.inst_stl_and_data.code.sh)
+or
 
-
-```sh
-
-#!/bin/bash
-
-# THIS file (demo version) install stl and data for user
-
-read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
-
-cd "${PATH_TO_CLONE}" || {
-    echo "in file: inst_st_rc_d_and_data_repo.sh : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
-    return 1
-}
-
-git clone git@gitflic.ru:legioner9/st_rc_d.git
-# empty DATA to st_rc_d
-git clone git@gitflic.ru:legioner9/st_rc_d_data.git
-
-cp "${PATH_TO_CLONE}"/st_rc_d/.d/.zip/.d.zip "${HOME}"
-
-unzip .d.zip
-
-if ! grep -F 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then' <~/.bashrc; then
-    echo 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then if ! . ~/.d/.rc.d/.st.rc.d/.st.rc ; then echo "in ~/.bashrc : FAIL . ~/.d/.rc.d/.st.rc.d/.st.rc : return 1" >&2;return 1;fi fi' >>~/.bashrc
-fi
-
-bash
-
-
-```
-
-[005.rm_stl_and_data.code.sh](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/005.rm_stl_and_data.code.sh)
-
-
-```sh
-
-#!/bin/bash
-
-# THIS file (demo version) delele stl and data for user
-
-read -rp "Enter full path to dir with for clone repo st_rc_d :" PATH_TO_CLONE
-
-cd "${PATH_TO_CLONE}" || {
-    echo "in file: dpl_st_rc_d.sh , line=${LINENO} : NOTDIR : ${PATH_TO_CLONE} : return 1" >&2
-    return 1
-}
-
-rm -rf st_rc_d || {
-    echo "in file: dpl_st_rc_d.sh , line=${LINENO} : FAILEXEC : 'rm -rf st_rc_d' : be continue"
-    read -rp "Delete ${PATH_TO_CLONE}/st_rc_d : Enter to continue"
-}
-
-rm -rf st_rc_d_data || {
-    echo "in file: dpl_st_rc_d.sh , line=${LINENO} : FAILEXEC : 'rm -rf st_rc_d_data' : be continue"
-    read -rp "Delete ${PATH_TO_CLONE}/st_rc_d_data : Enter to continue"
-}
-
-read -rp "Delete from ~/.bashrc code \
-starting with 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then' \
-and restart you shell : \
-Enter to continue"
-
-
-
-```
+    $ curl https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2F.sh%2Fmain_install_stl.sh | sh
+    
 
 [001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.md)
 

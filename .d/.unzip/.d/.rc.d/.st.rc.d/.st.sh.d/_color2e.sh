@@ -40,7 +40,7 @@ _color2e() {
 
     if [[ "-h" == "$1" ]]; then
         echo -e "
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: stdout STL color examles
 TAGS: 
 \$1 
 [, \$2]

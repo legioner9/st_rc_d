@@ -19,6 +19,11 @@ ___upg_st_rc_fn_TST_SH_DEB1() {
     local tst_dir_file=${tst_dir}/_upg_st_rc_fn.tst.sh.deb1
     local tst_lst_env=${tst_dir}/.lst/tst_env.lst
 
+    local data_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_upg_st_rc_fn.d
+    local data_dir_lst=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_upg_st_rc_fn.d/.lst
+
+    local comm_dir_tst=${HOME}/.d/.rpn.ax.d
+
     echo -e "${BLUE}--- start ___upg_st_rc_fn_TST_SH_DEB1() $* in $tst_dir_file ---${NORMAL}" #sistem info mesage
 
     _lnv2e ${tst_lst_env}
@@ -33,10 +38,94 @@ ___upg_st_rc_fn_TST_SH_DEB1() {
 
     # cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
 
+    # tree
+
+    _gig_st_rc_fn _utmp || {
+        _is_yes "rm _utmp? " && {
+            _rm_st_rc_fn _utmp
+            echo -e "${HLIGHT}--- bash ---${NORMAL}" #start files
+            bash
+        }
+
+    }
+
+    _st_info "control exist any string in _utmp"
+
+    echo -e "${HLIGHT}--- cat ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_utmp.hie ---${NORMAL}" #start files
+    cat ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_utmp.hie
+
+    _is_yes "ADD to _utmp any string?" && {
+
+        echo -e "
+echo \"that _utmp.sh\"
+" >${TMP_DIR_ST_RC}/fn_sh_body.file
+
+        _f2f ${TMP_DIR_ST_RC}/fn_sh_body.file "{{fn_sh_body}}" ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_utmp.sh
+
+        echo -e "
+echo \"that _utmp fn_f1\"
+" >${TMP_DIR_ST_RC}/fn_f1_body.file
+
+        _f2f ${TMP_DIR_ST_RC}/fn_f1_body.file "{{fn_f1_body}}" ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_utmp.tst.d/_utmp.tst.sh.deb1
+        # {{fn_hie_body_CAUSA}}
+
+        echo -e "
+echo \"that _utmp CAUSA\"
+" >${TMP_DIR_ST_RC}/fn_hie.file
+
+        _f2f ${TMP_DIR_ST_RC}/fn_hie.file "{{fn_hie_body_CAUSA}}" ${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d/_utmp.hie
+
+        echo -e "
+echo \"that _utmp data lst\"
+" >${TMP_DIR_ST_RC}/fn_data_lst.file
+
+        _f2e ${TMP_DIR_ST_RC}/fn_data_lst.file >${HOME}/.d/.rc.d/.st.rc.d/.st.sh.data.d/_utmp.d/.lst/0
+
+        # .d/.rc.d/.st.rc.d/.st.sh.data.d/_utmp.d/.lst
+    }
+
+    _is_yes "DO? : EXEC : _upg_st_rc_fn _utmp _gigx _i ?" && {
+
+        _upg_st_rc_fn _utmp _gigx _i || {
+            # hint="hint -> \$1: \$2: "
+            _st_exit "in fs= file://${sh_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_upg_st_rc_fn _utmp _gigx _i' : ${hint} : return 1"
+            cd $PPWD
+            return 1
+        }
+    }
+
+    _st_info "see ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_utmpX.sh : exist string 'echo _utmpX_NEW'"
+    echo -e "${HLIGHT}--- cat ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_utmpX.sh | grep 'echo _utmpX_NEW' ---${NORMAL}" #start files
+    cat ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_utmpX.sh | grep 'echo _utmpX_NEW'
+
+    _is_yes "add to _utmpX 'echo _utmpX_NEW'" && {
+        echo -e "
+echo _utmpX_NEW
+" >${TMP_DIR_ST_RC}/fn_sh_body_new.file
+        echo -e "${HLIGHT}--- _f2f ${TMP_DIR_ST_RC}/fn_sh_body_new.file "{{fn_sh_body}}" ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_utmpX.sh ---${NORMAL}" #start files
+        _f2f ${TMP_DIR_ST_RC}/fn_sh_body_new.file "{{fn_sh_body}}" ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_utmpX.sh
+    }
+
+    [ -d ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/.bcp_rst/_utmp.d ] && {
+        echo -e "${HLIGHT}--- rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/.bcp_rst/_utmp.d ---${NORMAL}" #start files
+        rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/.bcp_rst/_utmp.d
+    }
+
+    _is_yes "DO? : EXEC : _upg_st_rc_fn _utmp _bcp_rnm _i ?" && {
+        _upg_st_rc_fn _utmp _bcp_rnm _i || {
+            _st_exit "in fs= file://${sh_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_upg_st_rc_fn _utmp _bcp_rnm _i' : ${hint} : return 1"
+            cd $PPWD
+            return 1
+        }
+    }
+    # _upg_st_rc_fn _tmp _gigx
+
     # _upg_st_rc_fn >/dev/null
 
+    # _s2f "${HOME}" '${HOME}' ${tst_dir}/res
+
     flag=1
-    
+
     cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2
 
     if ! diff -q res pre >/dev/null; then
@@ -46,9 +135,11 @@ ___upg_st_rc_fn_TST_SH_DEB1() {
     if [ 0 -eq "$flag" ]; then
         echo "in file://${tst_dir_file} fail" >&2
         diff res pre >&2
+        cd ${PPWD}
         return 1
     else
         echo "in file://${tst_dir_file} true"
+        cd ${PPWD}
         return 0
     fi
 }

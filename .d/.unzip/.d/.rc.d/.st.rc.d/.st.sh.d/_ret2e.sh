@@ -16,11 +16,13 @@ TAGS:
 
     if [[ "_e" == "$1" ]]; then
         _edit ${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d/_s2se.sh
+        cd $PPWD
         return 0
     fi
 
     if [[ "_t" == "$1" ]]; then
         _edit ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_s2se.tst.d
+        cd $PPWD
         return 0
     fi
 
