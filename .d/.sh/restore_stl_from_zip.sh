@@ -1,5 +1,7 @@
 #!/bin/bash
 
+read -p "Enter full path for st_rc_d  :" ST_RC_D_PATH
+
 echo -e "${CYAN}--- restore_stl_from_zip_rnd7_747dad6() $* in file://${ST_RC_D_PATH}/.d/.sh/restore_stl_from_zip.sh ---${NORMAL}" #started functions
 
 restore_stl_from_zip_rnd7_747dad6() {
@@ -69,11 +71,12 @@ ${NORMAL}"
 
     [ -f ${HOME}/.d.zip ] && {
         mv ${HOME}/.d.zip ${HOME}/.d.zip.${post_date}
+        mv ${HOME}/.d ${HOME}/.d.${post_date}
     }
 
     cp ${ST_RC_D_PATH}/.d/.zip/.d.zip ${HOME}
     cd ${HOME}
-    unzip .d.zip
+    unzip .d.zip 
 
     #! END BODY FN ---------------------------------------
 
