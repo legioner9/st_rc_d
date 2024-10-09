@@ -280,6 +280,8 @@ EXAM:
     GCZ0CM1_[FC{0..7}] FC on dark ground CM_1 GCZ_0
     "
 
+    echo "reset all color effect \033[0m"
+
     echo "TABLE [FC]"
 
     for fc in {0..7}; do
@@ -350,7 +352,7 @@ EXAM:
 
     )
     
-    read -pr "STDOUT? Prefer TABLE ST_MFG_[FGREV{0..1}]_[CM{1..2}]_[FC{0..7}]_[GCZ{0..7}] continue : ENTER, NO : ^C"
+    read -p "STDOUT? Prefer TABLE ST_MFG_[FGREV{0..1}]_[CM{1..2}]_[FC{0..7}]_[GCZ{0..7}] continue : ENTER, NO : ^C"
 
     for item in ${arr_mfg[@]}; do
         eval "echo -en \"\$${item} vsdfuiytu ${NORMAL}\""

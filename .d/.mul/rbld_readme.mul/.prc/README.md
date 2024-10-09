@@ -55,7 +55,7 @@ Start Contents Menu
       - [Select (меню выбора) в параметре функции](#select-меню-выбора-в-параметре-функции)
       - [UPG stl\_fn](#upg-stl_fn)
 - [Install STL \[and STL0\]](#install-stl-and-stl0)
-- [Install STL \[and STL0\]](#install-stl-and-stl0-1)
+  - [restore STL from .d.zip](#restore-stl-from-dzip)
 - [Неупорядоченные заметки](#неупорядоченные-заметки)
 
 <!-- /TOC -->
@@ -69,9 +69,9 @@ PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1728460320_09102024145200
+DATE: 1728462487_09102024152807
 
-DATX: 1728460320
+DATX: 1728462487
 -->
 
 
@@ -657,29 +657,29 @@ Quid est hic (лат.)
 
 
 
-    $ curl https://raw.githubusercontent.com/legioner9/st_rc_d/refs/heads/master/.d/install.ax/main_install_stl.sh | sh
+    $ curl https://raw.githubusercontent.com/legioner9/st_rc_d/refs/heads/master/.d/.install.ax/main_install_stl.sh | sh
 
 or
 
-    $ curl https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2Finstall.ax%2Fmain_install_stl.sh | sh
+    $ curl https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2F.install.ax%2Fmain_install_stl.sh | sh
     
 
 [003.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/003.pref.txt.md)
 
 
 
-# Install STL [and STL0]
+## restore STL from .d.zip
     
 
 [004.restore_dot_d_cli.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/004.restore_dot_d_cli.txt.md)
 
 
 
-    $ curl https://raw.githubusercontent.com/legioner9/st_rc_d/refs/heads/master/.d/install.ax/restore_stl_from_zip.sh | sh
+    $ curl https://raw.githubusercontent.com/legioner9/st_rc_d/refs/heads/master/.d/.install.ax/restore_stl_from_zip.sh | sh
 
 or
 
-    $ curl https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2Finstall.ax%restore_stl_from_zip.sh | sh
+    $ curl https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2F.install.ax%restore_stl_from_zip.sh | sh
     
 
 [001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.md)
