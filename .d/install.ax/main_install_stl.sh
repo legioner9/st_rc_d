@@ -1,10 +1,8 @@
 #!/bin/bash
 
-read -p "Enter full path for st_rc_d  :" ST_RC_D_PATH
+echo -e "${CYAN}--- main_install_stl_rnd7_21b4629() $* in file://${ST_RC_D_PATH}/.d/install.ax/main_install_stl.sh ---${NORMAL}" #started functions
 
-echo -e "${CYAN}--- restore_stl_from_zip_rnd7_747dad6() $* in file://${ST_RC_D_PATH}/.d/.sh/restore_stl_from_zip.sh ---${NORMAL}" #started functions
-
-restore_stl_from_zip_rnd7_747dad6() {
+main_install_stl_rnd7_21b4629() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -12,7 +10,7 @@ restore_stl_from_zip_rnd7_747dad6() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_PATH}/.d/.sh/restore_stl_from_zip.sh"
+    local path_file="${ST_RC_D_PATH}/.d/install.ax/main_install_stl.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -61,28 +59,11 @@ ${NORMAL}"
 
     #{{body_fn}}
 
-    local dt=
-    local st=
-    local post_date=
-
-    dt=$(date +%d%m%Y%H%M%S)
-    st=$(date +%s)
-    post_date="${st}_${dt}"
-
-    [ -f ${HOME}/.d.zip ] && {
-        mv ${HOME}/.d.zip ${HOME}/.d.zip.${post_date}
-        mv ${HOME}/.d ${HOME}/.d.${post_date}
-    }
-
-    cp ${ST_RC_D_PATH}/.d/.zip/.d.zip ${HOME}
-    cd ${HOME}
-    unzip .d.zip 
-
     #! END BODY FN ---------------------------------------
-
+    
     cd $PPWD
     return 0
 
 }
 
-restore_stl_from_zip_rnd7_747dad6 "$@"
+main_install_stl_rnd7_21b4629 "$@"
