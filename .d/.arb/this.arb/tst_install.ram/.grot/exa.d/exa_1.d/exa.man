@@ -1,7 +1,10 @@
-# gig user from other user
+# adduser.conf 
+
+# gig user from other user use /etc/adduser.conf
 
     # для создания учетной записи пользователя
-    sudo adduser sth -k /etc/skel/
+    sudo adduser sth -m -k /etc/skel/
+    sudo adduser sth -m -k /home/st/.skel.d 
     # для создания пароля
     sudo passwd sth
 
