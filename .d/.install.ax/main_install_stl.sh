@@ -73,7 +73,7 @@ main_install_rnd7_55011d8() {
     is_yes_rnd7_55011d8() {
         # hint string
         local yes
-        echo -e "${grnd_green}$1 : only 'y' accept the offer${norm}"
+        echo -e "${grnd_green}$1 : CONFIRM enter only 'y' ${norm}"
         read -r -p " (y|) " yes
         echo -e "${grnd_green}You enter : ${yes}${norm}"
         if [ "${yes:-no}" == "y" ]; then
