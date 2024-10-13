@@ -191,6 +191,7 @@ main_install_rnd7_55011d8() {
             erro_rnd7_55011d8 "FAIL_EXEC : 'wget https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip -O ${HOME}/STL_DATA/master.zip' return 1"
             cd $PPWD
             return 1
+            }
         fi
     else 
         info_rnd7_55011d8 "reject install : return 0"
