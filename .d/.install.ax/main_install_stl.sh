@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- main_install_rnd7_55011d8() $* in file://${HOME}/.install.sh/main_install.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- main_install_d8() $* in file://${HOME}/.install.sh/main_install.sh ---${NORMAL}" #started functions
 
-main_install_rnd7_55011d8() {
+main_install_d8() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -58,29 +58,29 @@ main_install_rnd7_55011d8() {
 
     echo "START BODY FN : ${FNN}() $*"
 
-    erro_rnd7_55011d8() {
+    erro_d8() {
         echo -e "${grnd_red}$1${norm}" >&2
     }
 
-    varn_rnd7_55011d8() {
+    varn_d8() {
         echo -e "${grnd_yellow}$1${norm}"
     }
 
-    info_rnd7_55011d8() {
+    info_d8() {
         echo -e "${grnd_green}$1${norm}"
     }
 
-    is_yes_rnd7_55011d8() {
+    is_yes_d8() {
         # hint string
         local yes
         echo -e "${grnd_green}$1 : CONFIRM enter only 'y' ${norm}"
         read -r -p " (y|) " yes
         echo -e "${grnd_green}You enter : ${yes}${norm}"
         if [ "${yes:-no}" == "y" ]; then
-            cd $PPWD
+            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
             return 0
         else
-            cd $PPWD
+            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
             return 1
         fi
     }
@@ -88,60 +88,66 @@ main_install_rnd7_55011d8() {
     # echo -e "${fon_1} warn string ${norm}" >&2
 
     command -v wget >/dev/null || {
-        err_rnd7_55011d8 "util 'wget' not find : return 1"
-        cd $PPWD
+        err_d8 "util 'wget' not find : return 1"
+        cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
         return 1
     }
 
-    varn_rnd7_55011d8 "Default parameters install: 
-    ${HOME}/STL - dir with .d.zip STL and functions STL0
-    ${HOME}/STL_DATA - dir with user data for functions STL0"
+    varn_d8 "Default parameters install: 
+    ${HOME}/.stl/STL - dir with .d.zip STL and functions STL0
+    ${HOME}/.stl/STL_DATA - dir with user data for functions STL0
+    ${HOME}/.stl/UBIQUE - user directories with general-purpose data"
 
-    is_yes_rnd7_55011d8 "DO? : Continue with that Default parameters" || {
-        info_rnd7_55011d8 "reject install : return 0"
-        cd $PPWD
+    is_yes_d8 "DO? : Continue with that Default parameters" || {
+        info_d8 "reject install : return 0"
+        cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
         return 0
     }
 
-    mkdir_rnd7_55011d8() {
+    mkdir_d8() {
 
         if [ -d "$1" ]; then
-            erro_rnd7_55011d8 "DIR_EXIST : ' file://$1 '"
-            is_yes_rnd7_55011d8 "DO? : remove ' file://$1 ' dir?" && {
+            erro_d8 "DIR_EXIST : ' file://$1 '"
+            is_yes_d8 "DO? : remove ' file://$1 ' dir?" && {
 
-                varn_rnd7_55011d8 "rm -rf $1"
+                varn_d8 "rm -rf $1"
                 rm -rf "$1"
 
-                varn_rnd7_55011d8 "mkdir $1"
-                mkdir "$1" || {
-                    erro_rnd7_55011d8 "FAIL_EXEC : 'mkdir $1' return 1"
-                    cd $PPWD
+                varn_d8 "mkdir $1"
+                mkdir -p "$1" || {
+                    erro_d8 "FAIL_EXEC : 'mkdir $1' return 1"
+                    cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
                     return 1
                 }
 
             }
 
         else
-            varn_rnd7_55011d8 "mkdir $1"
-            mkdir "$1" || {
-                erro_rnd7_55011d8 "FAIL_EXEC : 'mkdir $1' return 1"
-                cd $PPWD
+            varn_d8 "mkdir $1"
+            mkdir -p "$1" || {
+                erro_d8 "FAIL_EXEC : 'mkdir $1' return 1"
+                cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
                 return 1
             }
         fi
 
     }
 
-    mkdir_rnd7_55011d8 ${HOME}/STL
-    mkdir_rnd7_55011d8 ${HOME}/STL_DATA
+    local p_stl=${HOME}/.stl/STL
+    local p_stl_data=${HOME}/.stl/STL_DATA
+    local p_ubique=${HOME}/.stl/UBIQUE
 
-    varn_rnd7_55011d8 "Default parameters download from github.com @legioner9 (use wget)"
+    mkdir_d8 ${p_stl}
+    mkdir_d8 ${p_stl_data}
+    mkdir_d8 ${p_ubique}
 
-    is_yes_rnd7_55011d8 "DO? : Continue with that Default parameters download" || {
+    varn_d8 "Default parameters download from github.com @legioner9 (use wget)"
 
-        is_yes_rnd7_55011d8 "Did you upload STL and STL_DATA yourself?" || {
-            info_rnd7_55011d8 "reject install : return 0"
-            cd $PPWD
+    is_yes_d8 "DO? : Continue with that Default parameters download" || {
+
+        is_yes_d8 "Did you upload STL and STL_DATA yourself?" || {
+            info_d8 "reject install : return 0"
+            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
             return 0
         }
     }
@@ -149,11 +155,11 @@ main_install_rnd7_55011d8() {
     # wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip
     # wget https://gitflic.ru/project/legioner9/st_rc_d/file/downloadAll?branch=master
 
-    if is_yes_rnd7_55011d8 "DO? wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip in ${HOME}/STL"; then
+    if is_yes_d8 "DO? wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip in ${HOME}/STL"; then
 
         wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip -O ${HOME}/STL/master.zip || {
-            erro_rnd7_55011d8 "FAIL_EXEC : 'wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip -O ${HOME}/STL/master.zip' return 1"
-            cd $PPWD
+            erro_d8 "FAIL_EXEC : 'wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip -O ${HOME}/STL/master.zip' return 1"
+            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
             return 1
         }
 
@@ -162,44 +168,51 @@ main_install_rnd7_55011d8() {
 
     else
 
-        info_rnd7_55011d8 "reject install : return 0"
-        cd $PPWD
+        info_d8 "reject install : return 0"
+        cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
         return 0
     fi
 
     # https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip
     # https://gitflic.ru/project/st_rc_d_data/sta/file/downloadAll?branch=master
 
-    if is_yes_rnd7_55011d8 "DO? wget https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip in ${HOME}/STL_DATA "; then
-        if [ -f ${HOME}/STL_DATA/master.zip ]; then
-            is_yes_rnd7_55011d8 "FILE_EXIST ${HOME}/STL_DATA/master.zip rewget ? " && {
-                rm -f ${HOME}/STL_DATA/master.zip
-                wget https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip -O ${HOME}/STL_DATA/master.zip || {
-                    erro_rnd7_55011d8 "FAIL_EXEC : 'wget https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip -O ${HOME}/STL_DATA/master.zip' return 1"
-                    cd $PPWD
+    do_wget_d8() { # $1 - linK for wget, $2 - parent dir for wget
+
+        if is_yes_d8 "DO? wget $1 in $2"; then
+            if [ -f "$2"/master.zip ]; then
+                is_yes_d8 "FILE_EXIST $2/master.zip rewget ? " && {
+                    rm -f "$2"/master.zip
+                    wget "$1" -O "$2"/master.zip || {
+                        erro_d8 "FAIL_EXEC : 'wget $1 -O $2/master.zip' return 1"
+                        cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+                        return 1
+                    }
+                }
+            else
+                wget $1 -O "$2"/master.zip || {
+                    erro_d8 "FAIL_EXEC : 'wget $1 -O $2/master.zip' return 1"
+                    cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
                     return 1
                 }
-            }
+            fi
         else
-            wget https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip -O ${HOME}/STL_DATA/master.zip || {
-                erro_rnd7_55011d8 "FAIL_EXEC : 'wget https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip -O ${HOME}/STL_DATA/master.zip' return 1"
-                cd $PPWD
-                return 1
-            }
+            info_d8 "reject install : return 0"
+            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0" >&2
+            return 0
         fi
-    else
-        info_rnd7_55011d8 "reject install : return 0"
-        cd $PPWD
-        return 0
-    fi
+    }
+
+    do_wget_d8 https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip ${HOME}/.stl/STL
+    do_wget_d8 https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip ${HOME}/.stl/STL_DATA
+    do_wget_d8 https://github.com/legioner9/ubique/archive/refs/heads/master.zip ${HOME}/.stl/UBIQUE
 
     #{{body_fn}}
 
     #! END BODY FN ---------------------------------------
 
-    cd $PPWD
+    cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
     return 0
 
 }
 
-main_install_rnd7_55011d8 "$@"
+main_install_d8 "$@"
