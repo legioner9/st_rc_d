@@ -56,8 +56,10 @@ main_install_d8() {
 
     #! START BODY FN ---------------------------------------
 
+    #* --- greeting ---
     echo "START BODY FN : ${FNN}() $*"
 
+    #* --- define functions---
     erro_d8() {
         echo -e "${grnd_red}$1${norm}" >&2
     }
@@ -72,27 +74,84 @@ main_install_d8() {
 
     is_yes_d8() {
         # hint string
-        local yes
+        local yes=
         echo -e "${grnd_green}$1 : CONFIRM enter only 'y' ${norm}"
         read -r -p " (y|) " yes
         echo -e "${grnd_green}You enter : ${yes}${norm}"
         if [ "${yes:-no}" == "y" ]; then
-            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
+            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
             return 0
         else
-            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
             return 1
         fi
     }
 
     # echo -e "${fon_1} warn string ${norm}" >&2
 
+    mkdir_d8() {
+
+        if [ -d "$1" ]; then
+            erro_d8 "DIR_EXIST : ' file://$1 '"
+            is_yes_d8 "DO? : remove ' file://$1 ' dir?" && {
+
+                varn_d8 "rm -rf $1"
+                rm -rf "$1"
+
+                varn_d8 "mkdir -p $1"
+                mkdir -p "$1" || {
+                    erro_d8 "FAIL_EXEC : 'mkdir $1' return 1"
+                    cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+                    return 1
+                }
+
+            }
+
+        else
+            varn_d8 "mkdir -p $1"
+            mkdir -p "$1" || {
+                erro_d8 "FAIL_EXEC : 'mkdir $1' return 1"
+                cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+                return 1
+            }
+        fi
+
+    }
+
+    #* --- is exist utils ---
     command -v wget >/dev/null || {
         err_d8 "util 'wget' not find : return 1"
-        cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
         return 1
     }
 
+    do_wget_d8() { # $1 - linK for wget, $2 - parent dir for wget
+
+        if is_yes_d8 "DO? wget $1 in $2"; then
+            if [ -f "$2"/master.zip ]; then
+                is_yes_d8 "FILE_EXIST $2/master.zip rewget ? " && {
+                    rm -f "$2"/master.zip
+                    wget "$1" -O "$2"/master.zip || {
+                        erro_d8 "FAIL_EXEC : 'wget $1 -O $2/master.zip' return 1"
+                        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+                        return 1
+                    }
+                }
+            else
+                wget "$1" -O "$2"/master.zip || {
+                    erro_d8 "FAIL_EXEC : 'wget $1 -O $2/master.zip' return 1"
+                    cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+                    return 1
+                }
+            fi
+        else
+            info_d8 "reject install : return 0"
+            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+            return 1
+        fi
+    }
+
+    #* --- varning + question ---
     varn_d8 "Default parameters install: 
     ${HOME}/.stl/STL - dir with .d.zip STL and functions STL0
     ${HOME}/.stl/STL_DATA - dir with user data for functions STL0
@@ -104,113 +163,58 @@ main_install_d8() {
         return 0
     }
 
-    mkdir_d8() {
+    #* --- varning + question ---
+    varn_d8 "Default parameters download from github.com @legioner9 (use wget)"
+    is_yes_d8 "DO? : Continue with that Default parameters download" || {
 
-        if [ -d "$1" ]; then
-            erro_d8 "DIR_EXIST : ' file://$1 '"
-            is_yes_d8 "DO? : remove ' file://$1 ' dir?" && {
-
-                varn_d8 "rm -rf $1"
-                rm -rf "$1"
-
-                varn_d8 "mkdir $1"
-                mkdir -p "$1" || {
-                    erro_d8 "FAIL_EXEC : 'mkdir $1' return 1"
-                    cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
-                    return 1
-                }
-
-            }
-
-        else
-            varn_d8 "mkdir $1"
-            mkdir -p "$1" || {
-                erro_d8 "FAIL_EXEC : 'mkdir $1' return 1"
-                cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
-                return 1
-            }
-        fi
-
+        is_yes_d8 "Did you upload STL and STL_DATA yourself?" || {
+            info_d8 "reject install : return 1"
+            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
+            return 0
+        }
     }
 
-    local p_stl=${HOME}/.stl/STL
-    local p_stl_data=${HOME}/.stl/STL_DATA
-    local p_ubique=${HOME}/.stl/UBIQUE
+    #* --- define variables ---
+    local p_stl="${HOME}"/.stl/STL
+    local p_stl_data="${HOME}"/.stl/STL_DATA
+    local p_ubique="${HOME}"/.stl/UBIQUE
+    local w_legioner9="https://github.com/legioner9"
+    local gh_master="archive/refs/heads/master.zip"
 
     mkdir_d8 ${p_stl}
     mkdir_d8 ${p_stl_data}
     mkdir_d8 ${p_ubique}
 
-    varn_d8 "Default parameters download from github.com @legioner9 (use wget)"
-
-    is_yes_d8 "DO? : Continue with that Default parameters download" || {
-
-        is_yes_d8 "Did you upload STL and STL_DATA yourself?" || {
-            info_d8 "reject install : return 0"
-            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
-            return 0
-        }
-    }
-
-    # wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip
-    # wget https://gitflic.ru/project/legioner9/st_rc_d/file/downloadAll?branch=master
-
-    if is_yes_d8 "DO? wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip in ${HOME}/STL"; then
-
-        wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip -O ${HOME}/STL/master.zip || {
-            erro_d8 "FAIL_EXEC : 'wget https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip -O ${HOME}/STL/master.zip' return 1"
-            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
-            return 1
-        }
-
-        ${HOME}/STL
-        unzip
-
-    else
-
-        info_d8 "reject install : return 0"
-        cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
-        return 0
-    fi
+    # https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip
+    # https://gitflic.ru/project/legioner9/st_rc_d/file/downloadAll?branch=master
 
     # https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip
     # https://gitflic.ru/project/st_rc_d_data/sta/file/downloadAll?branch=master
 
-    do_wget_d8() { # $1 - linK for wget, $2 - parent dir for wget
+    # https://github.com/legioner9/ubique/archive/refs/heads/master.zip
+    # https://gitflic.ru/project/ubique/sta/file/downloadAll?branch=master
 
-        if is_yes_d8 "DO? wget $1 in $2"; then
-            if [ -f "$2"/master.zip ]; then
-                is_yes_d8 "FILE_EXIST $2/master.zip rewget ? " && {
-                    rm -f "$2"/master.zip
-                    wget "$1" -O "$2"/master.zip || {
-                        erro_d8 "FAIL_EXEC : 'wget $1 -O $2/master.zip' return 1"
-                        cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
-                        return 1
-                    }
-                }
-            else
-                wget $1 -O "$2"/master.zip || {
-                    erro_d8 "FAIL_EXEC : 'wget $1 -O $2/master.zip' return 1"
-                    cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
-                    return 1
-                }
-            fi
-        else
-            info_d8 "reject install : return 0"
-            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0" >&2
-            return 0
-        fi
-    }
+    local arr_name_repo=("${p_stl}" "${p_stl_data}" "${p_ubique}")
 
-    do_wget_d8 https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip ${HOME}/.stl/STL
-    do_wget_d8 https://github.com/legioner9/st_rc_d_data/archive/refs/heads/master.zip ${HOME}/.stl/STL_DATA
-    do_wget_d8 https://github.com/legioner9/ubique/archive/refs/heads/master.zip ${HOME}/.stl/UBIQUE
+    local item=
+
+    for item in ${arr_name_repo[@]}; do
+        mkdir_d8 ${item} || {
+            echo "EXEC_FAIL : 'mkdir_d8 ${item}' :: return 1"
+            return 1
+        }
+        do_wget_d8 ${w_legioner9}/${item}/${gh_master} "${p_stl}" || {
+            echo "EXEC_FAIL : 'do_wget_d8 ${w_legioner9}/${item}/${gh_master}' :: return 1"
+            return 1
+        }
+
+    done
 
     #{{body_fn}}
 
     #! END BODY FN ---------------------------------------
 
-    cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+    cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
     return 0
 
 }
