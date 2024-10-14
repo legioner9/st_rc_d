@@ -44,6 +44,8 @@ main_install_d8() {
     # echo -e "${grnd_white} grnd_white ${norm}"
 
     # \033[0;31m${_W_CONST}\033[0;32m${arr_lib[*]} \033[0;35m\u@\H \w$(__git_ps1 " (%s)") \$\033[0m
+
+    #* define Prompt String 1 (color)
     PS1="${grnd_cyan}\u${grnd_black} @\H${grnd_green} \w $ ${norm}"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -232,6 +234,15 @@ main_install_d8() {
         }
 
     done
+
+    # ST_RC_D_PATH=${HOME}/.stl/st_rc_d/st_rc_d-master
+    # echo -e "${grnd_green}\${ST_RC_D_PATH} = ${ST_RC_D_PATH}${norm}"
+
+    # ST_RC_D_DATA_PATH=${HOME}/.stl/st_rc_d_data/st_rc_d_data-master
+    # echo -e "${grnd_green}\${ST_RC_D_DATA_PATH} = ${ST_RC_D_DATA_PATH}${norm}"
+
+    # UBIQUE_PATH=${HOME}/.stl/ubique/ubique-master
+    # echo -e "${grnd_green}\${UBIQUE_PATH} = ${UBIQUE_PATH}${norm}"
 
     #{{body_fn}}
 
