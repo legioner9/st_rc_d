@@ -77,7 +77,7 @@ main_install_d8() {
         local yes=
         echo -e "${grnd_green}$1 : CONFIRM enter only 'y' ${norm}"
         read -r -p " (y|) " yes
-        echo -e "${grnd_green}You enter : ${yes}${norm}"
+        echo -e "${grnd_green}You enter : '${yes}'${norm}"
         if [ "${yes:-no}" == "y" ]; then
             cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
             return 0
@@ -155,11 +155,11 @@ main_install_d8() {
     varn_d8 "Default parameters install: 
     ${HOME}/.stl/STL - dir with .d.zip STL and functions STL0
     ${HOME}/.stl/STL_DATA - dir with user data for functions STL0
-    ${HOME}/.stl/UBIQUE - user directories with general-purpose data"
+    ${HOME}/.stl/UBIQUE - user directory with general-purpose data"
 
     is_yes_d8 "DO? : Continue with that Default parameters" || {
         info_d8 "reject install : return 0"
-        cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
         return 0
     }
 
@@ -169,21 +169,19 @@ main_install_d8() {
 
         is_yes_d8 "Did you upload STL and STL_DATA yourself?" || {
             info_d8 "reject install : return 1"
-            cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
+            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
             return 0
         }
     }
 
-    #* --- define variables ---
-    local p_stl="${HOME}"/.stl/STL
-    local p_stl_data="${HOME}"/.stl/STL_DATA
-    local p_ubique="${HOME}"/.stl/UBIQUE
+    #* --- define local variables ---
+    local dot_stl="${HOME}"/.stl
+    # local p_stl="${HOME}"/.stl/STL
+    # local p_stl_data="${HOME}"/.stl/STL_DATA
+    # local p_ubique="${HOME}"/.stl/UBIQUE
     local w_legioner9="https://github.com/legioner9"
     local gh_master="archive/refs/heads/master.zip"
-
-    mkdir_d8 ${p_stl}
-    mkdir_d8 ${p_stl_data}
-    mkdir_d8 ${p_ubique}
+    local arr_name_repo=()
 
     # https://github.com/legioner9/st_rc_d/archive/refs/heads/master.zip
     # https://gitflic.ru/project/legioner9/st_rc_d/file/downloadAll?branch=master
@@ -192,18 +190,21 @@ main_install_d8() {
     # https://gitflic.ru/project/st_rc_d_data/sta/file/downloadAll?branch=master
 
     # https://github.com/legioner9/ubique/archive/refs/heads/master.zip
-    # https://gitflic.ru/project/ubique/sta/file/downloadAll?branch=master
+    # https://gitflic.ru/project/ubique/ubique/file/downloadAll?branch=master
 
-    local arr_name_repo=("${p_stl}" "${p_stl_data}" "${p_ubique}")
+    #* define array repo for wget
+    arr_name_repo=(st_rc_d st_rc_d_data ubique)
 
     local item=
 
     for item in ${arr_name_repo[@]}; do
-        mkdir_d8 ${item} || {
+
+        mkdir_d8 "${dot_stl}/${item}" || {
             echo "EXEC_FAIL : 'mkdir_d8 ${item}' :: return 1"
             return 1
         }
-        do_wget_d8 ${w_legioner9}/${item}/${gh_master} "${p_stl}" || {
+
+        do_wget_d8 "${w_legioner9}/${item}/${gh_master}" "${dot_stl}/${item}" || {
             echo "EXEC_FAIL : 'do_wget_d8 ${w_legioner9}/${item}/${gh_master}' :: return 1"
             return 1
         }
