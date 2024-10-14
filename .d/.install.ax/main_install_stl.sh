@@ -100,12 +100,14 @@ main_install_d8() {
 
                 varn_d8 "mkdir -p $1"
                 mkdir -p "$1" || {
-                    erro_d8 "FAIL_EXEC : 'mkdir $1' return 1"
+                    erro_d8 "FAIL_EXEC : 'mkdir -p $1' return 1"
                     cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
                     return 1
                 }
 
             }
+
+            return 0
 
         else
             varn_d8 "mkdir -p $1"
@@ -114,6 +116,8 @@ main_install_d8() {
                 cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
                 return 1
             }
+
+            return 0
         fi
 
     }
@@ -137,6 +141,7 @@ main_install_d8() {
                         return 1
                     }
                 }
+                return 0
             else
                 wget "$1" -O "$2"/master.zip || {
                     erro_d8 "FAIL_EXEC : 'wget $1 -O $2/master.zip' return 1"
@@ -144,11 +149,13 @@ main_install_d8() {
                     return 1
                 }
             fi
-        else
-            info_d8 "reject install : return 0"
-            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
-            return 1
+        # else
+        #     info_d8 "reject install : return 0"
+        #     cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+        #     return 1
         fi
+
+        return 0
     }
 
     #* --- varning + question ---
@@ -200,13 +207,28 @@ main_install_d8() {
     for item in ${arr_name_repo[@]}; do
 
         mkdir_d8 "${dot_stl}/${item}" || {
-            echo "EXEC_FAIL : 'mkdir_d8 ${item}' :: return 1"
+            echo "EXEC_FAIL : 'mkdir_d8 ${item}' :: return 1" >&2
+            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
             return 1
         }
 
         do_wget_d8 "${w_legioner9}/${item}/${gh_master}" "${dot_stl}/${item}" || {
-            echo "EXEC_FAIL : 'do_wget_d8 ${w_legioner9}/${item}/${gh_master}' :: return 1"
+            echo "EXEC_FAIL : 'do_wget_d8 ${w_legioner9}/${item}/${gh_master}' :: return 1" >&2
+            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
             return 1
+        }
+
+        # cd "${dot_stl}/${item}" || {
+        #     echo "EXEC_FAIL : 'cd ${dot_stl}/${item}' :: return 1" >&2
+        #     cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+        #     return 1
+        # }
+
+        is_yes_d8 "DO? : unzip ${dot_stl}/${item}/master.zip" && {
+            unzip ${dot_stl}/${item}/master.zip -d ${dot_stl}/${item} || {
+                echo "EXEC_FAIL : 'unzip ${dot_stl}/${item}/master.zip -d ${dot_stl}/${item}' :: return 1" >&2
+                return 1
+            }
         }
 
     done
