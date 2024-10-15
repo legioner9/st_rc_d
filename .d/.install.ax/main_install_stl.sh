@@ -48,7 +48,7 @@ main_install_d8() {
     #* define Prompt String 1 (color)
     PS1="${grnd_cyan}\u${grnd_black} @\H${grnd_green} \w $ ${norm}"
 
-    # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
+    echo -e "${font_blue}--- ${FUNCNAME[0]} $* in file://${path_file}---${norm}" #started functions
 
     # cd ${path_dir} || {
     #     # hint="\$1: \$2: "
@@ -81,10 +81,10 @@ main_install_d8() {
         read -r -p " (y|) " yes
         echo -e "${grnd_green}You enter : '${yes}'${norm}"
         if [ "${yes:-no}" == "y" ]; then
-            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
+            cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 0"
             return 0
         else
-            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+            cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
             return 1
         fi
     }
@@ -92,6 +92,7 @@ main_install_d8() {
     # echo -e "${fon_1} warn string ${norm}" >&2
 
     mkdir_d8() {
+        echo -e "${font_blue}--- ${FUNCNAME[0]} $* in file://${path_file}---${norm}" #started functions
 
         if [ -d "$1" ]; then
             erro_d8 "DIR_EXIST : ' file://$1 '"
@@ -103,7 +104,7 @@ main_install_d8() {
                 varn_d8 "mkdir -p $1"
                 mkdir -p "$1" || {
                     erro_d8 "FAIL_EXEC : 'mkdir -p $1' return 1"
-                    cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+                    cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
                     return 1
                 }
 
@@ -115,7 +116,7 @@ main_install_d8() {
             varn_d8 "mkdir -p $1"
             mkdir -p "$1" || {
                 erro_d8 "FAIL_EXEC : 'mkdir $1' return 1"
-                cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+                cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
                 return 1
             }
 
@@ -124,14 +125,53 @@ main_install_d8() {
 
     }
 
+    unzip_dot_d_d8() {                                                               # $1 path to .d.zip
+        echo -e "${font_blue}--- ${FUNCNAME[0]} $* in file://${path_file}---${norm}" #started functions
+
+        if [ -d "${HOME}"/.d ]; then
+
+            is_yes_d8 "DIR_EXIST '${HOME}/.d' rewrite that ?" && {
+
+                [ -d "${HOME}"/.d ] && {
+                    mv -f "${HOME}"/.d "${HOME}"/.d~
+                }
+
+                unzip ${1} -d ${HOME} || {
+                    erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'unzip ${1} -d ${HOME}' : ${hint} : return 1"
+                    cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
+                    return 1
+                }
+            }
+        fi
+
+        return 0
+    }
+
+    cp_f2f_d8() {                                                                    # $1 file issue $2 file dist
+        echo -e "${font_blue}--- ${FUNCNAME[0]} $* in file://${path_file}---${norm}" #started functions
+        if [ -f "$2" ]; then
+            is_yes_d8 "FILE_EXIST '$2' rewrite that ?" && {
+
+                mv -f "${2}" "${2}"~
+                cp "$1" "$2" || {
+                    erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'cp $1 $2' : ${hint} : return 1"
+                    cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
+                    return 1
+                }
+            }
+            return 0
+        fi
+    }
+
     #* --- is exist utils ---
     command -v wget >/dev/null || {
         err_d8 "util 'wget' not find : return 1"
-        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+        cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
         return 1
     }
 
-    do_wget_d8() { # $1 - linK for wget, $2 - parent dir for wget
+    do_wget_d8() {                                                                   # $1 - linK for wget, $2 - parent dir for wget
+        echo -e "${font_blue}--- ${FUNCNAME[0]} $* in file://${path_file}---${norm}" #started functions
 
         if is_yes_d8 "DO? wget $1 in $2"; then
             if [ -f "$2"/master.zip ]; then
@@ -139,7 +179,7 @@ main_install_d8() {
                     rm -f "$2"/master.zip
                     wget "$1" -O "$2"/master.zip || {
                         erro_d8 "FAIL_EXEC : 'wget $1 -O $2/master.zip' return 1"
-                        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+                        cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
                         return 1
                     }
                 }
@@ -147,7 +187,7 @@ main_install_d8() {
             else
                 wget "$1" -O "$2"/master.zip || {
                     erro_d8 "FAIL_EXEC : 'wget $1 -O $2/master.zip' return 1"
-                    cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+                    cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
                     return 1
                 }
             fi
@@ -168,7 +208,7 @@ main_install_d8() {
 
     is_yes_d8 "DO? : Continue with that Default parameters" || {
         info_d8 "reject install : return 0"
-        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
+        cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 0"
         return 0
     }
 
@@ -178,7 +218,7 @@ main_install_d8() {
 
         is_yes_d8 "Did you upload STL and STL_DATA yourself?" || {
             info_d8 "reject install : return 1"
-            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
+            cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 0"
             return 0
         }
     }
@@ -206,14 +246,14 @@ main_install_d8() {
     for item in ${arr_name_repo[@]}; do
 
         mkdir_d8 "${dot_stl}/${item}" || {
-            echo "EXEC_FAIL : 'mkdir_d8 ${dot_stl}/${item}' :: return 1" >&2
-            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+            erro_d8 "EXEC_FAIL : 'mkdir_d8 ${dot_stl}/${item}' :: return 1"
+            cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
             return 1
         }
 
         do_wget_d8 "${w_legioner9}/${item}/${gh_master}" "${dot_stl}/${item}" || {
-            echo "EXEC_FAIL : 'do_wget_d8 ${w_legioner9}/${item}/${gh_master}' :: return 1" >&2
-            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+            erro_d8 "EXEC_FAIL : 'do_wget_d8 ${w_legioner9}/${item}/${gh_master}' :: return 1"
+            cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
             return 1
         }
 
@@ -225,7 +265,7 @@ main_install_d8() {
 
         is_yes_d8 "DO? : unzip ${dot_stl}/${item}/master.zip" && {
             unzip ${dot_stl}/${item}/master.zip -d ${dot_stl}/${item} || {
-                echo "EXEC_FAIL : 'unzip ${dot_stl}/${item}/master.zip -d ${dot_stl}/${item}' :: return 1" >&2
+                erro_d8 "EXEC_FAIL : 'unzip ${dot_stl}/${item}/master.zip -d ${dot_stl}/${item}' :: return 1"
                 return 1
             }
         }
@@ -233,8 +273,8 @@ main_install_d8() {
     done
 
     mkdir_d8 "${dot_stl}"/.path || {
-        echo "EXEC_FAIL : 'mkdir_d8 ${dot_stl}' :: return 1" >&2
-        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+        erro_d8 "EXEC_FAIL : 'mkdir_d8 ${dot_stl}' :: return 1"
+        cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
         return 1
     }
 
@@ -242,9 +282,44 @@ main_install_d8() {
 
     for item in ${arr_name_repo[@]}; do
 
-        echo \${HOME}/.stl/${item}/${item}-master >"${dot_stl}"/.path/${item}.path
+        echo "\${HOME}/.stl/${item}/${item}-master" >"${dot_stl}"/.path/${item}.path
 
     done
+
+    unzip_dot_d_d8 "${HOME}"/.stl/st_rc_d/st_rc_d-master/.d/.zip/.d.zip || {
+        erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'unzip_dot_d_d8 ${HOME}/.stl/st_rc_d/st_rc_d-master/.d/.zip/.d.zip' : ${hint} : return 1"
+        cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
+        return 1
+    }
+
+    if is_yes_d8 "DO? : You ~/.bashrc rewrite ? "; then
+
+        cp_f2f_d8 "${HOME}"/.stl/ubique/ubique-master/.s/Store/.bashrc.d/.bashrc.tml "${HOME}"/.bashrc || {
+            erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'cp_f2f_d8 ${HOME}/.stl/ubique/ubique-master/.s/Store/.bashrc.d/.bashrc.tml ${HOME}/.bashrc' : ${hint} : return 1"
+            cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
+            return 1
+        }
+
+        return 0
+
+    else
+        varn_d8 "will be add ~/.bashrc.stl"
+        cp_f2f_d8 "${HOME}"/.stl/ubique/ubique-master/.s/Store/.bashrc.d/.bashrc.tml "${HOME}"/.bashrc.stl || {
+            erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'cp_f2f_d8 ${HOME}/.stl/ubique/ubique-master/.s/Store/.bashrc.d/.bashrc.tml ${HOME}/.bashrc' : ${hint} : return 1"
+            cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
+            return 1
+        }
+        varn_d8 "move lines from ~/.bashrc.stl to the end of ~/.bashrc yourself"
+
+        is_yes_d8 "was the transfer made?" || {
+            erro_d8 " ~/.bashrc may be incorrect :: return 1"
+            cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
+            return 1
+        }
+
+        return 0
+
+    fi
 
     # ST_RC_D_PATH=${HOME}/.stl/st_rc_d/st_rc_d-master
     # echo -e "${grnd_green}\${ST_RC_D_PATH} = ${ST_RC_D_PATH}${norm}"
@@ -259,7 +334,7 @@ main_install_d8() {
 
     #! END BODY FN ---------------------------------------
 
-    cd $PPWD || echo "EXEC_FAIL : 'cd $PPWD' :: return 0"
+    cd $PPWD || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 0"
     return 0
 
 }
