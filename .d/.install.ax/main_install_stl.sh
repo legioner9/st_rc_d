@@ -142,6 +142,13 @@ main_install_d8() {
                     return 1
                 }
             }
+
+        else
+            unzip ${1} -d ${HOME} || {
+                erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'unzip ${1} -d ${HOME}' : ${hint} : return 1"
+                cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
+                return 1
+            }
         fi
 
         return 0
@@ -158,6 +165,14 @@ main_install_d8() {
                     cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
                     return 1
                 }
+            }
+            return 0
+        else
+
+            cp "$1" "$2" || {
+                erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'cp $1 $2' : ${hint} : return 1"
+                cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
+                return 1
             }
             return 0
         fi
@@ -261,7 +276,7 @@ main_install_d8() {
         #     echo "EXEC_FAIL : 'cd ${dot_stl}/${item}' :: return 1" >&2
         #     cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
         #     return 1
-        # }
+        # } a
 
         is_yes_d8 "DO? : unzip ${dot_stl}/${item}/master.zip" && {
             unzip ${dot_stl}/${item}/master.zip -d ${dot_stl}/${item} || {
@@ -285,6 +300,8 @@ main_install_d8() {
         echo "\${HOME}/.stl/${item}/${item}-master" >"${dot_stl}"/.path/${item}.path
 
     done
+
+    ST_RC_D_PATH=$(cat "${HOME}"/.stl/.path/st_rc_d.path)
 
     unzip_dot_d_d8 "${HOME}"/.stl/st_rc_d/st_rc_d-master/.d/.zip/.d.zip || {
         erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'unzip_dot_d_d8 ${HOME}/.stl/st_rc_d/st_rc_d-master/.d/.zip/.d.zip' : ${hint} : return 1"
