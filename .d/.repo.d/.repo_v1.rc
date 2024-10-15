@@ -2,7 +2,7 @@
 
 file=${ST_RC_D_PATH}/.d/.config/env.sh
 
-path_to_data=${HOME}/.stl/.path/st_rc_d_data.path
+path_to_data=${ST_RC_D_PATH}/.d/.repo.d/.repo.data
 
 if [[ -f ${path_to_data} ]]; then
 
