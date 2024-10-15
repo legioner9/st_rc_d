@@ -185,9 +185,6 @@ main_install_d8() {
 
     #* --- define local variables ---
     local dot_stl="${HOME}"/.stl
-    # local p_stl="${HOME}"/.stl/STL
-    # local p_stl_data="${HOME}"/.stl/STL_DATA
-    # local p_ubique="${HOME}"/.stl/UBIQUE
     local w_legioner9="https://github.com/legioner9"
     local gh_master="archive/refs/heads/master.zip"
     local arr_name_repo=()
@@ -209,7 +206,7 @@ main_install_d8() {
     for item in ${arr_name_repo[@]}; do
 
         mkdir_d8 "${dot_stl}/${item}" || {
-            echo "EXEC_FAIL : 'mkdir_d8 ${item}' :: return 1" >&2
+            echo "EXEC_FAIL : 'mkdir_d8 ${dot_stl}/${item}' :: return 1" >&2
             cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
             return 1
         }
@@ -232,6 +229,20 @@ main_install_d8() {
                 return 1
             }
         }
+
+    done
+
+    mkdir_d8 "${dot_stl}"/.path || {
+        echo "EXEC_FAIL : 'mkdir_d8 ${dot_stl}' :: return 1" >&2
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+        return 1
+    }
+
+    item=
+
+    for item in ${arr_name_repo[@]}; do
+
+        echo \${HOME}/.stl/${item}/${item}-master >"${dot_stl}"/.path/${item}.path
 
     done
 
