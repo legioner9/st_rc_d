@@ -353,7 +353,7 @@ main_install_d8() {
 
     echo -e "
 \${HOME}/.d/.rc.d/.st_rc_d.rc
-\${HOME}/.d/.rc.d/.st_rc_d_data.rc
+\${HOME}/.d/.rc.d/.sta.rc
 " >"${HOME}"/.d/.lst.d/.st.lst
 
     # cp_f2f_d8 "${HOME}"/.stl/ubique/ubique-master/.s/Store/.enterrc.d/.enterrc "${HOME}"/.enterrc || {
