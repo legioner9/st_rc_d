@@ -132,6 +132,10 @@ main_install_d8() {
 
             is_yes_d8 "DIR_EXIST '${HOME}/.d' rewrite that ?" && {
 
+                [ -d "${HOME}"/.d~ ] && {
+                    rm -fr "${HOME}"/.d~
+                }
+
                 [ -d "${HOME}"/.d ] && {
                     mv -f "${HOME}"/.d "${HOME}"/.d~
                 }
@@ -334,9 +338,13 @@ main_install_d8() {
             return 1
         }
 
-        return 0
-
     fi
+
+    # cp_f2f_d8 "${HOME}"/.stl/ubique/ubique-master/.s/Store/.enterrc.d/.enterrc "${HOME}"/.enterrc || {
+    #     erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'cp_f2f_d8 ${HOME}/.stl/ubique/ubique-master/.s/Store/.bashrc.d/.bashrc.tml ${HOME}/.bashrc' : ${hint} : return 1"
+    #     cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
+    #     return 1
+    # }
 
     # ST_RC_D_PATH=${HOME}/.stl/st_rc_d/st_rc_d-master
     # echo -e "${grnd_green}\${ST_RC_D_PATH} = ${ST_RC_D_PATH}${norm}"
