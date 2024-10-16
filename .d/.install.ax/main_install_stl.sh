@@ -340,6 +340,17 @@ main_install_d8() {
 
     fi
 
+    touch ${HOME}/.w
+
+    is_yes_d8 "CHECK ${HOME}/.w define this: w+ or w- ?( WRITE with !!! ) " || {
+        varn_d8 "may be later define this: w+ or w-"
+        info_d8 "exec : cat file://${HOME}/.w"
+        cat ${HOME}/.w
+    }
+
+    echo "\${HOME}/tmp_dir_st_rc" >"${HOME}"/.tmp_dir_st_rc
+    # TMP_DIR_ST_RC=$(cat "${HOME}"/.tmp_dir_st_rc)
+
     # cp_f2f_d8 "${HOME}"/.stl/ubique/ubique-master/.s/Store/.enterrc.d/.enterrc "${HOME}"/.enterrc || {
     #     erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'cp_f2f_d8 ${HOME}/.stl/ubique/ubique-master/.s/Store/.bashrc.d/.bashrc.tml ${HOME}/.bashrc' : ${hint} : return 1"
     #     cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
