@@ -351,6 +351,11 @@ main_install_d8() {
     echo "\${HOME}/tmp_dir_st_rc" >"${HOME}"/.tmp_dir_st_rc
     # TMP_DIR_ST_RC=$(cat "${HOME}"/.tmp_dir_st_rc)
 
+    echo -e "
+\${HOME}/.d/.rc.d/.st_rc_d.rc
+\${HOME}/.d/.rc.d/.st_rc_d_data.rc
+" >"${HOME}"/.d/.lst.d/.st.lst
+
     # cp_f2f_d8 "${HOME}"/.stl/ubique/ubique-master/.s/Store/.enterrc.d/.enterrc "${HOME}"/.enterrc || {
     #     erro_d8 "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'cp_f2f_d8 ${HOME}/.stl/ubique/ubique-master/.s/Store/.bashrc.d/.bashrc.tml ${HOME}/.bashrc' : ${hint} : return 1"
     #     cd "$PPWD" || varn_d8 "EXEC_FAIL : 'cd $PPWD' :: return 1"
