@@ -1,0 +1,16 @@
+@startmindmap
+*:\~/.bashrc:
+
+46:source ~/.d/.rc.d/.st.rc.d/.st.rc;
+
+*:\~/.d/.rc.d/.st.rc.d/.st.rc:
+
+1;
+**:\~/.d/.rc.d/.st.rc.d/.st.rc:
+
+1.1;
+**:\~/.d/.rc.d/.st.rc.d/.st.rc:
+
+1.2;
+
+@endmindmap
