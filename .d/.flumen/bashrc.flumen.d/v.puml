@@ -1,10 +1,21 @@
 @startmindmap
-*:file:\~/.bashrc:
+*:
+ПРИНЯТЫЕ ОБОЗНАЧЕНИЯ И УСЛОВНОСТИ :
 
+<file:> <path_to_file>
+<nnn:> - номер строки в файле
+указывается только значимый код 
+в терминах псевдокода похожего на bash
+source <path_to_file> влечет за собой 
+раскрытие содержания <path_to_file> в 
+правой секции соединенной с текущей
+;
+*:
+file:\~/.bashrc
 046: source ~/.d/.rc.d/.st.rc.d/.st.rc
 ;
 
-*:file:\~/.d/.rc.d/.st.rc.d/.st.rc:
+**:file:\~/.d/.rc.d/.st.rc.d/.st.rc:
 Для STL путь всегда оопределен от домашней директории
 
 Определение константы ST_RC_D_PATH это путь к репо с STL0 из файла ~/.stl/.path/st_rc_d.path
@@ -28,20 +39,20 @@
 ' 000: 
 ' 000: 
 ;
-**:define: _up_d() {}
+***:define: _up_d() {}
 $1 - dir
 . every_file_from_dir
 ;
 
-**:define: _up_st_os_d() {
+***:define: _up_st_os_d() {
     _up_d \~/.d/.rc.d/.st.rc.d/.st.os.d
 }
 ;
 
-**:exec: _up_st_os_d:
+***:exec: _up_st_os_d:
 ;
 
-***:ls \~/.d/.rc.d/.st.rc.d/.st.os.d
+****:ls \~/.d/.rc.d/.st.rc.d/.st.os.d
 
 app-aliases.sh  
 git-alias.sh  
@@ -51,13 +62,13 @@ os_aliases.sh
 os_utils.sh
 ;
 
-****:file:app-aliases.sh
+*****:file:app-aliases.sh
 
 alias vim="gvim -v"
 alias sky="flatpak run com.skype.Client"
 ;
 
-****:file:git-alias.sh
+*****:file:git-alias.sh
 
 alias gs="git status
 alias ga="git add
@@ -71,17 +82,17 @@ alias gg="git log - -graph - -abbrev-commit - -decorate - -date=relative - -form
 alias gk="gitk --all&
 ;
 
-****:file:git-completion.sh
+*****:file:git-completion.sh
 
 git-completion STANDART
 ;
 
-****:file:git-prompt.sh
+*****:file:git-prompt.sh
 
 git-prompt STANDART
 ;
 
-****:file:os_aliases
+*****:file:os_aliases
 
 DEFINE USER ALIASES
 alias www="tldr"
@@ -91,46 +102,46 @@ alias updb="updatedb -l 0  --output=/home/st/.mydb.db"
 alias llocate="locate -d ~/.mydb.db"
 ;
 
-****:file:os_utils.sh
+*****:file:os_utils.sh
 
 DEFINE USER DEFAULT FUNCTIONS
 <EMPTY>
 ;
 
-**:define: _up_st_config_d() {
+***:define: _up_st_config_d() {
     _up_d \~/.d/.rc.d/.st.rc.d/.st.config.d
 }
 ;
 
-**:exec: _up_st_config_d
+***:exec: _up_st_config_d
 ;
 
-***:ls \~/.d/.rc.d/.st.rc.d/.st.config.d
+****:ls \~/.d/.rc.d/.st.rc.d/.st.config.d
 
 fn_name.sh
 ;
 
-****:file:fn_name.sh
+*****:file:fn_name.sh
 
 DEFINE NAME_FUNCTION [fn_name] is VAR [_fn_name]:
 _fn_name=fn_name
 ;
 
-**:define: _up_st_sh_d() {
+***:define: _up_st_sh_d() {
     _up_d \~/.d/.rc.d/.st.rc.d/.st.sh.d
 }
 ;
 
-**:exec: _up_st_sh_d
+***:exec: _up_st_sh_d
 ;
 
-***:ls \~/.d/.rc.d/.st.rc.d/.st.sh.d
+****:ls \~/.d/.rc.d/.st.rc.d/.st.sh.d
 
 ALL FN STL files with define functions
 [fn_name].sh
 ;
 
-****:file:[fn_name].sh
+*****:file:[fn_name].sh
 
 DEFINE NAME_FUNCTION [fn_name]
 [fn_name](){
@@ -138,23 +149,23 @@ DEFINE NAME_FUNCTION [fn_name]
 }
 ;
 
-**:source \~/.d/.rc.d/.st.rc.d/.st.tst || return 1
+***:source \~/.d/.rc.d/.st.rc.d/.st.tst || return 1
 
 ;
 
-***:file:\~/.d/.rc.d/.st.rc.d/.st.tst
+****:file:\~/.d/.rc.d/.st.rc.d/.st.tst
 
 for name_fn in all_name_fn;do
     source \~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst || return 1
 done
 ;
 
-****:file:\~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst
+*****:file:\~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst
 
     source \~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst.d/${name_fn}.tst.sh || return 1
 ;
 
-*****:file:\~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst.d/${name_fn}.tst.sh
+******:file:\~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst.d/${name_fn}.tst.sh
 
 В результате работы ${name_fn} формируется файл res:
 exec ${name_fn} -> \~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst.d/res   
