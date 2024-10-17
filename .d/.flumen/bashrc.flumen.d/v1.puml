@@ -1,16 +1,104 @@
 @startmindmap
-*:\~/.bashrc:
+*:file:\~/.bashrc:
 
-46:source ~/.d/.rc.d/.st.rc.d/.st.rc;
+046: source ~/.d/.rc.d/.st.rc.d/.st.rc;
 
-*:\~/.d/.rc.d/.st.rc.d/.st.rc:
+*:file:\~/.d/.rc.d/.st.rc.d/.st.rc:
 
-1;
-**:\~/.d/.rc.d/.st.rc.d/.st.rc:
+004: path_to_stl=${HOME}/.stl/.path/st_rc_d.path
+008: ST_RC_D_PATH=$(cat ${path_to_stl})
+026: path_to_data=${HOME}/.stl/.path/st_rc_d_data.path
+030: ST_RC_D_DATA_PATH=$(cat ${path_to_data})
+047: define _up_d() {}
+073: define _up_st_os_d() {}
+085: _up_st_os_d
+' 000: 
+' 000: 
+' 000: 
+;
+**:define: _up_d() {}:
+$1 - dir
+. every_file_from_dir
+;
+**:define: _up_st_os_d() {:
+    _up_d \~/.d/.rc.d/.st.rc.d/.st.os.d
+}
+;
+***:ls \~/.d/.rc.d/.st.rc.d/.st.os.d:
 
-1.1;
-**:\~/.d/.rc.d/.st.rc.d/.st.rc:
+app-aliases.sh  
+git-alias.sh  
+git-completion.sh  
+git-prompt.sh  
+os_aliases.sh  
+os_utils.sh
+;
 
-1.2;
+****:file:app-aliases.sh:
+
+alias vim="gvim -v"
+alias sky="flatpak run com.skype.Client"
+;
+
+****:file:git-alias.sh:
+
+alias gs="git status
+alias ga="git add
+alias gc="git commit
+alias gb="git branch
+alias gha="git checkout
+alias gp="git push -u origin master
+alias gl="git log - -pretty=format:\"%h %s\ --graph
+alias gw="git show - -stat --oneline HEAD
+alias gg="git log - -graph - -abbrev-commit - -decorate - -date=relative - -format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+alias gk="gitk --all&
+;
+
+****:file:git-completion.sh :
+
+git-completion STANDART
+;
+
+****:file:git-prompt.sh :
+
+git-prompt STANDART
+;
+
+****:file:os_aliases:
+
+DEFINE USER ALIASES
+alias www="tldr"
+alias ll="ls -l"
+alias lla="ls -la"
+alias updb="updatedb -l 0  --output=/home/st/.mydb.db"
+alias llocate="locate -d ~/.mydb.db"
+;
+
+****:file:os_utils.sh :
+
+DEFINE USER DEFAULT FUNCTIONS
+<EMPTY>
+;
+
+' *:HEAD:
+
+' CONT
+' ;
+
+
+' *:HEAD:
+
+' CONT
+' ;
+
+' *:HEAD:
+
+' CONT
+' ;
+
+' *:HEAD:
+
+' CONT
+' ;
 
 @endmindmap
