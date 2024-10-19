@@ -55,12 +55,16 @@ ${NORMAL}"
 
     #! START BODY FN ---------------------------------------
 
-    echo "START BODY FN : ${FNN}() $*"
-    cd ${path_dir}
-    puml_ v.puml -_drawing
-    cd ${path_dir}
-    rm -f v.puml.png
-
+    while true; do
+        sleep 10
+        [ v.puml.png -ot v.puml ] && {
+            echo "START BODY FN : ${FNN}() $*"
+            cd ${path_dir}
+            puml_ v.puml -_drawing
+            cd ${path_dir}
+            rm -f v.puml.png
+        }
+    done
     #{{body_fn}}
 
     #! END BODY FN ---------------------------------------

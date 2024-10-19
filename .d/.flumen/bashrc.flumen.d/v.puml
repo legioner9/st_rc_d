@@ -8,10 +8,31 @@
 в терминах псевдокода похожего на bash
 source <path_to_file> влечет за собой 
 раскрытие содержания <path_to_file> в 
-правой секции соединенной с текущей
+правой секции соединенной с текущей секцией
 ;
 
 *:
+
+STL ВНУТРЕННИЕ УПРАВЛЯЮЩИЕ ФАЙЛЫ STL
+
+1. (depr?) \~/.d/.lst.d/.st.lst список файлов с файл-путь к корню репо 
+подключаемой библиотеки
+
+$ cat \~/.d/.lst.d/.st.lst
+    ${HOME}/.d/.rc.d/.st_rc_d.rc
+    ${HOME}/.d/.rc.d/.sta.rc
+    ${HOME}/.d/.rc.d/.mane.rc
+    ${HOME}/.d/.rc.d/.stb.rc
+$ cat \~/.d/.rc.d/.st_rc_d.rc
+    ${HOME}/REPOBARE/_repo/st_rc_d
+
+2. \~/.stl/.path/ директория с файл-путь к корню репо 
+подключаемых библиотеки <lib_repo>
+ls \~/.stl/.path/ 
+    <lib_repo1>.path
+    ...
+
+
 USER ВНЕШНИЕ УПРАВЛЯЮЩИЕ ФАЙЛЫ STL
 
 1. \~/.is_bashrc_log 
@@ -58,6 +79,8 @@ file:\~/.bashrc
 
 Проверка тестов всех функций STL, если return 1, то загрузка оболочки прерывается 
 127: source ~/.d/.rc.d/.st.rc.d/.st.tst || return 1
+
+133: define _loop_lib_st_rc() {}
 ' 000: 
 ' 000: 
 ' 000: 
@@ -203,6 +226,18 @@ exec ${name_fn} -> \~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst.d/res
 ТЕСТ: Сравнение res и pre:
 diff \~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst.d/res \~/.d/.rc.d/.st.rc.d/.st.tst.d/${name_fn}.tst.d/pre || return 1
 возврат return 1 ошибка эскалируется до ~/.bashrc и прерывает загрузку оболочки
+;
+
+***:define: _loop_lib_st_rc() {
+    file_lib_lst=${HOME}/.d/.lst.d/.st.lst
+}
+;
+
+***:source \~/.d/.rc.d/.st.rc.d/.st.tst || return 1
+
+;
+***:source \~/.d/.rc.d/.st.rc.d/.st.tst || return 1
+
 ;
 
 ' *:HEAD:
