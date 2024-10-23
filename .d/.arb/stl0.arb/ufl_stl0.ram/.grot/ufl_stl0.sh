@@ -136,6 +136,8 @@ ${CYAN}${exam_str}${NORMAL}
 
     dir_set=${dir_ptv}/${res_ptv}
 
+    echo -e "${GREEN}\$dir_set = '$dir_set'${NORMAL}" #print variable
+
     local dir_ins=${dir_set}/.ins
     local dir_prc=${dir_set}/.prc
     local dir_tml=${dir_set}/.tml
@@ -147,6 +149,8 @@ ${CYAN}${exam_str}${NORMAL}
 
     local file_main=${dir_set}/main.sh
 
+    echo -e "${HLIGHT}--- . ${file_main} ---${NORMAL}" #start files
+    
     . ${file_main} || {
         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. file://${file_main}' : return 1"
         return 1
