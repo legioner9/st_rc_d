@@ -93,9 +93,9 @@ EXAM:
 
     unzip -o ${file_src}
 
-if ! [ ${path_dist}/${file_src} == ${path_src} ];then
-    rm ${path_dist}/${file_src}
-fi
+    if ! [ ${path_dist}/${file_src} == ${path_src} ]; then
+        rm ${path_dist}/${file_src}
+    fi
     cd $PPWD
     return 0
 

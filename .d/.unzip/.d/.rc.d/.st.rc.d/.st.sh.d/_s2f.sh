@@ -45,6 +45,8 @@ NB!!: escaping in \$2 '\[' '\]' '\\\$' '\^' '\\\\\' and in \$1 '\.'
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
+    #! eval "sed -i 's|^'\'' .*||g' ${HOME}/path_file" rm string starting with <' >
+
     echo -e "${GREEN}\$1 = $1${NORMAL}" #print variable
     echo -e "${GREEN}\$2 = $2${NORMAL}" #print variable
     echo -e "${GREEN}\$3 = file://$3${NORMAL}" #print variable

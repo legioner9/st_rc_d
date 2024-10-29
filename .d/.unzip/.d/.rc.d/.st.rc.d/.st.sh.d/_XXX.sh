@@ -149,18 +149,22 @@ EXAM:
     #* [ $di -eq 1 ] && echo "info"
 
     #* greeting
-    # [ $di -eq 1 ] && echo -e "${CYAN}--- start : ${FNN}() $@ ---${NORMAL}" #sistem info mesage
+    # [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${sh_file}---${NORMAL}" #started functions
 
     #* rename args
     #* check cntl
     #* inname cntl
+    _XXX_before_reurn() {
+        :
+    }
 
     #? ----- START _XXX body_flow -----
 
     #* {{fn_sh_body}}
 
     #? ----- END _XXX body -----
-
+    
+    _XXX_before_reurn
     cd $PPWD
     return 0
 

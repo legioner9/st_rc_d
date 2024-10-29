@@ -91,26 +91,26 @@ EXAM:
     if [[ -f ${path_src} ]]; then
         zip "${file_dist}" "${file_src}"
         mv "${file_dist}" "${path_dist}"
-        echo -e "${HLIGHT}--- exec: mkdir ${dir_dist}/tmp_$(_rnd2e) ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: mkdir ${dir_dist}/tmp_$(_rnd2e) ---${NORMAL}" #start files
         tmp_dir=${dir_dist}/_zip_to.tmp.d
         if ! [[ -d ${tmp_dir} ]]; then
             mkdir ${tmp_dir}
         fi
-        echo -e "${HLIGHT}--- cp file://${path_dist} file://${tmp_dir} ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- cp file://${path_dist} file://${tmp_dir} ---${NORMAL}" #start files
         cp ${path_dist} ${tmp_dir}
 
-        echo -e "${HLIGHT}--- exec: cd ${tmp_dir} ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: cd ${tmp_dir} ---${NORMAL}" #start files
         cd ${tmp_dir} || {
             echo "NOT_DIR : ${tmp_dir} return 1" >&2
             cd $PPWD
             return 1
         }
-        echo -e "${HLIGHT}--- exec: unzip -o ${tmp_dir}/${file_dist} ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: unzip -o ${tmp_dir}/${file_dist} ---${NORMAL}" #start files
         unzip -o ${tmp_dir}/${file_dist} 
 
         # read -p "continue?"
 
-        echo -e "${HLIGHT}--- exec: diff -q file://${tmp_dir}/${file_src} file://${path_src} ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: diff -q file://${tmp_dir}/${file_src} file://${path_src} ---${NORMAL}" #start files
         if ! diff -q ${tmp_dir}/${file_src} ${path_src}; then
             diff ${tmp_dir}/${file_src} ${path_src}
             echo "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'EXEC_EXPERSION' : ${hint} : return 1" >&2
@@ -130,30 +130,30 @@ EXAM:
 
     if [[ -d ${path_src} ]]; then
 
-        echo -e "${HLIGHT}--- exec: zip -vr "${file_dist}" "${file_src}" ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: zip -vr "${file_dist}" "${file_src}" ---${NORMAL}" #start files
         zip -vr "${file_dist}" "${file_src}"
 
         mv "${file_dist}" "${path_dist}"
-        echo -e "${HLIGHT}--- exec: mkdir ${dir_dist}/_zip_to.tmp.d ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: mkdir ${dir_dist}/_zip_to.tmp.d ---${NORMAL}" #start files
         tmp_dir=${dir_dist}/_zip_to.tmp.d
         if ! [[ -d ${tmp_dir} ]]; then
             mkdir ${tmp_dir}
         fi
-        echo -e "${HLIGHT}--- cp file://${path_dist} file://${tmp_dir} ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- cp file://${path_dist} file://${tmp_dir} ---${NORMAL}" #start files
         cp ${path_dist} ${tmp_dir}
 
-        echo -e "${HLIGHT}--- exec: cd ${tmp_dir} ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: cd ${tmp_dir} ---${NORMAL}" #start files
         cd ${tmp_dir} || {
             echo "NOT_DIR : ${tmp_dir} return 1" >&2
             cd $PPWD
             return 1
         }
-        echo -e "${HLIGHT}--- exec: unzip -o ${tmp_dir}/${file_dist} ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: unzip -o ${tmp_dir}/${file_dist} ---${NORMAL}" #start files
         unzip -o ${tmp_dir}/${file_dist}
 
         # read -p "continue?"
 
-        echo -e "${HLIGHT}--- exec: diff -qr file://${tmp_dir}/${file_src} file://${path_src} ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: diff -qr file://${tmp_dir}/${file_src} file://${path_src} ---${NORMAL}" #start files
         if ! diff -qr ${tmp_dir}/${file_src} ${path_src}; then
             diff -r ${tmp_dir}/${file_src} ${path_src}
             echo "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'EXEC_EXPERSION' : ${hint} : return 1" >&2

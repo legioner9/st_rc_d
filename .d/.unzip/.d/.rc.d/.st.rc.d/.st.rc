@@ -1,8 +1,29 @@
 #!/bin/bash
 
 unset IFS
+path_to_stl=${HOME}/.stl/.path/st_rc_d.path
 
-path_to_data=${HOME}/.d/.rc.d/.st.rc.d/.st.path.d/.repo.data
+if [[ -f ${path_to_stl} ]]; then
+
+    eval ST_RC_D_PATH=$(cat ${path_to_stl})
+
+    if [[ -z ${ST_RC_D_PATH} ]]; then
+        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DEFINE : '\${ST_RC_D_PATH} in file://${path_to_stl}' : ${hint} : return 1" >&2
+        return 1
+    fi
+
+    if ! [[ -d ${ST_RC_D_PATH} ]]; then
+        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DIR : '\${ST_RC_D_PATH} in file://${path_to_stl}' : ${hint} : return 1" >&2
+        return 1
+    fi
+
+else
+    echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_FILE : '. file://${path_to_stl}' : ${hint} : return 1" >&2
+    return 1
+fi
+
+# path_to_data=${HOME}/.d/.rc.d/.st.rc.d/.st.path.d/.repo.data
+path_to_data=${HOME}/.stl/.path/st_rc_d_data.path
 
 if [[ -f ${path_to_data} ]]; then
 
@@ -103,6 +124,7 @@ fi
 # read -p "1"
 
 echo ". ${HOME}/.d/.rc.d/.st.rc.d/.st.tst"
+
 if ! . ${HOME}/.d/.rc.d/.st.rc.d/.st.tst; then
     echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO} : EXEC_FAIL : '. ${HOME}/.d/.rc.d/.st.rc.d/.st.tst' : ${hint} : return 1" >&2
     return 1
@@ -116,7 +138,9 @@ _loop_lib_st_rc() {
         echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc ${LINENO} _loop_lib_st_rc() : NOT_FILE : file://$file_lib_lst return 1" >&2
         return 1
     fi
+
     local item
+
     for item in $(_f2e ${file_lib_lst}); do
 
         if [[ -f ${item} ]]; then
@@ -128,6 +152,7 @@ _loop_lib_st_rc() {
                 return 1
             fi
 
+            echo -e "${GREEN}\$item = '$item'${NORMAL}" #print variable
         else
             echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc ${LINENO} _loop_lib_st_rc() : NOT_FILE : file://$item return 1" >&2
             return 1
@@ -138,7 +163,10 @@ _loop_lib_st_rc() {
 
 unset IFS
 
+# >${HOME}/tmp/_loop_lib_st_rc.log 2>&1
+
 echo "_loop_lib_st_rc()"
+
 if ! _loop_lib_st_rc; then
     echo "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}: : EXEC_FAIL : '_loop_lib_st_rc()' : ${hint} : return 1" >&2
     return 1
@@ -195,7 +223,8 @@ GIT_PS1_SHOWSTASHSTATE=1
 arr_lib=($(_str_lib_lst))
 # export PS1='\033[0;32m${arr_lib[*]} \033[0;35m\u@\H \w$(__git_ps1 " (%s)") \$\033[0m '
 if [[ ${_W_CONST} == "w-" ]]; then
-    export PS1='\033[0;34m${_W_CONST} \033[0;32m${arr_lib[*]} \033[0;35m\u@\H \w$(__git_ps1 " (%s)") \$\033[0m '
+    # V_1 export PS1='\033[0;34m${_W_CONST} \033[0;32m${arr_lib[*]} \033[0;35m\u@\H \w$(__git_ps1 " (%s)") \$\033[0m '
+    export PS1='\033[0;34m${_W_CONST} \033[0;32m${arr_lib[*]} \033[1m\033[40m\033[34m\u\033[1m\033[40m\033[35m@\H \w$(__git_ps1 " (%s)") \$\033[0m '
 fi
 
 if [[ ${_W_CONST} == "w+" ]]; then
@@ -208,12 +237,12 @@ if [[ -f ${HOME}/.tmp_dir_st_rc ]]; then
         _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${TMP_DIR_ST_RC} from ${HOME}/.tmp_dir' : ${hint} : return 1"
         return 1
     fi
-    if [[ -d ${TMP_DIR_ST_RC} ]]; then
-        export TMP_DIR_ST_RC
-    else
-        _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${TMP_DIR_ST_RC} from ${HOME}/.tmp_dir' : ${hint} : return 1"
-        return 1
-    fi
+    # if [[ -d ${TMP_DIR_ST_RC} ]]; then
+    #     export TMP_DIR_ST_RC
+    # else
+    #     _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${TMP_DIR_ST_RC} from ${HOME}/.tmp_dir' : ${hint} : return 1"
+    #     return 1
+    # fi
 
 else
     _st_exit "in fs= file://${HOME}/.d/.rc.d/.st.rc.d/.st.rc , line=${LINENO}, ${FNN}() : NOT_FILE : 'file://${HOME}/.tmp_dir  from ${HOME}/.tmp_di' : ${hint} : return 1"

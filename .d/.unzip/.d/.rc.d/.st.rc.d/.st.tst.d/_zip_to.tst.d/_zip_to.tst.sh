@@ -33,7 +33,7 @@ fi
 
 tree tst.d
 
-rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir
+# rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir
 
 # _zip_to >/dev/null
 

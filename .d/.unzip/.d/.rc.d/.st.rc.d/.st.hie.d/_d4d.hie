@@ -1,0 +1,46 @@
+# HIE _d4d
+
+## CAUSA:
+ПРИЧИНА создания:
+<!-- {{fn_hie_body_CAUSA}} -->
+Требуется вставить рекурсивно поддиректории из одной директории в другую
+
+## FORMULA:
+СХЕМА решения:
+<!-- {{fn_hie_body_FORMULA}} -->
+dst_dir/.../@subdir -> dst_dir/.../subdir где subdir из issu_dir
+
+
+## DOGMA:
+РЕШЕНИЕ задачи: 
+<!-- {{fn_hie_body_DOGMA}} -->
+0. делаем копию `cp -r [destination_dir] _[destination_dir]` в оригинал изменения не вносим - 
+        копию скрываем под _
+1. далее для краткости `_[destination_dir]` == `dst_dir`
+2. для вставки subdir лежат в `src_dir` все в корне
+3. находим в dst_dir subdir префиксом @ и именем `string_name` - 
+        директоия только с _0 , используется только ее имя и путь к ней
+   - парсим `string_name` которая должна представлять следующую по составу: `src_name@dst_name`
+     - отбрасываем первый @ символ 
+     - `str_src_dst=src_name@dst_name ; str_src_dst_arr=(${str_src_dst//@/ })`
+       -  `src_name=${str_src_dst_arr[0]}`
+       -  `dst_name=${str_src_dst_arr[1]}`
+   - ищем в `dst_dir` `dst_name`
+4. делаем `dst_dir/.../@str_src_dst -> dst_dir/.../dst_name` - вот так:
+   - делаем копию `mv dst_dir/.../@str_src_dst dst_dir/.../_@str_src_dst` и `_0` файл внутри - уберем из видимости @dst_name - 
+        префикс _ для исключения из иттератора _dd2e
+   - `cp -r src_dir/src_name/. dst_dir/.../dst_name`
+5. Повторяем 2 и 3 пункт т.к. issu_dir/sd_name так же может содержать `@str_src_dst_1`
+6. Убеждаемся что уже ничего вставить невозможно
+7. Если в dst_dir остались @subdir которые заменить невозможно, то 
+        выводим их список в качестве предупреждения
+
+
+### TST
+<!-- {{fn_hie_body_TST}} -->
+
+
+### FLOW_1
+<!-- {{fn_hie_body_FLOW_1}} -->
+
+ 

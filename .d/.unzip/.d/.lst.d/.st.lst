@@ -1,5 +1,5 @@
 ${HOME}/.d/.rc.d/.st_rc_d.rc
 ${HOME}/.d/.rc.d/.sta.rc
-#${HOME}/.d/.rc.d/.mane.rc
-#${HOME}/.d/.rc.d/.stb.rc
+${HOME}/.d/.rc.d/.mane.rc
+${HOME}/.d/.rc.d/.stb.rc
 ${HOME}/.enterrc

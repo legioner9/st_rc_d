@@ -32,7 +32,7 @@ _date() {
 
     if [[ "-h" == "$1" ]]; then
         echo -e "
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: echo UnixTimeSec_DayManthYearHourMinSec
 TAGS:
 \$1 
 [, \$2]

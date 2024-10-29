@@ -1,12 +1,33 @@
 #!/bin/bash
 
-touch ${HOME}/.d/.path.d/.st_rc_d.path
+# touch ${HOME}/.d/.path.d/.st_rc_d.path
 
-eval "ST_RC_D_PATH=$(cat ${HOME}/.d/.path.d/.st_rc_d.path)"
+# eval "ST_RC_D_PATH=$(cat ${HOME}/.d/.path.d/.st_rc_d.path)"
+
+path_to_stl=${HOME}/.stl/.path/st_rc_d.path
+
+if [[ -f ${path_to_stl} ]]; then
+
+    eval ST_RC_D_PATH=$(cat ${path_to_stl})
+
+    if [[ -z ${ST_RC_D_PATH} ]]; then
+        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DEFINE : '\${ST_RC_D_PATH} in file://${path_to_stl}' : ${hint} : return 1" >&2
+        return 1
+    fi
+
+    if ! [[ -d ${ST_RC_D_PATH} ]]; then
+        echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_DIR : '\${ST_RC_D_PATH} in file://${path_to_stl}' : ${hint} : return 1" >&2
+        return 1
+    fi
+
+else
+    echo "in fs= file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : NOT_FILE : '. file://${path_to_stl}' : ${hint} : return 1" >&2
+    return 1
+fi
 
 if [[ -f ${ST_RC_D_PATH}/.d/.repo.d/.repo.rc ]]; then
     if ! . ${ST_RC_D_PATH}/.d/.repo.d/.repo.rc; then
-        echo "in fs=file://${HOME}/.d/.rc.d/.st_rc_d.rcc , line=${LINENO} : : EXEC_FAIL : '. file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc' : ${hint} : return 1" >&2
+        echo "in fs=file://${HOME}/.d/.rc.d/.st_rc_d.rc , line=${LINENO} : : EXEC_FAIL : '. file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc' : ${hint} : return 1" >&2
         return 1
     fi
 fi

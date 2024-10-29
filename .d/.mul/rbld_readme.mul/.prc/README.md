@@ -18,6 +18,7 @@ Start Contents Menu
 - [Что я могу сделать](#что-я-могу-сделать)
 - [Библиотека камней - Теория](#библиотека-камней---теория)
   - [Словарь](#словарь)
+  - [Сокращения](#сокращения)
   - [Что это](#что-это)
   - [Ограничения](#ограничения)
     - [Ограничение сложности stl](#ограничение-сложности-stl)
@@ -69,9 +70,9 @@ PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1728462487_09102024152807
+DATE: 1730176140_29102024112900
 
-DATX: 1728462487
+DATX: 1730176140
 -->
 
 
@@ -229,6 +230,25 @@ Lexicon (лат.)
     fn_elem             - элементарная функция написаная на os_cl вызываемая os_sl с аргументами и по имени 
 
     upath               - тип указания пути файловой системы
+    
+
+[002.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/002.pref.txt.md)
+
+
+
+## Сокращения
+
+    dr - dir
+    fl - file
+    et - entety - file|dir
+    nm - name
+    sdr - subdir
+    pth - path
+    rcv_dr - rcv dir
+    ins_dr - ins dir
+    prx - prefix
+    prx_et - prefix for entety (e.c. recommendationSTL for dr @|for fl &)
+    lext - последнее расширение имени справа
     
 
 [001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.md)
@@ -657,12 +677,13 @@ Quid est hic (лат.)
 
 
 
-    $ curl https://raw.githubusercontent.com/legioner9/st_rc_d/refs/heads/master/.d/.install.ax/main_install_stl.sh | sh
+    ~ $ wget https://raw.githubusercontent.com/legioner9/st_rc_d/refs/heads/master/.d/.install.ax/main_install_stl.sh
+    ~ $ . main_install_stl.sh
 
 or
 
-    $ curl https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2F.install.ax%2Fmain_install_stl.sh | sh
-    
+    ~ $ wget https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2F.install.ax%2Fmain_install_stl.sh
+    ~ $ . main_install_stl.sh
 
 [003.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/003.pref.txt.md)
 

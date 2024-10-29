@@ -1,0 +1,52 @@
+# HIE _gpz
+
+## CAUSA:
+ПРИЧИНА создания:
+<!-- {{fn_hie_body_CAUSA}} -->
+gpg-zip :
+- запоминает путь при запаковке
+- распаковывает затирая своими файлами все что повторяется и создает запомненный путь 
+- запаковка рядом распакует рядом и это рабочий вариант
+    - все делать в пределах одной директории (rut) директории
+    - все пути - только названия entetny
+
+это немного странно и сложно - нужна с ложная обертка упрощающая поведение
+
+## FORMULA:
+СХЕМА решения:
+<!-- {{fn_hie_body_FORMULA}} -->
+_gpg basedir/name_dir path/name_file.gpg запаковка наместе с копированием файла basedir/name_file.gpg path/name_file.gpg - 
+
+_gpg basedir/name_file.gpg dir_dst распаковка наместе во временной директории
+cp basedir/name_file.gpg tmp_dir
+после распаковки узнаем имя распакованой директории (ls tmp_dir даст name_file.gpg и name_dir)
+проверим папку dir_dst на наличие name_dir - защита от затирания
+если можно то перезаписываем  tmp_dir/name_dir/. dir_dst/name_dir
+
+or use gpg and:
+_zip_to zfile node -> zfile.zip
+_unzip_to dst_dir zfile.zip -> dst_dir/node
+
+problem _zip_to : zfile.zip~
+
+
+## DOGMA:
+РЕШЕНИЕ задачи:
+<!-- {{fn_hie_body_DOGMA}} -->
+
+if _gpz file_name src_dir 
+    _zip_to file_name src_dir
+    gpg -c -o src_dir/file_name src_dir/file_name.zip
+    <!-- gpg -d -o ${tst_d}/dcd/dst_res.f ${tst_d}/dcd/dst.f -->
+
+
+
+
+### TST
+<!-- {{fn_hie_body_TST}} -->
+
+
+### FLOW_1
+<!-- {{fn_hie_body_FLOW_1}} -->
+
+ 
