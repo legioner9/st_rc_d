@@ -27,7 +27,7 @@ path2nom_stl0() {
 
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: _s2f \${PATH} '\${REPO_PATH}' \$1 : ST_RC_D_PATH, ST_RC_D_DATA_PATH, ST_RC_DATA_PATH, REPO_PATH, HOME
 TAGS:
 ARGS: 
 \$1
@@ -76,7 +76,7 @@ ${NORMAL}"
     eval "_s2f ${ST_RC_D_PATH} '\${ST_RC_D_PATH}' ${ptr_path}" # /home/st/REPOBARE/_repo/st_rc_d
 
     eval "_s2f ${ST_RC_D_DATA_PATH} '\${ST_RC_D_DATA_PATH}' ${ptr_path}" # data_repo for st_rc_d repo
-    eval "_s2f ${STRC_DATA_PATH} '\${STRC_DATA_PATH}' ${ptr_path}" # data_repo for ~/.d
+    eval "_s2f ${STRC_DATA_PATH} '\${ST_RC_DATA_PATH}' ${ptr_path}" # data_repo for ~/.d
 
     
     #! eval "_s2f ${STA_PATH} '\${STA_PATH}' ${ptr_path}"
