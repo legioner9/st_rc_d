@@ -1,32 +1,25 @@
 <!--
-CMND: ufl_stl0 4 /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.d/cnx.d /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.d/res.md
+CMND: ufl_stl0 4 /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/res.md
 
-PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.d
+PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1730464289_01112024193129
+DATE: 1730470119_01112024210839
 
-DATX: 1730464289
+DATX: 1730470119
 -->
 
 
-[001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.d/cnx.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/001.pref.txt.md)
 
-<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
-- [Рекомендации RCM](#рекомендации-rcm)
-  - [RCM\_1 (изменения в оригинал)](#rcm_1-изменения-в-оригинал)
-  - [RCM\_2 (служебные файлы)](#rcm_2-служебные-файлы)
-  - [RCM\_3 (cокращения)](#rcm_3-cокращения)
-
-<!-- /TOC -->
 
 # Рекомендации RCM
 
     
 
-[002.rcm_1.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.d/cnx.d/002.d/002.rcm_1.txt.md)
+[002.rcm_1.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/002.rcm_1.txt.md)
 
 
 
@@ -35,7 +28,7 @@ DATX: 1730464289
 в оригинал вносим изменения - копия для истории изменений
     
 
-[003.rcm_2.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.d/cnx.d/002.d/003.rcm_2.txt.md)
+[003.rcm_2.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/003.rcm_2.txt.md)
 
 
 
@@ -50,7 +43,7 @@ DATX: 1730464289
   - сорс файлы для запуска в командной строке
     
 
-[004.rcm_3.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.d/cnx.d/002.d/004.rcm_3.txt.md)
+[004.rcm_3.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/004.rcm_3.txt.md)
 
 
 

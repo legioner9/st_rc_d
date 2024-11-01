@@ -53,6 +53,14 @@ ${NORMAL}"
 
     #! START BODY FN ---------------------------------------
 
+    #! rebuild all in dir
+    for sd in $(_dd2e ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.ins_dr); do
+        [ -f "${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.ins_dr/${sd}/res.md_ufl9" ] && {
+            echo -e "${HLIGHT}--- . ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.ins_dr/${sd}/res.md_ufl9 ---${NORMAL}"
+            . "${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.ins_dr/${sd}/res.md_ufl9"
+        }
+    done
+
     echo "START BODY FN : ${FNN}() $*"
 
     local frm_file=${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file
