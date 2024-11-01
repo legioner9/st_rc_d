@@ -75,19 +75,21 @@ _d5d (ins_dr,@,&,rcv_dr){
 6. Убеждаемся что уже ничего вставить невозможно
 7. Если в `rcv_dr` остались `{prx_et}str_nms` которые заменить невозможно, то 
         выводим их список в качестве предупреждения
-8. Создаем free_link_lst=$(_prs_f -d "${rcv_dr}")/_$(_prs_f -ne "${rcv_dr}")._d5d.lst - файл со списком нереализованых ссылок в rcv_dr
-9. Создаем source файл со строкой команды _d5d args sorce_file=$(_prs_f -d "${rcv_dr}")/_$(_prs_f -ne "${rcv_dr}").sh._d5d 
+
+8. Пересоздаем директорию служебных файлов utl_dr=$(_prs_f -d "${res_fl}")/_$(_prs_f -n "${rcv_dr}").${ptx_fn}.d где ${ptx_fn}=_d5d
+9. Создаем free_link_lst=${utl_dr}/free_link.lst - файл со списком нереализованых ссылок в rcv_dr
+10. Создаем source файл со строкой команды _d5d args sorce_file=${utl_dr}/restart.sh 
 - запуск и содержание :
 
 ```sh 
-$ surce ${sorce_file}    
-$ cat ${sorce_file}
+$ source ${source_file}    
+$ cat ${source_file}
     # restore backup [destination_dir]
     cp [base_rcv]/_[name_rcv]._d5d [base_rcv]/[name_rcv]
     # repeat exec command
     _d5d ${ins_dr} ${prx_dr} ${prx_fl} ${rcv_dr}
 ``` 
-10.  Создаем файл _$(_prs_f -ne "${rcv_dr}")._d5d.readme.man с пояснениями - _d5d.hie and _d5d.sh
+10.  Создаем файл ${utl_dr}/readme.stnd.md с пояснениями - _d5d.hie and _d5d.sh
 
 
 ### TST

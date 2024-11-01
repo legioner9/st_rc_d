@@ -69,10 +69,10 @@ CMND: ufl_stl0 4 /.d/.mul/rbld_readme.mul/.cnt /.d/.mul/rbld_readme.mul/.prc/REA
 PPWD: /.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
+****
+DATE: 1730469264_01112024205424
 
-DATE: 1730468507_01112024204147
-
-DATX: 1730468507
+DATX: 1730469264
 -->
 
 
@@ -236,7 +236,7 @@ Lexicon (лат.)
 
 
 
-## [Рекомендации RCM](/.d/.mul/rbld_readme.mul/.ins_dr/001.d/res.file.md)
+## [Рекомендации RCM](/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/res.md)
 
   
 
