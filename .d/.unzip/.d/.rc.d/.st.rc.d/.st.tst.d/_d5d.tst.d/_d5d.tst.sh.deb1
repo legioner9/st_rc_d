@@ -34,7 +34,24 @@ ___d5d_TST_SH_DEB1() {
         echo "_d5d"
     fi
 
-    : >${tst_dir}/res
+    : >"${tst_dir}"/res
+
+    cd tst.d || return 1
+
+    #! начальное состояние rcv.d это init.d
+    #! воосановление rcv.d
+    rm -r rcv.d
+    mkdir rcv.d
+    echo -e "${HLIGHT}--- cp -r init.d/. rcv.d ---${NORMAL}" #start files
+    cp -r init.d/. rcv.d
+
+    #! ins.d это дир с вставками
+    #! префикс: @ для дир, & для файлов
+    _d5d ins.d "@" "&" rcv.d
+
+    tree ins.d
+    tree init.d
+    tree rcv.d
 
     # cd tst.d || echo "in file://${tst_dir_file} : EXEC_FAIL : cd tst.dir" >&2
 

@@ -14,6 +14,8 @@ cd ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d || echo "cd ${HOME}/.d/.rc.
 # rm tst.d/dist_init_dir/dist.f.zip
 
 mkdir ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir
+rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/unzip_init_dir
+mkdir ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/unzip_init_dir
 
 flag=1
 
@@ -23,15 +25,23 @@ if ! _zip_to tst.d/dist_init_dir/dist.f tst.d/src_init_dir/src.f; then
     echo "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_zip_to tst.d/dist_init_dir/dist.f tst.d/src_init_dir/src.f' : ${hint} : flag=0" >&2
     flag=1
 fi
-
+_unzip_to tst.d/unzip_init_dir tst.d/dist_init_dir/dist.f.zip
 echo -e "${HLIGHT}--- exec: _zip_to tst.d/dist_init_dir/dist.d tst.d/src_init_dir/src.d ---${NORMAL}" #start files
 
 if ! _zip_to tst.d/dist_init_dir/dist.d tst.d/src_init_dir/src.d; then
     echo "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_zip_to tst.d/dist_init_dir/dist.d tst.d/src_init_dir/src.d' : ${hint} : flag=0" >&2
     flag=1
 fi
+_unzip_to tst.d/unzip_init_dir tst.d/dist_init_dir/dist.d.zip
+pwd
 
 tree tst.d
+
+if ! diff -qr tst.d/unzip_init_dir tst.d/src_init_dir; then
+    echo "tst _zip_to diff -qr tst.d/unzip_init_dir tst.d/src_init_dir : FAIL" >${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/res
+else
+    echo "tst _zip_to diff -qr tst.d/unzip_init_dir tst.d/src_init_dir : TRUE" >${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/res
+fi
 
 # rm -r ${HOME}/.d/.rc.d/.st.rc.d/.st.tst.d/_zip_to.tst.d/tst.d/dist_init_dir
 

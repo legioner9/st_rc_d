@@ -36,6 +36,8 @@ ___d4d_TST_SH_DEB1() {
 
     : >${tst_dir}/res
 
+    
+
     rm -r tst.d/tst.dst.d
     mkdir tst.d/tst.dst.d
 
@@ -58,7 +60,7 @@ ___d4d_TST_SH_DEB1() {
 
     # _s2f "${HOME}" '${HOME}' ${tst_dir}/res
 
-    #* {{fn_f1_body}}
+    #* {{fn_f1_body}} 
 
     flag=1
 

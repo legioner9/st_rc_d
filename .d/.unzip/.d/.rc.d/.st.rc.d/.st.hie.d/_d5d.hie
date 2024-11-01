@@ -6,6 +6,10 @@
 Требуется вставить рекурсивно поддиректории из одной директории в другую - 
 и файлы и поддиректории
 
+Директория для вставки (rcv_dr) - принимает сущности из (ins_dr) - про следующему алгоритму - 
+    - в ней есть сущности-ссылки  в именах которых содержится способ их реализации
+    - обрабатывающая процедура реализует ссылки в (rcv_dr) используя (ins_dr)
+
 ## FORMULA:
 СХЕМА решения:
 <!-- {{fn_hie_body_FORMULA}} -->
@@ -13,6 +17,7 @@
     fl - file
     et - entety - file|dir
     nm - name
+    et_lk - entety ссылка в ее имени содержится способ ее обработки
     sdr - subdir
     pth - path
     rcv_dr - rcv dir
@@ -21,44 +26,68 @@
     prx_et - prefix for entety (e.c. recommendationSTL for dr @|for fl &)
     lext - последнее расширение имени справа
 
-```bash
-_d5d ins_dr rcv_dr (){
-    rcv_dr/pth/@ins_sdr@nm_sdr -> cp -r ins_dr/.../ins_sdr cp  rcv_dr/pth/nm_sdr 
-    rcv_dr/pth/@ins_fl@nm_fl -> cp ins_dr/.../ins_fl cp rcv_dr/pth/nm_fl 
+```js
+// псевдокод поясняющий работу _d5d
+
+// @ и & префиксы рекомендованы стандартом STL - user префиксы допустимы
+
+_d5d (ins_dr,@,&,rcv_dr){ 
+    realization (rcv_dr/pth_lk/@ins_sdr@nm_sdr){ 
+        cp -r ins_dr/ins_sd rcv_dr/pth_lk/nm_sdr 
+    }
+
+    realization (rcv_dr/pth_lk/&ins_fl&nm_fl){ 
+        cp ins_dr/ins_fl rcv_dr/pth_lk/nm_fl 
+    }
+ 
 }
 ```
  
 ## DOGMA:
 РЕШЕНИЕ задачи:
 <!-- {{fn_hie_body_DOGMA}} -->
-0. Делаем копию `cp -r [destination_dir] _[destination_dir]` в оригинал изменения не вносим - 
-        копию скрываем под _
+0. Делаем копию `cp -r [destination_dir] _[destination_dir]._d5d` в оригинал вносим изменения - копия для истории изменений - скрываем ее под _
+        
 1. Далее для краткости `_[destination_dir]` == `rcv_dr`
-2. Для вставки `et` лежат в `ins_et` все по папкам - делаем рекурсивный обход
-   - придется делать проверку на повтор файлов `et`
+2. Для вставки `et` лежат в `ins_et` в корне - во вставках могут быть ссылки для вставок
 
-3. Находим в `rcv_dr` `et` префиксом `prx_et` и именами `str_nms` (начальный `prx_et` отбрасывается) 
+3. Находим в `rcv_dr`  `et` префиксом (это один символ) `prx_et` и именами `str_nms` (начальный `prx_et` отбрасывается) 
+    - `et` называется link_dr or link_fl - ссылочная директория или ссылочный файл
     - if et=dr - dir содержит только fl _0 , используется только ее имя и путь к ней
     - if et=fl - file пустой , используется только его имя и путь к нему
     - имена dir имеют обязательное lext .d
-    - имена fl не могут иметь lext .d 
+    - имена fl не могут иметь lext=.d 
       - e.c. pth/@var1.d@var2.d , pth/&var3&var4
+    - делаем рекурсивную функцию вставки сначала все директории,потом в них вставляем файлы, потом выводим нереализованные ссылки 
             
 4. Парсим `str_nms` которая должна быть следующей по составу: `ins_nm{prx_et}rcv_nm` (e.c. n1@n2, n3&n4)
      - отбрасываем первый `{prx_et}` символ 
      - `str_nms=ins_nm{prx_et}rcv_nm ; str_nms_arr=(${str_nms//{prx_et}/ })` получение массива из строки с разделителем через замену разделителя на пробел
        -  `ins_nm=${str_nms_arr[0]}` имя вставляемого 
        -  `rcv_nm=${str_nms_arr[1]}` имя принимающего содержание вставляемого
-    - ищем в `rcv_dr` `rcv_nm`
+    - ищем `rcv_nm` в `rcv_dr` 
     - делаем `rcv_dr/rcv_pth/{prx_et}str_nms -> rcv_dr/rcv_pth/rcv_nm` - `rcv_nm` имеет содержание из `ins_nm`:
     - делаем копию `mv rcv_dr/rcv_pth/{prx_et}str_nms rcv_dr/rcv_pth/_{prx_et}str_nms` - уберем из видимости STL _{prx_et}str_nms - 
         префикс _ для исключения из иттератора _dd2e и сохранения истории изменений
-       - `cp -r ins_dr/ins_pth/ins_nm/. rcv_dr/rcv_pth/rcv_nm` для директорий
-       - `cp ins_dr/ins_pth/ins_nm rcv_dr/rcv_pth/rcv_nm` для файлоа
+       - `cp -r ins_dr/ins_nm/. rcv_dr/rcv_pth/rcv_nm` для директорий
+       - `cp ins_dr/ins_nm rcv_dr/rcv_pth/rcv_nm` для файлоа
 5. Повторяем 3 и 4 пункт т.к. `rcv_dr` так же может содержать `{prx_et}*`
 6. Убеждаемся что уже ничего вставить невозможно
 7. Если в `rcv_dr` остались `{prx_et}str_nms` которые заменить невозможно, то 
         выводим их список в качестве предупреждения
+8. Создаем free_link_lst=$(_prs_f -d "${rcv_dr}")/_$(_prs_f -ne "${rcv_dr}")._d5d.lst - файл со списком нереализованых ссылок в rcv_dr
+9. Создаем source файл со строкой команды _d5d args sorce_file=$(_prs_f -d "${rcv_dr}")/_$(_prs_f -ne "${rcv_dr}").sh._d5d 
+- запуск и содержание :
+
+```sh 
+$ surce ${sorce_file}    
+$ cat ${sorce_file}
+    # restore backup [destination_dir]
+    cp [base_rcv]/_[name_rcv]._d5d [base_rcv]/[name_rcv]
+    # repeat exec command
+    _d5d ${ins_dr} ${prx_dr} ${prx_fl} ${rcv_dr}
+``` 
+10.  Создаем файл _$(_prs_f -ne "${rcv_dr}")._d5d.readme.man с пояснениями - _d5d.hie and _d5d.sh
 
 
 ### TST

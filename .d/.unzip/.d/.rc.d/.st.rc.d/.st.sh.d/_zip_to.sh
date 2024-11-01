@@ -153,7 +153,7 @@ EXAM:
 
         # read -p "continue?"
 
-        # echo -e "${HLIGHT}--- exec: diff -qr file://${tmp_dir}/${file_src} file://${path_src} ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- exec: diff -qr file://${tmp_dir}/${ file_src} file://${path_src} ---${NORMAL}" #start files
         if ! diff -qr ${tmp_dir}/${file_src} ${path_src}; then
             diff -r ${tmp_dir}/${file_src} ${path_src}
             echo "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'EXEC_EXPERSION' : ${hint} : return 1" >&2

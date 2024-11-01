@@ -14,6 +14,7 @@ _XXX() {
     local NARGS=$#
 
     local item=
+    local errno=
 
     #* local fn_data_dir=${HOME}/.d/.rc.d/.st.rc.d/.st.d
 
@@ -149,14 +150,18 @@ EXAM:
     #* [ $di -eq 1 ] && echo "info"
 
     #* greeting
-    # [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${sh_file}---${NORMAL}" #started functions
-
+    # [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${sh_file} ---${NORMAL}" #started functions
+    #* errno 
+    # opr arg
+    # errno=$?
+    # return ${errno}
     #* rename args
     #* check cntl
     #* inname cntl
-    _XXX_before_reurn() {
+    _XXX_before_return() {
         :
     }
+
 
     #? ----- START _XXX body_flow -----
 
@@ -164,7 +169,7 @@ EXAM:
 
     #? ----- END _XXX body -----
     
-    _XXX_before_reurn
+    _XXX_before_return
     cd $PPWD
     return 0
 

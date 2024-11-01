@@ -36,14 +36,17 @@ EXAM:
 
     local item=
     local dir_sh=${HOME}/.d/.rc.d/.st.rc.d/.st.sh.d
+    local dir_hie=${HOME}/.d/.rc.d/.st.rc.d/.st.hie.d
+
     local fn_name=
 
     for item in $(ls ${dir_sh}); do
         fn_name=$(_prs_f -n $item)
-        echo -e "${RED}--- $fn_name ---${NORMAL}"               #exit 1
-        echo -e "${BLUE}PATH : file://${dir_sh}/$item${NORMAL}" #sistem info mesage
-        echo -e "${CYAN}$($fn_name -h | grep 'MAIN')${NORMAL}"  #sistem info mesage
-        echo -e "${CYAN}$($fn_name -h | grep 'TAGS')${NORMAL}"  #sistem info mesage
+        echo -e "${RED}--- $fn_name ---${NORMAL}"                        #exit 1
+        echo -e "${BLUE}hie : file://${dir_hie}/${fn_name}.hie ${NORMAL}" #sistem info mesage
+        echo -e "${BLUE}PATH : file://${dir_sh}/$item ${NORMAL}"         #sistem info mesage
+        echo -e "${CYAN}$($fn_name -h | grep 'MAIN')${NORMAL}"           #sistem info mesage
+        echo -e "${CYAN}$($fn_name -h | grep 'TAGS')${NORMAL}"           #sistem info mesage
     done
 
     cd $PPWD
