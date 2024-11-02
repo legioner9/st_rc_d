@@ -8,6 +8,11 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
+- [Рекомендации RCM](#рекомендации-rcm)
+  - [RCM\_1 (изменения в оригинал)](#rcm_1-изменения-в-оригинал)
+  - [RCM\_2 (служебные файлы)](#rcm_2-служебные-файлы)
+  - [RCM\_3 (cокращения)](#rcm_3-cокращения)
+
 <!-- /TOC -->
 
 End Contents Menu
@@ -19,9 +24,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1730570391_03112024005951
+DATE: 1730571508_03112024011828
 
-DATX: 1730570391
+DATX: 1730571508
 -->
 
 
