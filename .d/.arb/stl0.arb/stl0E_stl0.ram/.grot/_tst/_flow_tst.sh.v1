@@ -7,7 +7,7 @@ __stl0E_stl0_FLOW() {
         return 1
     fi
 
-    local filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/stl0E_stl0.ram/.grot/_tst/_flow_tst.sh
+    local filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/stl0E_stl0.ram/.grot/_tst/_flow_tst.sh.v1
 
     local PW=$(pwd)
     local idir="$(dirname ${filename})"
