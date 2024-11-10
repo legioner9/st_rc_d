@@ -5,9 +5,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731214263_10112024115103
+DATE: 1731259116_11112024001836
 
-DATX: 1731214263
+DATX: 1731259116
 -->
 
 
@@ -74,6 +74,16 @@ DATX: 1731214263
 ## RCM_4 (notmast_butlast)
 
 - наличие последнего аргумента для отладки функции 
+
+
+[006.rcm_5.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/006.rcm_5.txt.md)
+
+
+
+## RCM_5 (mast_def_args)
+
+- используемые аргументы в функции не могут быть пустыми при вызове
+  - допускается замена на константу e.c. @ 
 
 
 
