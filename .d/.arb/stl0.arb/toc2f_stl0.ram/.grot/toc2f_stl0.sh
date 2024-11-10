@@ -28,14 +28,14 @@ toc2f_stl0() {
 
     #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file} ---${NORMAL}" #started functions
 
-    local hint="hint -> "
+    local hint="hint -> table of cont : from file://\$1 file[.md] to file[.md].toc2f_stl0 "
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: table of cont : from \$1 file[.md] to file[.md].toc2f_stl0 [-i] 
 TAGS:
 ARGS: 
 \$1
-[ ,\$2 num_menu ]
+[ ,\$N _i] mast define N
 CNTL: 
     _go         : _edit body        : _edit file://${d_name}/${FNN}.sh
     _tst        : . exec.tst        : . file://${d_name}/_tst/exec.tst
@@ -106,26 +106,26 @@ ${NORMAL}"
     fi
 
     # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     return 1
-    # fi
+    if _isn_from ${NARGS} 1 1 "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
 
     #* DEBAG CNTL
-    # local di=
-    # if [ -n "$N" ]; then
-    #     if [ "$N" == "_i" ]; then
-    #         di=1
-    #     else
-    #         di=0
-    #     fi
-    # else
-    #     di=0
-    # fi
+    local di=
+    if [ -n "$2" ]; then
+        if [ "$2" == "_i" ]; then
+            di=1
+        else
+            di=0
+        fi
+    else
+        di=0
+    fi
 
     #[[ptr_path]]
-    #! ptr_path
-    # local ptr_path="$1"
-    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+    # ! ptr_path
+    local ptr_path="$1"
+    ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
     #* [ $di -eq 1 ] && echo "info"
 
@@ -143,6 +143,7 @@ ${NORMAL}"
     # return ${errno}
 
     #* rename args
+    local md_file=${ptr_path}
 
     #* check cntl
 
@@ -152,18 +153,17 @@ ${NORMAL}"
         :
     }
 
-    # local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/toc2f_stl0
-    # echo -e "${GREEN}\$dir_fn_data = file://$dir_fn_data${NORMAL}"
-
-    toc2f_before_return
-    cd ${PPWD}
-    return 0
+    #* define local variables
 
     #? ----- START toc2f body_flow -----
 
     #* {{fn_sh_body}}
 
     #? ----- END toc2f body -----
+
+    toc2f_before_return
+    cd ${PPWD}
+    return 0
 
 }
 

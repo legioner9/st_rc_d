@@ -8,11 +8,6 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
-- [Рекомендации RCM](#рекомендации-rcm)
-  - [RCM\_1 (изменения в оригинал)](#rcm_1-изменения-в-оригинал)
-  - [RCM\_2 (служебные файлы)](#rcm_2-служебные-файлы)
-  - [RCM\_3 (cокращения)](#rcm_3-cокращения)
-
 <!-- /TOC -->
 
 End Contents Menu
@@ -24,9 +19,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1730571508_03112024011828
+DATE: 1731214263_10112024115103
 
-DATX: 1730571508
+DATX: 1731214263
 -->
 
 
@@ -85,6 +80,15 @@ DATX: 1730571508
     cnx - context 
     res - результат вставки context
     
+
+[005.rcm_4.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/005.rcm_4.txt.md)
+
+
+
+## RCM_4 (notmast_butlast)
+
+- наличие последнего аргумента для отладки функции 
+
 
 
 

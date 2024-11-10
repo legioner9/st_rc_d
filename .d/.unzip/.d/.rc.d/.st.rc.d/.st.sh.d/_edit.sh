@@ -57,17 +57,21 @@ TAGS:
         echo -e "${ULINE} code $ptr_path${NORMAL}" #repit commands
         code $2 "$ptr_path"
 
-    elif type "gvim"; then
-        echo -e "${ULINE}gvim -v +$2 $ptr_path${NORMAL}" #repit commands
-        gvim -v +"$2" "$ptr_path"
+    elif type "gvim" && type "mate-terminal" && [ -f $ptr_path ]; then
+        echo -e "${ULINE}mate-terminal -- sh -c gvim -v +$2 $ptr_path${NORMAL}" #repit commands
+        mate-terminal -- sh -c "gvim -v +$2 $ptr_path"
+
+    elif type "mc" && type "mate-terminal" && [ -f $ptr_path ]; then
+        echo -e "${ULINE}mate-terminal -- sh -c mc -e $ptr_path${NORMAL}" #repit commands
+        mate-terminal -- sh -c "mc -e $ptr_path"
+
+    elif type "mc" && type "mate-terminal" && [ -d $ptr_path ]; then
+        echo -e "${ULINE}mate-terminal -- sh -c mc $ptr_path${NORMAL}" #repit commands
+        mate-terminal -- sh -c "mc $ptr_path"
 
     elif type "vim"; then
         echo -e "${ULINE}vim $ptr_path${NORMAL}" #repit commands
         vim "$ptr_path"
-
-    elif type "mc"; then
-        echo -e "${ULINE}mc $ptr_path${NORMAL}" #repit commands
-        mc "$ptr_path"
 
     else
         echo "editors: codium, gvim, vim, mc not enabled" >&2

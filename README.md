@@ -70,9 +70,9 @@ PPWD: /.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1730470146_01112024210906
+DATE: 1731214304_10112024115144
 
-DATX: 1730470146
+DATX: 1731214304
 -->
 
 
@@ -703,6 +703,18 @@ Libero capitulum (лат.)
 - ${HOME}/tmp_dir_st_rc временная user директория - очищается при перезапуске оболочки
 
 - файлы стилей для интерпретатора md2html [md_css](/.d/.unzip/.d/.cdn.d/md_css)
+
+- lib2e вывод информации по функциям библиотеки [name_lib]E_[name_lib]
+  - st - _stE
+  - stl0 - stl0E
+
+- создание пустой функции в библиотеке st _gig_st_rc_fn
+- удаление файлов функции из библиотеки st _rm_st_rc_fn
+  
+- создание пустой функции в библиотеке gig_fn_stl_[name_lib]
+- удаление файлов функции из библиотеке rm_fn_stl_[name_lib]
+- создание библиотеки cr_lib_fn_stl arg
+
 
 
 

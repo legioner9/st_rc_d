@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_XXX() {
+_mc() {
 
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
@@ -89,12 +89,12 @@ _XXX() {
         return 0
     fi
 
-    #? ----- START _XXX body_prepeare -----
+    #? ----- START _mc body_prepeare -----
 
-    local hint="hint->"
+    local hint="hint->$ mc \$1 , \$1 - u@path - (path|@)"
     if [[ "-h" == "$1" ]]; then
         echo -e "
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: $ mc \$1 , \$1 - u@path - (path|@)
 TAGS: 
 \$1 
 [, \$2]
@@ -123,16 +123,16 @@ EXAM:
 
     #* check _isn_from
     # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     cd $PPWD
-    #     return 1
-    # fi
+    if _isn_from ${NARGS} 1 1 "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND '1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+         cd $PPWD
+         return 1
+    fi
 
     #* path -> u@path
     #[[ptr_path]]
     #! ptr_path
-    # local ptr_path_1="$1"
-    # ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+    local ptr_path_1="$1"
+    ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
 
     # [[ "${arg_arr[*]}" == *$arg* ]]
 
@@ -147,42 +147,32 @@ EXAM:
     # else
     #     di=0
     # fi
-
     #* [ $di -eq 1 ] && echo "info"
-
-    #* standart echo fl
-    # _st_exit "in fs= file://${} , line=${LINENO}, EXEC: ${FNN} $* : 'SIGN_STR' (\$N) : 'file://${}' : ${hint} : return 1"
-    # cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
-    # return 1
-
-
 
     #* greeting
     # [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${sh_file} ---${NORMAL}" #started functions
-
     #* errno 
-    # cmd arg
+    # opr arg
     # errno=$?
     # return ${errno}
-
     #* rename args
-
     #* check cntl
-
     #* inname cntl
-
-    _XXX_before_return() {
+    _mc_before_return() {
         :
     }
 
 
-    #? ----- START _XXX body_flow -----
-
+    #? ----- START _mc body_flow -----
+    mate-terminal -- sh -c "mc $ptr_path_1" || {
+	echo "EXEC_FAIL: 'mate-terminal -- sh -c mc $ptr_path_1' : return 1" >&2
+	return 1
+    }
     #* {{fn_sh_body}}
 
-    #? ----- END _XXX body -----
+    #? ----- END _mc body -----
     
-    _XXX_before_return
+    _mc_before_return
     cd $PPWD
     return 0
 

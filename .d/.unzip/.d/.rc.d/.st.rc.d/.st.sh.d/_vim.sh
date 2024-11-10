@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_XXX() {
+_vim() {
 
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
@@ -89,7 +89,7 @@ _XXX() {
         return 0
     fi
 
-    #? ----- START _XXX body_prepeare -----
+    #? ----- START _vim body_prepeare -----
 
     local hint="hint->"
     if [[ "-h" == "$1" ]]; then
@@ -147,42 +147,32 @@ EXAM:
     # else
     #     di=0
     # fi
-
     #* [ $di -eq 1 ] && echo "info"
-
-    #* standart echo fl
-    # _st_exit "in fs= file://${} , line=${LINENO}, EXEC: ${FNN} $* : 'SIGN_STR' (\$N) : 'file://${}' : ${hint} : return 1"
-    # cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
-    # return 1
-
-
 
     #* greeting
     # [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${sh_file} ---${NORMAL}" #started functions
-
     #* errno 
-    # cmd arg
+    # opr arg
     # errno=$?
     # return ${errno}
-
     #* rename args
-
     #* check cntl
-
     #* inname cntl
-
-    _XXX_before_return() {
+    _vim_before_return() {
         :
     }
 
 
-    #? ----- START _XXX body_flow -----
-
+    #? ----- START _vim body_flow -----
+    mate-terminal -- sh -c "vim $ptr_path_1" || {
+	echo "EXEC_FAIL: 'mate-terminal -- sh -c vim $ptr_path_1' : return 1" >&2
+	return 1
+    }
     #* {{fn_sh_body}}
 
-    #? ----- END _XXX body -----
+    #? ----- END _vim body -----
     
-    _XXX_before_return
+    _vim_before_return
     cd $PPWD
     return 0
 
