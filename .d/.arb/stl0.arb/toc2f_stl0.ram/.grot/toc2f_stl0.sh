@@ -135,7 +135,7 @@ ${NORMAL}"
     # return 1
 
     #* greeting
-    [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${sh_file} ---${NORMAL}" #started functions
+    [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file} ---${NORMAL}" #started functions
 
     #* errno
     # cmd arg
