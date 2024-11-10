@@ -19,9 +19,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1730470119_01112024210839
+#DATE: 1730470119_01112024210839
 
-DATX: 1730470119
+DATX: 1730470119 #
 -->
 
 
@@ -29,7 +29,7 @@ DATX: 1730470119
 
 
 
-# Рекомендации RCM
+# Рекомендации RCM 
 
     
 
