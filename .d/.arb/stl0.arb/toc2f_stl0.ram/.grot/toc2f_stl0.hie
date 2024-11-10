@@ -46,7 +46,10 @@ file.md остается неизменным - генерируется нов�
             - `$(echo "casd [sdcasd](vsdv) w [asd](dv) " > ggg ; sed -r 's/(.*)\[(.*)\]\(.*\)(.*)\[(.*)\]\(.*\)/\1\2\3\4/' ggg ; rm ggg)`
             - `head_anc=$(echo "$head_str" > ggg ; sed -r 's/(.*)\[(.*)\]\(.*\)(.*)\[(.*)\]\(.*\)/\1\2\3\4/' ggg ; rm ggg)`
             
-- выбираем список строк-заголовков `grep -E '(^# |^## |^### |^#### |^##### |^###### )' $file.md`
+- выбираем список строк-заголовков `grep -E '(^# |^## |^### |^#### |^##### |^###### )' $file_md`
+- только номера `grep -E -n '(^# |^## |^### |^#### |^##### |^###### )' $file_md | grep -Eo '^[^:]+'` 
+- с номером `grep -E -n '(^# |^## |^### |^#### |^##### |^###### )' $file_md` -> nom:string
+- вставить строку с номером `sed -i '8i This is Line 8' file_md`
 
 
 ## DOGMA:
@@ -62,8 +65,25 @@ file.md остается неизменным - генерируется нов�
 
 #### sed
 
+1.
     sed -e '1 i\'$'\n''new first line' <<<$'a\nb'
 
     new first line
     a
     b
+
+2.
+    cat tst.txt
+    mykey=one
+    before=me
+    anothervalue=two
+    lastvalue=three
+
+    sed '/^anothervalue=.*/i before=me\nbefore2=me2' test.txt
+
+    cat tst.txt
+    mykey=one
+    before=me
+    before2=me2
+    anothervalue=two
+    lastvalue=three
