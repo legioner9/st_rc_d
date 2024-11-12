@@ -40,7 +40,7 @@ ___s2d_TST_SH() {
 
     cd ${tst_dir} || echo "in file://${tst_dir_file} : EXEC_FAIL : cd ${tst_dir}" >&2
     
-    echo -e "${HLIGHT}--- exec: cat tst.d/res.d/dir/2.file >res---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- exec: cat tst.d/res.d/dir.a/tst_dir/dir.a/file_to_ins_1.file >res---${NORMAL}" #start files
     cat tst.d/res.d/dir.a/tst_dir/dir.a/file_to_ins_1.file >>res
     echo >>res
     cat tst.d/res.d/.dir.a/tst_dir/_dir.a/file_to_ins_1.file >>res

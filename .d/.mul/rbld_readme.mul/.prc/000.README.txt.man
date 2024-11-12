@@ -1,13 +1,13 @@
 <!--
-CMND: ufl_stl0 4 /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc/README.md
+CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc/README.md 2
 
 PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731214304_10112024115144
+DATE: 1731387525_12112024115845
 
-DATX: 1731214304
+DATX: 1731387525
 -->
 
 
@@ -650,6 +650,18 @@ Libero capitulum (лат.)
 - удаление файлов функции из библиотеке rm_fn_stl_[name_lib]
 - создание библиотеки cr_lib_fn_stl arg
 
+
+
+[001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/902.using_note.d/001.pref.txt.md)
+
+
+
+# Замечания об использовании функций
+
+- echo | _st_exit подавлние остановки при экстренном выходе по ^C
+- _is_yes  если только вопрос о выходе то это только _st_exit , 
+    использовать _is_yes только для ветвлений
+    
 
 
 

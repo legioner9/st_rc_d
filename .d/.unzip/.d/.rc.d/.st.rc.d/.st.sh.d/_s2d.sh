@@ -27,7 +27,7 @@ _s2d() {
 
     if [[ "-h" == "$1" ]]; then
         echo -e "
-MAIN: ${FNN} :: insert \$1 str into str \$2 in (with prevent) file from dir \$3
+MAIN: ${FNN} :: into str \$1 insert \$2 str in (with prevent) file from dir \$3
 TAGS:
 \$1 reciver_string
 \$2 inserter_string

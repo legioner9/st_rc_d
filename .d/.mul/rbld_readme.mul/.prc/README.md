@@ -58,21 +58,22 @@ Start Contents Menu
 - [Install STL \[and STL0\]](#install-stl-and-stl0)
   - [restore STL from .d.zip](#restore-stl-from-dzip)
 - [Неупорядоченные заметки](#неупорядоченные-заметки)
+- [Замечания об использовании функций](#замечания-об-использовании-функций)
 
 <!-- /TOC -->
 
 End Contents Menu
 
 <!--
-CMND: ufl_stl0 4 /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc/README.md
+CMND: ufl_stl0 9 /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc/README.md 2
 
 PPWD: /REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
 FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731214304_10112024115144
+DATE: 1731387525_12112024115845
 
-DATX: 1731214304
+DATX: 1731387525
 -->
 
 
@@ -715,6 +716,18 @@ Libero capitulum (лат.)
 - удаление файлов функции из библиотеке rm_fn_stl_[name_lib]
 - создание библиотеки cr_lib_fn_stl arg
 
+
+
+[001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/902.using_note.d/001.pref.txt.md)
+
+
+
+# Замечания об использовании функций
+
+- echo | _st_exit подавлние остановки при экстренном выходе по ^C
+- _is_yes  если только вопрос о выходе то это только _st_exit , 
+    использовать _is_yes только для ветвлений
+    
 
 
 

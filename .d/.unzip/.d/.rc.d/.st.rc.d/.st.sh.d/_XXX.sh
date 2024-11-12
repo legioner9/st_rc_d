@@ -123,7 +123,7 @@ EXAM:
 
     #* check _isn_from
     # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS MORE "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+    # if _isn_from ${NARGS} LESS LESS+1 "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'LESS LESS+1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
     #     cd $PPWD
     #     return 1
     # fi
@@ -136,17 +136,17 @@ EXAM:
 
     # [[ "${arg_arr[*]}" == *$arg* ]]
 
-    #* DEBAG CNTL
-    # local di=
-    # if [ -n "$N" ]; then
-    #     if [ "$N" == "_i" ]; then
-    #         di=1
-    #     else
-    #         di=0
-    #     fi
-    # else
-    #     di=0
-    # fi
+    #* DEBAG CNTL MAST DEFFINE $N -> ... e.c. [$2]
+    local di=
+    if [ -n "$N" ]; then
+        if [ "$N" == "_i" ]; then
+            di=1
+        else
+            di=0
+        fi
+    else
+        di=0
+    fi
 
     #* [ $di -eq 1 ] && echo "info"
 
@@ -155,12 +155,10 @@ EXAM:
     # cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
     # return 1
 
-
-
     #* greeting
     # [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${sh_file} ---${NORMAL}" #started functions
 
-    #* errno 
+    #* errno
     # cmd arg
     # errno=$?
     # return ${errno}
@@ -175,13 +173,14 @@ EXAM:
         :
     }
 
+    #* define local variables
 
     #? ----- START _XXX body_flow -----
 
     #* {{fn_sh_body}}
 
     #? ----- END _XXX body -----
-    
+
     _XXX_before_return
     cd $PPWD
     return 0
