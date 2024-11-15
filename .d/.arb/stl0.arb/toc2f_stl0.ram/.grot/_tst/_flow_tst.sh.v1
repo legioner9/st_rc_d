@@ -39,14 +39,14 @@ __toc2f_stl0_FLOW() {
     cp init.md file.md
 
     toc2f_stl0 file.md _i
-
+    # read -p 1
     #?-------------------------------------
     #?----------------------------------------------------
 
-    cd "${PW}" || {
-        echo "${PW} not dir" >&2
-        return 1
-    }
+    # cd "${PW}" || {
+    #     echo "${PW} not dir" >&2
+    #     return 1
+    # }
 
 }
 

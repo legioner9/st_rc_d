@@ -157,6 +157,50 @@ ${NORMAL}"
 
     #? ----- START toc2f body_flow -----
 
+    cp ${md_file} ${md_file}.toc2f_stl0
+
+    local str=
+    local head_str=
+    local num_str=
+    local head_anc=
+    local rnd_num=
+    local ins_toc=
+
+    local num_toc=$(grep -E -n '<!-- TOC toc2f_stl0 -->' ${md_file} | grep -Eo '^[^:]+')
+    echo -e "${GREEN}\$num_toc = '$num_toc'${NORMAL}"
+
+    local curr_num=0
+
+    IFS=$'\n'
+    for str in $(grep -E -n '(^# |^## |^### |^#### |^##### |^###### )' ${md_file}); do
+        echo -e "${GREEN}\$curr_num = '$curr_num'${NORMAL}"
+        head_str="${str#*:}"
+        num_str="${str%%:*}"
+        head_anc=$(
+            echo "$head_str" >$TMP/ggg
+            sed -r 's/(.*)\[(.*)\]\(.*\)(.*)/\1[\2]/' $TMP/ggg
+            rm $TMP/ggg
+        )
+
+        num_toc=$((1 + num_toc))
+        num_str=$((curr_num + num_str + 1))
+
+        rnd_num=$(_rnd2e)
+        ins_toc="- [$head_anc](#$rnd_num)"
+        ins_anc="<a id=\"$rnd_num\"></a>"
+
+        echo -e "${HLIGHT}--- sed -i '${num_toc}i ${ins_toc}' ---${NORMAL}"
+        eval "sed -i '${num_toc}i ${ins_toc}' ${md_file}"
+        echo -e "${HLIGHT}--- sed -i '${num_str}i ${ins_anc}' ---${NORMAL}"
+        eval "sed -i '${num_str}i ${ins_anc}' ${md_file}"
+
+        curr_num=$((curr_num + 2))
+    done
+
+    unset IFS
+
+    # read -p 1
+
     #* {{fn_sh_body}}
 
     #? ----- END toc2f body -----
