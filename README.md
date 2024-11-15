@@ -8,76 +8,24 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
-- [Да здравствует Марк tshemsedinov](#да-здравствует-марк-tshemsedinov)
-  - [Благодарность](#благодарность)
-- [Явление миру](#явление-миру)
-  - [Шаги по камням](#шаги-по-камням)
-- [Фон](#фон)
-  - [Культурологический контекст](#культурологический-контекст)
-  - [Огонь внутри](#огонь-внутри)
-- [Что я могу сделать](#что-я-могу-сделать)
-- [Библиотека камней - Теория](#библиотека-камней---теория)
-  - [Словарь](#словарь)
-  - [Рекомендации RCM](#рекомендации-rcm)
-  - [Что это](#что-это)
-  - [Ограничения](#ограничения)
-    - [Ограничение сложности stl](#ограничение-сложности-stl)
-    - [Требования к fn\_elem](#требования-к-fn_elem)
-    - [Требования к os\_sl](#требования-к-os_sl)
-    - [Тестируемость](#тестируемость)
-    - [Расширяемость](#расширяемость)
-    - [Производительность](#производительность)
-  - [Типы и поведение](#типы-и-поведение)
-- [Библиотека камней - Практика](#библиотека-камней---практика)
-  - [Понижение абстракций](#понижение-абстракций)
-    - [Базовые принципы](#базовые-принципы)
-    - [Базовые технологии](#базовые-технологии)
-- [Что здесь есть](#что-здесь-есть)
-    - [Библиотека STL](#библиотека-stl)
-      - [Поведение библиотеки STL](#поведение-библиотеки-stl)
-        - [Правила именования функций](#правила-именования-функций)
-        - [Подсказки в именовании файлов или директорий](#подсказки-в-именовании-файлов-или-директорий)
-        - [Подсказки в расширениях файлов - wellknown - `wnext`](#подсказки-в-расширениях-файлов---wellknown---wnext)
-    - [Функция библиотеки STL](#функция-библиотеки-stl)
-      - [Поведение функции STL](#поведение-функции-stl)
-  - [Состав библиотеки STL](#состав-библиотеки-stl)
-      - [Все функции STL (local)](#все-функции-stl-local)
-      - [Все функции STL (git)](#все-функции-stl-git)
-  - [Библиотека STL0](#библиотека-stl0)
-    - [Поведение библиотеки STL0](#поведение-библиотеки-stl0)
-  - [Функция библиотеки STL0](#функция-библиотеки-stl0)
-    - [Поведение функции STL0](#поведение-функции-stl0)
-  - [LCU](#lcu)
-    - [Что это](#что-это-1)
-    - [naming](#naming)
-    - [add to flcu](#add-to-flcu)
-        - [search among flcu](#search-among-flcu)
-  - [Unsort](#unsort)
-      - [Select (меню выбора) в параметре функции](#select-меню-выбора-в-параметре-функции)
-      - [UPG stl\_fn](#upg-stl_fn)
-- [Install STL \[and STL0\]](#install-stl-and-stl0)
-  - [restore STL from .d.zip](#restore-stl-from-dzip)
-- [Неупорядоченные заметки](#неупорядоченные-заметки)
-- [Замечания об использовании функций](#замечания-об-использовании-функций)
-
 <!-- /TOC -->
 
 End Contents Menu
 
 <!--
-CMND: ufl_stl0 9 /.d/.mul/rbld_readme.mul/.cnt /.d/.mul/rbld_readme.mul/.prc/README.md 2
+CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt /home/st/REPOBARE/_repo/st_rc_d/README.md 2
 
-PPWD: /.d/.mul/rbld_readme.mul/.prc
+PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.prc
 
-FLOW: /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
+FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731387525_12112024115845
+DATE: 1731648215_15112024122335
 
-DATX: 1731387525
+DATX: 1731648215
 -->
 
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/001.pref.txt.md)
 
 
 
@@ -89,7 +37,7 @@ Ave Marcus tshemsedinov* (лат.)
 
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/002.gratia.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/001.01.ave_marcus.d/002.gratia.d/001.pref.txt.md)
 
 
 
@@ -102,7 +50,7 @@ Gratia (лат.)
 - a3rus
     
 
-[001.pef.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/001.pef.txt.md)
+[001.pef.txt.md](.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/001.pef.txt.md)
 
 
 
@@ -112,7 +60,7 @@ Manifesto
 
 Библиотеки stlu это инструмент создаваемый пользователем для создания автоматизации пользовательских задач.
 
-[001.pef.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.md)
+[001.pef.txt.md](.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.md)
 
 
 
@@ -121,7 +69,7 @@ Manifesto
 Gradus in saxa (лат.)
    
 
-[001.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.md)
+[001.txt.md](.d/.mul/rbld_readme.mul/.cnt/002.01.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.md)
 
 
 
@@ -130,7 +78,7 @@ Gradus in saxa (лат.)
 - Следует знать как используется недоверенный код    
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/001.pref.txt.md)
 
 
 
@@ -141,7 +89,7 @@ Sfondo (лат.)
 Понимание поступков иногда кроется в том как человек видит реальность и в том что его терзает 
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/002.contextus_culturalis.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/002.contextus_culturalis.d/001.pref.txt.md)
 
 
 
@@ -159,7 +107,7 @@ Contextus culturalis (лат.)
 
 
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/003.fuoco_dentro.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/002.02.sfondo.d/003.fuoco_dentro.d/001.pref.txt.md)
 
 
 
@@ -171,7 +119,7 @@ Fuoco dentro (лат.)
 - баланса между системным и прикладным кодом не существует? 
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/001.pref.txt.md)
 
 
 
@@ -180,7 +128,7 @@ Fuoco dentro (лат.)
 Quid possum facere (лат.)
 
 
-[001.txt.md](/.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/002.d/001.txt.md)
+[001.txt.md](.d/.mul/rbld_readme.mul/.cnt/003.quid_possum_facere.d/002.d/001.txt.md)
 
 
 
@@ -198,7 +146,7 @@ Quid possum facere (лат.)
  
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/001.pref.txt.md)
 
 
 
@@ -208,7 +156,7 @@ Bibliotheca Lapidum - Theoria (лат.)
     
 
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/001.pref.txt.md)
 
 
 
@@ -233,15 +181,15 @@ Lexicon (лат.)
     upath               - тип указания пути файловой системы
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/002.d/001.pref.txt.md)
 
 
 
-## [Рекомендации RCM](/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/res.md)
+## [Рекомендации RCM](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/res.md)
 
   
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.md)
 
 
 
@@ -256,7 +204,7 @@ Quid est (лат.)
   - Последующее за stl древо библиотек - stlu
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/004.limitations.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/004.limitations.d/001.pref.txt.md)
 
 
 
@@ -296,7 +244,7 @@ Limitations (лат.)
 - Управляемость автоматизации рутинных действий для юзера ценнее производительности
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/005.genera_at_mores.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/004.bibliotheca_lapidum_theoria.d/005.genera_at_mores.d/001.pref.txt.md)
 
 
 
@@ -318,7 +266,7 @@ Genera et mores (лат.)
   - информация и ее обработка связаны только через интерфейсы
   - создавать регулярные структуры только генерацией с параметрами - копипаст недоверенная операция 
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/001.pref.txt.md)
 
 
 
@@ -328,7 +276,7 @@ Bibliotheca Lapidum - Usu (лат.)
 
   
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.md)
 
 
 
@@ -339,7 +287,7 @@ Deminutio abstractionis (лат.)
 
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.md)
 
 
 
@@ -383,7 +331,7 @@ Basic principiis (лат.)
 
 
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/003.basic_technologiae.txt.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/003.basic_technologiae.txt.d/001.pref.txt.md)
 
 
 
@@ -396,7 +344,7 @@ Basic technologiae (лат.)
 - os_sl - bash      (the GNU Project's shell—the Bourne Again SHell)
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/001.pref.txt.md)
 
 
 
@@ -407,7 +355,7 @@ Quid est hic (лат.)
 
     
 
-[001.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/001.txt.md)
+[001.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/001.txt.md)
 
 
 
@@ -415,7 +363,7 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/001.pref.txt.md)
 
 
 
@@ -423,7 +371,7 @@ Quid est hic (лат.)
 
 
 
-[002.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/002.txt.md)
+[002.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/002.txt.md)
 
 
 
@@ -449,7 +397,7 @@ Quid est hic (лат.)
     
 
 
-[003.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/003.txt.md)
+[003.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/003.txt.md)
 
 
 
@@ -459,7 +407,7 @@ Quid est hic (лат.)
 
     
 
-[004.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/004.txt.md)
+[004.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/004.txt.md)
 
 
 
@@ -492,21 +440,21 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/001.pref.txt.md)
 
 
 
 ### Функция библиотеки STL
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.d/001.pref.txt.md)
 
 
 
 #### Поведение функции STL
     
 
-[002.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.d/002.txt.md)
+[002.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.02.d/002.d/002.txt.md)
 
 
 
@@ -535,16 +483,16 @@ Quid est hic (лат.)
 - .tml шаблоны
     
 
-[001.03.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.pref.txt.md)
+[001.03.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/001.03.pref.txt.md)
 
 
 
 ## Состав библиотеки STL
 
-#### [Все функции STL (local)](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.local.md)
-#### [Все функции STL (git)](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.git.md)
+#### [Все функции STL (local)](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.local.md)
+#### [Все функции STL (git)](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.git.md)
 
-[001.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/003.d/001.txt.md)
+[001.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/003.d/001.txt.md)
 
 
 
@@ -552,7 +500,7 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/003.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/003.d/002.d/001.pref.txt.md)
 
 
 
@@ -560,28 +508,28 @@ Quid est hic (лат.)
 
 
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/004.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/004.d/001.pref.txt.md)
 
 
 
 ## Функция библиотеки STL0
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/004.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/004.d/002.d/001.pref.txt.md)
 
 
 
 ### Поведение функции STL0
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/005.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/005.d/001.pref.txt.md)
 
 
 
 ## LCU
     
 
-[099.upg_fn.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/005.d/099.upg_fn.txt.md)
+[099.upg_fn.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/005.d/099.upg_fn.txt.md)
 
 
 
@@ -623,14 +571,14 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/001.pref.txt.md)
 
 
 
 ## Unsort
     
 
-[002.select.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/002.select.txt.md)
+[002.select.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/002.select.txt.md)
 
 
 
@@ -643,7 +591,7 @@ Quid est hic (лат.)
 - `_d2mm` пример выбора файла из директории
     
 
-[003.upg_fn.txt.md](/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/003.upg_fn.txt.md)
+[003.upg_fn.txt.md](.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/099.d/003.upg_fn.txt.md)
 
 
 
@@ -656,14 +604,14 @@ Quid est hic (лат.)
     - заменяем [name_fn]_ на [name_fn] во сех файлах и директориях [name_fn]_ (like _gig_st_rc_fn _XXX -> [name_fn])
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/001.pref.txt.md)
 
 
 
 # Install STL [and STL0]
     
 
-[002.install_cli.txt.md](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/002.install_cli.txt.md)
+[002.install_cli.txt.md](.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/002.install_cli.txt.md)
 
 
 
@@ -675,14 +623,14 @@ or
     ~ $ wget https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2F.install.ax%2Fmain_install_stl.sh
     ~ $ . main_install_stl.sh
 
-[003.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/003.pref.txt.md)
+[003.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/003.pref.txt.md)
 
 
 
 ## restore STL from .d.zip
     
 
-[004.restore_dot_d_cli.txt.md](/.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/004.restore_dot_d_cli.txt.md)
+[004.restore_dot_d_cli.txt.md](.d/.mul/rbld_readme.mul/.cnt/801.install_stl.d/004.restore_dot_d_cli.txt.md)
 
 
 
@@ -693,7 +641,7 @@ or
     $ curl https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2F.install.ax%restore_stl_from_zip.sh | sh
     
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/901.unsort.d/001.pref.txt.md)
 
 
 
@@ -718,7 +666,7 @@ Libero capitulum (лат.)
 
 
 
-[001.pref.txt.md](/.d/.mul/rbld_readme.mul/.cnt/902.using_note.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.mul/rbld_readme.mul/.cnt/902.using_note.d/001.pref.txt.md)
 
 
 
@@ -727,7 +675,9 @@ Libero capitulum (лат.)
 - echo | _st_exit подавлние остановки при экстренном выходе по ^C
 - _is_yes  если только вопрос о выходе то это только _st_exit , 
     использовать _is_yes только для ветвлений
-    
+
+- в следующих версиях использзовать `-` вместо `@` в качестве пустого аргумента
+- заплнитель пустых директорий не файл 0, а _0    
 
 
 

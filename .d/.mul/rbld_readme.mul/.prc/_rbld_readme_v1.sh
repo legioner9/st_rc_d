@@ -65,37 +65,27 @@ ${NORMAL}"
 
     local frm_file=${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file
 
-    echo | ufl_stl0 9 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt \
-        ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/README.md \
-        2
+    ufl_stl0 7 1 ${frm_file}.local.md
 
-    echo | ufl_stl0 9 ${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.cnt \
-        ${ST_RC_D_PATH}/README.md \
-        2
+    cp -f ${frm_file}.local.md ${frm_file}.git.md
 
-    # ufl_stl0 7 1 ${frm_file}.local.md
+    _s2f '/REPOBARE/_repo/st_rc_d/' '/' ${frm_file}.git.md
 
-    # cp -f ${frm_file}.local.md ${frm_file}.git.md
+    . README.md_ufl9
 
-    # _s2f '/REPOBARE/_repo/st_rc_d/' '/' ${frm_file}.git.md
+    _s2f "${HOME}"/ '/' README.md
 
-    # . README.md_ufl9
+    rm ${ST_RC_D_PATH}/README.md
 
-    # _s2f "${HOME}"/ '/' README.md
+    cp README.md ${ST_RC_D_PATH}/README.md
 
-    # rm ${ST_RC_D_PATH}/README.md
+    _s2f "${HOME}"/REPOBARE/_repo/st_rc_d/ '/' ${ST_RC_D_PATH}/README.md
 
-    # cp README.md ${ST_RC_D_PATH}/README.md
-
-    # _s2f "${HOME}"/REPOBARE/_repo/st_rc_d/ '/' ${ST_RC_D_PATH}/README.md
-
-    # _s2f '/REPOBARE/_repo/st_rc_d/' '/' ${ST_RC_D_PATH}/README.md
+    _s2f '/REPOBARE/_repo/st_rc_d/' '/' ${ST_RC_D_PATH}/README.md
 
     # REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.md
 
     # '[Все функции STL](/REPOBARE/_repo/st_rc_d/' 'd'
-    
-    rm ${ST_RC_D_PATH}/README.md_ufl9
 
     _edit ${ST_RC_D_PATH}/README.md
 

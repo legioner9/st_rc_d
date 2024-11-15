@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_XXX() {
+_ee2rpth() {
 
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
@@ -89,15 +89,17 @@ _XXX() {
         return 0
     fi
 
-    #? ----- START _XXX body_prepeare -----
+    #? ----- START _ee2rpth body_prepeare -----
 
-    local hint="hint->"
+    local hint="hint->relpath from entety \$1 to entety \$2"
     if [[ "-h" == "$1" ]]; then
         echo -e "
-MAIN: ${FNN} :: 
+MAIN: ${FNN} :: relpath from entety \$1 to entety \$2
 TAGS:
-ARGS: [\$1]
-[, \$N last arg DEBAG CNTL]
+ARGS: 
+\$1 relpath from entety
+\$2 to entety
+[, \$3 last arg DEBAG CNTL]
     if '_i' debag action, use: [ \$di -eq 1 ] && {debag action} ]
 GLAR: ${FNN}_glar_[name_glar] 
 UCNT:
@@ -122,16 +124,35 @@ EXAM:
 
     #* check _isn_from
     # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} LESS LESS+1 "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'LESS LESS+1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    #     cd $PPWD
-    #     return 1
-    # fi
+    if _isn_from ${NARGS} 2 3 "in fs= file://${sh_file}, line=${LINENO}, ${FNN}() : DEMAND '2 3' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        cd $PPWD
+        return 1
+    fi
 
     #* path -> u@path
     #[[ptr_path]]
     #! ptr_path
-    # local ptr_path_1="$1"
-    # ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+    local ptr_path_1="$1"
+    ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+
+    if ! [ -e ${ptr_path_1} ]; then
+
+        _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : NOT_NODE(file or dir) (\$) : 'file://${ptr_path_1}' : ${hint} : return 1"
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+        return 1
+
+    fi
+
+    local ptr_path_2="$2"
+    ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
+
+    if ! [ -e ${ptr_path_2} ]; then
+
+        _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : NOT_NODE(file or dir) (\$) : 'file://${ptr_path_2}' : ${hint} : return 1"
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+        return 1
+
+    fi
 
     # [[ "${arg_arr[*]}" == *$arg* ]]
 
@@ -168,19 +189,21 @@ EXAM:
 
     #* inname cntl
 
-    _XXX_before_return() {
+    _ee2rpth_before_return() {
         :
     }
 
+    realpath -s --relative-to="$(dirname "${ptr_path_1}")" "${ptr_path_2}"
+
     #* define local variables
 
-    #? ----- START _XXX body_flow -----
+    #? ----- START _ee2rpth body_flow -----
 
     #* {{fn_sh_body}}
 
-    #? ----- END _XXX body -----
+    #? ----- END _ee2rpth body -----
 
-    _XXX_before_return
+    _ee2rpth_before_return
     cd $PPWD
     return 0
 

@@ -19,13 +19,13 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731387512_12112024115832
+DATE: 1731648206_15112024122326
 
-DATX: 1731387512
+DATX: 1731648206
 -->
 
 
-[001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](cnx.d/002.d/001.pref.txt.md)
 
 
 
@@ -33,7 +33,7 @@ DATX: 1731387512
 
     
 
-[002.rcm_1.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/002.rcm_1.txt.md)
+[002.rcm_1.txt.md](cnx.d/002.d/002.rcm_1.txt.md)
 
 
 
@@ -42,7 +42,7 @@ DATX: 1731387512
 в оригинал вносим изменения - копия для истории изменений
     
 
-[003.rcm_2.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/003.rcm_2.txt.md)
+[003.rcm_2.txt.md](cnx.d/002.d/003.rcm_2.txt.md)
 
 
 
@@ -57,7 +57,7 @@ DATX: 1731387512
   - сорс файлы для запуска в командной строке
     
 
-[004.rcm_3.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/004.rcm_3.txt.md)
+[004.rcm_3.txt.md](cnx.d/002.d/004.rcm_3.txt.md)
 
 
 
@@ -81,7 +81,7 @@ DATX: 1731387512
     res - результат вставки context
     
 
-[005.rcm_4.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/005.rcm_4.txt.md)
+[005.rcm_4.txt.md](cnx.d/002.d/005.rcm_4.txt.md)
 
 
 
@@ -90,7 +90,7 @@ DATX: 1731387512
 - наличие последнего аргумента для отладки функции 
 
 
-[006.rcm_5.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/006.rcm_5.txt.md)
+[006.rcm_5.txt.md](cnx.d/002.d/006.rcm_5.txt.md)
 
 
 
