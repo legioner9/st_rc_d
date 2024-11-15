@@ -165,6 +165,10 @@ ${NORMAL}"
     local head_anc=
     local rnd_num=
     local ins_toc=
+    local deep_str=
+    local deep_num=
+    local head_anc_free=
+   local  ins_anc=
 
     local num_toc=$(grep -E -n '<!-- TOC toc2f_stl0 -->' ${md_file} | grep -Eo '^[^:]+')
     echo -e "${GREEN}\$num_toc = '$num_toc'${NORMAL}"
@@ -185,14 +189,30 @@ ${NORMAL}"
         num_toc=$((1 + num_toc))
         num_str=$((curr_num + num_str + 1))
 
+        #! строка #{n-1}
+        deep_str=${head_anc%#*}
+        deep_num=${#deep_str}
+        echo -e "${GREEN}\$deep_num = '$deep_num'${NORMAL}"
+        head_anc_free=${head_anc##*#}
+
         rnd_num=$(_rnd2e)
-        ins_toc="- [$head_anc](#$rnd_num)"
         ins_anc="<a id=\"$rnd_num\"></a>"
 
-        echo -e "${HLIGHT}--- sed -i '${num_toc}i ${ins_toc}' ---${NORMAL}"
-        eval "sed -i '${num_toc}i ${ins_toc}' ${md_file}"
-        echo -e "${HLIGHT}--- sed -i '${num_str}i ${ins_anc}' ---${NORMAL}"
-        eval "sed -i '${num_str}i ${ins_anc}' ${md_file}"
+        ins_toc="- [$head_anc_free](#$rnd_num)"
+
+        for ((i = 0; i < ${deep_num}; i++)); do
+            ins_toc="  ${ins_toc}"
+        done
+
+        echo -e "${GREEN}\$ins_toc = '$ins_toc'${NORMAL}"
+
+        echo -e "${HLIGHT}--- sed -i '${num_toc}i \ ${ins_toc}' ---${NORMAL}"
+
+        eval "sed -i '${num_toc}i\ ${ins_toc}' ${md_file}"
+
+        echo -e "${HLIGHT}--- sed -i '${num_str}i \ ${ins_anc}' ---${NORMAL}"
+
+        eval "sed -i '${num_str}i\ ${ins_anc}' ${md_file}"
 
         curr_num=$((curr_num + 2))
     done
