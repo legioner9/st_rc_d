@@ -96,6 +96,7 @@ ${NORMAL}"
     # '[Все функции STL](/REPOBARE/_repo/st_rc_d/' 'd'
     
     rm ${ST_RC_D_PATH}/README.md_ufl9
+    rm ${ST_RC_D_PATH}/000.README.txt.man
 
     _edit ${ST_RC_D_PATH}/README.md
 
