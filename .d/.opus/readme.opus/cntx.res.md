@@ -28,57 +28,57 @@
 Start Contents Menu
 
 <!-- TOC toc2f_stl0 --> 
- - <a href=#690d3eac77be4f7fa7cd8a0f7e0c5b78> Да здравствует Марк tshemsedinov</a>
-   - <a href=#deaccdf3f09640c4a8b76d1d2ebc51d4> Благодарность</a>
- - <a href=#0cc924f778b04f38a6f3aa614924fb18> Явление миру </a>
-   - <a href=#69603b7b40c44c9b8144c2cf9b044f82> Шаги по камням</a>
- - <a href=#048db31437fa43bd8f0eaeed633dd365> Фон </a>
-   - <a href=#177ab18360a14009b3b4b0cdcbe9f086> Культурологический контекст</a>
-   - <a href=#97dbec0946bb494db69adccb567a69b3> Огонь внутри</a>
- - <a href=#98707beec5da4fc4b7465b0c6c8accf5> Что я могу сделать</a>
- - <a href=#b00a10674ceb432a8db529ee5ad4abbd> Библиотека камней - Теория</a>
-   - <a href=#09e653df0f074fffb858d7df6d8e9f35> Словарь</a>
-   - <a href=#83ca8befe6654a57b789ca1a34bf8557> [Рекомендации RCM]</a>
-   - <a href=#3c70bf8c678d4484a1593cc4fd7263eb> Что это</a>
-   - <a href=#727157681a034230acba1f92b5f12edb> Ограничения</a>
-     - <a href=#714b6af72d9a40c7abb8d323564a12c9> Ограничение сложности stl</a>
-     - <a href=#c56e1a08f74a4a99b765eadb27dac799> Требования к fn_elem</a>
-     - <a href=#1d4b1f7eeaee468081de9d073130ace9> Требования к os_sl</a>
-     - <a href=#64aa081910bd4fdfb8ab71e36dabfc38> Тестируемость </a>
-     - <a href=#35989de919344a7ea6bb8fd4889ec0fe> Расширяемость</a>
-     - <a href=#2e73f4dcd8094e998fd3d55c219a8322> Производительность</a>
-   - <a href=#4a64058a551143ad8ebf01af6edb60d3> Типы и поведение</a>
- - <a href=#3d75e77f6ad04b92aa6279abb4459da4> Библиотека камней - Практика</a>
-   - <a href=#81d603be415c4857bf665720868abce0> Понижение абстракций</a>
-     - <a href=#0fd020f972434275af7d1adca10a2328> Базовые принципы</a>
-     - <a href=#d1cceb3c588c46478d4cf19f4138e91c> Базовые технологии</a>
- - <a href=#f8acb691afcc42eea110100e633136f4> Что здесь есть</a>
-     - <a href=#1fe110f2af9b45f5b3f42afd293cc172> Библиотека STL</a>
-       - <a href=#4b937f1e6b9d4c94b7205fccffee282b> Поведение библиотеки STL</a>
-         - <a href=#a7d4fa83fe9243e9bd41b14a2f7685e3> Правила именования функций</a>
-         - <a href=#adebe257fd884e0a9733554ecff2d169> Подсказки в именовании файлов или директорий</a>
-         - <a href=#d38d186ac4c94038b38c1d16e706c53d> Подсказки в расширениях файлов - wellknown - `wnext`</a>
-     - <a href=#e27367e0a05845f9a89e0060d4226948> Функция библиотеки STL</a>
-       - <a href=#65b588e1f26d4c7995f94d6d6538bc6d> Поведение функции STL</a>
-   - <a href=#f180dab30ecc4bc6bf9bcd9ca662d74e> Состав библиотеки STL</a>
-       - <a href=#414b2c97aac941cab21727beb835dbec> [Все функции STL (local)]</a>
-       - <a href=#27d4ec4459d64443b744d064c7515191> [Все функции STL (git)]</a>
-   - <a href=#34dd7e5787d14bd182f4cd70e53b7b7e> Библиотека STL0</a>
-     - <a href=#38e0a1e61f9f4e1688a5dfa072ba3171> Поведение библиотеки STL0</a>
-   - <a href=#3c7904d9ddf0497a9c969de85addf639> Функция библиотеки STL0</a>
-     - <a href=#2d1de28952e74a1c8d635c6b4c2d3f67> Поведение функции STL0</a>
-   - <a href=#a378991b2d0745c48362f036f750c732> LCU</a>
-     - <a href=#cb8aaaa4870545368b04b4ba5c7c4e27> Что это</a>
-     - <a href=#417db4fc9ee64125a0cadfa72753c7b3> naming</a>
-     - <a href=#f0dc587c82474ba596dc607ac9238293> add to flcu</a>
-         - <a href=#d107ae204d2b4c128de0a3c45122db4a> search among flcu</a>
-   - <a href=#40ccb4afcdd241aabe2f2ce889d80fbc> Unsort</a>
-       - <a href=#1ad6136e847240e1b92f6f901ab23a6b> Select (меню выбора) в параметре функции</a>
-       - <a href=#ce3bb58b28414e80865543bd3d974e94> UPG stl_fn</a>
- - <a href=#e2a8373510414acc9c79cd7fedeaeca9> Install STL [and STL0]</a>
-   - <a href=#daebeb0b44db4cd8b57960e3d5012c9c> restore STL from .d.zip</a>
- - <a href=#e1ed2f37925b40d1be28ca67bb303c1d> Неупорядоченные заметки</a>
- - <a href=#2eb16bc859fc47439b0112b8d7d71246> Замечания об использовании функций</a>
+ - <a href=#c42614b69eb24133bcc409541cf4cbba> Да здравствует Марк tshemsedinov</a>
+   - <a href=#8df1685fabde44428bde40f76f89ee20> Благодарность</a>
+ - <a href=#e5521f3594494dd2aaa41fe9bfe345c6> Явление миру </a>
+   - <a href=#f5fb60078fd54c82844afa0ca0b66637> Шаги по камням</a>
+ - <a href=#64bb0bac028d49079fc0513dba428f46> Фон </a>
+   - <a href=#524ab00fb27d418a8c95a134c7456a70> Культурологический контекст</a>
+   - <a href=#17252cab97ef4773b8dd87b9008eb9e9> Огонь внутри</a>
+ - <a href=#1c6f924d4541441a8f31af7786450b91> Что я могу сделать</a>
+ - <a href=#2a4ec8d465ea4e078f824ff9380ef368> Библиотека камней - Теория</a>
+   - <a href=#de887868b00b4168bcef6ad10273d0f7> Словарь</a>
+   - <a href=#7fec199416a64d2cac24e8774933fcca> [Рекомендации RCM]</a>
+   - <a href=#1efd90fa72da419b856df98f2afb069e> Что это</a>
+   - <a href=#2ea6823a3d6d443693baeabaa0b1fb96> Ограничения</a>
+     - <a href=#e4c2cb13fa6045cfa8e5d962a2cb11f2> Ограничение сложности stl</a>
+     - <a href=#99c062bfa0d54dec81c373f38c09435f> Требования к fn_elem</a>
+     - <a href=#3d13d38af1ec4426a52954236a4e7a9f> Требования к os_sl</a>
+     - <a href=#84dcd601daa1413c98e4903cb5150e45> Тестируемость </a>
+     - <a href=#72b75a36d61c47e09b1a3477e388650a> Расширяемость</a>
+     - <a href=#a98498347a1c4a11ae0e9745a49df7d9> Производительность</a>
+   - <a href=#2d9c85ff6eb9480da31fe0b196cfaaa3> Типы и поведение</a>
+ - <a href=#63e60471b6c94f9bbb61fb656e66074c> Библиотека камней - Практика</a>
+   - <a href=#2f504be7ee7a456786ce4605926ee5eb> Понижение абстракций</a>
+     - <a href=#97e56785f6e04c2fbcc3c0e06f96e30b> Базовые принципы</a>
+     - <a href=#c45ad0d96416477987634cfa8d8db65d> Базовые технологии</a>
+ - <a href=#7beda3faff4541cdb3bdc3c35e169b6e> Что здесь есть</a>
+     - <a href=#8a7ea7b418b6423aa88c7432b1eb6c0f> Библиотека STL</a>
+       - <a href=#baf7fcbbdd54455caf7dc8d2f384c533> Поведение библиотеки STL</a>
+         - <a href=#4df9358160b9477aa08f7734032cb731> Правила именования функций</a>
+         - <a href=#680b662dd0bb476590a91578fb4b2916> Подсказки в именовании файлов или директорий</a>
+         - <a href=#81f7462d0ea04db3b76bdc65bef9254b> Подсказки в расширениях файлов - wellknown - `wnext`</a>
+     - <a href=#5a16e2b3563340a2af0627574dbd0117> Функция библиотеки STL</a>
+       - <a href=#ab3c73b6210d49c38c6947e566c2d3a1> Поведение функции STL</a>
+   - <a href=#5d654b5974014ce8ac6f0ac066e0c597> Состав библиотеки STL</a>
+       - <a href=#a6d02047756b4130b21f302303942d96> [Все функции STL (local)]</a>
+       - <a href=#ab76cb52baf444679ba280e1c674fbd1> [Все функции STL (git)]</a>
+   - <a href=#8d1637f506d44b6a9c36c260fd29845e> Библиотека STL0</a>
+     - <a href=#5ec110a739524d34a89b71173fa438c4> Поведение библиотеки STL0</a>
+   - <a href=#79cd9f42c1714fd89538eb952ae4f351> Функция библиотеки STL0</a>
+     - <a href=#e15e70f38d2740bdb4e03d4bcf8d1c7e> Поведение функции STL0</a>
+   - <a href=#4254e132db164be6a28c604882680519> LCU</a>
+     - <a href=#acba15eace974eb78851ce827eae8571> Что это</a>
+     - <a href=#cccb96b6f3254ef28d852da1020e0b2b> naming</a>
+     - <a href=#1f173bc9c55d402184cf8caacb5188c2> add to flcu</a>
+         - <a href=#c5b027fbef0643a889b0a6eb22abde39> search among flcu</a>
+   - <a href=#f2a4eeefda3f4641ad4c8d8964eb135d> Unsort</a>
+       - <a href=#14716153bea046af97f287f654c1d5ed> Select (меню выбора) в параметре функции</a>
+       - <a href=#3f650f22131945e1889a18f168b94b94> UPG stl_fn</a>
+ - <a href=#a25fa2bd505a479b894899f131fecf91> Install STL [and STL0]</a>
+   - <a href=#71c3340be6824104824e53ffede0815c> restore STL from .d.zip</a>
+ - <a href=#84e70d9768aa4a8196af174bd712d063> Неупорядоченные заметки</a>
+ - <a href=#c34378d1b776475e82cc590ec4218a6f> Замечания об использовании функций</a>
 
 <!-- /TOC toc2f_stl0 -->
 
@@ -91,9 +91,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.opus/readme.opus
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731837330_17112024165530
+DATE: 1731838641_17112024171721
 
-DATX: 1731837330
+DATX: 1731838641
 -->
 
 
@@ -101,7 +101,7 @@ DATX: 1731837330
 
 
 
- <a id="690d3eac77be4f7fa7cd8a0f7e0c5b78"></a>
+ <a id="c42614b69eb24133bcc409541cf4cbba"></a>
 # Да здравствует Марк tshemsedinov
 
 Ave Marcus tshemsedinov* (лат.)
@@ -114,7 +114,7 @@ Ave Marcus tshemsedinov* (лат.)
 
 
 
- <a id="deaccdf3f09640c4a8b76d1d2ebc51d4"></a>
+ <a id="8df1685fabde44428bde40f76f89ee20"></a>
 ## Благодарность
 
 Gratia (лат.)
@@ -128,7 +128,7 @@ Gratia (лат.)
 
 
 
- <a id="0cc924f778b04f38a6f3aa614924fb18"></a>
+ <a id="e5521f3594494dd2aaa41fe9bfe345c6"></a>
 # Явление миру 
 
 Manifesto
@@ -139,7 +139,7 @@ Manifesto
 
 
 
- <a id="69603b7b40c44c9b8144c2cf9b044f82"></a>
+ <a id="f5fb60078fd54c82844afa0ca0b66637"></a>
 ## Шаги по камням
 
 Gradus in saxa (лат.)
@@ -158,7 +158,7 @@ Gradus in saxa (лат.)
 
 
 
- <a id="048db31437fa43bd8f0eaeed633dd365"></a>
+ <a id="64bb0bac028d49079fc0513dba428f46"></a>
 # Фон 
 
 Sfondo (лат.)  
@@ -170,7 +170,7 @@ Sfondo (лат.)
 
 
 
- <a id="177ab18360a14009b3b4b0cdcbe9f086"></a>
+ <a id="524ab00fb27d418a8c95a134c7456a70"></a>
 ## Культурологический контекст
 
 Contextus culturalis (лат.)
@@ -189,7 +189,7 @@ Contextus culturalis (лат.)
 
 
 
- <a id="97dbec0946bb494db69adccb567a69b3"></a>
+ <a id="17252cab97ef4773b8dd87b9008eb9e9"></a>
 ## Огонь внутри
 
 Fuoco dentro (лат.)
@@ -202,7 +202,7 @@ Fuoco dentro (лат.)
 
 
 
- <a id="98707beec5da4fc4b7465b0c6c8accf5"></a>
+ <a id="1c6f924d4541441a8f31af7786450b91"></a>
 # Что я могу сделать
 
 Quid possum facere (лат.)
@@ -230,7 +230,7 @@ Quid possum facere (лат.)
 
 
 
- <a id="b00a10674ceb432a8db529ee5ad4abbd"></a>
+ <a id="2a4ec8d465ea4e078f824ff9380ef368"></a>
 # Библиотека камней - Теория
 
 Bibliotheca Lapidum - Theoria (лат.)
@@ -241,7 +241,7 @@ Bibliotheca Lapidum - Theoria (лат.)
 
 
 
- <a id="09e653df0f074fffb858d7df6d8e9f35"></a>
+ <a id="de887868b00b4168bcef6ad10273d0f7"></a>
 ## Словарь
 
 Lexicon (лат.)
@@ -267,7 +267,7 @@ Lexicon (лат.)
 
 
 
- <a id="83ca8befe6654a57b789ca1a34bf8557"></a>
+ <a id="7fec199416a64d2cac24e8774933fcca"></a>
 ## [Рекомендации RCM](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/res.md)
 
   
@@ -276,7 +276,7 @@ Lexicon (лат.)
 
 
 
- <a id="3c70bf8c678d4484a1593cc4fd7263eb"></a>
+ <a id="1efd90fa72da419b856df98f2afb069e"></a>
 ## Что это
 
 Quid est (лат.)
@@ -292,42 +292,42 @@ Quid est (лат.)
 
 
 
- <a id="727157681a034230acba1f92b5f12edb"></a>
+ <a id="2ea6823a3d6d443693baeabaa0b1fb96"></a>
 ## Ограничения
 
 Limitations (лат.)
 
- <a id="714b6af72d9a40c7abb8d323564a12c9"></a>
+ <a id="e4c2cb13fa6045cfa8e5d962a2cb11f2"></a>
 ### Ограничение сложности stl
 
 - stl состоит из fn_elem 
 - stlu использует предыдущие вплоть до stl
 - функции библиотек имеют ограничение на количество строк
  
- <a id="c56e1a08f74a4a99b765eadb27dac799"></a>
+ <a id="99c062bfa0d54dec81c373f38c09435f"></a>
 ### Требования к fn_elem
 
 - Написаны на базовом языке операционной системы
   
- <a id="1d4b1f7eeaee468081de9d073130ace9"></a>
+ <a id="3d13d38af1ec4426a52954236a4e7a9f"></a>
 ### Требования к os_sl
 
 - Понятен и прост для юзера
 - Период версионных изменений близок к периоду базового языка операционной системы
 
- <a id="64aa081910bd4fdfb8ab71e36dabfc38"></a>
+ <a id="84dcd601daa1413c98e4903cb5150e45"></a>
 ### Тестируемость 
 
 - stl тестируется безусловно полностью при каждом запуске оболочки
 - stlu тестируется по возможности
 
- <a id="35989de919344a7ea6bb8fd4889ec0fe"></a>
+ <a id="72b75a36d61c47e09b1a3477e388650a"></a>
 ### Расширяемость
 
 - по набору функций в библиотеке
 - по написанию библиотеки следующего уровня абстракции
 
- <a id="2e73f4dcd8094e998fd3d55c219a8322"></a>
+ <a id="a98498347a1c4a11ae0e9745a49df7d9"></a>
 ### Производительность
 
 - Читабельность и простота для юзера будет происходить за счет уменьшения производительности
@@ -339,7 +339,7 @@ Limitations (лат.)
 
 
 
- <a id="4a64058a551143ad8ebf01af6edb60d3"></a>
+ <a id="2d9c85ff6eb9480da31fe0b196cfaaa3"></a>
 ## Типы и поведение
 
 Genera et mores (лат.)
@@ -362,7 +362,7 @@ Genera et mores (лат.)
 
 
 
- <a id="3d75e77f6ad04b92aa6279abb4459da4"></a>
+ <a id="63e60471b6c94f9bbb61fb656e66074c"></a>
 # Библиотека камней - Практика
 
 Bibliotheca Lapidum - Usu (лат.)
@@ -373,7 +373,7 @@ Bibliotheca Lapidum - Usu (лат.)
 
 
 
- <a id="81d603be415c4857bf665720868abce0"></a>
+ <a id="2f504be7ee7a456786ce4605926ee5eb"></a>
 ## Понижение абстракций
 
 Deminutio abstractionis (лат.)
@@ -385,7 +385,7 @@ Deminutio abstractionis (лат.)
 
 
 
- <a id="0fd020f972434275af7d1adca10a2328"></a>
+ <a id="97e56785f6e04c2fbcc3c0e06f96e30b"></a>
 ### Базовые принципы
 
 Basic principiis (лат.)
@@ -430,7 +430,7 @@ Basic principiis (лат.)
 
 
 
- <a id="d1cceb3c588c46478d4cf19f4138e91c"></a>
+ <a id="c45ad0d96416477987634cfa8d8db65d"></a>
 ### Базовые технологии
 
 Basic technologiae (лат.)
@@ -444,7 +444,7 @@ Basic technologiae (лат.)
 
 
 
- <a id="f8acb691afcc42eea110100e633136f4"></a>
+ <a id="7beda3faff4541cdb3bdc3c35e169b6e"></a>
 # Что здесь есть
 
 Quid est hic (лат.)
@@ -456,7 +456,7 @@ Quid est hic (лат.)
 
 
 
- <a id="1fe110f2af9b45f5b3f42afd293cc172"></a>
+ <a id="8a7ea7b418b6423aa88c7432b1eb6c0f"></a>
 ### Библиотека STL
 
     
@@ -465,7 +465,7 @@ Quid est hic (лат.)
 
 
 
- <a id="4b937f1e6b9d4c94b7205fccffee282b"></a>
+ <a id="baf7fcbbdd54455caf7dc8d2f384c533"></a>
 #### Поведение библиотеки STL
 
 
@@ -474,7 +474,7 @@ Quid est hic (лат.)
 
 
 
- <a id="a7d4fa83fe9243e9bd41b14a2f7685e3"></a>
+ <a id="4df9358160b9477aa08f7734032cb731"></a>
 ##### Правила именования функций
 
 - если [fn_stl] результатом является только возврат 0 или 1 при действии и производится [flow], то именование следующее:
@@ -501,7 +501,7 @@ Quid est hic (лат.)
 
 
 
- <a id="adebe257fd884e0a9733554ecff2d169"></a>
+ <a id="680b662dd0bb476590a91578fb4b2916"></a>
 ##### Подсказки в именовании файлов или директорий
 
 - если в имени файла или директории содержится `.ax.`, то удаление файла или файлов из директории будет иметь негативные последствия - допускается изменение файла или добавление файлов в директорию - иными словами ссылки на эти сущности используются в STL 
@@ -512,7 +512,7 @@ Quid est hic (лат.)
 
 
 
- <a id="d38d186ac4c94038b38c1d16e706c53d"></a>
+ <a id="81f7462d0ea04db3b76bdc65bef9254b"></a>
 ##### Подсказки в расширениях файлов - wellknown - `wnext`
 - `wnext`
   - `.lst` список
@@ -546,7 +546,7 @@ Quid est hic (лат.)
 
 
 
- <a id="e27367e0a05845f9a89e0060d4226948"></a>
+ <a id="5a16e2b3563340a2af0627574dbd0117"></a>
 ### Функция библиотеки STL
     
 
@@ -554,7 +554,7 @@ Quid est hic (лат.)
 
 
 
- <a id="65b588e1f26d4c7995f94d6d6538bc6d"></a>
+ <a id="ab3c73b6210d49c38c6947e566c2d3a1"></a>
 #### Поведение функции STL
     
 
@@ -591,19 +591,19 @@ Quid est hic (лат.)
 
 
 
- <a id="f180dab30ecc4bc6bf9bcd9ca662d74e"></a>
+ <a id="5d654b5974014ce8ac6f0ac066e0c597"></a>
 ## Состав библиотеки STL
 
- <a id="414b2c97aac941cab21727beb835dbec"></a>
+ <a id="a6d02047756b4130b21f302303942d96"></a>
 #### [Все функции STL (local)](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.local.md)
- <a id="27d4ec4459d64443b744d064c7515191"></a>
+ <a id="ab76cb52baf444679ba280e1c674fbd1"></a>
 #### [Все функции STL (git)](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.git.md)
 
 [001.txt.md](cntx.ins.d/701.quid_est_hic.d/002.d/003.d/001.txt.md)
 
 
 
- <a id="34dd7e5787d14bd182f4cd70e53b7b7e"></a>
+ <a id="8d1637f506d44b6a9c36c260fd29845e"></a>
 ## Библиотека STL0
 
     
@@ -612,7 +612,7 @@ Quid est hic (лат.)
 
 
 
- <a id="38e0a1e61f9f4e1688a5dfa072ba3171"></a>
+ <a id="5ec110a739524d34a89b71173fa438c4"></a>
 ### Поведение библиотеки STL0
 
 
@@ -621,7 +621,7 @@ Quid est hic (лат.)
 
 
 
- <a id="3c7904d9ddf0497a9c969de85addf639"></a>
+ <a id="79cd9f42c1714fd89538eb952ae4f351"></a>
 ## Функция библиотеки STL0
     
 
@@ -629,7 +629,7 @@ Quid est hic (лат.)
 
 
 
- <a id="2d1de28952e74a1c8d635c6b4c2d3f67"></a>
+ <a id="e15e70f38d2740bdb4e03d4bcf8d1c7e"></a>
 ### Поведение функции STL0
     
 
@@ -637,7 +637,7 @@ Quid est hic (лат.)
 
 
 
- <a id="a378991b2d0745c48362f036f750c732"></a>
+ <a id="4254e132db164be6a28c604882680519"></a>
 ## LCU
     
 
@@ -645,7 +645,7 @@ Quid est hic (лат.)
 
 
 
- <a id="cb8aaaa4870545368b04b4ba5c7c4e27"></a>
+ <a id="acba15eace974eb78851ce827eae8571"></a>
 ### Что это
 - LCU - обработка файловой системы основаная на соответствии директории и файла __.lcu 
   - характеристики
@@ -657,7 +657,7 @@ Quid est hic (лат.)
     - ограниченное whellknown количество тегов
       - добавление тега в файл отлько из уже существующих (alrtag)
       - 
- <a id="417db4fc9ee64125a0cadfa72753c7b3"></a>
+ <a id="cccb96b6f3254ef28d852da1020e0b2b"></a>
 ### naming
 
 - секция .lcu loc
@@ -674,14 +674,14 @@ Quid est hic (лат.)
 - file.lcu == flcu
 - env_dirs - pull directory as united for treat LSU == env_lcu
 - dir with flcu == dlcu
- <a id="f0dc587c82474ba596dc607ac9238293"></a>
+ <a id="1f173bc9c55d402184cf8caacb5188c2"></a>
 ### add to flcu
 
 - nrdx
 - tags
 - main
 
- <a id="d107ae204d2b4c128de0a3c45122db4a"></a>
+ <a id="c5b027fbef0643a889b0a6eb22abde39"></a>
 ##### search among flcu
 
 
@@ -691,7 +691,7 @@ Quid est hic (лат.)
 
 
 
- <a id="40ccb4afcdd241aabe2f2ce889d80fbc"></a>
+ <a id="f2a4eeefda3f4641ad4c8d8964eb135d"></a>
 ## Unsort
     
 
@@ -699,7 +699,7 @@ Quid est hic (лат.)
 
 
 
- <a id="1ad6136e847240e1b92f6f901ab23a6b"></a>
+ <a id="14716153bea046af97f287f654c1d5ed"></a>
 #### Select (меню выбора) в параметре функции
 
 - Если параметром функции является меню, то
@@ -713,7 +713,7 @@ Quid est hic (лат.)
 
 
 
- <a id="ce3bb58b28414e80865543bd3d974e94"></a>
+ <a id="3f650f22131945e1889a18f168b94b94"></a>
 #### UPG stl_fn
 
 - для upg_[name_fn]:
@@ -727,7 +727,7 @@ Quid est hic (лат.)
 
 
 
- <a id="e2a8373510414acc9c79cd7fedeaeca9"></a>
+ <a id="a25fa2bd505a479b894899f131fecf91"></a>
 # Install STL [and STL0]
     
 
@@ -747,7 +747,7 @@ or
 
 
 
- <a id="daebeb0b44db4cd8b57960e3d5012c9c"></a>
+ <a id="71c3340be6824104824e53ffede0815c"></a>
 ## restore STL from .d.zip
     
 
@@ -766,7 +766,7 @@ or
 
 
 
- <a id="e1ed2f37925b40d1be28ca67bb303c1d"></a>
+ <a id="84e70d9768aa4a8196af174bd712d063"></a>
 # Неупорядоченные заметки
 
 Libero capitulum (лат.)
@@ -792,7 +792,7 @@ Libero capitulum (лат.)
 
 
 
- <a id="2eb16bc859fc47439b0112b8d7d71246"></a>
+ <a id="c34378d1b776475e82cc590ec4218a6f"></a>
 # Замечания об использовании функций
 
 - echo | _st_exit подавлние остановки при экстренном выходе по ^C
