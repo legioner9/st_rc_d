@@ -157,7 +157,10 @@ ${NORMAL}"
 
     #? ----- START toc2f body_flow -----
 
-    cp ${md_file} ${md_file}.toc2f_stl0
+    local md_file_toc2f_stl0=$(dirname ${md_file})/_$(basename ${md_file})_toc2f_stl0
+
+    cp ${md_file} ${md_file_toc2f_stl0}
+    # cp ${md_file} ${md_file}.toc2f_stl0
 
     local str=
     local head_str=
@@ -168,7 +171,7 @@ ${NORMAL}"
     local deep_str=
     local deep_num=
     local head_anc_free=
-   local  ins_anc=
+    local ins_anc=
 
     local num_toc=$(grep -E -n '<!-- TOC toc2f_stl0 -->' ${md_file} | grep -Eo '^[^:]+')
     echo -e "${GREEN}\$num_toc = '$num_toc'${NORMAL}"
