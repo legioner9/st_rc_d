@@ -186,7 +186,7 @@ ${NORMAL}"
             rm $TMP/ggg
         )
 
-        # head_anc=${head_anc//[~,%,&,*,(,),\",\`,$,@,<,>,|,-]/}
+        head_anc=${head_anc//[~,%,&,*,(,),\",\`,$,@,<,>,|,-]/}
 
         num_toc=$((1 + num_toc))
         num_str=$((curr_num + num_str + 1))
@@ -200,8 +200,7 @@ ${NORMAL}"
         rnd_num=$(_rnd2e)
         ins_anc="<a id=\"$rnd_num\"></a>"
 
-        ins_toc="- <a href="#$rnd_num">$head_anc_free</a>"
-        # ins_toc="- [$head_anc_free](#$rnd_num)"
+        ins_toc="- [$head_anc_free](#$rnd_num)"
 
         for ((i = 0; i < ${deep_num}; i++)); do
             ins_toc="  ${ins_toc}"
