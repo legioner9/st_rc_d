@@ -3,7 +3,7 @@
 echo -e "${BLUE}--- that file://${REPO_PATH}/${name_repo}/.d/.ham/main/main.fn.lst.d/rbld_readme.sh ---${NORMAL}" #sistem info mesage
 # echo -e "${HLIGHT}--- git_reset__() ---${NORMAL}"
 
-rbld_file=${REPO_PATH}/${name_repo}/.d/.opus/readme.opus/rbld_res_md.sh #start files
+rbld_file=${REPO_PATH}/${name_repo}/.d/.opus/readme.opus/_rbld_res_md.sh #start files
 
 if [ -f ${rbld_file} ]; then
 

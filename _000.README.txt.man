@@ -1,13 +1,5 @@
-<!--
-CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/st_rc_d/.d/.opus/readme.opus/cntx.ins.d /home/st/REPOBARE/_repo/st_rc_d/README.md 2
 
-PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.opus/readme.opus
-
-FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
-
-DATE: 1731869181_18112024014621
-
-DATX: 1731869181
+DATX: 1732082477
 -->
 
 
@@ -740,7 +732,7 @@ Libero capitulum (лат.)
     использовать _is_yes только для ветвлений
 
 - в следующих версиях использзовать `-` вместо `@` в качестве пустого аргумента
-- заплнитель пустых директорий не файл 0, а _0    
+- заплнитель пустых директорий не файл 0, а _0     
 
 
 

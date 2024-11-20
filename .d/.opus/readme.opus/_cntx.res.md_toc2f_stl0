@@ -23,6 +23,39 @@
     height: 1em;
     background-color: #F8F8F8;
 }
+
+h1{
+    color: rgb(155, 0, 218);
+    font-weight: normal;
+    font-style: italic;
+    font-weight:bold;
+
+}
+h2{
+    color: rgb(155, 40, 238);
+    font-style: italic;
+    font-weight:bold;
+}
+h3{
+    color: rgb(155, 80, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h4{
+    color: rgb(155, 120, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h5{
+    color: rgb(155, 160, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h6 {
+    color: rgb(155, 200, 230);
+    font-style: italic;
+    font-weight:bold;
+}
 </style>
 
 Start Contents Menu
@@ -40,9 +73,9 @@ PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.opus/readme.opus
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731869172_18112024014612
+DATE: 1732082468_20112024130108
 
-DATX: 1731869172
+DATX: 1732082468
 -->
 
 
@@ -775,7 +808,7 @@ Libero capitulum (лат.)
     использовать _is_yes только для ветвлений
 
 - в следующих версиях использзовать `-` вместо `@` в качестве пустого аргумента
-- заплнитель пустых директорий не файл 0, а _0    
+- заплнитель пустых директорий не файл 0, а _0     
 
 
 
