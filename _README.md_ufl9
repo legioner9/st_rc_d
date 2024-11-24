@@ -59,11 +59,10 @@ ${NORMAL}"
 
     #{{body_fn}}
 
-echo | ufl_stl0 9 ${ST_RC_D_PATH}/.d/.opus/readme.opus/cntx.ins.d ${ST_RC_D_PATH}/README.md 2
-
+    echo | ufl_stl0 9 ${ST_RC_D_PATH}/.d/.opus/readme.opus/cntx.ins.d ${ST_RC_D_PATH}/README.md 2
 
     #! END BODY FN ---------------------------------------
-    
+
     cd $PPWD
     return 0
 
