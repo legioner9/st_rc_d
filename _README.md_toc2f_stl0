@@ -67,19 +67,19 @@ Start Contents Menu
 End Contents Menu
 
 <!--
-CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/st_rc_d/.d/.opus/readme.opus/cntx.ins.d /home/st/REPOBARE/_repo/st_rc_d/README.md 2
+CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/st_rc_d/.d/.opus/readme.opus/_cntx.ins.d /home/st/REPOBARE/_repo/st_rc_d/README.md 2
 
 PPWD: /home/st/REPOBARE/_repo/st_rc_d/.d/.opus/readme.opus
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1732085388_20112024134948
+DATE: 1732606287_26112024143127
 
-DATX: 1732085388
+DATX: 1732606287
 -->
 
 
-[001.001.first_head.txt.md](.d/.opus/readme.opus/cntx.ins.d/001.001.first_head.txt.md)
+[001.001.first_head.txt.md](.d/.opus/readme.opus/_cntx.ins.d/001.001.first_head.txt.md)
 
 
 
@@ -88,7 +88,7 @@ DATX: 1732085388
 
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/001.01.ave_marcus.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/001.01.ave_marcus.d/001.pref.txt.md)
 
 
 
@@ -100,7 +100,7 @@ Ave Marcus tshemsedinov* (лат.)
 
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/001.01.ave_marcus.d/002.gratia.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/001.01.ave_marcus.d/002.gratia.d/001.pref.txt.md)
 
 
 
@@ -111,9 +111,9 @@ Gratia (лат.)
 - vitlav
 - larchanka
 - a3rus
-    
 
-[001.pef.txt.md](.d/.opus/readme.opus/cntx.ins.d/002.01.manifesto.d/001.pef.txt.md)
+
+[001.pef.txt.md](.d/.opus/readme.opus/_cntx.ins.d/002.01.manifesto.d/001.pef.txt.md)
 
 
 
@@ -123,16 +123,16 @@ Manifesto
 
 Библиотеки stlu это инструмент создаваемый пользователем для создания автоматизации пользовательских задач.
 
-[001.pef.txt.md](.d/.opus/readme.opus/cntx.ins.d/002.01.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.md)
+[001.pef.txt.md](.d/.opus/readme.opus/_cntx.ins.d/002.01.manifesto.d/002.gradus_in_saxa.d/001.pef.txt.md)
 
 
 
 ## Шаги по камням
 
 Gradus in saxa (лат.)
-   
 
-[001.txt.md](.d/.opus/readme.opus/cntx.ins.d/002.01.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.md)
+
+[001.txt.md](.d/.opus/readme.opus/_cntx.ins.d/002.01.manifesto.d/002.gradus_in_saxa.d/002.d/001.txt.md)
 
 
 
@@ -141,7 +141,7 @@ Gradus in saxa (лат.)
 - Следует знать как используется недоверенный код    
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/002.02.sfondo.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/002.02.sfondo.d/001.pref.txt.md)
 
 
 
@@ -152,7 +152,7 @@ Sfondo (лат.)
 Понимание поступков иногда кроется в том как человек видит реальность и в том что его терзает 
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/002.02.sfondo.d/002.contextus_culturalis.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/002.02.sfondo.d/002.contextus_culturalis.d/001.pref.txt.md)
 
 
 
@@ -170,7 +170,7 @@ Contextus culturalis (лат.)
 
 
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/002.02.sfondo.d/003.fuoco_dentro.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/002.02.sfondo.d/003.fuoco_dentro.d/001.pref.txt.md)
 
 
 
@@ -182,7 +182,7 @@ Fuoco dentro (лат.)
 - баланса между системным и прикладным кодом не существует? 
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/003.quid_possum_facere.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/003.quid_possum_facere.d/001.pref.txt.md)
 
 
 
@@ -191,7 +191,7 @@ Fuoco dentro (лат.)
 Quid possum facere (лат.)
 
 
-[001.txt.md](.d/.opus/readme.opus/cntx.ins.d/003.quid_possum_facere.d/002.d/001.txt.md)
+[001.txt.md](.d/.opus/readme.opus/_cntx.ins.d/003.quid_possum_facere.d/002.d/001.txt.md)
 
 
 
@@ -209,7 +209,7 @@ Quid possum facere (лат.)
  
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/001.pref.txt.md)
 
 
 
@@ -219,7 +219,7 @@ Bibliotheca Lapidum - Theoria (лат.)
     
 
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/002.lexicon.d/001.pref.txt.md)
 
 
 
@@ -244,7 +244,7 @@ Lexicon (лат.)
     upath               - тип указания пути файловой системы
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/003.quid_est.d/001.pref.txt.md)
 
 
 
@@ -259,7 +259,7 @@ Quid est (лат.)
   - Последующее за stl древо библиотек - stlu
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/004.limitations.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/004.limitations.d/001.pref.txt.md)
 
 
 
@@ -299,7 +299,7 @@ Limitations (лат.)
 - Управляемость автоматизации рутинных действий для юзера ценнее производительности
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/005.genera_at_mores.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/005.genera_at_mores.d/001.pref.txt.md)
 
 
 
@@ -321,7 +321,7 @@ Genera et mores (лат.)
   - информация и ее обработка связаны только через интерфейсы
   - создавать регулярные структуры только генерацией с параметрами - копипаст недоверенная операция 
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/001.pref.txt.md)
 
 
 
@@ -330,7 +330,7 @@ Genera et mores (лат.)
 
     
 
-[002.rcm_1.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/002.rcm_1.txt.md)
+[002.rcm_1.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/002.rcm_1.txt.md)
 
 
 
@@ -339,7 +339,7 @@ Genera et mores (лат.)
 в оригинал вносим изменения - копия для истории изменений
     
 
-[003.rcm_2.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/003.rcm_2.txt.md)
+[003.rcm_2.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/003.rcm_2.txt.md)
 
 
 
@@ -354,7 +354,7 @@ Genera et mores (лат.)
   - сорс файлы для запуска в командной строке
     
 
-[004.rcm_3.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/004.rcm_3.txt.md)
+[004.rcm_3.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/004.rcm_3.txt.md)
 
 
 
@@ -378,7 +378,7 @@ Genera et mores (лат.)
     res - результат вставки context
     
 
-[005.rcm_4.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/005.rcm_4.txt.md)
+[005.rcm_4.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/005.rcm_4.txt.md)
 
 
 
@@ -387,7 +387,7 @@ Genera et mores (лат.)
 - наличие последнего аргумента для отладки функции 
 
 
-[006.rcm_5.txt.md](.d/.opus/readme.opus/cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/006.rcm_5.txt.md)
+[006.rcm_5.txt.md](.d/.opus/readme.opus/_cntx.ins.d/004.bibliotheca_lapidum_theoria.d/006.recom.d/002.d/006.rcm_5.txt.md)
 
 
 
@@ -397,7 +397,7 @@ Genera et mores (лат.)
   - допускается замена на константу e.c. @ 
 
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/005.bibliotheca_lapidum_usu.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/005.bibliotheca_lapidum_usu.d/001.pref.txt.md)
 
 
 
@@ -407,7 +407,7 @@ Bibliotheca Lapidum - Usu (лат.)
 
   
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.md)
 
 
 
@@ -418,7 +418,7 @@ Deminutio abstractionis (лат.)
 
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.md)
 
 
 
@@ -462,7 +462,7 @@ Basic principiis (лат.)
 
 
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/003.basic_technologiae.txt.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/003.basic_technologiae.txt.d/001.pref.txt.md)
 
 
 
@@ -475,7 +475,7 @@ Basic technologiae (лат.)
 - os_sl - bash      (the GNU Project's shell—the Bourne Again SHell)
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/001.pref.txt.md)
 
 
 
@@ -486,7 +486,7 @@ Quid est hic (лат.)
 
     
 
-[001.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/001.txt.md)
+[001.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/001.txt.md)
 
 
 
@@ -494,7 +494,7 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/002.d/001.pref.txt.md)
 
 
 
@@ -502,7 +502,7 @@ Quid est hic (лат.)
 
 
 
-[002.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/002.txt.md)
+[002.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/002.txt.md)
 
 
 
@@ -528,7 +528,7 @@ Quid est hic (лат.)
     
 
 
-[003.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/003.txt.md)
+[003.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/003.txt.md)
 
 
 
@@ -538,7 +538,7 @@ Quid est hic (лат.)
 
     
 
-[004.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/004.txt.md)
+[004.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/001.01.d/002.d/002.d/004.txt.md)
 
 
 
@@ -571,21 +571,21 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/001.02.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/001.02.d/001.pref.txt.md)
 
 
 
 ### Функция библиотеки STL
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/001.02.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/001.02.d/002.d/001.pref.txt.md)
 
 
 
 #### Поведение функции STL
     
 
-[002.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/001.02.d/002.d/002.txt.md)
+[002.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/001.02.d/002.d/002.txt.md)
 
 
 
@@ -614,7 +614,7 @@ Quid est hic (лат.)
 - .tml шаблоны
     
 
-[001.03.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/001.03.pref.txt.md)
+[001.03.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/001.03.pref.txt.md)
 
 
 
@@ -623,7 +623,7 @@ Quid est hic (лат.)
 #### [Все функции STL (local)](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.local.md)
 #### [Все функции STL (git)](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.cnt/701.quid_est_hic.d/002.d/002.files_stl.file.git.md)
 
-[001.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/003.d/001.txt.md)
+[001.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/003.d/001.txt.md)
 
 
 
@@ -631,7 +631,7 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/003.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/003.d/002.d/001.pref.txt.md)
 
 
 
@@ -639,28 +639,28 @@ Quid est hic (лат.)
 
 
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/004.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/004.d/001.pref.txt.md)
 
 
 
 ## Функция библиотеки STL0
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/004.d/002.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/004.d/002.d/001.pref.txt.md)
 
 
 
 ### Поведение функции STL0
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/005.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/005.d/001.pref.txt.md)
 
 
 
 ## LCU
     
 
-[099.upg_fn.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/005.d/099.upg_fn.txt.md)
+[099.upg_fn.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/005.d/099.upg_fn.txt.md)
 
 
 
@@ -702,14 +702,14 @@ Quid est hic (лат.)
 
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/099.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/099.d/001.pref.txt.md)
 
 
 
 ## Unsort
     
 
-[002.select.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/099.d/002.select.txt.md)
+[002.select.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/099.d/002.select.txt.md)
 
 
 
@@ -722,7 +722,7 @@ Quid est hic (лат.)
 - `_d2mm` пример выбора файла из директории
     
 
-[003.upg_fn.txt.md](.d/.opus/readme.opus/cntx.ins.d/701.quid_est_hic.d/002.d/099.d/003.upg_fn.txt.md)
+[003.upg_fn.txt.md](.d/.opus/readme.opus/_cntx.ins.d/701.quid_est_hic.d/002.d/099.d/003.upg_fn.txt.md)
 
 
 
@@ -735,14 +735,14 @@ Quid est hic (лат.)
     - заменяем [name_fn]_ на [name_fn] во сех файлах и директориях [name_fn]_ (like _gig_st_rc_fn _XXX -> [name_fn])
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/801.install_stl.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/801.install_stl.d/001.pref.txt.md)
 
 
 
 # Install STL [and STL0]
     
 
-[002.install_cli.txt.md](.d/.opus/readme.opus/cntx.ins.d/801.install_stl.d/002.install_cli.txt.md)
+[002.install_cli.txt.md](.d/.opus/readme.opus/_cntx.ins.d/801.install_stl.d/002.install_cli.txt.md)
 
 
 
@@ -754,14 +754,14 @@ or
     ~ $ wget https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2F.install.ax%2Fmain_install_stl.sh
     ~ $ . main_install_stl.sh
 
-[003.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/801.install_stl.d/003.pref.txt.md)
+[003.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/801.install_stl.d/003.pref.txt.md)
 
 
 
 ## restore STL from .d.zip
     
 
-[004.restore_dot_d_cli.txt.md](.d/.opus/readme.opus/cntx.ins.d/801.install_stl.d/004.restore_dot_d_cli.txt.md)
+[004.restore_dot_d_cli.txt.md](.d/.opus/readme.opus/_cntx.ins.d/801.install_stl.d/004.restore_dot_d_cli.txt.md)
 
 
 
@@ -772,7 +772,7 @@ or
     $ curl https://gitflic.ru/project/legioner9/st_rc_d/blob/raw?file=.d%2F.install.ax%restore_stl_from_zip.sh | sh
     
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/901.unsort.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/901.unsort.d/001.pref.txt.md)
 
 
 
@@ -797,7 +797,7 @@ Libero capitulum (лат.)
 
 
 
-[001.pref.txt.md](.d/.opus/readme.opus/cntx.ins.d/902.using_note.d/001.pref.txt.md)
+[001.pref.txt.md](.d/.opus/readme.opus/_cntx.ins.d/902.using_note.d/001.pref.txt.md)
 
 
 
