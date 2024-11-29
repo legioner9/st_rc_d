@@ -115,6 +115,11 @@ ${CYAN}${exam_str}${NORMAL}
 
     #* ${fn_data_dir}
 
+    #! clousure for child process
+    local gig_command="$FNN ${ARGS[*]} in file://${fn_sh_file}"
+
+    echo -e "${GREEN}\$gig_command = '$gig_command'${NORMAL}"
+
     # local dir_ptv=${fn_data_dir}
 
     local arr1_ptv=($(_dd2e ${dir_ptv}))
@@ -150,7 +155,7 @@ ${CYAN}${exam_str}${NORMAL}
     local file_main=${dir_set}/main.sh
 
     echo -e "${HLIGHT}--- . ${file_main} ---${NORMAL}" #start files
-    
+
     . ${file_main} || {
         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. file://${file_main}' : return 1"
         return 1
